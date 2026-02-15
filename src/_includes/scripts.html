@@ -1,0 +1,19 @@
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
+const section1Height = window.innerHeight * 0.9;
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > section1Height) {
+        scrollBtn.classList.add("show");
+    } else {
+        scrollBtn.classList.remove("show");
+    }
+});
+
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
