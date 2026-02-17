@@ -1,3 +1,80 @@
+<style>
+    
+.contact {
+    padding: 100px 24px;
+    background: #fff;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+/* Info */
+.contact-info h2 {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    margin-bottom: 16px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.contact-details p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* Form */
+.contact-form {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+}
+
+</style>
+
 <section id="contact" class="contact">
         <div class="contact-container">
             <div class="contact-info">

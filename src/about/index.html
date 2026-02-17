@@ -1,0 +1,340 @@
+---
+layout: layout.html
+title: About
+---
+
+<style>
+.about-section {
+  padding: 120px 20px 80px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* FLOATING SHAPES */
+.shape {
+  position: absolute;
+  opacity: 0.08;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape-circle {
+  width: 220px;
+  height: 220px;
+  fill: #2f855a;
+  top: -80px;
+  left: -80px;
+}
+
+.shape-dots {
+  width: 120px;
+  height: 120px;
+  fill: #2f855a;
+  bottom: 180px;
+  left: 60px;
+}
+
+.shape-wave {
+  width: 300px;
+  stroke: #2f855a;
+  top: 200px;
+  right: -120px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+  100% { transform: translateY(0); }
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* HEADER */
+.about-header h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 64px;
+  margin-bottom: 60px;
+  color: #1f2933;
+}
+
+.about-header span {
+  color: #2f855a;
+}
+
+/* SPLIT */
+.about-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.about-text p {
+  font-family: "Tinos", serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+.intro {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* HIGHLIGHT BOXES */
+.highlight-box {
+  background: #f0fdf4;
+  border-left: 5px solid #2f855a;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 35px;
+}
+
+.highlight-box h3 {
+  color: #065f46;
+  margin-bottom: 10px;
+}
+
+/* IMAGE */
+.about-image {
+  position: relative;
+}
+
+.image-blob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #2f855a;
+  opacity: 0.08;
+  border-radius: 60% 40% 80% 50%;
+  top: -30px;
+  right: -30px;
+}
+
+.about-image img {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+}
+
+/* SUPPORT SECTION */
+.support-wrapper {
+  background: #f9fafb;
+  padding: 70px 40px;
+  margin: 100px 0;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.support-wrapper h2 {
+  font-family: "Tinos", serif;
+  font-size: 3.2rem;
+  color: #47524f;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.support-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.support-card {
+  font-family: "Tinos", serif;
+  font-size: 1.1rem;
+  color: #151616;
+  line-height: 1.7;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+/* PROMISE */
+.promise-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.promise-box h3{
+      font-family: "Tinos", serif;
+  font-size: 2.4rem;
+  color: #226616;
+  line-height: 1.7;
+}
+
+.promise-box li {
+    font-family: "Tinos", serif;
+  font-size: 1.3rem;
+  color: #151616;
+  line-height: 1.7;
+  padding-left: 26px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.promise-box li::before {
+  content: "🛡";
+  position: absolute;
+  left: 0;
+}
+
+/* CTA */
+.cta-section {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.cta-btn {
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta-btn.primary {
+  background: #2f855a;
+  color: #ffffff;
+}
+
+.cta-btn.secondary {
+  background: #e6f4ea;
+  color: #065f46;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-header h1 {
+    font-size: 36px;
+  }
+
+  .about-split {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-section {
+    flex-direction: column;
+  }
+}
+</style>
+<section class="about-section">
+
+  <!-- FLOATING SHAPES -->
+  <svg class="shape shape-circle" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="100" />
+  </svg>
+
+  <svg class="shape shape-dots" viewBox="0 0 120 120">
+    <g>
+      <circle cx="10" cy="10" r="3" />
+      <circle cx="40" cy="10" r="3" />
+      <circle cx="70" cy="10" r="3" />
+      <circle cx="10" cy="40" r="3" />
+      <circle cx="40" cy="40" r="3" />
+      <circle cx="70" cy="40" r="3" />
+    </g>
+  </svg>
+
+  <svg class="shape shape-wave" viewBox="0 0 400 80">
+    <path d="M0 40 Q50 10 100 40 T200 40 T300 40 T400 40"
+      fill="none" stroke-width="6" />
+  </svg>
+
+  <div class="about-container">
+
+    <!-- FULL WIDTH HEADER -->
+    <div class="about-header">
+      <h1>
+        Helping You Regain <br />
+        <span>Financial Control—with Dignity</span>
+      </h1>
+    </div>
+
+    <!-- SPLIT CONTENT -->
+    <div class="about-split">
+
+      <div class="about-text">
+        <p class="intro">
+          Financial stress can feel overwhelming. Missed EMIs, recovery calls,
+          legal notices—it’s a lot to handle alone.
+        </p>
+
+        <p>
+          <strong>Resolve Now</strong> is a professional loan settlement and debt
+          resolution company in India, helping individuals navigate financial
+          difficulties in a legal, ethical, and transparent way.
+        </p>
+
+        <!-- WHY WE EXIST -->
+        <div class="highlight-box why-box">
+          <h3>Why We Exist</h3>
+          <p>
+            Life doesn’t always go according to plan. Job loss, medical
+            emergencies, or business downturns can disrupt even the most
+            responsible finances. We exist to help you regain control —
+            calmly, legally, and without intimidation.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-image">
+        <div class="image-blob"></div>
+        <img src="../assets/img-1.png" alt="Support illustration" />
+      </div>
+    </div>
+
+    <!-- HOW WE SUPPORT -->
+    <section class="support-wrapper">
+      <h2>How We Support You</h2>
+
+      <div class="support-cards">
+        <div class="support-card">
+          <h4>Loan & Credit Card Settlement</h4>
+          <p>Legally negotiated settlements to reduce total repayment burden.</p>
+        </div>
+
+        <div class="support-card">
+          <h4>EMI Relief Solutions</h4>
+          <p>Strategies to reduce or restructure EMI pressure.</p>
+        </div>
+
+        <div class="support-card">
+          <h4>Recovery Harassment Protection</h4>
+          <p>Guidance to stop unethical recovery tactics.</p>
+        </div>
+
+        <div class="support-card">
+          <h4>Legal Notice Assistance</h4>
+          <p>Clear, calm guidance on responding to legal notices.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMISE -->
+    <div class="highlight-box promise-box">
+      <h3>Our Promise to You</h3>
+      <ul>
+        <li>Ethical and fully compliant processes</li>
+        <li>Transparent communication</li>
+        <li>No false guarantees or pressure</li>
+        <li>Respect for your dignity and privacy</li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <a href="#contact" class="cta-btn primary">Free Consultation</a>
+      <a href="#services" class="cta-btn secondary">Meet our advisor</a>
+    </div>
+
+  </div>
+</section>

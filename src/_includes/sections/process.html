@@ -1,0 +1,201 @@
+<style>
+.how-we-work-section {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2f6 100%);
+    color: #0f172a;
+    padding: 100px 20px;
+}
+
+.section-title {
+    color: #0f172a;;
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 70px;
+    letter-spacing: -0.02em;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step-item {
+    display: flex;
+    gap: 20px;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    transition: all 0.35s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-6px);
+    background: #ffffff;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+
+.checkmark-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #10b981, #34d399);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.15);
+}
+
+.checkmark-icon::before {
+    content: '✓';
+    color: #0f172a;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.step-content h3 {
+    color: #0f172a;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    color: #54585d;
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.cta-container {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.cta-button {
+    padding: 18px 48px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 10px;
+    background: #274ecc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e19934;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .how-we-work-section {
+        padding: 70px 16px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+</style>
+
+<section class="how-we-work-section">
+    <h2 class="section-title">How We Help You Become Debt-Free</h2>
+
+    <div class="steps-container">
+
+        <div class="step-item">
+            <div class="checkmark-icon"></div>
+            <div class="step-content">
+                <h3>Speak With a Financial Expert</h3>
+                <p>
+                    Start with a one-on-one conversation with our financial expert. 
+                    We understand your loans, EMIs, and current situation to check 
+                    whether loan settlement is the right solution for you.
+                </p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="checkmark-icon"></div>
+            <div class="step-content">
+                <h3>Personalised Financial Assessment</h3>
+                <p>
+                    We carefully evaluate your income, outstanding debts, and repayment capacity. 
+                    Based on this assessment, we design a settlement strategy tailored specifically 
+                    to your financial needs.
+                </p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="checkmark-icon"></div>
+            <div class="step-content">
+                <h3>Enroll in the Settlement Program</h3>
+                <p>
+                    Once you’re comfortable with the plan, you enroll in our loan settlement program. 
+                    All fees, timelines, and the negotiation process are clearly explained upfront — 
+                    no surprises.
+                </p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="checkmark-icon"></div>
+            <div class="step-content">
+                <h3>Build Your Settlement Savings</h3>
+                <p>
+                    You begin setting aside funds in a dedicated account. These savings are used 
+                    exclusively for settlements, helping you stay prepared while reducing financial stress.
+                </p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="checkmark-icon"></div>
+            <div class="step-content">
+                <h3>Negotiation With Creditors</h3>
+                <p>
+                    Our experienced legal and financial team negotiates directly with your lenders. 
+                    The goal is to reduce your total outstanding amount and reach a mutually agreed settlement.
+                </p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="checkmark-icon"></div>
+            <div class="step-content">
+                <h3>Achieve a Debt-Free Life</h3>
+                <p>
+                    Once the settlement is completed, you receive official confirmation from the lender. 
+                    Your loan is closed, stress is lifted, and you move forward with a fresh financial start.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cta-container">
+        <button class="cta-button">Request a Free Callback</button>
+    </div>
+</section>

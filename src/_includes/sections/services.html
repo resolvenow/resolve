@@ -1,73 +1,163 @@
+<style>
+    .services {
+  padding: 120px 24px;
+  background: linear-gradient(180deg, #f9f9f9, #ffffff);
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.services-header {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; 
+    color: #0f172a;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 72px;
+}
+
+.section-tag {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.services-header h2 {
+  font-size: clamp(2.1rem, 3vw, 2.7rem);
+  margin-bottom: 16px;
+}
+
+.services-header p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 40px 32px;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.service-card a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+.service-card a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #000;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.service-card a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
 <section id="services" class="services">
-        <div class="services-container">
+  <div class="services-container">
 
-            <div class="services-header">
-                <span class="section-tag">Services</span>
-                <h2>How We Can Help You</h2>
-                <p>Professional solutions tailored to your needs</p>
-            </div>
+    <div class="services-header">
+      <span class="section-tag">What We Do</span>
+      <h2>Solutions That Put You Back in Control</h2>
+      <p>
+        From debt settlement to legal protection, we help you navigate financial stress
+        with confidence and clarity.
+      </p>
+    </div>
 
-            <div class="services-grid">
+    <div class="services-grid">
 
-                <!-- Card 1 -->
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="./assets/img-2.jpg" alt="Loan Settlement">
-                    </div>
+      <!-- Service -->
+      <div class="service-card">
+        <div class="service-icon">💼</div>
+        <h3>Loan Settlement Assistance</h3>
+        <p>
+          We negotiate directly with lenders to reduce your outstanding amount
+          and secure fair settlement terms.
+        </p>
+        <a href="services/service1.html">Learn More →</a>
+      </div>
 
-                    <div class="service-content">
-                        <h3>Loan Settlement Assistance</h3>
-                        <p>
-                            We negotiate with agents and respective institutions to reduce
-                            any outstanding and reach fair settlement terms.
-                        </p>
-                        <a href="services/service1.html" class="service-btn">Read More</a>
-                    </div>
-                </div>
+      <div class="service-card">
+        <div class="service-icon">💳</div>
+        <h3>Credit Card Debt Resolution</h3>
+        <p>
+          End constant calls and pressure. We help you resolve credit card dues
+          legally and peacefully.
+        </p>
+        <a href="services/service2.html">Learn More →</a>
+      </div>
 
-                <!-- Card 2 -->
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="./assets/img-3.webp" alt="Credit Card Settlement">
-                    </div>
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h3>Anti-Harassment Protection</h3>
+        <p>
+          Protection against unlawful recovery practices with resolution
+          support within 90 days.
+        </p>
+        <a href="services/service3.html">Learn More →</a>
+      </div>
 
-                    <div class="service-content">
-                        <h3>Credit Card Debt Settlement Assistance</h3>
-                        <p>
-                            We provide assistance against any harrasment regarding credit card outstanding.
-                        </p>
-                        <a href="services/service2.html" class="service-btn">Read More</a>
-                    </div>
-                </div>
+      <div class="service-card">
+        <div class="service-icon">⚖️</div>
+        <h3>Legal Advisory Services</h3>
+        <p>
+          Expert legal advisors to guide you through disputes,
+          notices, and compliance matters.
+        </p>
+        <a href="services/service4.html">Learn More →</a>
+      </div>
 
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="./assets/img-4.avif" alt="Credit Card Settlement">
-                    </div>
-
-                    <div class="service-content">
-                        <h3>Anti-Harrasment Services</h3>
-                        <p>
-                            We provide assitance against any kind of harrasment faced, with a easy resolution within 90 days.
-                        </p>
-                        <a href="services/services3.html" class="service-btn">Read More</a>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="./assets/img-5.png" alt="Credit Card Settlement">
-                    </div>
-
-                    <div class="service-content">
-                        <h3>Legal Services</h3>
-                        <p>
-                            We have a team of legal advisor who can consult our clients on further legal matters.
-                        </p>
-                        <a href="services/services4.html" class="service-btn">Read More</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    </div>
+  </div>
+</section>
