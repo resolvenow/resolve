@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+      /* overflow-x: hidden; */
 }
 
 
@@ -25,7 +26,7 @@
    ========================================================= */
 
 /* ---------- Large Tablets & Small Laptops ---------- */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .nav-wrapper {
     padding: 20px 24px;
   }
@@ -38,12 +39,12 @@
   .services-grid {
     gap: 32px;
   }
-}
+} */
 
 /* ---------- Tablets ---------- */
 @media (max-width: 992px) {
   /* Navbar */
-  .nav-inner {
+  /* .nav-inner {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
@@ -52,7 +53,7 @@
   .nav-cta {
     font-size: 18px;
     padding: 10px 22px;
-  }
+  } */
 
   /* About */
   .about-container {
@@ -90,7 +91,7 @@
 
 /* ---------- Mobile Devices ---------- */
 @media (max-width: 768px) {
-  /* Navbar */
+  /* Navbar
   .nav-wrapper {
     padding: 16px;
   }
@@ -103,7 +104,7 @@
 
   .nav-glass a {
     font-size: 18px;
-  }
+  } */
 
   /* Hero */
   .hero-content h1 {
@@ -162,7 +163,7 @@
 
 /* ---------- Very Small Devices ---------- */
 @media (max-width: 480px) {
-  /* Typography */
+  /* Typography
   .nav-logo {
     font-size: 20px;
   }
@@ -170,7 +171,7 @@
   .nav-cta {
     font-size: 16px;
     padding: 10px 20px;
-  }
+  } */
 
   .service-content h3 {
     font-size: 1.15rem;
