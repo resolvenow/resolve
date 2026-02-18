@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Bebas+Neue&family=Bubblegum+Sans&family=Sekuya&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Reset */
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.14);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --text-light: #ffffff;
+  --accent: #00ffd5;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/* =========================================================
+   RESPONSIVE ADDITIONS
+   Paste at the VERY BOTTOM of your existing CSS
+   ========================================================= */
+
+/* ---------- Large Tablets & Small Laptops ---------- */
+@media (max-width: 1200px) {
+  .nav-wrapper {
+    padding: 20px 24px;
+  }
+
+  .nav-glass {
+    gap: 24px;
+    padding: 12px 28px;
+  }
+
+  .services-grid {
+    gap: 32px;
+  }
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 992px) {
+  /* Navbar */
+  .nav-inner {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .nav-cta {
+    font-size: 18px;
+    padding: 10px 22px;
+  }
+
+  /* About */
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact */
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}
+
+/* ---------- Mobile Devices ---------- */
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-wrapper {
+    padding: 16px;
+  }
+
+  .nav-glass {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .nav-glass a {
+    font-size: 18px;
+  }
+
+  /* Hero */
+  .hero-content h1 {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  /* Sections spacing */
+  .about,
+  .services,
+  .reviews,
+  .blogs,
+  .contact,
+  .faq {
+    padding: 64px 16px;
+  }
+
+  /* Service cards */
+  .service-content {
+    padding: 24px;
+  }
+
+  /* Blog cards */
+  .blog-content {
+    padding: 20px;
+  }
+
+  /* FAQ */
+  .faq-item summary {
+    font-size: 1rem;
+  }
+
+  /* Floating buttons spacing */
+  .whatsapp-float {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  #scrollTopBtn {
+    right: 16px;
+    bottom: 88px;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Very Small Devices ---------- */
+@media (max-width: 480px) {
+  /* Typography */
+  .nav-logo {
+    font-size: 20px;
+  }
+
+  .nav-cta {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .service-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .review-text,
+  .blog-content p,
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  /* Forms */
+  .contact-form {
+    padding: 28px 20px;
+  }
+
+  /* Footer */
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
+
+

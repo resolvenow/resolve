@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/icon.png" type="image/x-icon">
+    <title>Resolve Now</title>
+</head>
+
+<body>
+
+<style>
+    .contact-float {
+        position: fixed;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        z-index: 999;
+    }
+
+    .contact-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .contact-icon:hover {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+
+    /* Individual colors */
+    .contact-icon.call {
+        background-color: #0d6efd; /* blue */
+    }
+
+    .contact-icon.mail {
+        background-color: #dc3545; /* red */
+    }
+</style>
+
+<button id="scrollTopBtn" aria-label="Go to top">
+    ↑
+</button>
+
+<a
+    href="https://wa.me/919451210865"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Chat on WhatsApp"
+>
+    <img src="/assets/whatsapp-color-svgrepo-com.svg" alt="WhatsApp">
+</a>
+
+<div class="contact-float">
+    <a
+        href="tel:+919451210865"
+        class="contact-icon call"
+        aria-label="Call us"
+    >
+        📞
+    </a>
+
+    <a
+        href="mailto:info@example.com"
+        class="contact-icon mail"
+        aria-label="Email us"
+    >
+        ✉️
+    </a>
+</div>
+<style>
+    /* NAVBAR */
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  padding: 10px 48px;
+  z-index: 100;
+  background: #497ec3;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.90),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.nav-inner {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  position: relative;
+}
+
+.nav-logo img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-45%);
+  height: 100px;              /* you control logo size here */
+  width: auto;
+  pointer-events: auto;
+}
+/* CENTER LINKS */
+.nav-glass {
+    display: flex;
+    gap: 48px;
+    padding: 0;               /* remove pill padding */
+    background: none;         /* no glass */
+    border: none;
+    box-shadow: none;
+    margin-left: auto;   /* 👈 key line */
+    margin-right: 48px; 
+}
+
+.nav-glass a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.nav-glass a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav-glass a:hover::after {
+  width: 100%;
+}
+
+/* CTA */
+.nav-cta {
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: #e19934;
+  color: #2B2B2B;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px #587A60;
+}
+</style>
+
+<nav class="nav-wrapper">
+    <div class="nav-inner">
+
+        <div class="nav-logo">
+            <img src="../assets/images/nav-logo2.png" alt="Resolve Now Logo">
+        </div>
+
+        <div class="nav-glass">
+            <a href="../">Home</a>
+            <a href="../about/">About</a>
+            <a href="../services/">Services</a>
+            <a href="#blogs">Blogs</a>
+            <a href="../contact/">Contact</a>
+        </div>
+
+        <a href="../forms/" class="nav-cta">Consult Us</a>
+
+    </div>
+</nav>
+
+<main>
+  
+<style>
+    .hero {
+        min-height: 100vh;
+        position: relative;
+        background-image: url("../../assets/images/hero.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+        padding: 20px 148px;
+    }
+
+    /* Dark overlay */
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+    }
+
+    /* Decorative geometric shapes */
+    .hero-decorative-shapes {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 500px;
+        height: 500px;
+        pointer-events: none;
+    }
+
+    .shape {
+        position: absolute;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    .shape-1 {
+        width: 400px;
+        height: 400px;
+        top: 50px;
+        right: 0;
+        animation: float 8s ease-in-out infinite;
+    }
+
+    .shape-2 {
+        width: 300px;
+        height: 300px;
+        top: 100px;
+        right: 100px;
+        border-radius: 20px;
+        transform: rotate(45deg);
+        animation: float 6s ease-in-out infinite reverse;
+    }
+
+    .shape-3 {
+        width: 250px;
+        height: 250px;
+        top: 200px;
+        right: 50px;
+        border-radius: 15px;
+        animation: float 7s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-20px) rotate(5deg);
+        }
+    }
+
+    /* Content */
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 0;
+        text-align: left;
+        color: #e1dfdf;
+    }
+
+    .hero-content h1 {
+        font-family: "Bebas Neue", sans-serif;
+        letter-spacing: 0.03em;
+        font-weight: 400;
+        font-style: normal;
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 24px;
+    }
+
+    .hero-content h1 .highlight {
+        color: #FFB84D;
+        display: inline;
+    }
+
+    .hero-content p {
+        font-family: "Tinos", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.5rem;
+        line-height: 1.7;
+        opacity: 0.95;
+        margin-bottom: 32px;
+        max-width: 650px;
+    }
+
+    /* Buttons */
+    .hero-actions {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        font-family: "Atkinson Hyperlegible Mono", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        padding: 16px 32px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn.primary {
+        background: #6B8F71;
+        color: #ffffff;
+        border: none;
+    }
+
+    .btn.primary:hover {
+        background: #587A60;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(46, 170, 110, 0.3);
+    }
+
+    .btn.secondary {
+        background: transparent;
+        border: 2px solid #6B8F71;
+        color: #fff;
+    }
+
+    .btn.secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: #fff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .hero-decorative-shapes {
+            right: -10%;
+            width: 400px;
+            height: 400px;
+        }
+        
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .shape-2 {
+            width: 220px;
+            height: 220px;
+        }
+        
+        .shape-3 {
+            width: 180px;
+            height: 180px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            padding: 60px 24px;
+        }
+        
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-decorative-shapes {
+            display: none;
+        }
+        
+        .hero-content {
+            max-width: 100%;
+        }
+        
+        .hero-content h1 {
+            font-size: 2rem;
+        }
+        
+        .hero-content p {
+            font-size: 1rem;
+        }
+        
+        .hero-actions {
+            flex-direction: column;
+        }
+        
+        .btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+
+</style>
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-decorative-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+        <h1>Resolve Now .</h1>
+        <p>Trust our expertise for a stress-free settlement. 
+            <br>We specialize in Credit Card Loan Settlement and Personal Loan Settlement as well as protecting against creditor harassment through our proprietary products. </p>
+        <div class="hero-actions">
+            <a href="forms/main-form.html" class="btn primary">Talk To Us →</a>
+            <a href="#video" class="btn secondary">Video Meet →</a>
+        </div>
+    </div>
+</section>
+<style>
+    
+.about {
+    padding: 120px 24px;
+    background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 72px;
+    align-items: center;
+}
+
+/* Tag */
+.section-tag {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #777;
+}
+
+/* Text */
+.about-text h2 {
+    font-size: clamp(2.2rem, 3.8vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 24px;
+    color: #111;
+}
+
+.about-text p {
+    max-width: 520px;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+/* CTA Button */
+.btn.primary {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 14px 28px;
+    background: #274ecc;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background: #e19934;
+}
+
+/* Image */
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+</style>
+
+<section id="about" class="about">
+    <div class="about-container">
+
+        <div class="about-text">
+            <span class="section-tag">About Us</span>
+            <h2>We Help You Resolve Matters With Confidence</h2>
+
+            <p>
+                Resolve Now is a professional loan settlement and debt resolution company in India,
+                committed to helping individuals overcome financial challenges in a legal, ethical,
+                and transparent manner.
+            </p>
+
+            <p>
+                We specialize in loan settlement services, debt settlement solutions, EMI burden relief,
+                and recovery harassment support—helping clients achieve safe and stress-free debt closure.
+            </p>
+
+            <p>
+                Our approach is built on empathy, compliance, and professionalism. We act as a support
+                system between borrowers and lenders, guiding individuals toward financial stability
+                with dignity.
+            </p>
+
+            <a href="../../about/" class="btn primary">Read More ➜</a>
+        </div>
+
+        <div class="about-image">
+            <img src="./assets/img-1.png" alt="About Resolve Now">
+        </div>
+
+    </div>
+</section>
+<style>
+.how-we-work-section {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2f6 100%);
+    color: #0f172a;
+    padding: 100px 20px;
+}
+
+.section-title {
+    color: #0f172a;;
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 70px;
+    letter-spacing: -0.02em;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step-item {
+    display: flex;
+    gap: 20px;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    transition: all 0.35s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-6px);
+    background: #ffffff;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+
+.checkmark-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #10b981, #34d399);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.15);
+}
+
+.checkmark-icon::before {
+    content: '✓';
+    color: #0f172a;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.step-content h3 {
+    color: #0f172a;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    color: #54585d;
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.cta-container {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.cta-button {
+    padding: 18px 48px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 10px;
+    background: #274ecc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e19934;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .how-we-work-section {
+        padding: 70px 16px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+</style>
+
+<section class="how-we-work-section">
+    <h2 class="section-title">How We Help You Become Debt-Free</h2>
+
+    <div class="steps-container">
+
+        <div class="step-item">
+            <div class="checkmark-icon"></div>
+            <div class="step-content">
+                <h3>Speak With a Financial Expert</h3>
+                <p>
+                    Start with a one-on-one conversation with our financial expert. 
+                    We understand your loans, EMIs, and current situation to check 
+                    whether loan settlement is the right solution for you.
+                </p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="checkmark-icon"></div>
+            <div class="step-content">
+                <h3>Personalised Financial Assessment</h3>
+                <p>
+                    We carefully evaluate your income, outstanding debts, and repayment capacity. 
+                    Based on this assessment, we design a settlement strategy tailored specifically 
+                    to your financial needs.
+                </p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="checkmark-icon"></div>
+            <div class="step-content">
+                <h3>Enroll in the Settlement Program</h3>
+                <p>
+                    Once you’re comfortable with the plan, you enroll in our loan settlement program. 
+                    All fees, timelines, and the negotiation process are clearly explained upfront — 
+                    no surprises.
+                </p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="checkmark-icon"></div>
+            <div class="step-content">
+                <h3>Build Your Settlement Savings</h3>
+                <p>
+                    You begin setting aside funds in a dedicated account. These savings are used 
+                    exclusively for settlements, helping you stay prepared while reducing financial stress.
+                </p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="checkmark-icon"></div>
+            <div class="step-content">
+                <h3>Negotiation With Creditors</h3>
+                <p>
+                    Our experienced legal and financial team negotiates directly with your lenders. 
+                    The goal is to reduce your total outstanding amount and reach a mutually agreed settlement.
+                </p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="checkmark-icon"></div>
+            <div class="step-content">
+                <h3>Achieve a Debt-Free Life</h3>
+                <p>
+                    Once the settlement is completed, you receive official confirmation from the lender. 
+                    Your loan is closed, stress is lifted, and you move forward with a fresh financial start.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cta-container">
+        <button class="cta-button">Request a Free Callback</button>
+    </div>
+</section>
+<style>
+    .services {
+  padding: 120px 24px;
+  background: linear-gradient(180deg, #f9f9f9, #ffffff);
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.services-header {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; 
+    color: #0f172a;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 72px;
+}
+
+.section-tag {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.services-header h2 {
+  font-size: clamp(2.1rem, 3vw, 2.7rem);
+  margin-bottom: 16px;
+}
+
+.services-header p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 40px 32px;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.service-card a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+.service-card a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #000;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.service-card a:hover::after {
+  width: 100%;
+}
+
+.services-cta {
+  text-align: center;
+  margin-top: 72px;
+}
+
+.view-all-btn {
+  display: inline-block;
+  padding: 16px 36px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: #2d6aaf;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #e19934;
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<section id="services" class="services">
+  <div class="services-container">
+
+    <div class="services-header">
+      <span class="section-tag">What We Do</span>
+      <h2>Solutions That Put You Back in Control</h2>
+      <p>
+        From debt settlement to legal protection, we help you navigate financial stress
+        with confidence and clarity.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Service -->
+      <div class="service-card">
+        <div class="service-icon">💼</div>
+        <h3>Loan Settlement Assistance</h3>
+        <p>
+          We negotiate directly with lenders to reduce your outstanding amount
+          and secure fair settlement terms.
+        </p>
+        <a href="services/service1.html">Learn More →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💳</div>
+        <h3>Credit Card Debt Resolution</h3>
+        <p>
+          End constant calls and pressure. We help you resolve credit card dues
+          legally and peacefully.
+        </p>
+        <a href="services/service2.html">Learn More →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h3>Anti-Harassment Protection</h3>
+        <p>
+          Protection against unlawful recovery practices with resolution
+          support within 90 days.
+        </p>
+        <a href="services/service3.html">Learn More →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⚖️</div>
+        <h3>Legal Advisory Services</h3>
+        <p>
+          Expert legal advisors to guide you through disputes,
+          notices, and compliance matters.
+        </p>
+        <a href="services/service4.html">Learn More →</a>
+      </div>
+
+    </div>
+    <div class="services-cta">
+      <a href="../../services/" class="view-all-btn">
+        View All Services
+      </a>
+    </div>
+  </div>
+</section>
+<style>
+.reviews {
+    padding: 100px 24px;
+    background: #f4f2f2;
+}
+
+.reviews-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.reviews-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 64px;
+}
+
+.reviews-header h2 {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    margin-bottom: 12px;
+}
+
+.reviews-header p {
+    color: #555;
+}
+
+/* Grid */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+/* Card */
+.review-card {
+    background: #f9f9f9;
+    padding: 40px 32px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+.stars {
+    color: #f5a623;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 24px;
+}
+
+/* Author */
+.review-author strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.review-author span {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+</style>
+
+<section id="reviews" class="reviews">
+        <div class="reviews-container">
+            <div class="reviews-header">
+                <span class="section-tag">Client Reviews</span>
+                <h2>What Our Clients Say</h2>
+                <p>Real experiences from people who trusted Resolve Now</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">
+                        Resolve Now handled my case with professionalism and clarity.
+                        The entire process was smooth and stress-free.
+                    </p>
+                    <div class="review-author">
+                        <strong>Amit Sharma</strong>
+                        <span>Business Owner</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">
+                        Excellent guidance and transparent communication throughout.
+                        I always knew where my case stood.
+                    </p>
+                    <div class="review-author">
+                        <strong>Neha Verma</strong>
+                        <span>Startup Founder</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★☆</div>
+                    <p class="review-text">
+                        Professional team with a strong focus on results.
+                        Highly recommended for anyone seeking reliable advice.
+                    </p>
+                    <div class="review-author">
+                        <strong>Rahul Mehta</strong>
+                        <span>Consultant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<style>
+    
+
+.blogs {
+    padding: 100px 24px;
+    background: #f9f9f9;
+}
+
+.blogs-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.blogs-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 64px;
+}
+
+.blogs-header h2 {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    margin-bottom: 12px;
+}
+
+.blogs-header p {
+    color: #555;
+}
+
+/* Grid */
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+/* Card */
+.blog-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* Image */
+.blog-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Content */
+.blog-content {
+    padding: 24px;
+}
+
+.blog-date {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.blog-content h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.blog-content p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.read-more {
+    text-decoration: none;
+    font-weight: 500;
+    color: #111;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+</style>
+
+<section id="blogs" class="blogs">
+        <div class="blogs-container">
+            <div class="blogs-header">
+                <span class="section-tag">Insights</span>
+                <h2>Latest Articles & Updates</h2>
+                <p>Expert opinions, legal updates, and practical guidance</p>
+            </div>
+
+            <div class="blogs-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./assets/hero-image.jpg" alt="Blog 1">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Jan 12, 2026</span>
+                        <h3>Understanding Legal Rights in Business Contracts</h3>
+                        <p>
+                            A simple breakdown of key clauses every business owner should
+                            understand before signing a contract.
+                        </p>
+                        <a href="blogs/blog1.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./assets/hero-image.jpg" alt="Blog 2">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Dec 28, 2025</span>
+                        <h3>How Mediation Can Save Time and Cost</h3>
+                        <p>
+                            Learn how mediation helps resolve disputes faster without
+                            lengthy legal battles.
+                        </p>
+                        <a href="blogs/blog2.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./assets/hero-image.jpg" alt="Blog 3">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Dec 10, 2025</span>
+                        <h3>Common Legal Mistakes Startups Make</h3>
+                        <p>
+                            Avoid these common pitfalls that can slow down or derail
+                            early-stage startups.
+                        </p>
+                        <a href="blogs/blog3.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+<style>
+    .faq {
+    background: #ffffff;
+    padding: 80px 20px;
+}
+
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 18px 0;
+}
+
+.faq-item summary {
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item p {
+    margin-top: 12px;
+    color: #555;
+    line-height: 1.6;
+}
+</style>
+
+<section id="faq" class="faq">
+        <div class="faq-container">
+            <div class="faq-header">
+                <span class="section-tag">FAQs</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Clear answers to common concerns about loan resolution and support</p>
+            </div>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Which types of loans does Resolve Now assist with?</summary>
+                    <p>
+                        We provide assistance for various kinds of loans, including personal loans,
+                        credit card dues, business loans, and other unsecured borrowings, depending
+                        on individual circumstances.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How long does the loan resolution process usually take?</summary>
+                    <p>
+                        The timeline varies based on the lender, loan amount, and case complexity,
+                        but most resolutions are achieved within a few weeks to a few months.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Will interest or penalty charges continue during the settlement process?</summary>
+                    <p>
+                        In many cases, we work to minimize additional interest and late fees by
+                        engaging with lenders and negotiating fair terms on your behalf.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How should I respond to calls from banks or recovery agents?</summary>
+                    <p>
+                        Once you are connected with us, we guide you on handling communication
+                        professionally and, where possible, act as an intermediary to reduce
+                        unnecessary pressure.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What if a lender initiates legal proceedings against me?</summary>
+                    <p>
+                        If legal action is initiated, our team helps you understand the situation
+                        and connects you with appropriate legal guidance to ensure your rights
+                        are protected.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+<style>
+    
+.contact {
+    padding: 100px 24px;
+    background: #fff;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+/* Info */
+.contact-info h2 {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    margin-bottom: 16px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.contact-details p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* Form */
+.contact-form {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+}
+
+</style>
+
+<section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <span class="section-tag">Contact Us</span>
+                <h2>Let’s Talk</h2>
+                <p>
+                    Have a question or need professional guidance?
+                    Fill out the form and our team will get back to you shortly.
+                </p>
+
+                <div class="contact-details">
+                    <p><strong>Email:</strong> admin@resolvenow.co.in</p>
+                    <p><strong>Phone:</strong> +91 9451210865</p>
+                    <p><strong>Location:</strong> Kanpur</p>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <input type="text" name="user_name" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" name="user_email" placeholder="Your Email" required>
+                </div>
+
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+ <style>
+    .site-footer {
+    background: linear-gradient(180deg, #0b1c2d, #071421);
+    color: #d1d9e6;
+    padding: 80px 24px 0;
+}
+
+/* Container */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 48px;
+}
+
+/* Brand */
+.footer-brand h3 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.footer-brand p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #b8c3d9;
+}
+
+/* Columns */
+.footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #b8c3d9;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.footer-column p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #b8c3d9;
+}
+
+/* Bottom bar */
+.footer-bottom {
+    margin-top: 64px;
+    padding: 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+    font-size: 0.85rem;
+    color: #9fb0cf;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+}
+
+
+.footer-socials {
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.08);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-3px);
+}
+
+.footer-socials svg {
+    width: 18px;
+    height: 18px;
+    fill: #d1d9e6;
+}
+
+ </style>
+ 
+ <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Resolve Now</h3>
+                <p>
+                    Trusted guidance and professional solutions to help you
+                    resolve matters with confidence.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/resolve__now/"  target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm4.75-.75a1.05 1.05 0 1 1-1.05-1.05 1.05 1.05 0 0 1 1.05 1.05z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://www.facebook.com/profile.php?id=61585303696370"  target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5A3.5 3.5 0 0 1 14.2 6h2.8v3h-2c-.8 0-1 .4-1 1v2h3l-.5 3h-2.5v7A10 10 0 0 0 22 12z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/resolve-now-5b22a33a5/"  target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M6.94 6.5A1.94 1.94 0 1 1 5 4.56 1.94 1.94 0 0 1 6.94 6.5zM5 8.5h3.9V20H5zM14.5 8.5c-2 0-2.9 1.1-3.4 1.9V8.5H7.4V20h3.9v-6.3c0-1.7.3-3.4 2.4-3.4s2.1 1.9 2.1 3.5V20H19v-7.1c0-3.5-.7-6.4-4.5-6.4z"/>
+                        </svg>
+                    </a>
+
+                    <!-- <a href="https://www.youtube.com/your-channel-url" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M23.5 6.2c-.3-1.1-1.3-2-2.4-2.2C18.6 3.5 12 3.5 12 3.5s-6.6 0-9.1.5c-1.1.2-2.1 1.1-2.4 2.2C0 8.5 0 12 0 12s0 3.5.5 5.8c.3 1.1 1.3 2 2.4 2.2 2.5.5 9.1.5 9.1.5s6.6 0 9.1-.5c1.1-.2 2.1-1.1 2.4-2.2.5-2.3.5-5.8.5-5.8s0-3.5-.5-5.8zM9.8 15.5V8.5l6.7 3.5-6.7 3.5z"/>
+                        </svg>
+                    </a> -->
+                </div>
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../about/">About Us</a></li>
+                    <li><a href="../services/">Services</a></li>
+                    <li><a href="#reviews">Client Reviews</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="../contact/">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-column">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services/service1.html">Loan Settlement</a></li>
+                    <li><a href="services/service2.html">Credit Card Settlement</a></li>
+                    <!-- <li><a href="#">NPA Account Resolution</a></li>
+                    <li><a href="#">Bank Negotiation</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Offices -->
+            <div class="footer-column">
+                <h4>Our Offices</h4>
+                <p>
+                    Kanpur<br>
+                    <!-- Noida<br> -->
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <p>© 2026 Resolve Now. All rights reserved.</p>
+        </div>
+    </footer>
+<style>
+    .whatsapp-float {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 56px;
+        height: 56px;
+        z-index: 9999;
+
+        background: #f1fb5d;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whatsapp-float img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .whatsapp-float:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+    }
+
+    
+/* Scroll To Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 96px;
+    right: 28px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    color: #00c2ff;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#scrollTopBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+
+</style>
+
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
+const section1Height = window.innerHeight * 0.9;
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > section1Height) {
+        scrollBtn.classList.add("show");
+    } else {
+        scrollBtn.classList.remove("show");
+    }
+});
+
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+
+// Form script
+const form = document.getElementById("supportForm");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const payload = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        whatsapp: formData.get("whatsapp"),
+        address: formData.get("address"),
+        loanType: formData.getAll("loanType").join(", "),
+        harassmentType: formData.get("harassmentType"),
+        otherProblem: formData.get("otherProblem")
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbxZaC1mnHlHwnuCWMfpG4WLnuAifP5P0IHd3bFC4aooNFFAvT5LxChBLO97jkX-uvE/exec", {
+        method: "POST",
+        body: JSON.stringify(payload)
+    })
+    .then(res => res.json())
+    .then(() => {
+        alert("Form submitted successfully. We will contact you shortly.");
+        form.reset();
+    })
+    .catch(() => {
+        alert("Submission failed. Please try again.");
+    });
+});
+</script>
+
+</body>
+</html>
