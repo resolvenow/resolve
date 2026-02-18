@@ -1,0 +1,148 @@
+<style>
+    
+
+.blogs {
+    padding: 100px 24px;
+    background: #f9f9f9;
+}
+
+.blogs-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.blogs-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 64px;
+}
+
+.blogs-header h2 {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    margin-bottom: 12px;
+}
+
+.blogs-header p {
+    color: #555;
+}
+
+/* Grid */
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+/* Card */
+.blog-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* Image */
+.blog-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Content */
+.blog-content {
+    padding: 24px;
+}
+
+.blog-date {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.blog-content h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.blog-content p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.read-more {
+    text-decoration: none;
+    font-weight: 500;
+    color: #111;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+</style>
+
+<section id="blogs" class="blogs">
+        <div class="blogs-container">
+            <div class="blogs-header">
+                <span class="section-tag">Insights</span>
+                <h2>Latest Articles & Updates</h2>
+                <p>Expert opinions, legal updates, and practical guidance</p>
+            </div>
+
+            <div class="blogs-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./assets/hero-image.jpg" alt="Blog 1">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Jan 12, 2026</span>
+                        <h3>Understanding Legal Rights in Business Contracts</h3>
+                        <p>
+                            A simple breakdown of key clauses every business owner should
+                            understand before signing a contract.
+                        </p>
+                        <a href="blogs/blog1.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./assets/hero-image.jpg" alt="Blog 2">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Dec 28, 2025</span>
+                        <h3>How Mediation Can Save Time and Cost</h3>
+                        <p>
+                            Learn how mediation helps resolve disputes faster without
+                            lengthy legal battles.
+                        </p>
+                        <a href="blogs/blog2.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./assets/hero-image.jpg" alt="Blog 3">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Dec 10, 2025</span>
+                        <h3>Common Legal Mistakes Startups Make</h3>
+                        <p>
+                            Avoid these common pitfalls that can slow down or derail
+                            early-stage startups.
+                        </p>
+                        <a href="blogs/blog3.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
