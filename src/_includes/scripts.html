@@ -1,0 +1,123 @@
+<style>
+    .whatsapp-float {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 56px;
+        height: 56px;
+        z-index: 9999;
+
+        background: #f1fb5d;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whatsapp-float img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .whatsapp-float:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+    }
+
+    
+/* Scroll To Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 96px;
+    right: 28px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    color: #00c2ff;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#scrollTopBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+
+</style>
+
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
+const section1Height = window.innerHeight * 0.9;
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > section1Height) {
+        scrollBtn.classList.add("show");
+    } else {
+        scrollBtn.classList.remove("show");
+    }
+});
+
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+
+// Form script
+const form = document.getElementById("supportForm");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const payload = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        whatsapp: formData.get("whatsapp"),
+        address: formData.get("address"),
+        loanType: formData.getAll("loanType").join(", "),
+        harassmentType: formData.get("harassmentType"),
+        otherProblem: formData.get("otherProblem")
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbxZaC1mnHlHwnuCWMfpG4WLnuAifP5P0IHd3bFC4aooNFFAvT5LxChBLO97jkX-uvE/exec", {
+        method: "POST",
+        body: JSON.stringify(payload)
+    })
+    .then(res => res.json())
+    .then(() => {
+        alert("Form submitted successfully. We will contact you shortly.");
+        form.reset();
+    })
+    .catch(() => {
+        alert("Submission failed. Please try again.");
+    });
+});
+</script>

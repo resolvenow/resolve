@@ -1,0 +1,120 @@
+<style>
+    
+.about {
+    padding: 120px 24px;
+    background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 72px;
+    align-items: center;
+}
+
+/* Tag */
+.section-tag {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #777;
+}
+
+/* Text */
+.about-text h2 {
+    font-size: clamp(2.2rem, 3.8vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 24px;
+    color: #111;
+}
+
+.about-text p {
+    max-width: 520px;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+/* CTA Button */
+.btn.primary {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 14px 28px;
+    background: #274ecc;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background: #e19934;
+}
+
+/* Image */
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+</style>
+
+<section id="about" class="about">
+    <div class="about-container">
+
+        <div class="about-text">
+            <span class="section-tag">About Us</span>
+            <h2>We Help You Resolve Matters With Confidence</h2>
+
+            <p>
+                Resolve Now is a professional loan settlement and debt resolution company in India,
+                committed to helping individuals overcome financial challenges in a legal, ethical,
+                and transparent manner.
+            </p>
+
+            <p>
+                We specialize in loan settlement services, debt settlement solutions, EMI burden relief,
+                and recovery harassment support—helping clients achieve safe and stress-free debt closure.
+            </p>
+
+            <p>
+                Our approach is built on empathy, compliance, and professionalism. We act as a support
+                system between borrowers and lenders, guiding individuals toward financial stability
+                with dignity.
+            </p>
+
+            <a href="../../about/" class="btn primary">Read More ➜</a>
+        </div>
+
+        <div class="about-image">
+            <img src="./assets/img-1.png" alt="About Resolve Now">
+        </div>
+
+    </div>
+</section>

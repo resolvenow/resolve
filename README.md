@@ -1,0 +1,1 @@
+This project is for the landing page of Resolve Now.
