@@ -1,0 +1,219 @@
+---
+layout: layout.html
+title: Personalized Consultation
+---
+
+<style>
+/* Page wrapper */
+.personalized-consultation-page {
+  margin-top: 64px;
+  padding: 5rem 1.5rem;
+  background: #fff;
+  color: #222;
+}
+
+/* Inner width control */
+.personalized-consultation-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Header */
+.personalized-consultation-header {
+  margin-bottom: 3.5rem;
+}
+
+.personalized-consultation-page h1 {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.personalized-consultation-lead {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Body content */
+.personalized-consultation-body h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.personalized-consultation-body p {
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  color: #333;
+}
+
+/* Lists */
+.personalized-consultation-body ul {
+  padding-left: 1.25rem;
+  margin: 1rem 0 1.75rem;
+}
+
+.personalized-consultation-body li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Scroll rhythm */
+.personalized-consultation-body > * + * {
+  scroll-margin-top: 6rem;
+}
+
+/* Actions */
+.personalized-consultation-actions {
+  margin-top: 3.5rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.personalized-consultation-btn {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Primary button */
+.personalized-consultation-btn.primary {
+  background: #222;
+  color: #fff;
+}
+
+/* Secondary button */
+.personalized-consultation-btn.secondary {
+  border: 1px solid #222;
+  color: #222;
+}
+
+/* Hover states */
+.personalized-consultation-btn.primary:hover {
+  background: #000;
+}
+
+.personalized-consultation-btn.secondary:hover {
+  background: #f5f5f5;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .personalized-consultation-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .personalized-consultation-btn {
+    text-align: center;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .personalized-consultation-page {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .personalized-consultation-page h1 {
+    font-size: 2rem;
+  }
+}
+</style>
+
+<section class="personalized-consultation-page">
+  <div class="personalized-consultation-inner">
+
+    <header class="personalized-consultation-header">
+      <h1>Personalized Consultation</h1>
+      <p class="personalized-consultation-lead">
+        One-on-one expert consultations designed to understand your situation,
+        evaluate your options, and define a clear, informed strategy.
+      </p>
+    </header>
+
+    <div class="personalized-consultation-body">
+
+      <h2>What Is a Personalized Consultation?</h2>
+      <p>
+        A personalized consultation is a dedicated, confidential discussion focused
+        entirely on your specific circumstances.
+      </p>
+      <p>
+        Rather than generic advice, we take the time to understand the details of your
+        case and provide guidance tailored to your needs, goals, and constraints.
+      </p>
+
+      <h2>What to Expect</h2>
+      <p>
+        During your consultation, we focus on clarity and practical next steps—without
+        pressure or obligation.
+      </p>
+      <ul>
+        <li>Listening carefully to your situation and concerns</li>
+        <li>Reviewing relevant documents or notices, if applicable</li>
+        <li>Explaining your rights, options, and potential outcomes</li>
+        <li>Outlining possible strategies suited to your circumstances</li>
+        <li>Answering questions openly and honestly</li>
+      </ul>
+
+      <h2>Who This Is For</h2>
+      <p>
+        Personalized consultations are ideal for individuals and businesses seeking
+        clarity before making important financial or legal decisions.
+      </p>
+      <p>
+        If you’re unsure how to proceed or want a second opinion, a focused consultation
+        can help you move forward with confidence.
+      </p>
+
+      <h2>Our Approach</h2>
+      <p>
+        Our approach is thoughtful, respectful, and practical. We prioritize
+        understanding your perspective before offering guidance.
+      </p>
+      <p>
+        There is no obligation to proceed beyond the consultation—our goal is to equip
+        you with insight and direction.
+      </p>
+
+      <h2>Why a One-on-One Conversation Matters</h2>
+      <p>
+        Complex situations are rarely resolved through general information alone.
+        Direct, personalized guidance can help you avoid missteps and unnecessary stress.
+      </p>
+      <p>
+        A clear conversation often brings relief, perspective, and a sense of control.
+      </p>
+
+      <h2>Taking the Next Step</h2>
+      <p>
+        Reaching out for a consultation is a proactive step toward clarity and
+        resolution.
+      </p>
+      <p>
+        Get in touch to schedule a personalized consultation and begin defining the
+        right strategy for your situation.
+      </p>
+
+      <div class="personalized-consultation-actions">
+        <a href="../../forms/" class="personalized-consultation-btn primary">
+          Book a Consultation
+        </a>
+        <a href="https://calendly.com/quickresolvenow" target="_blank" class="personalized-consultation-btn secondary">
+          Speak With an Advisor
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
