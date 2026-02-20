@@ -3,42 +3,208 @@ layout: layout.html
 title: Blogs
 ---
 
+<style>
+.blogs-page {
+    padding: 100px 24px;
+    background: #f9f9f9;
+}
 
-<section class="blogs">
-  <h1>Our Services</h1>
+.blogs-container {
+    max-width: 1200px;
+    margin: auto;
+}
 
-  <div class="blog-grid">
-    <a href="/services/debt-relief/" class="service-card">
-      <h3>Debt Relief</h3>
-      <p>Negotiate and settle debts legally.</p>
-    </a>
-        <a href="/services/debt-relief/" class="service-card">
-      <h3>Debt Relief</h3>
-      <p>Negotiate and settle debts legally.</p>
-    </a>
-        <a href="/services/debt-relief/" class="service-card">
-      <h3>Debt Relief</h3>
-      <p>Negotiate and settle debts legally.</p>
-    </a>
-        <a href="/services/debt-relief/" class="service-card">
-      <h3>Debt Relief</h3>
-      <p>Negotiate and settle debts legally.</p>
-    </a>
-        <a href="/services/debt-relief/" class="service-card">
-      <h3>Debt Relief</h3>
-      <p>Negotiate and settle debts legally.</p>
-    </a>
-        <a href="/services/debt-relief/" class="service-card">
-      <h3>Debt Relief</h3>
-      <p>Negotiate and settle debts legally.</p>
-    </a>
-        <a href="/services/debt-relief/" class="service-card">
-      <h3>Debt Relief</h3>
-      <p>Negotiate and settle debts legally.</p>
-    </a>
-        <a href="/services/debt-relief/" class="service-card">
-      <h3>Debt Relief</h3>
-      <p>Negotiate and settle debts legally.</p>
-    </a>
-  </div>
+/* Header */
+.blogs-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 64px;
+}
+
+.blogs-header .section-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #888;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.blogs-header h1 {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    margin-bottom: 12px;
+}
+
+.blogs-header p {
+    color: #555;
+}
+
+/* Grid — auto grows */
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+/* Card */
+.blog-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* Image */
+.blog-image img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+/* Content */
+.blog-content {
+    padding: 24px;
+}
+
+.blog-date {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.blog-content h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.blog-content p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.read-more {
+    text-decoration: none;
+    font-weight: 500;
+    color: #111;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.blog-cta {
+  margin-top: 5rem;
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #4f80c1, #3a6fb3);
+  color: #fff;
+  text-align: center;
+}
+
+.blog-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-cta p {
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+/* CTA button — locked styles */
+.blog-cta .cta-btn {
+  display: inline-block;
+  background: #f5a623;
+  color: #000;
+  padding: 0.8rem 2rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.blog-cta .cta-btn:hover {
+  opacity: 0.9;
+}
+</style>
+
+<section class="blogs-page">
+    <div class="blogs-container">
+        <!-- Header -->
+        <div class="blogs-header">
+            <span class="section-tag">Insights</span>
+            <h1>Our Blogs & Legal Insights</h1>
+            <p>
+                Expert opinions, legal updates, and practical guidance to help
+                you make informed decisions.
+            </p>
+        </div>
+
+        <!-- Blogs Grid -->
+        <div class="blogs-grid">
+            <!-- Blog 1 -->
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="../../assets/images/blog1.png" alt="Understanding Legal Rights in Business Contracts">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date">Jan 12, 2026</span>
+                    <h3>Understanding Legal Rights in Business Contracts</h3>
+                    <p>
+                        A simple breakdown of key clauses every business owner should
+                        understand before signing a contract.
+                    </p>
+                    <a href="Legal-rights/" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog 2 -->
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="../../assets/images/blog2.png" alt="How Mediation Can Save Time and Cost">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date">Dec 28, 2025</span>
+                    <h3>How Mediation Can Save Time and Cost</h3>
+                    <p>
+                        Learn how mediation helps resolve disputes faster without
+                        lengthy legal battles.
+                    </p>
+                    <a href="Mediation/" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog 3 -->
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="../../assets/images/blog3.png" alt="Common Legal Mistakes Startups Make">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date">Dec 10, 2025</span>
+                    <h3>Common Legal Mistakes Startups Make</h3>
+                    <p>
+                        Avoid these common pitfalls that can slow down or derail
+                        early-stage startups.
+                    </p>
+                    <a href="Legal-Mistakes/" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+
+            <!-- Add new blogs freely below -->
+        </div>
+
+        <div class="blog-cta">
+          <h2>Do you like our work?</h2>
+          <p>Talk to our experts and get clarity on similar topics.</p>
+          <a href="/contact" class="cta-btn">Consult Us</a>
+        </div>
+    </div>
 </section>
