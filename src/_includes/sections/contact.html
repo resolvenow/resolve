@@ -92,7 +92,10 @@
                 </div>
             </div>
 
-            <form class="contact-form" id="contact-form">
+            <form
+                class="contact-form"
+                id="contact-form"
+            >
                 <div class="form-group">
                     <input type="text" name="user_name" placeholder="Your Name" required>
                 </div>
@@ -109,3 +112,26 @@
             </form>
         </div>
     </section>
+
+
+<script>
+const contactForm = document.getElementById("contact-form");
+
+contactForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // stop normal form submit
+
+    const formData = new FormData(contactForm);
+
+    fetch("https://script.google.com/macros/s/AKfycbyWAKVN_5ZYFuUaciJxFn358jPlknh04Bxv-3PFrZrZeagQXVK72vr0N4Bp7zpm0vCJVg/exec", {
+        method: "POST",
+        body: formData
+    })
+    .then(() => {
+        alert("Thank you! We will contact you shortly.");
+        contactForm.reset();
+    })
+    .catch(() => {
+        alert("Something went wrong. Please try again later.");
+    });
+});
+</script>

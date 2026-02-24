@@ -1,174 +1,247 @@
+<!-- PASTE THIS STYLE BLOCK INTO YOUR HEAD/CSS -->
 <style>
-    /* NAVBAR */
-.nav-wrapper {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 72px;
-  padding: 10px 48px;
-  z-index: 100;
-  background: #497ec3;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 
-    0 8px 30px rgba(0, 0, 0, 0.90),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-.nav-inner {
-  max-width: 1300px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-logo {
-  position: relative;
-}
-
-.nav-logo img {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-45%);
-  height: 100px;              /* you control logo size here */
-  width: auto;
-  pointer-events: auto;
-}
-/* CENTER LINKS */
-.nav-glass {
-    display: flex;
-    gap: 48px;
-    padding: 0;               /* remove pill padding */
-    background: none;         /* no glass */
-    border: none;
-    box-shadow: none;
-    margin-left: auto;   /* 👈 key line */
-    margin-right: 48px; 
-}
-
-.nav-glass a {
-  color: var(--text-light);
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 500;
-  position: relative;
-  transition: opacity 0.3s ease;
-}
-
-.nav-glass a::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: var(--accent);
-  transform: translateX(-50%);
-  transition: width 0.3s ease;
-}
-
-.nav-glass a:hover::after {
-  width: 100%;
-}
-
-/* CTA */
-.nav-cta {
-  padding: 12px 26px;
-  border-radius: 999px;
-  background: #e19934;
-  color: #2B2B2B;
-  font-weight: 600;
-  font-size: 20px;
-  text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.nav-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px #587A60;
-}
-
-
-/* HAMBURGER */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 28px;
-  height: 3px;
-  background: #fff;
-  border-radius: 2px;
-  transition: 0.3s ease;
-}
-
-/* MOBILE STYLES */
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: flex;
+  /* ── Variables ── */
+  :root {
+    --nav-bg: #497ec3;
+    --nav-height: 72px;
+    --accent: #e19934;
+    --text-light: #fff;
   }
 
-  .nav-glass {
+  /* ── Wrapper ── */
+  .nav-wrapper {
     position: fixed;
-    top: 72px;
-    right: -100%;
+    top: 0;
     width: 100%;
-    height: calc(100vh - 72px);
-    background: #497ec3;
-    flex-direction: column;
+    height: var(--nav-height);
+    z-index: 100;
+    background: var(--nav-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+      0 8px 30px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-inner {
+    max-width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 32px;
-    transition: right 0.3s ease;
+    justify-content: space-between;
   }
 
-  .nav-glass.active {
-    right: 0;
+  /* ── Logo ── */
+  .nav-logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: var(--nav-height);
+  }
+  .nav-logo img {
+    height: 100px;
+    width: auto;
   }
 
+  /* ── Desktop links ── */
+  .nav-glass {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-glass a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    position: relative;
+    white-space: nowrap;
+    transition: opacity 0.25s;
+  }
+  .nav-glass a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+  .nav-glass a:hover::after { width: 100%; }
+
+  /* ── CTA button ── */
   .nav-cta {
-    display: none; /* optional: hide CTA on mobile */
+    flex-shrink: 0;
+    padding: 10px 24px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #2b2b2b;
+    font-weight: 600;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.25s, box-shadow 0.25s;
+    white-space: nowrap;
   }
-}
+  .nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(225, 153, 52, 0.45);
+  }
+
+  /* ── Hamburger ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--text-light);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) { opacity: 0; }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 768px) {
+    .nav-inner { padding: 0 20px; }
+
+    .hamburger { display: flex; }
+
+    .nav-cta { display: none; }   /* hide desktop CTA; shown inside mobile menu */
+
+    .nav-glass {
+      /* full-screen dropdown */
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      width: 100%;
+      height: calc(100dvh - var(--nav-height));
+      background: var(--nav-bg);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+
+      /* hidden by default — slide up then fade */
+      transform: translateY(-16px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .nav-glass.active {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .nav-glass a {
+      font-size: 22px;
+    }
+
+    /* CTA inside mobile menu */
+    .nav-glass .mobile-cta {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 14px 36px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #2b2b2b;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .nav-glass .mobile-cta { display: none; }
+  }
 </style>
 
+<!-- PASTE THIS HTML WHERE YOUR NAV IS -->
 <nav class="nav-wrapper">
-    <div class="nav-inner">
+  <div class="nav-inner">
 
-        <div class="nav-logo">
-            <img src="/../assets/images/nav-logo2.png" alt="Resolve Now Logo">
-        </div>
-
-        <div class="nav-glass">
-            <a href="/../">Home</a>
-            <a href="/../about/">About</a>
-            <a href="/../services/">Services</a>
-            <a href="/#blogs">Blogs</a>
-            <a href="/../contact/">Contact</a>
-        </div>
-
-        <a href="/../forms/" class="nav-cta">Consult Us</a>
-
-          <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+    <div class="nav-logo">
+      <a href="/../">
+        <img src="/../assets/images/nav-logo2.png" alt="Resolve Now Logo">
+      </a>
     </div>
-</nav>
 
+    <div class="nav-glass" id="navMenu">
+      <a href="/../">Home</a>
+      <a href="/../about/">About</a>
+      <a href="/../services/">Services</a>
+      <a href="/../blogs/">Blogs</a>
+      <a href="/../contact/">Contact</a>
+      <!-- CTA only visible in mobile menu -->
+      <a href="/../forms/" class="mobile-cta">Consult Us</a>
+    </div>
+
+    <a href="/../forms/" class="nav-cta">Consult Us</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"
+            aria-expanded="false" aria-controls="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</nav>
 
 <script>
   const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("navMenu");
+  const navMenu   = document.getElementById("navMenu");
 
   hamburger.addEventListener("click", () => {
-    alert("clicked");
-    navMenu.classList.toggle("active");
+    const isOpen = navMenu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+    hamburger.setAttribute("aria-expanded", isOpen);
+    // prevent body scroll while menu is open
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  });
+
+  // Close on link click
+  navMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("active");
+      hamburger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    });
+  });
+
+  // Close on Escape key
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && navMenu.classList.contains("active")) {
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("active");
+      hamburger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }
   });
 </script>
