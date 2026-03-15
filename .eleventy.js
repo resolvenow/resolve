@@ -1,11 +1,15 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 module.exports = function (eleventyConfig) {
-  // Copy assets through to _site
+
+  // Copy static assets
   eleventyConfig.addPassthroughCopy("src/assets");
 
-  // Only process plain HTML
-  eleventyConfig.setTemplateFormats(["html"]);
+  // Add RSS plugin (provides date formatting filter)
+  eleventyConfig.addPlugin(pluginRss);
 
   return {
+    templateFormats: ["html", "njk"],
     dir: {
       input: "src",
       includes: "_includes",
