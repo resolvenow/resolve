@@ -1,6 +1,4 @@
-<!-- PASTE THIS STYLE BLOCK INTO YOUR HEAD/CSS -->
 <style>
-  /* ── Variables ── */
   :root {
     --nav-bg: #497ec3;
     --nav-height: 72px;
@@ -8,7 +6,6 @@
     --text-light: #fff;
   }
 
-  /* ── Wrapper ── */
   .nav-wrapper {
     position: fixed;
     top: 0;
@@ -32,7 +29,6 @@
     justify-content: space-between;
   }
 
-  /* ── Logo ── */
   .nav-logo {
     flex-shrink: 0;
     display: flex;
@@ -44,7 +40,6 @@
     width: auto;
   }
 
-  /* ── Desktop links ── */
   .nav-glass {
     display: flex;
     align-items: center;
@@ -130,10 +125,9 @@
 
     .hamburger { display: flex; }
 
-    .nav-cta { display: none; }   /* hide desktop CTA; shown inside mobile menu */
+    .nav-cta { display: none; }   
 
     .nav-glass {
-      /* full-screen dropdown */
       position: fixed;
       top: var(--nav-height);
       left: 0;
@@ -145,7 +139,6 @@
       justify-content: center;
       gap: 28px;
 
-      /* hidden by default — slide up then fade */
       transform: translateY(-16px);
       opacity: 0;
       pointer-events: none;
@@ -162,7 +155,6 @@
       font-size: 22px;
     }
 
-    /* CTA inside mobile menu */
     .nav-glass .mobile-cta {
       display: inline-block;
       margin-top: 8px;
@@ -181,7 +173,6 @@
   }
 </style>
 
-<!-- PASTE THIS HTML WHERE YOUR NAV IS -->
 <nav class="nav-wrapper">
   <div class="nav-inner">
 
@@ -197,7 +188,6 @@
       <a href="/../services/">Services</a>
       <a href="/../blogs/">Blogs</a>
       <a href="/../contact/">Contact</a>
-      <!-- CTA only visible in mobile menu -->
       <a href="/../forms/" class="mobile-cta">Consult Us</a>
     </div>
 
@@ -221,11 +211,9 @@
     const isOpen = navMenu.classList.toggle("active");
     hamburger.classList.toggle("active");
     hamburger.setAttribute("aria-expanded", isOpen);
-    // prevent body scroll while menu is open
     document.body.style.overflow = isOpen ? "hidden" : "";
   });
 
-  // Close on link click
   navMenu.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       navMenu.classList.remove("active");
@@ -235,7 +223,6 @@
     });
   });
 
-  // Close on Escape key
   document.addEventListener("keydown", e => {
     if (e.key === "Escape" && navMenu.classList.contains("active")) {
       navMenu.classList.remove("active");
