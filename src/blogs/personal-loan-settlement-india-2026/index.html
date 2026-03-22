@@ -2,8 +2,8 @@
 layout: layout.html
 ---
 
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
     :root {
       --ink: #1a1a2e;
       --ink-light: #444460;
@@ -22,6 +22,18 @@ layout: layout.html
       --green: #1e6b3a;
       --green-pale: #eaf4ee;
       --red-pale: #fdf0ee;
+    }
+
+    /* * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; } */
+
+    .blog-body {
+      /* font-family: 'DM Sans', sans-serif; */
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.8;
     }
 
     /* ── HEADER ── */
@@ -587,6 +599,7 @@ layout: layout.html
     }
     .MB1-sidebar-card ul li:last-child { border-bottom: none; }
     .MB1-sidebar-card ul li::before { content: '→'; color: var(--accent-1); flex-shrink: 0; }
+    .MB1-sidebar-card ul a{ text-decoration: none; }
 
     .MB1-callout-card {
       background: var(--ink);
@@ -644,10 +657,211 @@ layout: layout.html
       .MB1-hero { padding: 44px 20px 40px; }
       .MB1-article { padding: 36px 0; }
     }
-  </style>
-</head>
-<body>
 
+    /* ══════════════════════════════════
+       CASE STUDY COMPONENTS — MB1-cs-*
+    ══════════════════════════════════ */
+
+    .MB1-cs-section { border-top: 2px dashed var(--border); padding-top: 40px; }
+
+    .MB1-cs-h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      color: var(--ink);
+      margin: 32px 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .MB1-cs-h3::before {
+      content: '';
+      display: inline-block;
+      width: 14px; height: 3px;
+      background: var(--teal);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .MB1-cs-disclaimer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--paper-warm);
+      border: 1px dashed var(--border-strong);
+      border-radius: 4px;
+      padding: 10px 16px;
+      font-size: 13px;
+      color: var(--ink-muted);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+    .MB1-cs-disclaimer-icon { font-size: 15px; flex-shrink: 0; }
+
+    .MB1-cs-questions {
+      background: var(--teal-light);
+      border: 1px solid #b0d8d8;
+      border-radius: 6px;
+      padding: 18px 22px;
+      margin: 18px 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .MB1-cs-q-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14.5px;
+      color: var(--ink-light);
+    }
+    .MB1-cs-q-icon {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .MB1-cs-solution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 16px 0 24px;
+    }
+    @media(max-width: 600px) { .MB1-cs-solution-grid { grid-template-columns: 1fr; } }
+
+    .MB1-cs-solution-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px 22px;
+    }
+    .MB1-cs-sol-num {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .MB1-cs-solution-card h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .MB1-cs-solution-card p {
+      font-size: 14px;
+      color: var(--ink-light);
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .MB1-cs-warning-box {
+      background: #fff8f0;
+      border: 1px solid #f5c6a0;
+      border-left: 4px solid #e07b20;
+      border-radius: 4px;
+      padding: 20px 24px;
+      margin: 18px 0;
+    }
+    .MB1-cs-warn-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #c0580a;
+      margin-bottom: 12px;
+    }
+    .MB1-cs-warning-box ul {
+      padding-left: 18px;
+      color: var(--ink-light);
+      font-size: 14.5px;
+      margin-bottom: 12px;
+    }
+    .MB1-cs-warning-box ul li { margin-bottom: 6px; }
+    .MB1-cs-warn-note {
+      font-size: 13px;
+      color: #c0580a;
+      font-style: italic;
+      margin: 0;
+    }
+
+    .MB1-cs-action-row {
+      display: flex;
+      gap: 18px;
+      margin: 16px 0 22px;
+      flex-wrap: wrap;
+    }
+    .MB1-cs-action-item {
+      flex: 1;
+      min-width: 220px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--paper-warm);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px 18px;
+    }
+    .MB1-cs-action-icon { font-size: 1.5rem; flex-shrink: 0; line-height: 1.2; }
+    .MB1-cs-action-item strong { display: block; font-size: 14.5px; color: var(--ink); margin-bottom: 4px; }
+    .MB1-cs-action-item p { font-size: 13.5px; color: var(--ink-muted); margin: 0; line-height: 1.65; }
+
+    .MB1-cs-outcome-card {
+      background: var(--ink);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 18px 0 24px;
+    }
+    .MB1-cs-outcome-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 28px 32px;
+      flex-wrap: wrap;
+    }
+    .MB1-cs-outcome-block { text-align: center; }
+    .MB1-cs-outcome-label {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #8888aa;
+      margin-bottom: 6px;
+    }
+    .MB1-cs-outcome-value {
+      font-family: 'Lora', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .MB1-cs-struck { text-decoration: line-through; color: #6666aa; font-size: 1.3rem; }
+    .MB1-cs-green-val { color: #6fcf97; }
+    .MB1-cs-teal-val { color: var(--gold-light); }
+    .MB1-cs-outcome-arrow { font-size: 1.4rem; color: #555588; align-self: flex-end; padding-bottom: 8px; }
+    .MB1-cs-outcome-notes {
+      background: rgba(255,255,255,0.05);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 18px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .MB1-cs-outcome-note-item { display: flex; gap: 10px; font-size: 14px; color: #b0b0cc; }
+    .MB1-cs-outcome-note-item span:first-child { color: #6fcf97; font-weight: 700; flex-shrink: 0; }
+
+    @media(max-width: 600px) {
+      .MB1-cs-outcome-top { gap: 16px; padding: 22px 20px; }
+      .MB1-cs-outcome-notes { padding: 16px 20px; }
+      .MB1-cs-outcome-arrow { display: none; }
+    }
+</style>
+
+<div class="blog-body">
 <header class="MB1-site-header">
   <span>FinanceDesk</span> &nbsp;·&nbsp; Personal Finance &nbsp;·&nbsp; Debt Management
 </header>
@@ -655,7 +869,7 @@ layout: layout.html
 <!-- HERO -->
 <section class="MB1-hero">
   <div class="MB1-hero-inner">
-    <span class="MB1-hero-tag">Updated: 2026 Edition</span>
+    <span class="MB1-hero-tag">Updated: March 2026 Edition, Reviewd by Vivek Tripathi</span>
     <h1>Personal Loan Settlement:<br/><em>The Complete Honest Guide</em></h1>
     <p class="MB1-hero-sub">
       What really happens after you settle. How badly it hits your CIBIL. How to negotiate like you know what you're doing — and when to walk away.
@@ -691,6 +905,7 @@ layout: layout.html
         <li><a href="#MB1-rebuild">How to rebuild credit</a></li>
         <li><a href="#MB1-verdict">Final verdict</a></li>
         <li><a href="#MB1-faq">FAQs</a></li>
+          <li><a href="#MB1-case-study">Real Client Case Study</a></li>
       </ol>
     </div>
 
@@ -1131,6 +1346,125 @@ layout: layout.html
       </div>
     </div>
 
+    <!-- CASE STUDY -->
+    <div class="MB1-section MB1-cs-section" id="MB1-case-study">
+      <h2>Real Client Story: ₹20 Lakh Settled for ₹7 Lakh — With Harassment Stopped</h2>
+
+      <div class="MB1-cs-disclaimer">
+        <span class="MB1-cs-disclaimer-icon">🔒</span>
+        <span>Client identity and lender details withheld to maintain confidentiality.</span>
+      </div>
+
+      <p>Sometimes theory only goes so far. Here's a real case we handled — the messy parts included — so you know what the process actually looks like from the inside.</p>
+
+      <!-- Background -->
+      <h3 class="MB1-cs-h3">The Situation</h3>
+      <p>A client came to us through a referral lead, overwhelmed and unsure where to turn. They were carrying outstanding dues on a <strong>personal loan and multiple credit cards</strong>, had fallen behind on EMIs, and were already fielding collection calls. Their total outstanding at the time was approximately <strong>₹19–20 lakhs</strong>.</p>
+
+      <p>Before anything else, they had five questions they needed answered:</p>
+
+      <div class="MB1-cs-questions">
+        <div class="MB1-cs-q-item"><span class="MB1-cs-q-icon">?</span><span>Is loan settlement actually safe?</span></div>
+        <div class="MB1-cs-q-item"><span class="MB1-cs-q-icon">?</span><span>What are the real pros and cons?</span></div>
+        <div class="MB1-cs-q-item"><span class="MB1-cs-q-icon">?</span><span>How does the process work step by step?</span></div>
+        <div class="MB1-cs-q-item"><span class="MB1-cs-q-icon">?</span><span>Will this affect my financial future?</span></div>
+        <div class="MB1-cs-q-item"><span class="MB1-cs-q-icon">?</span><span>Will lenders harass me after I opt for settlement?</span></div>
+      </div>
+
+      <!-- Approach -->
+      <h3 class="MB1-cs-h3">What We Did First</h3>
+      <p>We started with a detailed intake consultation — not a sales call. The goal was to understand the client's exact financial picture: income situation, nature of default, number of lenders, and what they could realistically pay as a lump sum. Only after that did we map out a plan.</p>
+
+      <!-- Solutions -->
+      <h3 class="MB1-cs-h3">Solutions We Provided</h3>
+
+      <div class="MB1-cs-solution-grid">
+        <div class="MB1-cs-solution-card">
+          <div class="MB1-cs-sol-num">01</div>
+          <h4>Settlement Guidance</h4>
+          <p>We explained that One-Time Settlement (OTS) is a valid option under RBI guidelines when a borrower genuinely cannot service EMIs. We walked through the negotiation process, what a proper settlement letter looks like, and what an NOC means and why it matters.</p>
+        </div>
+        <div class="MB1-cs-solution-card">
+          <div class="MB1-cs-sol-num">02</div>
+          <h4>Anti-Harassment Support</h4>
+          <p>The client was already experiencing frequent collection calls and physical visits from recovery agents. We deployed a dedicated team to intercept and manage those calls directly — so the client wasn't fielding pressure alone — and brought in legal support to handle any formal notices.</p>
+        </div>
+      </div>
+
+      <!-- Critical Challenge -->
+      <h3 class="MB1-cs-h3">The Critical Challenge: An NBFC That Crossed the Line</h3>
+
+      <div class="MB1-cs-warning-box">
+        <div class="MB1-cs-warn-label">⚠ Unethical Recovery Practices Documented</div>
+        <ul>
+          <li>Late-night visits to the client's home at <strong>9–10 PM</strong></li>
+          <li>Repeated threats and mental harassment from agents</li>
+          <li>Intimidation tactics designed to force immediate payment</li>
+        </ul>
+        <p class="MB1-cs-warn-note">All of the above violate RBI's Fair Practices Code for lenders and NBFCs.</p>
+      </div>
+
+      <p>When direct negotiations with this lender broke down and the harassment continued, we escalated formally.</p>
+
+      <!-- Action -->
+      <h3 class="MB1-cs-h3">Action Taken</h3>
+
+      <div class="MB1-cs-action-row">
+        <div class="MB1-cs-action-item">
+          <div class="MB1-cs-action-icon">📋</div>
+          <div>
+            <strong>Consumer Complaint Filed</strong>
+            <p>A formal complaint was lodged against the NBFC documenting all instances of harassment with evidence.</p>
+          </div>
+        </div>
+        <div class="MB1-cs-action-item">
+          <div class="MB1-cs-action-icon">🏛</div>
+          <div>
+            <strong>Escalated to RBI</strong>
+            <p>The matter was escalated to the Reserve Bank of India, which has direct authority over NBFC recovery conduct.</p>
+          </div>
+        </div>
+      </div>
+
+      <p>The intervention worked. The illegal recovery practices stopped. The client, who had been under severe stress, now had institutional backing — and the lender knew it.</p>
+
+      <!-- Outcome -->
+      <h3 class="MB1-cs-h3">The Outcome</h3>
+
+      <div class="MB1-cs-outcome-card">
+        <div class="MB1-cs-outcome-top">
+          <div class="MB1-cs-outcome-block">
+            <div class="MB1-cs-outcome-label">Outstanding Amount</div>
+            <div class="MB1-cs-outcome-value MB1-cs-struck">₹19–20 Lakhs</div>
+          </div>
+          <div class="MB1-cs-outcome-arrow">→</div>
+          <div class="MB1-cs-outcome-block">
+            <div class="MB1-cs-outcome-label">Final Settlement</div>
+            <div class="MB1-cs-outcome-value MB1-cs-green-val">₹7 Lakhs</div>
+          </div>
+          <div class="MB1-cs-outcome-block">
+            <div class="MB1-cs-outcome-label">Amount Saved</div>
+            <div class="MB1-cs-outcome-value MB1-cs-teal-val">~₹12–13 Lakhs</div>
+          </div>
+        </div>
+        <div class="MB1-cs-outcome-notes">
+          <div class="MB1-cs-outcome-note-item"><span>✓</span><span>Settlement achieved despite no prior EMI payments</span></div>
+          <div class="MB1-cs-outcome-note-item"><span>✓</span><span>Recovery calls became manageable post-intervention</span></div>
+          <div class="MB1-cs-outcome-note-item"><span>✓</span><span>Harassment from NBFC stopped after RBI escalation</span></div>
+          <div class="MB1-cs-outcome-note-item"><span>✓</span><span>Client received settlement letter and NOC on completion</span></div>
+          <div class="MB1-cs-outcome-note-item"><span>✓</span><span>Client is now on the path to financial stability</span></div>
+        </div>
+      </div>
+
+      <!-- Takeaways -->
+      <h3 class="MB1-cs-h3">What This Case Teaches Us</h3>
+      <div class="MB1-inline-tip">
+        <strong>Key takeaway:</strong> Settlement is not just about numbers — it's about knowing your rights, having the right people in your corner, and being willing to escalate when lenders act illegally. This client saved over ₹12 lakhs and stopped harassment that was affecting their daily life.
+      </div>
+
+    </div>
+    <!-- END CASE STUDY -->
+
   </article>
 
   <!-- SIDEBAR -->
@@ -1172,18 +1506,45 @@ layout: layout.html
       </ul>
     </div>
 
+    <div class="MB1-sidebar-card">
+        <h4>Quick Links</h4>
+        <ul class="MB1-quick-links">
+            <li>
+            <a href="https://www.rbi.org.in/" target="_blank">
+                RBI Guidelines on Debt 
+                <span class="external-icon">↗</span>
+            </a>
+            </li>
+            <li>
+            <a href="https://www.cibil.com/blog/impact-of-settled-status-on-cibil-score" target="_blank">
+                CIBIL Dispute Process 
+                <span class="external-icon">↗</span>
+            </a>
+            </li>
+            <li>
+            <a href="https://www.rbi.org.in/commonman/english/Scripts/Notification.aspx?Id=1572" target="_blank">
+                Fair Practices Code 
+                <span class="external-icon">↗</span>
+            </a>
+            </li>
+        </ul>
+    </div>
   </aside>
 
 </div>
 
-
+<!-- ═══════════════════════════════════
+     AUTHOR SECTION
+     To customise: swap out the src, name,
+     role, bio, and social href values below
+═══════════════════════════════════ -->
 <style>
   .MB1-author-strip {
     max-width: 1120px;
     margin: 0 auto 48px;
     padding: 0 24px;
   }
- 
+
   .MB1-author-card {
     display: flex;
     gap: 28px;
@@ -1195,7 +1556,7 @@ layout: layout.html
     padding: 28px 32px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.05);
   }
- 
+
   .MB1-author-avatar {
     flex-shrink: 0;
     width: 80px;
@@ -1205,7 +1566,7 @@ layout: layout.html
     border: 3px solid var(--MB1-teal-light, #e8f5f5);
     background: var(--MB1-paper-warm, #f4f1eb);
   }
- 
+
   /* Fallback initials circle when no image is supplied */
   .MB1-author-avatar-fallback {
     flex-shrink: 0;
@@ -1222,11 +1583,11 @@ layout: layout.html
     justify-content: center;
     letter-spacing: 1px;
   }
- 
+
   .MB1-author-body {
     flex: 1;
   }
- 
+
   .MB1-author-label {
     font-size: 10px;
     font-weight: 700;
@@ -1235,7 +1596,7 @@ layout: layout.html
     color: var(--MB1-teal, #1a7a7a);
     margin-bottom: 6px;
   }
- 
+
   .MB1-author-name {
     font-family: 'Lora', Georgia, serif;
     font-size: 1.15rem;
@@ -1243,26 +1604,26 @@ layout: layout.html
     color: var(--MB1-ink, #1a1a2e);
     margin-bottom: 2px;
   }
- 
+
   .MB1-author-role {
     font-size: 13px;
     color: var(--MB1-ink-muted, #6b6b88);
     margin-bottom: 12px;
   }
- 
+
   .MB1-author-bio {
     font-size: 14.5px;
     color: var(--MB1-ink-light, #444460);
     line-height: 1.75;
     margin-bottom: 14px;
   }
- 
+
   .MB1-author-links {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
   }
- 
+
   .MB1-author-link {
     display: inline-flex;
     align-items: center;
@@ -1276,12 +1637,12 @@ layout: layout.html
     border-radius: 999px;
     transition: background 0.2s, color 0.2s;
   }
- 
+
   .MB1-author-link:hover {
     background: var(--MB1-teal, #1a7a7a);
     color: #fff;
   }
- 
+
   @media (max-width: 600px) {
     .MB1-author-card {
       flex-direction: column;
@@ -1291,31 +1652,65 @@ layout: layout.html
     }
     .MB1-author-links { justify-content: center; }
   }
+
+
+  .MB1-cta {
+      margin-top: 5rem;
+      padding: 3rem 2rem;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #4f80c1, #3a6fb3);
+      color: #fff;
+      text-align: center;
+  }
+
+  .MB1-cta h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+  }
+
+  .MB1-cta p {
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+  }
+
+  .MB1-cta .MB1-cta-btn {
+      display: inline-block;
+      background: #f5a623;
+      color: #000;
+      padding: 0.8rem 2rem;
+      border-radius: 999px;
+      font-weight: 500;
+      text-decoration: none;
+  }
+
+  .MB1-cta .MB1-cta-btn:hover {
+      opacity: 0.9;
+  }
 </style>
- 
+
 <div class="MB1-author-strip">
   <div class="MB1-author-card">
- 
+
     <!-- ▼ OPTION A: use a real image — set src to your image path -->
     <!-- <img class="MB1-author-avatar"
          src="/assets/images/authors/your-photo.jpg"
          alt="Author Name"> -->
- 
+
     <!-- ▼ OPTION B: no image — shows initials instead (remove this block if using Option A) -->
-    <div class="MB1-author-avatar-fallback">VT</div>
- 
+    <div class="MB1-author-avatar-fallback">RN</div>
+
     <div class="MB1-author-body">
       <div class="MB1-author-label">Written by</div>
- 
+
       <!-- ▼ Change name, role, and bio below -->
-      <div class="MB1-author-name">Vivek Tripathi</div>
-      <div class="MB1-author-role">Debt Resolution Specialists · India</div>
+      <div class="MB1-author-name">Resolve Now Finance Advisors</div>
+      <div class="MB1-author-role">Debt Resolution Specialist · India</div>
       <p class="MB1-author-bio">
-        The Resolve Now team has helped thousands of borrowers across India navigate loan settlements,
+        The Resolve Now team has helped many borrowers across India navigate loan settlements,
         CIBIL recovery, and recovery harassment — without the legal jargon. Our guides are built from
         real case experience, not textbook theory.
       </p>
- 
+
       <div class="MB1-author-links">
         <!-- ▼ Add, remove, or change these links as needed -->
         <a class="MB1-author-link" href="/about/">About Us</a>
@@ -1323,7 +1718,14 @@ layout: layout.html
         <a class="MB1-author-link" href="/contact/">Get in Touch</a>
       </div>
     </div>
- 
+  </div>
+
+    <!-- ── CTA block ── -->
+  <div class="MB1-cta">
+      <h2>Do you like our work?</h2>
+      <p>Talk to our experts and get clarity on similar topics.</p>
+      <a href="/contact" class="MB1-cta-btn">Consult Us</a>
   </div>
 </div>
 <!-- ═══════════════════════════════════ -->
+</div>
