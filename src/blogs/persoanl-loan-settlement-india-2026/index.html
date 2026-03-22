@@ -1,0 +1,1329 @@
+---
+layout: layout.html
+---
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --ink: #1a1a2e;
+      --ink-light: #444460;
+      --ink-muted: #6b6b88;
+      --paper: #faf9f6;
+      --paper-warm: #f4f1eb;
+      --accent-1: #c0392b;
+      --accent-1-light: #e74c3c;
+      --accent-1-pale: #fdf0ee;
+      --gold: #b8860b;
+      --gold-light: #f0d060;
+      --teal: #1a7a7a;
+      --teal-light: #e8f5f5;
+      --border: #e0ddd6;
+      --border-strong: #c8c4bc;
+      --green: #1e6b3a;
+      --green-pale: #eaf4ee;
+      --red-pale: #fdf0ee;
+    }
+
+    /* ── HEADER ── */
+    .MB1-site-header {
+      background: var(--ink);
+      padding: 14px 0;
+      text-align: center;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: 500;
+      color: #aaaacc;
+      text-transform: uppercase;
+    }
+    .MB1-site-header span { color: var(--gold-light); }
+
+    /* ── HERO ── */
+    .MB1-hero {
+      background: var(--ink);
+      color: #fff;
+      padding: 64px 24px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .MB1-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 60%, rgba(192,57,43,0.18) 0%, transparent 60%),
+                  radial-gradient(ellipse at 75% 20%, rgba(26,122,122,0.14) 0%, transparent 55%);
+    }
+    .MB1-hero-inner { position: relative; max-width: 760px; margin: 0 auto; }
+    .MB1-hero-tag {
+      display: inline-block;
+      background: var(--accent-1);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+    .MB1-hero h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .MB1-hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+    .MB1-hero-sub {
+      color: #b0b0cc;
+      font-size: 15px;
+      max-width: 540px;
+      margin: 0 auto 32px;
+    }
+    .MB1-hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      font-size: 13px;
+      color: #8888aa;
+      flex-wrap: wrap;
+    }
+    .MB1-hero-meta span { display: flex; align-items: center; gap: 6px; }
+    .MB1-hero-meta .MB1-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--accent-1); display: inline-block;
+    }
+
+    /* ── LAYOUT ── */
+    .MB1-page-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 56px;
+      align-items: start;
+    }
+    @media(max-width: 900px) {
+      .MB1-page-wrap { grid-template-columns: 1fr; }
+      .MB1-sidebar { display: none; }
+    }
+
+    /* ── ARTICLE ── */
+    .MB1-article {
+      padding: 56px 0;
+    }
+
+    /* ── TOC CARD ── */
+    .MB1-toc-card {
+      background: var(--paper-warm);
+      border: 1px solid var(--border-strong);
+      border-left: 4px solid var(--teal);
+      border-radius: 4px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .MB1-toc-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 14px;
+    }
+    .MB1-toc-card ol {
+      padding-left: 18px;
+      color: var(--ink-light);
+      font-size: 14.5px;
+    }
+    .MB1-toc-card ol li { margin-bottom: 6px; }
+    .MB1-toc-card a {
+      color: var(--ink-light);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .MB1-toc-card a:hover { color: var(--accent-1); }
+
+    /* ── SECTIONS ── */
+    .MB1-section { margin-bottom: 56px; }
+    .MB1-section h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      line-height: 1.3;
+    }
+    .MB1-section h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      color: var(--ink);
+      margin: 28px 0 10px;
+    }
+    .MB1-section p {
+      color: var(--ink-light);
+      margin-bottom: 16px;
+    }
+    .MB1-section p strong { color: var(--ink); font-weight: 600; }
+
+    /* ── INTRO NOTE ── */
+    .MB1-intro-note {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink-muted);
+      border-left: 3px solid var(--accent-1);
+      padding: 12px 20px;
+      margin-bottom: 32px;
+      background: var(--accent-1-pale);
+      border-radius: 0 4px 4px 0;
+    }
+
+    /* ── REAL EXAMPLE BOX ── */
+    .MB1-example-box {
+      background: var(--teal-light);
+      border: 1px solid #b0d8d8;
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .MB1-example-box .MB1-ex-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
+    .MB1-example-box .MB1-ex-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      border-bottom: 1px dashed #c0d8d8;
+      font-size: 15px;
+    }
+    .MB1-example-box .MB1-ex-row:last-child { border-bottom: none; }
+    .MB1-example-box .MB1-ex-row span:first-child { color: var(--ink-muted); }
+    .MB1-example-box .MB1-ex-row span:last-child { font-weight: 600; color: var(--ink); }
+    .MB1-example-box .MB1-ex-row.MB1-highlight span:last-child { color: var(--teal); }
+    .MB1-example-box .MB1-ex-row.MB1-waived span:last-child { color: var(--green); }
+
+    /* ── STEP LIST ── */
+    .MB1-step-list { list-style: none; padding: 0; margin: 20px 0; }
+    .MB1-step-list li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+    .MB1-step-num {
+      flex-shrink: 0;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .MB1-step-content { flex: 1; }
+    .MB1-step-content strong {
+      display: block;
+      font-size: 15px;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+    .MB1-step-content p { color: var(--ink-muted); font-size: 14.5px; margin: 0; }
+
+    /* ── IMPACT BOX ── */
+    .MB1-impact-box {
+      background: var(--accent-1-pale);
+      border: 1px solid #f5c6c2;
+      border-radius: 6px;
+      padding: 22px 26px;
+      margin: 24px 0;
+    }
+    .MB1-impact-box .MB1-imp-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-1);
+      margin-bottom: 12px;
+    }
+    .MB1-impact-box ul {
+      padding-left: 18px;
+      color: var(--ink-light);
+      font-size: 15px;
+    }
+    .MB1-impact-box ul li { margin-bottom: 7px; }
+
+    /* ── SCORE VIZ ── */
+    .MB1-score-viz {
+      background: var(--paper-warm);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      padding: 22px 26px;
+      margin: 22px 0;
+    }
+    .MB1-score-viz .MB1-sv-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--ink-muted);
+      margin-bottom: 16px;
+    }
+    .MB1-score-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+    .MB1-score-row label {
+      width: 100px;
+      font-size: 13px;
+      color: var(--ink-muted);
+      text-align: right;
+    }
+    .MB1-score-bar-wrap {
+      flex: 1;
+      height: 10px;
+      background: var(--border);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .MB1-score-bar {
+      height: 100%;
+      border-radius: 5px;
+      transition: width 1s ease;
+    }
+    .MB1-score-bar.MB1-before { background: var(--green); width: 78%; }
+    .MB1-score-bar.MB1-after { background: var(--accent-1); width: 63%; }
+    .MB1-score-row .MB1-val {
+      width: 40px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .MB1-score-note {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-top: 12px;
+      font-style: italic;
+    }
+
+    /* ── TIPS LIST ── */
+    .MB1-tips-list { list-style: none; padding: 0; margin: 10px 0; }
+    .MB1-tips-list li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .MB1-tips-list li:last-child { border-bottom: none; }
+    .MB1-tip-num {
+      flex-shrink: 0;
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--accent-1);
+      line-height: 1;
+      width: 28px;
+    }
+    .MB1-tip-body strong { display: block; color: var(--ink); margin-bottom: 4px; font-size: 15px; }
+    .MB1-tip-body p { color: var(--ink-light); font-size: 14.5px; margin: 0; }
+
+    /* ── LETTER BOX ── */
+    .MB1-letter-box {
+      background: #fff;
+      border: 1px solid var(--border-strong);
+      border-top: 4px solid var(--ink);
+      border-radius: 4px;
+      padding: 28px 32px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--ink-light);
+      margin: 24px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    }
+    .MB1-letter-box .MB1-letter-subject {
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 12px;
+      font-size: 13.5px;
+    }
+    .MB1-letter-box .MB1-letter-highlight {
+      background: var(--gold-light);
+      padding: 0 3px;
+    }
+
+    /* ── COMPARISON TABLE ── */
+    .MB1-compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+    .MB1-compare-table th {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .MB1-compare-table th:first-child { color: var(--ink-muted); }
+    .MB1-compare-table th.MB1-bad { background: var(--accent-1); color: #fff; }
+    .MB1-compare-table th.MB1-good { background: var(--green); color: #fff; }
+    .MB1-compare-table td {
+      padding: 11px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink-light);
+    }
+    .MB1-compare-table td:first-child { font-weight: 500; color: var(--ink); }
+    .MB1-compare-table tr:last-child td { border-bottom: none; }
+    .MB1-compare-table tr:nth-child(even) td { background: var(--paper-warm); }
+    .MB1-badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .MB1-badge.MB1-red { background: var(--accent-1-pale); color: var(--accent-1); }
+    .MB1-badge.MB1-green { background: var(--green-pale); color: var(--green); }
+
+    /* ── PROS CONS ── */
+    .MB1-pros-cons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    @media(max-width: 600px) { .MB1-pros-cons { grid-template-columns: 1fr; } }
+    .MB1-pros, .MB1-cons {
+      border-radius: 6px;
+      padding: 20px;
+    }
+    .MB1-pros { background: var(--green-pale); border: 1px solid #b8dcc8; }
+    .MB1-cons { background: var(--red-pale); border: 1px solid #f5c6c2; }
+    .MB1-pros h4, .MB1-cons h4 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .MB1-pros h4 { color: var(--green); }
+    .MB1-cons h4 { color: var(--accent-1); }
+    .MB1-pros ul, .MB1-cons ul { list-style: none; padding: 0; }
+    .MB1-pros ul li, .MB1-cons ul li {
+      font-size: 14.5px;
+      padding: 5px 0;
+      color: var(--ink-light);
+      display: flex; gap: 8px;
+    }
+    .MB1-pros ul li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+    .MB1-cons ul li::before { content: '✗'; color: var(--accent-1); font-weight: 700; flex-shrink: 0; }
+
+    /* ── ALTERNATIVES ── */
+    .MB1-alt-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    @media(max-width: 600px) { .MB1-alt-cards { grid-template-columns: 1fr; } }
+    .MB1-alt-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 18px 20px;
+      position: relative;
+    }
+    .MB1-alt-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--teal);
+      border-radius: 6px 0 0 6px;
+    }
+    .MB1-alt-card h4 { font-size: 14.5px; color: var(--ink); margin-bottom: 5px; font-weight: 600; }
+    .MB1-alt-card p { font-size: 13.5px; color: var(--ink-muted); margin: 0; }
+
+    /* ── REBUILD STEPS ── */
+    .MB1-rebuild-steps {
+      counter-reset: rebuild;
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    }
+    .MB1-rebuild-steps li {
+      counter-increment: rebuild;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+      color: var(--ink-light);
+    }
+    .MB1-rebuild-steps li:last-child { border-bottom: none; }
+    .MB1-rebuild-steps li::before {
+      content: counter(rebuild);
+      flex-shrink: 0;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ── VERDICT BOX ── */
+    .MB1-verdict-box {
+      background: var(--ink);
+      color: #fff;
+      border-radius: 8px;
+      padding: 30px 32px;
+      margin: 24px 0;
+    }
+    .MB1-verdict-box h4 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      color: var(--gold-light);
+      margin-bottom: 18px;
+    }
+    .MB1-verdict-row {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .MB1-verdict-col { flex: 1; min-width: 180px; }
+    .MB1-verdict-col h5 {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .MB1-verdict-col.MB1-yes h5 { color: #6fcf97; }
+    .MB1-verdict-col.MB1-no h5 { color: var(--accent-1-light); }
+    .MB1-verdict-col ul { list-style: none; padding: 0; }
+    .MB1-verdict-col ul li {
+      font-size: 14px;
+      color: #c0c0dd;
+      padding: 4px 0;
+      display: flex; gap: 8px;
+    }
+    .MB1-verdict-col.MB1-yes ul li::before { content: '✓'; color: #6fcf97; }
+    .MB1-verdict-col.MB1-no ul li::before { content: '✗'; color: var(--accent-1-light); }
+
+    /* ── FAQ ── */
+    .MB1-faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+    .MB1-faq-item:last-child { border-bottom: none; }
+    .MB1-faq-q {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 8px;
+      display: flex; gap: 10px;
+    }
+    .MB1-faq-q::before {
+      content: 'Q';
+      flex-shrink: 0;
+      width: 24px; height: 24px;
+      border-radius: 4px;
+      background: var(--accent-1);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .MB1-faq-a { color: var(--ink-light); font-size: 15px; padding-left: 34px; }
+
+    /* ── SIDEBAR ── */
+    .MB1-sidebar {
+      padding: 56px 0;
+      position: sticky;
+      top: 24px;
+    }
+    .MB1-sidebar-card {
+      background: var(--paper-warm);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 22px;
+      margin-bottom: 22px;
+    }
+    .MB1-sidebar-card h4 {
+      font-family: 'Lora', serif;
+      font-size: 14px;
+      color: var(--ink);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .MB1-sidebar-card ul { list-style: none; padding: 0; }
+    .MB1-sidebar-card ul li {
+      font-size: 13.5px;
+      color: var(--ink-muted);
+      padding: 6px 0;
+      border-bottom: 1px dashed var(--border);
+      display: flex; gap: 8px; align-items: flex-start;
+    }
+    .MB1-sidebar-card ul li:last-child { border-bottom: none; }
+    .MB1-sidebar-card ul li::before { content: '→'; color: var(--accent-1); flex-shrink: 0; }
+
+    .MB1-callout-card {
+      background: var(--ink);
+      color: #fff;
+      border-radius: 6px;
+      padding: 22px;
+      margin-bottom: 22px;
+    }
+    .MB1-callout-card h4 { font-family: 'Lora', serif; font-size: 15px; color: var(--gold-light); margin-bottom: 10px; }
+    .MB1-callout-card p { font-size: 13.5px; color: #b0b0cc; line-height: 1.7; }
+
+    .MB1-timeline-card { background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 22px; }
+    .MB1-timeline-card h4 { font-family: 'Lora', serif; font-size: 14px; margin-bottom: 14px; color: var(--ink); }
+    .MB1-tl-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 13.5px;
+      padding: 7px 0;
+      color: var(--ink-light);
+    }
+    .MB1-tl-row .MB1-tl-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+      flex-shrink: 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      color: #6666aa;
+      text-align: center;
+      font-size: 13px;
+      padding: 28px 24px;
+      margin-top: 32px;
+    }
+    footer strong { color: #9999bb; }
+
+    /* ── INLINE CALLOUT ── */
+    .MB1-inline-tip {
+      background: var(--paper-warm);
+      border-left: 4px solid var(--gold);
+      padding: 12px 18px;
+      border-radius: 0 4px 4px 0;
+      font-size: 14.5px;
+      color: var(--ink-light);
+      margin: 18px 0;
+      font-style: italic;
+    }
+    .MB1-inline-tip strong { color: var(--gold); font-style: normal; }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width: 600px) {
+      .MB1-hero { padding: 44px 20px 40px; }
+      .MB1-article { padding: 36px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="MB1-site-header">
+  <span>FinanceDesk</span> &nbsp;·&nbsp; Personal Finance &nbsp;·&nbsp; Debt Management
+</header>
+
+<!-- HERO -->
+<section class="MB1-hero">
+  <div class="MB1-hero-inner">
+    <span class="MB1-hero-tag">Updated: 2026 Edition</span>
+    <h1>Personal Loan Settlement:<br/><em>The Complete Honest Guide</em></h1>
+    <p class="MB1-hero-sub">
+      What really happens after you settle. How badly it hits your CIBIL. How to negotiate like you know what you're doing — and when to walk away.
+    </p>
+    <div class="MB1-hero-meta">
+      <span><span class="MB1-dot"></span> 15 min read</span>
+      <span><span class="MB1-dot"></span> India Context</span>
+      <span><span class="MB1-dot"></span> Last updated March 2026</span>
+    </div>
+  </div>
+</section>
+
+<div class="MB1-page-wrap">
+
+  <!-- ARTICLE -->
+  <article class="MB1-article">
+
+    <!-- TOC -->
+    <div class="MB1-toc-card">
+      <h3>What's in this guide</h3>
+      <ol>
+        <li><a href="#MB1-what-is">What is personal loan settlement?</a></li>
+        <li><a href="#MB1-process">The step-by-step process</a></li>
+        <li><a href="#MB1-aftermath">What actually happens after settlement</a></li>
+        <li><a href="#MB1-cibil">Impact on your CIBIL score</a></li>
+        <li><a href="#MB1-negotiate">How to negotiate effectively</a></li>
+        <li><a href="#MB1-letter">Settlement letter template</a></li>
+        <li><a href="#MB1-vs-closure">Settlement vs. closure</a></li>
+        <li><a href="#MB1-rejection">Can the bank reject your request?</a></li>
+        <li><a href="#MB1-home-loan">Does it affect home loan eligibility?</a></li>
+        <li><a href="#MB1-pros-cons">Pros &amp; cons</a></li>
+        <li><a href="#MB1-alternatives">Better alternatives to try first</a></li>
+        <li><a href="#MB1-rebuild">How to rebuild credit</a></li>
+        <li><a href="#MB1-verdict">Final verdict</a></li>
+        <li><a href="#MB1-faq">FAQs</a></li>
+      </ol>
+    </div>
+
+    <p class="MB1-intro-note">
+      If you've landed here, you're probably under financial stress — EMIs piling up, recovery calls beginning, income disrupted. This guide doesn't give you the standard copy-paste advice. It goes into real scenarios, real numbers, and what actually works when you sit across from your bank.
+    </p>
+
+    <!-- SECTION 1 -->
+    <div class="MB1-section" id="MB1-what-is">
+      <h2>What is Personal Loan Settlement?</h2>
+      <p>
+        Personal loan settlement is a process where you negotiate with your lender to accept <strong>less than the total outstanding amount</strong> as a one-time, full-and-final payment. Once complete, your loan is marked as <strong>"Settled"</strong> in your credit report — not "Closed," and not "Paid in Full."
+      </p>
+      <p>That distinction matters enormously, and we'll come back to it.</p>
+
+      <div class="MB1-example-box">
+        <div class="MB1-ex-label">📊 Real-World Example</div>
+        <div class="MB1-ex-row"><span>Original Loan</span><span>₹6,00,000</span></div>
+        <div class="MB1-ex-row"><span>Outstanding (with interest)</span><span>₹7,20,000</span></div>
+        <div class="MB1-ex-row MB1-highlight"><span>Settlement Agreed</span><span>₹4,50,000</span></div>
+        <div class="MB1-ex-row MB1-waived"><span>Amount Waived</span><span>₹2,70,000 ✓</span></div>
+      </div>
+
+      <p>
+        Sounds like a win — and in pure cash terms, it is. But the relief comes at a real cost to your credit profile. Keep reading before you decide anything.
+      </p>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="MB1-section" id="MB1-process">
+      <h2>The Step-by-Step Process in India</h2>
+      <p>This is how it actually unfolds in practice — not the ideal version, the real one.</p>
+
+      <ul class="MB1-step-list">
+        <li>
+          <div class="MB1-step-num">1</div>
+          <div class="MB1-step-content">
+            <strong>EMI Defaults Begin</strong>
+            <p>You miss 2–3 consecutive EMIs. Automated reminders start almost immediately.</p>
+          </div>
+        </li>
+        <li>
+          <div class="MB1-step-num">2</div>
+          <div class="MB1-step-content">
+            <strong>Collection Calls Ramp Up</strong>
+            <p>Banks begin calling you and any references you listed on the application.</p>
+          </div>
+        </li>
+        <li>
+          <div class="MB1-step-num">3</div>
+          <div class="MB1-step-content">
+            <strong>Loan is Classified as NPA</strong>
+            <p>After approximately 90 days of default, your account is tagged as a Non-Performing Asset. This is a significant escalation internally.</p>
+          </div>
+        </li>
+        <li>
+          <div class="MB1-step-num">4</div>
+          <div class="MB1-step-content">
+            <strong>Recovery Pressure Intensifies</strong>
+            <p>Calls from third-party recovery agents. Legal notice letters may arrive warning of further action.</p>
+          </div>
+        </li>
+        <li>
+          <div class="MB1-step-num">5</div>
+          <div class="MB1-step-content">
+            <strong>Settlement is Initiated</strong>
+            <p>Either the bank reaches out with a settlement offer, or you proactively write to them requesting one. Both paths are valid.</p>
+          </div>
+        </li>
+        <li>
+          <div class="MB1-step-num">6</div>
+          <div class="MB1-step-content">
+            <strong>The Negotiation Phase</strong>
+            <p>This is where most people leave money on the table. Strategy matters here — see the section below on negotiation tactics.</p>
+          </div>
+        </li>
+        <li>
+          <div class="MB1-step-num">7</div>
+          <div class="MB1-step-content">
+            <strong>One-Time Settlement (OTS) Payment</strong>
+            <p>You pay the agreed lump sum. Always insist on paying via official bank channels with a receipt.</p>
+          </div>
+        </li>
+        <li>
+          <div class="MB1-step-num">8</div>
+          <div class="MB1-step-content">
+            <strong>Credit Report is Updated</strong>
+            <p>Your lender reports the account as "Settled" to CIBIL and other bureaus within 30–60 days.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="MB1-section" id="MB1-aftermath">
+      <h2>What Actually Happens After Settlement?</h2>
+      <p>Most articles stop at "your score will drop." Here's the full picture of consequences you should anticipate:</p>
+
+      <div class="MB1-impact-box">
+        <div class="MB1-imp-label">⚠ Consequences to Expect</div>
+        <ul>
+          <li>Your credit score drops significantly — usually 75 to 150+ points</li>
+          <li>The loan appears as "Settled" (not "Closed") on your credit report</li>
+          <li>Future loan applications become considerably harder to approve</li>
+          <li>Lenders who do approve you will charge higher interest rates to price in the risk</li>
+          <li>The "Settled" tag stays visible on your report for up to <strong>7 years</strong></li>
+          <li>You may need to rebuild your credit profile almost from scratch</li>
+        </ul>
+      </div>
+
+      <div class="MB1-inline-tip">
+        <strong>Bottom line:</strong> Settlement should be treated as a last resort — not a clever financial move. The immediate relief is real. The long-term consequences are equally real.
+      </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="MB1-section" id="MB1-cibil">
+      <h2>Impact on Your CIBIL Score: The Honest Numbers</h2>
+
+      <p>
+        Settlement is interpreted by lenders as: <em>"this borrower could not repay their debt in full."</em> That's a serious signal, and CIBIL reflects it immediately.
+      </p>
+
+      <div class="MB1-score-viz">
+        <div class="MB1-sv-label">Score impact — real scenario</div>
+        <div class="MB1-score-row">
+          <label>Before</label>
+          <div class="MB1-score-bar-wrap"><div class="MB1-score-bar MB1-before"></div></div>
+          <div class="MB1-val">780</div>
+        </div>
+        <div class="MB1-score-row">
+          <label>After</label>
+          <div class="MB1-score-bar-wrap"><div class="MB1-score-bar MB1-after"></div></div>
+          <div class="MB1-val">635</div>
+        </div>
+        <p class="MB1-score-note">Recovery to a healthy score typically takes 2–4 years of disciplined credit behavior.</p>
+      </div>
+
+      <h3>Why the Drop is So Steep</h3>
+      <p>
+        It's not just the missed EMIs — those already hurt you before settlement. The "Settled" tag is an <em>additional</em> negative mark that sits permanently on your history. Even lenders who don't pull your full CIBIL report will see it the moment they check your credit file.
+      </p>
+      <p>
+        On the positive side: the impact softens over time. If you're consistent with all other credit obligations, you can meaningfully recover within 3–4 years.
+      </p>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="MB1-section" id="MB1-negotiate">
+      <h2>How to Negotiate Personal Loan Settlement (What Actually Works)</h2>
+
+      <p>Most borrowers accept the first number the bank gives them. That's a mistake. Banks are businesses — they'd rather recover 55% today than wait 2 years to potentially recover 70%.</p>
+
+      <ul class="MB1-tips-list">
+        <li>
+          <div class="MB1-tip-num">1</div>
+          <div class="MB1-tip-body">
+            <strong>Never Accept the First Offer</strong>
+            <p>Banks typically open at 80–90% of the outstanding amount. In many cases, you can negotiate this down to 40–60%. Don't flinch at their first number — it's a starting point, not a final position.</p>
+          </div>
+        </li>
+        <li>
+          <div class="MB1-tip-num">2</div>
+          <div class="MB1-tip-body">
+            <strong>Document Your Hardship Thoroughly</strong>
+            <p>Banks respond to evidence, not emotion. Job loss letters, salary cut notices, medical bills, or proof of income disruption all strengthen your position significantly. The more concrete your paper trail, the more leverage you have.</p>
+          </div>
+        </li>
+        <li>
+          <div class="MB1-tip-num">3</div>
+          <div class="MB1-tip-body">
+            <strong>Offer a Lump Sum — Not a Payment Plan</strong>
+            <p>Banks strongly prefer an immediate lump sum over a drawn-out restructured repayment. The certainty of cash today beats the uncertainty of payments tomorrow. This is your biggest negotiating chip.</p>
+          </div>
+        </li>
+        <li>
+          <div class="MB1-tip-num">4</div>
+          <div class="MB1-tip-body">
+            <strong>Time Your Negotiation Strategically</strong>
+            <p>The sweet spot is 3–6 months into your default. By then, the bank is under internal pressure to resolve NPA accounts, especially near quarter-end. The pressure on them is real — use it.</p>
+          </div>
+        </li>
+        <li>
+          <div class="MB1-tip-num">5</div>
+          <div class="MB1-tip-body">
+            <strong>Get Everything in Writing Before Paying</strong>
+            <p>Never, ever transfer money without a signed settlement agreement in hand. The document must include the agreed amount, a "no further dues" clause, and a commitment to update your credit report. This is non-negotiable.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="MB1-section" id="MB1-letter">
+      <h2>Settlement Letter Template</h2>
+      <p>Use this as a starting point and customize it to your specific situation. Keep your tone respectful but clear.</p>
+
+      <div class="MB1-letter-box">
+        <div class="MB1-letter-subject">Subject: Request for One-Time Loan Settlement – Account No. <span class="MB1-letter-highlight">XXXXX</span></div>
+
+        Dear Sir/Madam,<br/><br/>
+        I am writing regarding my personal loan (Account No: <span class="MB1-letter-highlight">XXXXX</span>), which I have been unable to service regularly due to <span class="MB1-letter-highlight">[specific reason — job loss / medical emergency / income reduction]</span> since <span class="MB1-letter-highlight">[month, year]</span>.<br/><br/>
+        Despite my best efforts, my current financial situation does not allow me to repay the outstanding dues in full. I am, however, in a position to make a one-time lump sum payment of ₹<span class="MB1-letter-highlight">[amount]</span> as full and final settlement of this account.<br/><br/>
+        I request you to kindly consider this settlement offer and provide a written confirmation of the agreed terms, including the settlement amount, payment deadline, and confirmation that no further dues will be claimed after payment.<br/><br/>
+        I appreciate your understanding and look forward to your response.<br/><br/>
+        Sincerely,<br/>
+        <span class="MB1-letter-highlight">[Your Full Name]</span><br/>
+        <span class="MB1-letter-highlight">[Contact Number]</span>
+      </div>
+
+      <div class="MB1-inline-tip">
+        <strong>Tip:</strong> Send this letter via email <em>and</em> as a physical letter sent by registered post. Having a paper trail protects you if any dispute arises later.
+      </div>
+    </div>
+
+    <!-- SECTION 7 -->
+    <div class="MB1-section" id="MB1-vs-closure">
+      <h2>Settlement vs. Full Closure: Know the Difference</h2>
+      <p>These two outcomes sound similar but are worlds apart on your credit file.</p>
+
+      <table class="MB1-compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="MB1-bad">Settlement</th>
+            <th class="MB1-good">Full Closure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Amount Paid</td>
+            <td>Partial (negotiated)</td>
+            <td>Full outstanding</td>
+          </tr>
+          <tr>
+            <td>Credit Score Impact</td>
+            <td><span class="MB1-badge MB1-red">Significant drop</span></td>
+            <td><span class="MB1-badge MB1-green">No negative impact</span></td>
+          </tr>
+          <tr>
+            <td>Credit Report Status</td>
+            <td><span class="MB1-badge MB1-red">Settled</span></td>
+            <td><span class="MB1-badge MB1-green">Closed</span></td>
+          </tr>
+          <tr>
+            <td>Future Loan Eligibility</td>
+            <td>Difficult for years</td>
+            <td>Unaffected</td>
+          </tr>
+          <tr>
+            <td>Home Loan Impact</td>
+            <td>Major obstacle</td>
+            <td>None</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>The rule is simple:</strong> if you can find any way to pay in full — borrow from family, liquidate an asset, ask your employer for an advance — full closure is always the smarter choice. Settlement is for when that's genuinely not an option.</p>
+    </div>
+
+    <!-- SECTION 8 -->
+    <div class="MB1-section" id="MB1-rejection">
+      <h2>Can the Bank Reject Your Settlement Request?</h2>
+      <p>Yes — and it happens more often than people expect. Banks aren't obligated to offer or accept settlements.</p>
+
+      <h3>Common Reasons for Rejection</h3>
+      <p>
+        Your default period is still short (under 60–90 days). You have visible repayment capacity — regular salary credits, other assets. The bank believes legal recovery is viable. You haven't provided sufficient hardship documentation.
+      </p>
+
+      <h3>What You Can Do If Rejected</h3>
+      <p>
+        Wait an additional 30–60 days before approaching again — the bank's urgency grows over time. Meanwhile, gather stronger documentation. Consider engaging a financial mediator. If you have legal knowledge, understand that banks typically prefer settlement over lengthy court proceedings.
+      </p>
+    </div>
+
+    <!-- SECTION 9 -->
+    <div class="MB1-section" id="MB1-home-loan">
+      <h2>Does Loan Settlement Affect Home Loan Eligibility?</h2>
+      <p>
+        This is a question people often forget to ask until it's too late. The answer is: <strong>yes, significantly.</strong>
+      </p>
+      <p>
+        Every home loan lender pulls your CIBIL report. The "Settled" tag is one of the first things their credit team notices. It signals that you've previously failed to honor a loan commitment — a serious red flag when you're applying for a secured loan of 20–50 lakhs over 20 years.
+      </p>
+
+      <div class="MB1-impact-box">
+        <div class="MB1-imp-label">What to Expect When Applying for a Home Loan After Settlement</div>
+        <ul>
+          <li>Straightforward rejections from most PSU banks for 2–3 years post-settlement</li>
+          <li>Private lenders may approve but with higher interest rates (0.5–1.5% above standard)</li>
+          <li>You'll likely need a co-applicant with a clean credit history</li>
+          <li>Higher income documentation requirements</li>
+        </ul>
+      </div>
+
+      <p>If buying a home is part of your plan within the next 3–4 years, factor this in heavily before deciding to settle your personal loan.</p>
+    </div>
+
+    <!-- SECTION 10 -->
+    <div class="MB1-section" id="MB1-pros-cons">
+      <h2>Pros and Cons of Personal Loan Settlement</h2>
+
+      <div class="MB1-pros-cons">
+        <div class="MB1-pros">
+          <h4>Advantages</h4>
+          <ul>
+            <li>Immediate relief from debt pressure</li>
+            <li>Reduced total repayment burden</li>
+            <li>Stops recovery calls and legal threats</li>
+            <li>You keep more cash for essential needs</li>
+          </ul>
+        </div>
+        <div class="MB1-cons">
+          <h4>Disadvantages</h4>
+          <ul>
+            <li>Credit score drops 75–150+ points</li>
+            <li>"Settled" tag on report for up to 7 years</li>
+            <li>Future loan approvals become difficult</li>
+            <li>Higher interest rates when you do borrow</li>
+            <li>Home loan eligibility is seriously impacted</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 11 -->
+    <div class="MB1-section" id="MB1-alternatives">
+      <h2>Alternatives to Try Before Settling</h2>
+      <p>
+        These options protect your credit score and don't carry permanent stigma. Exhaust them before exploring settlement.
+      </p>
+
+      <div class="MB1-alt-cards">
+        <div class="MB1-alt-card">
+          <h4>Loan Restructuring</h4>
+          <p>Ask the bank to reduce your EMI by extending the repayment tenure. Your total payout increases, but monthly pressure drops.</p>
+        </div>
+        <div class="MB1-alt-card">
+          <h4>EMI Moratorium</h4>
+          <p>A temporary pause on EMIs — sometimes 2–6 months — while you get back on your feet. Interest still accrues but you avoid defaults.</p>
+        </div>
+        <div class="MB1-alt-card">
+          <h4>Balance Transfer</h4>
+          <p>Move your loan to a lender offering a lower interest rate. This doesn't reduce principal but reduces monthly burden.</p>
+        </div>
+        <div class="MB1-alt-card">
+          <h4>Debt Consolidation</h4>
+          <p>Combine multiple loans into one single EMI at a better rate. Simplifies management and often reduces total monthly outgo.</p>
+        </div>
+      </div>
+
+      <div class="MB1-inline-tip">
+        <strong>Important:</strong> Contact your bank <em>before</em> you start missing EMIs. Once you have a default on record, your negotiating options narrow considerably.
+      </div>
+    </div>
+
+    <!-- SECTION 12 -->
+    <div class="MB1-section" id="MB1-rebuild">
+      <h2>How to Rebuild Your Credit After Settlement</h2>
+      <p>
+        Recovery is absolutely possible — it just requires patience and consistency. Here's a practical sequence that works:
+      </p>
+
+      <ul class="MB1-rebuild-steps">
+        <li>Get a secured credit card (backed by a fixed deposit — most banks offer these)</li>
+        <li>Use it for small, regular purchases and pay the bill in full every month</li>
+        <li>Keep your credit utilization under 30% on all cards</li>
+        <li>Don't apply for multiple loans at once — each hard inquiry hurts your score</li>
+        <li>Check your CIBIL report every 3 months for errors or outdated information</li>
+        <li>After 12–18 months of clean behavior, apply for a small personal loan to diversify your credit mix</li>
+      </ul>
+
+      <p>With disciplined execution, a meaningful score recovery (650 → 720+) is realistic within 2–3 years.</p>
+    </div>
+
+    <!-- SECTION 13 -->
+    <div class="MB1-section" id="MB1-verdict">
+      <h2>Final Verdict: Should You Settle?</h2>
+
+      <div class="MB1-verdict-box">
+        <h4>The honest answer depends entirely on your situation.</h4>
+        <div class="MB1-verdict-row">
+          <div class="MB1-verdict-col MB1-yes">
+            <h5>Choose Settlement If</h5>
+            <ul>
+              <li>You're in genuine financial distress</li>
+              <li>No realistic repayment alternative exists</li>
+              <li>Recovery calls and legal pressure are imminent</li>
+              <li>You've already tried restructuring and been refused</li>
+              <li>You accept the 2–4 year credit recovery period</li>
+            </ul>
+          </div>
+          <div class="MB1-verdict-col MB1-no">
+            <h5>Avoid Settlement If</h5>
+            <ul>
+              <li>Restructuring is still an option</li>
+              <li>You plan to apply for a home loan soon</li>
+              <li>Your hardship is temporary and short-term</li>
+              <li>You have assets or income that can resume payments</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        Settlement is not a shortcut or a loophole. It's a legitimate financial instrument designed for genuine hardship situations. If that's where you are — approach it with strategy, get everything in writing, and have a clear plan for credit rebuilding the moment it's done.
+      </p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="MB1-section" id="MB1-faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="MB1-faq-item">
+        <div class="MB1-faq-q">Is personal loan settlement good or bad?</div>
+        <div class="MB1-faq-a">It's neither inherently good nor bad — it's a trade-off. You get immediate financial relief at the cost of creditworthiness. In a genuine emergency, it can be the right call. As a strategic shortcut, it almost always backfires.</div>
+      </div>
+      <div class="MB1-faq-item">
+        <div class="MB1-faq-q">What happens after personal loan settlement?</div>
+        <div class="MB1-faq-a">Your credit score drops, the account is tagged "Settled" on your credit report, and future loan approvals become significantly harder. The impact is real but not permanent — recovery takes 2–4 years of consistent credit behavior.</div>
+      </div>
+      <div class="MB1-faq-item">
+        <div class="MB1-faq-q">How long does the settlement affect my CIBIL score?</div>
+        <div class="MB1-faq-a">The "Settled" tag stays on your credit report for up to 7 years. However, the active impact on your score starts diminishing after 1–2 years if you're building positive credit history in parallel.</div>
+      </div>
+      <div class="MB1-faq-item">
+        <div class="MB1-faq-q">Can I get a loan after settlement?</div>
+        <div class="MB1-faq-a">Yes, but with difficulty. Most PSU banks will decline for 2–3 years. Some private lenders and NBFCs may approve at higher interest rates. Your best path is to rebuild credit first, then approach for smaller loans before going for larger ones.</div>
+      </div>
+      <div class="MB1-faq-item">
+        <div class="MB1-faq-q">Can the bank reject my settlement request?</div>
+        <div class="MB1-faq-a">Absolutely. If the bank believes you have the capacity to repay in full, if your default is recent, or if you haven't documented your hardship adequately, they can decline. Waiting longer and providing stronger proof typically improves your chances.</div>
+      </div>
+      <div class="MB1-faq-item">
+        <div class="MB1-faq-q">Is loan settlement legal in India?</div>
+        <div class="MB1-faq-a">Yes, completely. It's governed by individual lender policies and RBI guidelines. It's not preferred by banks but it's a recognized process. Just ensure you have proper written documentation of the settlement agreement before paying.</div>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="MB1-sidebar">
+
+    <div class="MB1-callout-card">
+      <h4>Before You Settle</h4>
+      <p>Have you explored restructuring, moratorium, or balance transfer? These protect your credit score and are often easier than you think to request.</p>
+    </div>
+
+    <div class="MB1-sidebar-card">
+      <h4>Quick Facts</h4>
+      <ul>
+        <li>Score drop: 75–150+ points</li>
+        <li>Stays on CIBIL for up to 7 years</li>
+        <li>Negotiation window: 3–6 months in default</li>
+        <li>Process takes 1–3 months total</li>
+        <li>Settlement is legal under RBI guidelines</li>
+      </ul>
+    </div>
+
+    <div class="MB1-timeline-card">
+      <h4>Typical Timeline</h4>
+      <div class="MB1-tl-row"><span class="MB1-tl-dot"></span>Negotiation: 2–6 weeks</div>
+      <div class="MB1-tl-row"><span class="MB1-tl-dot"></span>Agreement signed: 1–2 weeks</div>
+      <div class="MB1-tl-row"><span class="MB1-tl-dot"></span>Payment made: same day</div>
+      <div class="MB1-tl-row"><span class="MB1-tl-dot"></span>Credit update: 30–60 days</div>
+      <div class="MB1-tl-row"><span class="MB1-tl-dot"></span>Score recovery starts: 12–18 months</div>
+    </div>
+
+    <div class="MB1-sidebar-card" style="margin-top:22px;">
+      <h4>Mistakes to Avoid</h4>
+      <ul>
+        <li>Settling too early in the process</li>
+        <li>Not negotiating the first offer</li>
+        <li>Paying without written agreement</li>
+        <li>Ignoring the credit report update</li>
+        <li>Using unverified settlement agencies</li>
+      </ul>
+    </div>
+
+  </aside>
+
+</div>
+
+
+<style>
+  .MB1-author-strip {
+    max-width: 1120px;
+    margin: 0 auto 48px;
+    padding: 0 24px;
+  }
+ 
+  .MB1-author-card {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid var(--MB1-border, #e0ddd6);
+    border-top: 4px solid var(--MB1-teal, #1a7a7a);
+    border-radius: 6px;
+    padding: 28px 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+ 
+  .MB1-author-avatar {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--MB1-teal-light, #e8f5f5);
+    background: var(--MB1-paper-warm, #f4f1eb);
+  }
+ 
+  /* Fallback initials circle when no image is supplied */
+  .MB1-author-avatar-fallback {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--MB1-teal, #1a7a7a);
+    color: #fff;
+    font-family: 'Lora', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+  }
+ 
+  .MB1-author-body {
+    flex: 1;
+  }
+ 
+  .MB1-author-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--MB1-teal, #1a7a7a);
+    margin-bottom: 6px;
+  }
+ 
+  .MB1-author-name {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--MB1-ink, #1a1a2e);
+    margin-bottom: 2px;
+  }
+ 
+  .MB1-author-role {
+    font-size: 13px;
+    color: var(--MB1-ink-muted, #6b6b88);
+    margin-bottom: 12px;
+  }
+ 
+  .MB1-author-bio {
+    font-size: 14.5px;
+    color: var(--MB1-ink-light, #444460);
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+ 
+  .MB1-author-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+ 
+  .MB1-author-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--MB1-teal, #1a7a7a);
+    text-decoration: none;
+    padding: 5px 14px;
+    border: 1px solid var(--MB1-teal, #1a7a7a);
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s;
+  }
+ 
+  .MB1-author-link:hover {
+    background: var(--MB1-teal, #1a7a7a);
+    color: #fff;
+  }
+ 
+  @media (max-width: 600px) {
+    .MB1-author-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 24px 20px;
+    }
+    .MB1-author-links { justify-content: center; }
+  }
+</style>
+ 
+<div class="MB1-author-strip">
+  <div class="MB1-author-card">
+ 
+    <!-- ▼ OPTION A: use a real image — set src to your image path -->
+    <!-- <img class="MB1-author-avatar"
+         src="/assets/images/authors/your-photo.jpg"
+         alt="Author Name"> -->
+ 
+    <!-- ▼ OPTION B: no image — shows initials instead (remove this block if using Option A) -->
+    <div class="MB1-author-avatar-fallback">VT</div>
+ 
+    <div class="MB1-author-body">
+      <div class="MB1-author-label">Written by</div>
+ 
+      <!-- ▼ Change name, role, and bio below -->
+      <div class="MB1-author-name">Vivek Tripathi</div>
+      <div class="MB1-author-role">Debt Resolution Specialists · India</div>
+      <p class="MB1-author-bio">
+        The Resolve Now team has helped thousands of borrowers across India navigate loan settlements,
+        CIBIL recovery, and recovery harassment — without the legal jargon. Our guides are built from
+        real case experience, not textbook theory.
+      </p>
+ 
+      <div class="MB1-author-links">
+        <!-- ▼ Add, remove, or change these links as needed -->
+        <a class="MB1-author-link" href="/about/">About Us</a>
+        <a class="MB1-author-link" href="/blogs/">More Articles</a>
+        <a class="MB1-author-link" href="/contact/">Get in Touch</a>
+      </div>
+    </div>
+ 
+  </div>
+</div>
+<!-- ═══════════════════════════════════ -->

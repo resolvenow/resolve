@@ -4,6 +4,7 @@ title: Blogs
 ---
 
 <style>
+/* ── Base page ── */
 .blogs-page {
     padding: 100px 24px;
     background: #f9f9f9;
@@ -14,11 +15,11 @@ title: Blogs
     margin: auto;
 }
 
-/* Header */
+/* ── Header ── */
 .blogs-header {
     text-align: center;
     max-width: 640px;
-    margin: 0 auto 64px;
+    margin: 0 auto 56px;
 }
 
 .blogs-header .section-tag {
@@ -39,14 +40,200 @@ title: Blogs
     color: #555;
 }
 
-/* Grid — auto grows */
+/* ── Topic filter bar ── */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 48px;
+}
+
+.filter-btn {
+    font-size: 0.8rem;
+    padding: 6px 16px;
+    border-radius: 999px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.filter-btn:hover {
+    border-color: #999;
+    color: #111;
+}
+
+.filter-btn.active {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+/* ── Section titles ── */
+.section-heading {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 24px;
+}
+
+/* ── Cluster block ── */
+.cluster-block {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.cluster-block:last-of-type {
+    border-bottom: none;
+}
+
+.cluster-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.cluster-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.cluster-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.cluster-count {
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-left: auto;
+}
+
+/* ── Pillar card ── */
+.pillar-card {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e4e4e4;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.pillar-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.pillar-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin-bottom: 7px;
+}
+
+.pillar-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.pillar-card-meta {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+.pillar-arrow {
+    font-size: 1.1rem;
+    color: #bbb;
+    flex-shrink: 0;
+}
+
+/* ── Spoke chips ── */
+.spokes-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.spoke-chip {
+    font-size: 0.78rem;
+    color: #555;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    text-decoration: none;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.spoke-chip:hover {
+    border-color: #999;
+    color: #111;
+}
+
+.spoke-chip.coming-soon {
+    color: #bbb;
+    cursor: default;
+    font-style: italic;
+}
+
+/* ── Colour themes per cluster ── */
+.dot-blue  { background: #4f80c1; }
+.dot-coral { background: #d85a30; }
+.dot-amber { background: #ba7517; }
+.dot-teal  { background: #1d9e75; }
+.dot-purple{ background: #7f77dd; }
+
+.badge-blue   { background: #e6f1fb; color: #0c447c; }
+.badge-coral  { background: #faece7; color: #712b13; }
+.badge-amber  { background: #faeeda; color: #633806; }
+.badge-teal   { background: #e1f5ee; color: #085041; }
+.badge-purple { background: #eeedfe; color: #3c3489; }
+
+/* ── Latest articles section ── */
+.latest-section {
+    margin-top: 56px;
+}
+
+.latest-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.latest-header .section-heading {
+    margin-bottom: 0;
+}
+
+/* ── Blog card grid (kept from original) ── */
 .blogs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
 }
 
-/* Card */
 .blog-card {
     background: #fff;
     border-radius: 20px;
@@ -60,39 +247,50 @@ title: Blogs
     box-shadow: 0 20px 50px rgba(0,0,0,0.12);
 }
 
-/* Image */
 .blog-image img {
     width: 100%;
-    height: 240px;
+    height: 200px;
     object-fit: cover;
 }
 
-/* Content */
 .blog-content {
-    padding: 24px;
+    padding: 20px 24px;
+}
+
+.blog-cluster-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    display: block;
 }
 
 .blog-date {
-    font-size: 0.8rem;
-    color: #777;
+    font-size: 0.78rem;
+    color: #999;
+    margin-bottom: 6px;
+    display: block;
 }
 
 .blog-content h3 {
-    font-size: 1.1rem;
-    margin: 10px 0;
+    font-size: 1rem;
+    margin: 0 0 10px;
     line-height: 1.4;
+    color: #111;
 }
 
 .blog-content p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #555;
     line-height: 1.6;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .read-more {
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.88rem;
     color: #111;
 }
 
@@ -100,172 +298,318 @@ title: Blogs
     text-decoration: underline;
 }
 
+/* ── CTA block (kept from original) ── */
 .blog-cta {
-  margin-top: 5rem;
-  padding: 3rem 2rem;
-  border-radius: 24px;
-  background: linear-gradient(135deg, #4f80c1, #3a6fb3);
-  color: #fff;
-  text-align: center;
+    margin-top: 5rem;
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #4f80c1, #3a6fb3);
+    color: #fff;
+    text-align: center;
 }
 
 .blog-cta h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .blog-cta p {
-  opacity: 0.9;
-  margin-bottom: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
 }
 
-/* CTA button — locked styles */
 .blog-cta .cta-btn {
-  display: inline-block;
-  background: #f5a623;
-  color: #000;
-  padding: 0.8rem 2rem;
-  border-radius: 999px;
-  font-weight: 500;
-  text-decoration: none;
+    display: inline-block;
+    background: #f5a623;
+    color: #000;
+    padding: 0.8rem 2rem;
+    border-radius: 999px;
+    font-weight: 500;
+    text-decoration: none;
 }
 
 .blog-cta .cta-btn:hover {
-  opacity: 0.9;
+    opacity: 0.9;
 }
 </style>
 
 <section class="blogs-page">
     <div class="blogs-container">
-        <!-- Header -->
+
+        <!-- ── Header ── -->
         <div class="blogs-header">
-            <span class="section-tag">Insights</span>
-            <h1>Our Blogs & Legal Insights</h1>
+            <span class="section-tag">Knowledge base</span>
+            <h1>Loan Settlement Guides & Borrower Rights</h1>
             <p>
-                Expert opinions, legal updates, and practical guidance to help
-                you make informed decisions.
+                Complete guides on personal loan settlement, credit card debt,
+                CIBIL impact, and your legal rights against recovery harassment in India.
             </p>
         </div>
 
-        <!-- Blogs Grid -->
-        <div class="blogs-grid">
-
-            <!--Blog 7-->
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="/assets/images/blog7.png" alt="Gen-z vs older generation who is more vulnerable to loan traps.">
-                </div>
-                <div class="blog-content">
-                    <span class="blog-date">Mar 19, 2026</span>
-                    <h3>Gen-z vs older generation who is more vulnerable to loan traps.</h3>
-                    <p>
-                        Deep dive into how generation gap affect the expenditure practices.
-                    </p>
-                    <a href="genz-vs-older-india/" class="read-more">Read More →</a>
-                </div>
-            </article>
-
-            <!---Blog 6-->
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="/assets/images/blog6.png" alt="What Happens If You Don't Pay a Personal Loan in India?">
-                </div>
-                <div class="blog-content">
-                    <span class="blog-date">Mar 15, 2026</span>
-                    <h3>What Happens If You Don't Pay a Personal Loan in India?</h3>
-                    <p>
-                        Understand the consequences of missing personal loan EMIs in India.
-                    </p>
-                    <a href="unable-to-pay-loan-india/" class="read-more">Read More →</a>
-                </div>
-            </article>
-
-            <!---Blog 5-->
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="/assets/images/blog5.png" alt="New RBI Rules for Anti Harrasment">
-                </div>
-                <div class="blog-content">
-                    <span class="blog-date">Mar 14, 2026</span>
-                    <h3>New RBI Rules for Anti Harrasment, according to 2026.</h3>
-                    <p>
-                        RBI's 2026 loan recovery rules to protect borrowers from harassment by recovery agents.
-                    </p>
-                    <a href="rbi-rules-2026-india/" class="read-more">Read More →</a>
-                </div>
-            </article>
-
-            <!---Blog 4-->
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="/assets/images/blog4.png" alt="Is Loan Settlement Legally Possible">
-                </div>
-                <div class="blog-content">
-                    <span class="blog-date">Mar 11, 2026</span>
-                    <h3>Is Loan Settlement Legally Possible in India?</h3>
-                    <p>
-                        Understanding how borrowers can resolve loan and credit card debt through legal settlement and negotiation.
-                    </p>
-                    <a href="loan-settlement-india/" class="read-more">Read More →</a>
-                </div>
-            </article>
-
-            <!-- Blog 1 -->
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="/assets/images/blog1.png" alt="Understanding Legal Rights in Business Contracts">
-                </div>
-                <div class="blog-content">
-                    <span class="blog-date">Jan 12, 2026</span>
-                    <h3>Understanding Legal Rights in Business Contracts</h3>
-                    <p>
-                        A simple breakdown of key clauses every business owner should
-                        understand before signing a contract.
-                    </p>
-                    <a href="legal-rights-india/" class="read-more">Read More →</a>
-                </div>
-            </article>
-
-            <!-- Blog 2 -->
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="/assets/images/blog2.png" alt="How Mediation Can Save Time and Cost">
-                </div>
-                <div class="blog-content">
-                    <span class="blog-date">Dec 28, 2025</span>
-                    <h3>How Mediation Can Save Time and Cost</h3>
-                    <p>
-                        Learn how mediation helps resolve disputes faster without
-                        lengthy legal battles.
-                    </p>
-                    <a href="mediation-tactics-india/" class="read-more">Read More →</a>
-                </div>
-            </article>
-
-            <!-- Blog 3 -->
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="/assets/images/blog3.png" alt="Common Legal Mistakes Startups Make">
-                </div>
-                <div class="blog-content">
-                    <span class="blog-date">Dec 10, 2025</span>
-                    <h3>Common Legal Mistakes Startups Make</h3>
-                    <p>
-                        Avoid these common pitfalls that can slow down or derail
-                        early-stage startups.
-                    </p>
-                    <a href="legal-mistakes-india/" class="read-more">Read More →</a>
-                </div>
-            </article>
-
-
-            <!-- Add new blogs freely below -->
+        <!-- ── Filter bar ── -->
+        <div class="filter-bar">
+            <button class="filter-btn active">All topics</button>
+            <button class="filter-btn">Personal loan</button>
+            <button class="filter-btn">Credit card</button>
+            <button class="filter-btn">CIBIL score</button>
+            <button class="filter-btn">Harassment &amp; RBI</button>
+            <button class="filter-btn">Loan default</button>
         </div>
 
+        <!-- ══════════════════════════════════
+             PILLAR CLUSTERS
+        ══════════════════════════════════ -->
+        <p class="section-heading">Browse by topic</p>
+
+        <!-- Cluster 1 — Personal loan settlement -->
+        <div class="cluster-block">
+            <div class="cluster-meta">
+                <div class="cluster-dot dot-blue"></div>
+                <span class="cluster-title">Personal loan settlement</span>
+                <span class="cluster-count">7 articles</span>
+            </div>
+
+            <a href="persoanl-loan-settlement-india-2026/" class="pillar-card">
+                <div>
+                    <span class="pillar-badge badge-blue">Pillar guide</span>
+                    <div class="pillar-card-title">Personal loan settlement in India — complete guide 2026</div>
+                    <div class="pillar-card-meta">3,200 words · Updated Mar 2026</div>
+                </div>
+                <span class="pillar-arrow">→</span>
+            </a>
+
+            <div class="spokes-row">
+                <!-- <a href="negotiate-sbi-loan-settlement/" class="spoke-chip">How to negotiate with SBI</a>
+                <a href="hdfc-loan-settlement-process/" class="spoke-chip">HDFC settlement process</a>
+                <a href="loan-settlement-letter-format/" class="spoke-chip">Settlement letter template</a>
+                <a href="loan-settlement-vs-closure/" class="spoke-chip">Settlement vs loan closure</a>
+                <a href="after-loan-settlement-india/" class="spoke-chip">What happens after settlement</a> -->
+            </div>
+        </div>
+
+        <!-- Cluster 2 — Harassment & RBI -->
+        <div class="cluster-block">
+            <div class="cluster-meta">
+                <div class="cluster-dot dot-coral"></div>
+                <span class="cluster-title">Harassment &amp; RBI rules</span>
+                <span class="cluster-count">6 articles</span>
+            </div>
+
+            <div class="pillar-card" style="opacity:0.55; cursor:default; pointer-events:none;">
+                <div>
+                    <span class="pillar-badge badge-coral">Pillar guide - coming soon</span>
+                    <div class="pillar-card-title">Recovery agent harassment in India — your rights &amp; legal protection</div>
+                    <div class="pillar-card-meta">2,800 words · Updated Mar 2026</div>
+                </div>
+                <span class="pillar-arrow">→</span>
+            </div>
+
+            <div class="spokes-row">
+                <a href="rbi-rules-2026-india/" class="spoke-chip">RBI rules 2026</a>
+                <a href="complaint-against-recovery-agent/" class="spoke-chip">File a complaint vs agent</a>
+                <a href="recovery-agent-calling-family/" class="spoke-chip">Can they call your family?</a>
+                <a href="stop-bank-calls-legally/" class="spoke-chip">Stop bank calls legally</a>
+                <a href="legal-notice-recovery-agent/" class="spoke-chip">Legal notice template</a>
+            </div>
+        </div>
+
+        <!-- Cluster 3 — Loan default & consequences -->
+        <div class="cluster-block">
+            <div class="cluster-meta">
+                <div class="cluster-dot dot-amber"></div>
+                <span class="cluster-title">Loan default &amp; consequences</span>
+                <span class="cluster-count">6 articles</span>
+            </div>
+
+            <div class="pillar-card" style="opacity:0.55; cursor:default; pointer-events:none;">
+                <div>
+                    <span class="pillar-badge badge-amber">Pillar guide - comming soon</span>
+                    <div class="pillar-card-title">What happens if you default on a loan in India — full guide</div>
+                    <div class="pillar-card-meta">3,000 words · Updated Mar 2026</div>
+                </div>
+                <span class="pillar-arrow">→</span>
+            </div>
+
+            <div class="spokes-row">
+                <a href="unable-to-pay-loan-india/" class="spoke-chip">Missing 1, 2, 3 EMIs</a>
+                <a href="can-bank-sue-personal-loan/" class="spoke-chip">Can bank sue you?</a>
+                <a href="sarfaesi-personal-loan-india/" class="spoke-chip">SARFAESI for personal loans</a>
+                <a href="debt-recovery-tribunal-india/" class="spoke-chip">DRT process explained</a>
+                <a href="loan-default-vs-settlement/" class="spoke-chip">Default vs settlement</a>
+            </div>
+        </div>
+
+        <!-- Cluster 4 — Credit card settlement -->
+        <div class="cluster-block">
+            <div class="cluster-meta">
+                <div class="cluster-dot dot-teal"></div>
+                <span class="cluster-title">Credit card debt settlement</span>
+                <span class="cluster-count">5 articles · coming soon</span>
+            </div>
+
+            <div class="pillar-card" style="opacity:0.55; cursor:default; pointer-events:none;">
+                <div>
+                    <span class="pillar-badge badge-teal">Pillar guide — coming soon</span>
+                    <div class="pillar-card-title">Credit card debt settlement in India — complete guide</div>
+                    <div class="pillar-card-meta">Publishing April 2026</div>
+                </div>
+                <span class="pillar-arrow">→</span>
+            </div>
+
+            <div class="spokes-row">
+                <span class="spoke-chip coming-soon">Settle for less?</span>
+                <span class="spoke-chip coming-soon">CIBIL impact</span>
+                <span class="spoke-chip coming-soon">Stop credit card calls</span>
+                <span class="spoke-chip coming-soon">Min due trap</span>
+                <span class="spoke-chip coming-soon">Settlement letter</span>
+            </div>
+        </div>
+
+        <!-- Cluster 5 — CIBIL score -->
+        <div class="cluster-block">
+            <div class="cluster-meta">
+                <div class="cluster-dot dot-purple"></div>
+                <span class="cluster-title">CIBIL score &amp; settlement</span>
+                <span class="cluster-count">5 articles · coming soon</span>
+            </div>
+
+            <div class="pillar-card" style="opacity:0.55; cursor:default; pointer-events:none;">
+                <div>
+                    <span class="pillar-badge badge-purple">Pillar guide — coming soon</span>
+                    <div class="pillar-card-title">CIBIL score and loan settlement — full impact guide</div>
+                    <div class="pillar-card-meta">Publishing May 2026</div>
+                </div>
+                <span class="pillar-arrow">→</span>
+            </div>
+
+            <div class="spokes-row">
+                <span class="spoke-chip coming-soon">Settlement vs closure in CIBIL</span>
+                <span class="spoke-chip coming-soon">Rebuild CIBIL after settlement</span>
+                <span class="spoke-chip coming-soon">How long does it stay?</span>
+                <span class="spoke-chip coming-soon">Loans after settlement</span>
+                <span class="spoke-chip coming-soon">CIBIL dispute process</span>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════
+             LATEST ARTICLES
+        ══════════════════════════════════ -->
+        <div class="latest-section">
+            <div class="latest-header">
+                <p class="section-heading">Latest articles</p>
+            </div>
+
+            <div class="blogs-grid">
+
+                <!-- Blog 7 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="/assets/images/blog7.png" alt="Gen Z vs older generation — who is more vulnerable to loan traps">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-cluster-tag" style="color:#4f80c1">Personal loan</span>
+                        <span class="blog-date">Mar 19, 2026</span>
+                        <h3>Gen Z vs older generation — who is more vulnerable to loan traps?</h3>
+                        <p>Deep dive into how generation gap affects expenditure practices and debt habits.</p>
+                        <a href="genz-vs-older-india/" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog 6 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="/assets/images/blog6.png" alt="What happens if you don't pay a personal loan in India">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-cluster-tag" style="color:#ba7517">Loan default</span>
+                        <span class="blog-date">Mar 15, 2026</span>
+                        <h3>What happens if you don't pay a personal loan in India?</h3>
+                        <p>Understand the consequences of missing personal loan EMIs in India.</p>
+                        <a href="unable-to-pay-loan-india/" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog 5 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="/assets/images/blog5.png" alt="New RBI rules for anti-harassment 2026">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-cluster-tag" style="color:#d85a30">Harassment &amp; RBI</span>
+                        <span class="blog-date">Mar 14, 2026</span>
+                        <h3>New RBI rules for anti-harassment, according to 2026</h3>
+                        <p>RBI's 2026 loan recovery rules to protect borrowers from harassment by recovery agents.</p>
+                        <a href="rbi-rules-2026-india/" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog 4 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="/assets/images/blog4.png" alt="Is loan settlement legally possible in India">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-cluster-tag" style="color:#4f80c1">Personal loan</span>
+                        <span class="blog-date">Mar 11, 2026</span>
+                        <h3>Is loan settlement legally possible in India?</h3>
+                        <p>Understanding how borrowers can resolve loan and credit card debt through legal settlement.</p>
+                        <a href="loan-settlement-india/" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog 1 — rewritten to fit niche -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="/assets/images/blog1.png" alt="Legal rights of borrowers in India">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-cluster-tag" style="color:#d85a30">Harassment &amp; RBI</span>
+                        <span class="blog-date">Jan 12, 2026</span>
+                        <h3>Legal rights of borrowers in India — what banks cannot do</h3>
+                        <p>A plain-language guide to your rights when dealing with banks and recovery agents.</p>
+                        <a href="legal-rights-india/" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog 2 — rewritten to fit niche -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="/assets/images/blog2.png" alt="How loan mediation works in India">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-cluster-tag" style="color:#4f80c1">Personal loan</span>
+                        <span class="blog-date">Dec 28, 2025</span>
+                        <h3>How loan mediation can help you avoid court proceedings</h3>
+                        <p>Learn how debt mediation resolves disputes faster and cheaper than legal battles.</p>
+                        <a href="mediation-tactics-india/" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog 3 — rewritten to fit niche -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="/assets/images/blog3.png" alt="Common loan settlement mistakes to avoid">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-cluster-tag" style="color:#4f80c1">Personal loan</span>
+                        <span class="blog-date">Dec 10, 2025</span>
+                        <h3>Common loan settlement mistakes borrowers make in India</h3>
+                        <p>Avoid these pitfalls that can reduce your chances of a successful loan settlement.</p>
+                        <a href="legal-mistakes-india/" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Add new blog cards below this line -->
+
+            </div>
+        </div>
+
+        <!-- ── CTA block ── -->
         <div class="blog-cta">
-          <h2>Do you like our work?</h2>
-          <p>Talk to our experts and get clarity on similar topics.</p>
-          <a href="/contact" class="cta-btn">Consult Us</a>
+            <h2>Do you like our work?</h2>
+            <p>Talk to our experts and get clarity on similar topics.</p>
+            <a href="/contact" class="cta-btn">Consult Us</a>
         </div>
+
     </div>
 </section>
