@@ -1,0 +1,187 @@
+<!-- ═══════════════════════════════════
+     AUTHOR SECTION
+     To customise: swap out the src, name,
+     role, bio, and social href values below
+═══════════════════════════════════ -->
+<style>
+  .MB1-author-strip {
+    max-width: 1120px;
+    margin: 0 auto 48px;
+    padding: 0 24px;
+  }
+
+  .MB1-author-card {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid var(--MB1-border, #e0ddd6);
+    border-top: 4px solid var(--MB1-teal, #1a7a7a);
+    border-radius: 6px;
+    padding: 28px 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+
+  .MB1-author-avatar {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 20%; 
+    /* border: 1px solid var(--MB1-teal-light, #174d4d); */
+    background: var(--MB1-paper-warm, #f4f1eb);
+  }
+
+  /* Fallback initials circle when no image is supplied */
+  .MB1-author-avatar-fallback {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--MB1-teal, #1a7a7a);
+    color: #fff;
+    font-family: 'Lora', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+  }
+
+  .MB1-author-body {
+    flex: 1;
+  }
+
+  .MB1-author-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--MB1-teal, #1a7a7a);
+    margin-bottom: 6px;
+  }
+
+  .MB1-author-name {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--MB1-ink, #1a1a2e);
+    margin-bottom: 2px;
+  }
+
+  .MB1-author-role {
+    font-size: 13px;
+    color: var(--MB1-ink-muted, #6b6b88);
+    margin-bottom: 12px;
+  }
+
+  .MB1-author-bio {
+    font-size: 14.5px;
+    color: var(--MB1-ink-light, #444460);
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+
+  .MB1-author-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .MB1-author-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--MB1-teal, #1a7a7a);
+    text-decoration: none;
+    padding: 5px 14px;
+    border: 1px solid var(--MB1-teal, #1a7a7a);
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .MB1-author-link:hover {
+    background: var(--MB1-teal, #1a7a7a);
+    color: #fff;
+  }
+
+  @media (max-width: 600px) {
+    .MB1-author-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 24px 20px;
+    }
+    .MB1-author-links { justify-content: center; }
+  }
+
+
+  .MB1-cta {
+      margin-top: 5rem;
+      padding: 3rem 2rem;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #4f80c1, #3a6fb3);
+      color: #fff;
+      text-align: center;
+  }
+
+  .MB1-cta h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+  }
+
+  .MB1-cta p {
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+  }
+
+  .MB1-cta .MB1-cta-btn {
+      display: inline-block;
+      background: #f5a623;
+      color: #000;
+      padding: 0.8rem 2rem;
+      border-radius: 999px;
+      font-weight: 500;
+      text-decoration: none;
+  }
+
+  .MB1-cta .MB1-cta-btn:hover {
+      opacity: 0.9;
+  }
+</style>
+
+<div class="MB1-author-strip">
+  <div class="MB1-author-card">
+
+    <!-- ▼ OPTION A: use a real image — set src to your image path -->
+    <img class="MB1-author-avatar"
+         src="/assets/images/icon.png"
+         alt="Resolve Now">
+
+    <!-- ▼ OPTION B: no image — shows initials instead (remove this block if using Option A) -->
+    <!-- <div class="MB1-author-avatar-fallback">RN</div> -->
+
+    <div class="MB1-author-body">
+      <div class="MB1-author-label">Written by</div>
+
+      <!-- ▼ Change name, role, and bio below -->
+      <div class="MB1-author-name">Resolve Now Finance Advisors</div>
+      <div class="MB1-author-role">Debt Resolution Specialist · India</div>
+      <p class="MB1-author-bio">
+        The Resolve Now team has helped many borrowers across India navigate loan settlements,
+        CIBIL recovery, and recovery harassment — without the legal jargon. Our guides are built from
+        real case experience, not textbook theory.
+      </p>
+
+      <div class="MB1-author-links">
+        <!-- ▼ Add, remove, or change these links as needed -->
+        <a class="MB1-author-link" href="/about/">About Us</a>
+        <a class="MB1-author-link" href="/blogs/">More Articles</a>
+        <a class="MB1-author-link" href="/contact/">Get in Touch</a>
+      </div>
+    </div>
+  </div>
