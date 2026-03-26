@@ -1,0 +1,1163 @@
+---
+layout: layout.html
+title:  Recovery Agent Harassment — Legal Editorial
+---
+
+<!-- Recovery Agent Harassment — Legal Editorial, MB2 namespace -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* ─── TOKENS ─────────────────────────────────────────────────── */
+:root {
+  --MB2-bg:        #F9F6F1;
+  --MB2-ink:       #1C1C1E;
+  --MB2-ink-mid:   #4A4A50;
+  --MB2-ink-faint: #9A9A9E;
+  --MB2-rule:      #D8D3CA;
+  --MB2-red:       #B5271F;
+  --MB2-red-tint:  #F7EFEE;
+  --MB2-brass:     #8B6914;
+  --MB2-brass-tint:#F5F0E4;
+  --MB2-green:     #1A4A2E;
+  --MB2-green-tint:#EBF2ED;
+  --MB2-serif:     'Libre Baskerville', Georgia, serif;
+  --MB2-body:      'Source Serif 4', Georgia, serif;
+  --MB2-mono:      'IBM Plex Mono', 'Courier New', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── ARTICLE SHELL ──────────────────────────────────────────── */
+.MB2-article {
+  font-family: var(--MB2-body);
+  font-size: 1.0625rem;
+  font-weight: 300;
+  line-height: 1.82;
+  color: var(--MB2-ink);
+  background: var(--MB2-bg);
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 4.5rem 1.5rem 6rem;
+}
+
+/* ─── DATELINE ───────────────────────────────────────────────── */
+.MB2-dateline {
+  font-family: var(--MB2-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--MB2-ink-faint);
+  border-top: 2px solid var(--MB2-ink);
+  padding-top: 0.6rem;
+  margin-bottom: 2.8rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.MB2-dateline-sep { color: var(--MB2-rule); }
+
+/* ─── INTRO ──────────────────────────────────────────────────── */
+.MB2-lede {
+  font-family: var(--MB2-serif);
+  font-style: italic;
+  font-size: 1.18rem;
+  line-height: 1.75;
+  color: var(--MB2-ink-mid);
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--MB2-rule);
+  border-bottom: 1px solid var(--MB2-rule);
+  margin-bottom: 2rem;
+}
+
+.MB2-intro-statement {
+  font-family: var(--MB2-serif);
+  font-size: 1.28rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--MB2-ink);
+  margin-bottom: 1.1rem;
+}
+
+.MB2-para {
+  margin-bottom: 1.1rem;
+  color: var(--MB2-ink-mid);
+}
+
+/* ─── SECTION STRUCTURE ──────────────────────────────────────── */
+.MB2-section {
+  margin-bottom: 3.8rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid var(--MB2-rule);
+}
+
+.MB2-section-marker {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.MB2-section-num {
+  font-family: var(--MB2-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--MB2-red);
+  flex-shrink: 0;
+}
+
+.MB2-section-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--MB2-rule);
+}
+
+.MB2-h2 {
+  font-family: var(--MB2-serif);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.22;
+  color: var(--MB2-ink);
+  margin-bottom: 1.3rem;
+  letter-spacing: -0.01em;
+}
+
+.MB2-h3 {
+  font-family: var(--MB2-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--MB2-ink-faint);
+  margin: 2rem 0 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--MB2-rule);
+}
+
+/* ─── TABLE ──────────────────────────────────────────────────── */
+.MB2-table-wrap {
+  margin: 1.8rem 0;
+  overflow-x: auto;
+}
+
+.MB2-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+  font-family: var(--MB2-body);
+}
+
+.MB2-table thead tr { border-bottom: 2px solid var(--MB2-ink); }
+
+.MB2-table th {
+  font-family: var(--MB2-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--MB2-ink-faint);
+  padding: 0.5rem 1rem 0.5rem 0;
+  text-align: left;
+  font-weight: 400;
+}
+
+.MB2-table td {
+  padding: 0.7rem 1rem 0.7rem 0;
+  border-bottom: 1px solid var(--MB2-rule);
+  vertical-align: top;
+  color: var(--MB2-ink-mid);
+}
+
+.MB2-table tr:last-child td { border-bottom: none; }
+.MB2-td-ok  { color: var(--MB2-green); font-weight: 600; }
+.MB2-td-bad { color: var(--MB2-red);   font-weight: 600; }
+
+/* ─── LEDGER LIST ─────────────────────────────────────────────── */
+.MB2-ledger {
+  list-style: none;
+  margin: 1.5rem 0;
+  counter-reset: MB2-ledger-cnt;
+}
+
+.MB2-ledger-item {
+  counter-increment: MB2-ledger-cnt;
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 0 0.8rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--MB2-rule);
+  align-items: start;
+}
+
+.MB2-ledger-item:first-child { border-top: 1px solid var(--MB2-rule); }
+
+.MB2-ledger-index {
+  font-family: var(--MB2-mono);
+  font-size: 0.7rem;
+  color: var(--MB2-red);
+  padding-top: 0.25rem;
+  letter-spacing: 0.04em;
+}
+
+.MB2-ledger-index::before { content: counter(MB2-ledger-cnt, decimal-leading-zero); }
+
+.MB2-ledger-title {
+  font-family: var(--MB2-serif);
+  font-weight: 700;
+  font-size: 0.96rem;
+  color: var(--MB2-ink);
+  margin-bottom: 0.25rem;
+}
+
+.MB2-ledger-desc {
+  font-size: 0.9rem;
+  color: var(--MB2-ink-mid);
+  line-height: 1.6;
+}
+
+/* ─── TWO-COLUMN RULED PANEL ─────────────────────────────────── */
+.MB2-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin: 1.8rem 0;
+  border: 1px solid var(--MB2-rule);
+}
+
+.MB2-col-panel { padding: 1.4rem 1.5rem; }
+.MB2-col-panel:first-child { border-right: 1px solid var(--MB2-rule); }
+
+.MB2-col-head {
+  font-family: var(--MB2-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid var(--MB2-rule);
+}
+
+.MB2-col-head--permit { color: var(--MB2-green); }
+.MB2-col-head--deny   { color: var(--MB2-red);   }
+
+.MB2-col-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.MB2-col-list li {
+  font-size: 0.9rem;
+  color: var(--MB2-ink-mid);
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  gap: 0.4rem;
+  line-height: 1.5;
+}
+
+.MB2-col-marker--permit { color: var(--MB2-green); font-weight: 700; }
+.MB2-col-marker--deny   { color: var(--MB2-red);   font-weight: 700; }
+
+/* ─── RIGHTS LIST ─────────────────────────────────────────────── */
+.MB2-rights {
+  list-style: none;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.MB2-right-item {
+  padding: 1.1rem 0 1.1rem 1.4rem;
+  border-bottom: 1px solid var(--MB2-rule);
+  border-left: 3px solid var(--MB2-green);
+  margin-left: 0;
+}
+
+.MB2-right-item:first-child { border-top: 1px solid var(--MB2-rule); }
+.MB2-right-item + .MB2-right-item { margin-top: 0; }
+
+.MB2-right-name {
+  font-family: var(--MB2-serif);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--MB2-ink);
+  margin-bottom: 0.2rem;
+}
+
+.MB2-right-sub {
+  font-size: 0.88rem;
+  color: var(--MB2-ink-mid);
+  line-height: 1.6;
+}
+
+/* ─── NOTICE / WARNING ───────────────────────────────────────── */
+.MB2-notice {
+  border-left: 3px solid var(--MB2-brass);
+  background: var(--MB2-brass-tint);
+  padding: 1.1rem 1.4rem;
+  margin: 1.6rem 0;
+  font-size: 0.91rem;
+  color: #4a3800;
+  line-height: 1.7;
+}
+
+.MB2-notice strong { font-family: var(--MB2-serif); font-weight: 700; }
+
+.MB2-warning {
+  border-left: 3px solid var(--MB2-red);
+  background: var(--MB2-red-tint);
+  padding: 1.1rem 1.4rem;
+  margin: 1.6rem 0;
+  font-size: 0.91rem;
+  color: #5a1010;
+  line-height: 1.7;
+}
+
+.MB2-warning strong { font-family: var(--MB2-serif); font-weight: 700; }
+
+/* ─── LEGAL PROVISIONS TABLE ─────────────────────────────────── */
+.MB2-provisions {
+  width: 100%;
+  margin: 1.4rem 0;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.MB2-provisions thead tr { border-bottom: 2px solid var(--MB2-ink); }
+
+.MB2-provisions th {
+  font-family: var(--MB2-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--MB2-ink-faint);
+  padding: 0.4rem 1.2rem 0.4rem 0;
+  text-align: left;
+  font-weight: 400;
+}
+
+.MB2-provisions td {
+  padding: 0.65rem 1.2rem 0.65rem 0;
+  border-bottom: 1px solid var(--MB2-rule);
+  vertical-align: top;
+  color: var(--MB2-ink-mid);
+}
+
+.MB2-prov-code {
+  font-family: var(--MB2-mono);
+  font-size: 0.8rem;
+  color: var(--MB2-ink);
+  white-space: nowrap;
+}
+
+.MB2-prov-label {
+  font-weight: 600;
+  color: var(--MB2-ink);
+  font-size: 0.88rem;
+}
+
+/* ─── PROCEDURE (steps as legal clauses) ─────────────────────── */
+.MB2-procedure {
+  list-style: none;
+  margin: 1.6rem 0;
+}
+
+.MB2-proc-item {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid var(--MB2-rule);
+}
+
+.MB2-proc-item:first-child { border-top: 1px solid var(--MB2-rule); }
+
+.MB2-proc-num {
+  font-family: var(--MB2-mono);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--MB2-ink-faint);
+  line-height: 1;
+  padding-top: 0.2rem;
+  letter-spacing: -0.04em;
+  user-select: none;
+}
+
+.MB2-proc-title {
+  font-family: var(--MB2-serif);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--MB2-ink);
+  margin-bottom: 0.3rem;
+}
+
+.MB2-proc-desc {
+  font-size: 0.91rem;
+  color: var(--MB2-ink-mid);
+  line-height: 1.65;
+}
+
+.MB2-proc-link {
+  display: inline-block;
+  margin-top: 0.45rem;
+  margin-right: 1.2rem;
+  font-family: var(--MB2-mono);
+  font-size: 0.76rem;
+  color: var(--MB2-red);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid currentColor;
+  transition: opacity 0.18s;
+}
+
+.MB2-proc-link:hover { opacity: 0.6; }
+
+/* ─── ESCALATION PATH ────────────────────────────────────────── */
+.MB2-escalation {
+  display: flex;
+  align-items: center;
+  margin: 1.6rem 0;
+  font-family: var(--MB2-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.MB2-esc-step {
+  color: var(--MB2-ink);
+  font-weight: 500;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--MB2-ink);
+  white-space: nowrap;
+}
+
+.MB2-esc-arrow {
+  width: 2rem;
+  height: 1px;
+  background: var(--MB2-rule);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.MB2-esc-arrow::after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid var(--MB2-rule);
+  border-right: 1px solid var(--MB2-rule);
+  transform: rotate(45deg);
+}
+
+/* ─── SCENARIOS TABLE ────────────────────────────────────────── */
+.MB2-cases {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.6rem 0;
+  font-size: 0.91rem;
+}
+
+.MB2-cases thead tr { border-bottom: 2px solid var(--MB2-ink); }
+
+.MB2-cases th {
+  font-family: var(--MB2-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--MB2-ink-faint);
+  padding: 0.4rem 1rem 0.4rem 0;
+  text-align: left;
+  font-weight: 400;
+}
+
+.MB2-cases td {
+  padding: 0.9rem 1rem 0.9rem 0;
+  border-bottom: 1px solid var(--MB2-rule);
+  vertical-align: top;
+  color: var(--MB2-ink-mid);
+  line-height: 1.55;
+}
+
+.MB2-cases tr:last-child td { border-bottom: none; }
+
+.MB2-case-no {
+  font-family: var(--MB2-mono);
+  font-size: 0.78rem;
+  color: var(--MB2-ink-faint);
+  white-space: nowrap;
+}
+
+.MB2-case-title-cell {
+  display: block;
+  font-family: var(--MB2-serif);
+  font-weight: 700;
+  color: var(--MB2-ink);
+  font-size: 0.93rem;
+  margin-bottom: 0.2rem;
+}
+
+.MB2-case-outcome {
+  font-family: var(--MB2-mono);
+  font-size: 0.74rem;
+  color: var(--MB2-green);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* ─── FAQ ────────────────────────────────────────────────────── */
+.MB2-faq { margin: 1.6rem 0; }
+
+.MB2-faq-item { border-bottom: 1px solid var(--MB2-rule); }
+.MB2-faq-item:first-child { border-top: 1px solid var(--MB2-rule); }
+
+.MB2-faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1.05rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1.2rem;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--MB2-serif);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--MB2-ink);
+  text-align: left;
+  transition: color 0.15s;
+}
+
+.MB2-faq-q:hover { color: var(--MB2-red); }
+
+.MB2-faq-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  color: var(--MB2-ink-faint);
+  justify-self: end;
+}
+
+.MB2-faq-item.MB2-open .MB2-faq-icon {
+  transform: rotate(45deg);
+  color: var(--MB2-red);
+}
+
+.MB2-faq-a {
+  display: none;
+  padding: 0 0 1.1rem;
+  font-size: 0.91rem;
+  color: var(--MB2-ink-mid);
+  line-height: 1.7;
+}
+
+.MB2-faq-item.MB2-open .MB2-faq-a { display: block; }
+
+/* ─── LINKS ──────────────────────────────────────────────────── */
+.MB2-link {
+  color: var(--MB2-red);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: opacity 0.18s;
+}
+
+.MB2-link:hover { opacity: 0.65; }
+
+/* ─── CONCLUSION ─────────────────────────────────────────────── */
+.MB2-conclusion {
+  margin-top: 4rem;
+  padding: 2.4rem 2rem;
+  background: var(--MB2-ink);
+  color: var(--MB2-bg);
+}
+
+.MB2-conclusion .MB2-section-num { color: #666; }
+.MB2-conclusion .MB2-section-rule { background: #3a3a3a; }
+
+.MB2-conclusion .MB2-h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.MB2-conclusion p {
+  color: #a8a5a0;
+  font-size: 0.93rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.75;
+}
+
+.MB2-conclusion .MB2-esc-step {
+  color: #e8e5e0;
+  border-color: #444;
+}
+
+.MB2-conclusion .MB2-esc-arrow { background: #3a3a3a; }
+.MB2-conclusion .MB2-esc-arrow::after { border-color: #3a3a3a; }
+
+.MB2-conclusion-list {
+  list-style: none;
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #333;
+}
+
+.MB2-conclusion-list li {
+  font-size: 0.9rem;
+  color: #a8a5a0;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #2c2c2e;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.6rem;
+  align-items: start;
+  line-height: 1.55;
+}
+
+.MB2-ci {
+  font-family: var(--MB2-mono);
+  font-size: 0.68rem;
+  color: #555;
+  padding-top: 0.15rem;
+  letter-spacing: 0.06em;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 560px) {
+  .MB2-article { padding: 2rem 1rem 4rem; font-size: 1rem; }
+  .MB2-h2 { font-size: 1.35rem; }
+  .MB2-two-col { grid-template-columns: 1fr; }
+  .MB2-two-col .MB2-col-panel:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--MB2-rule);
+  }
+  .MB2-proc-num { font-size: 1.5rem; }
+  .MB2-esc-arrow { width: 1rem; }
+  .MB2-conclusion { padding: 1.8rem 1.2rem; }
+}
+</style>
+
+<article class="MB2-article">
+
+    <h1>Recovery agent harassment in India — your rights &amp; legal protection</h1>
+
+  <div class="MB2-dateline">
+    <span>India Borrower Rights</span>
+    <span class="MB2-dateline-sep">—</span>
+    <span>Updated Mar 2026</span>
+    <span class="MB2-dateline-sep">—</span>
+    <span>Per RBI Guidelines</span>
+  </div>
+
+  <p class="MB2-lede">
+    Your phone rings at 10:45&nbsp;PM. Unknown number. You ignore it. It rings again.
+    The next morning, a stranger appears at your workplace asking about your loan default.
+    By evening, abusive messages arrive threatening arrest and public humiliation.
+  </p>
+
+  <p class="MB2-intro-statement">If this sounds familiar — you are not alone.</p>
+
+  <p class="MB2-para">
+    Thousands of borrowers across India face recovery agent harassment daily, from banks,
+    <a class="MB2-link" href="https://www.rbi.org.in/commonman/English/scripts/NBFCs.aspx" target="_blank" rel="noopener">NBFCs</a>,
+    and digital lending apps. This guide sets out your rights and the exact steps to stop it.
+  </p>
+
+  <div class="MB2-notice">
+    <strong>Fundamental principle:</strong> Being in debt is not a crime. Harassment is.
+  </div>
+
+  <!-- 01 -->
+  <section class="MB2-section">
+    <div class="MB2-section-marker">
+      <span class="MB2-section-num">01</span>
+      <span class="MB2-section-rule"></span>
+    </div>
+    <h2 class="MB2-h2">Who Are Recovery Agents?</h2>
+
+    <p class="MB2-para">
+      Banks and NBFCs appoint recovery agents to collect overdue EMIs, credit card dues, or loan payments.
+      These agents act on behalf of the lender. The critical point most borrowers are unaware of:
+    </p>
+
+    <div class="MB2-warning">
+      <strong>Legal liability:</strong> The bank or NBFC is fully responsible for the actions of its recovery agents.
+      They cannot claim "it's a third-party agency." Under law, they are accountable.
+    </div>
+
+    <p class="MB2-para">
+      Under guidelines issued by the
+      <a class="MB2-link" href="https://www.rbi.org.in" target="_blank" rel="noopener">Reserve Bank of India</a>,
+      lenders must ensure their agents follow strict conduct standards.
+    </p>
+
+    <div class="MB2-table-wrap">
+      <table class="MB2-table">
+        <thead>
+          <tr><th>Legitimate Recovery</th><th>Harassment</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="MB2-td-ok">Polite reminders</td>
+            <td class="MB2-td-bad">Abusive or threatening calls</td>
+          </tr>
+          <tr>
+            <td class="MB2-td-ok">Calls within permitted hours</td>
+            <td class="MB2-td-bad">Contact before 8 AM or after 7 PM</td>
+          </tr>
+          <tr>
+            <td class="MB2-td-ok">Requesting repayment</td>
+            <td class="MB2-td-bad">Threats of arrest or legal action</td>
+          </tr>
+          <tr>
+            <td class="MB2-td-ok">Visiting with valid ID</td>
+            <td class="MB2-td-bad">Public humiliation or workplace contact</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section class="MB2-section">
+    <div class="MB2-section-marker">
+      <span class="MB2-section-num">02</span>
+      <span class="MB2-section-rule"></span>
+    </div>
+    <h2 class="MB2-h2">What Constitutes Harassment</h2>
+
+    <p class="MB2-para">Many borrowers tolerate behaviour that is plainly illegal. The following are established red lines under Indian law and RBI guidelines:</p>
+
+    <ul class="MB2-ledger">
+      <li class="MB2-ledger-item">
+        <div class="MB2-ledger-index"></div>
+        <div>
+          <div class="MB2-ledger-title">Excessive &amp; Repeated Calls</div>
+          <div class="MB2-ledger-desc">Multiple calls per day, contact from rotating numbers, persistent follow-up after the borrower has responded.</div>
+        </div>
+      </li>
+      <li class="MB2-ledger-item">
+        <div class="MB2-ledger-index"></div>
+        <div>
+          <div class="MB2-ledger-title">Contact Outside Permitted Hours</div>
+          <div class="MB2-ledger-desc">Any contact before 8&nbsp;AM or after 7&nbsp;PM directly violates <a class="MB2-link" href="https://www.rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=10296" target="_blank" rel="noopener">RBI norms</a> and is immediately actionable.</div>
+        </div>
+      </li>
+      <li class="MB2-ledger-item">
+        <div class="MB2-ledger-index"></div>
+        <div>
+          <div class="MB2-ledger-title">Threats &amp; Criminal Intimidation</div>
+          <div class="MB2-ledger-desc">Statements such as "police will arrest you" or "you will go to jail" are false. Loan default is a civil matter, not a criminal offence.</div>
+        </div>
+      </li>
+      <li class="MB2-ledger-item">
+        <div class="MB2-ledger-index"></div>
+        <div>
+          <div class="MB2-ledger-title">Public Humiliation</div>
+          <div class="MB2-ledger-desc">Contacting employers, informing neighbours, or messaging the borrower's personal contacts is a direct violation of privacy rights.</div>
+        </div>
+      </li>
+      <li class="MB2-ledger-item">
+        <div class="MB2-ledger-index"></div>
+        <div>
+          <div class="MB2-ledger-title">Unauthorised Home or Workplace Visits</div>
+          <div class="MB2-ledger-desc">Unannounced visits, creating scenes on premises, or pressuring family members who are not party to the loan.</div>
+        </div>
+      </li>
+      <li class="MB2-ledger-item">
+        <div class="MB2-ledger-index"></div>
+        <div>
+          <div class="MB2-ledger-title">Digital Harassment</div>
+          <div class="MB2-ledger-desc">Abusive WhatsApp messages, threatening voice notes, and social media shaming — particularly prevalent with digital lending apps.</div>
+        </div>
+      </li>
+      <li class="MB2-ledger-item">
+        <div class="MB2-ledger-index"></div>
+        <div>
+          <div class="MB2-ledger-title">Fabricated Legal Threats</div>
+          <div class="MB2-ledger-desc">Claims of "court notice issued," "non-bailable warrant," or "police case registered" are typically false and designed to coerce payment through fear.</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 03 -->
+  <section class="MB2-section">
+    <div class="MB2-section-marker">
+      <span class="MB2-section-num">03</span>
+      <span class="MB2-section-rule"></span>
+    </div>
+    <h2 class="MB2-h2">RBI Guidelines — Permitted &amp; Prohibited Conduct</h2>
+
+    <p class="MB2-para">
+      The governing authority is
+      <a class="MB2-link" href="https://www.rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=10296" target="_blank" rel="noopener">RBI Circular RBI/2022-23/108</a>
+      on Outsourcing of Financial Services, which defines conduct standards under the Fair Practices Code.
+    </p>
+
+    <div class="MB2-two-col">
+      <div class="MB2-col-panel">
+        <div class="MB2-col-head MB2-col-head--permit">Permitted</div>
+        <ul class="MB2-col-list">
+          <li><span class="MB2-col-marker--permit">+</span><span>Contact between 8&nbsp;AM – 7&nbsp;PM</span></li>
+          <li><span class="MB2-col-marker--permit">+</span><span>Home or workplace visits at reasonable hours</span></li>
+          <li><span class="MB2-col-marker--permit">+</span><span>Polite requests for repayment</span></li>
+          <li><span class="MB2-col-marker--permit">+</span><span>Request for relevant loan documents</span></li>
+          <li><span class="MB2-col-marker--permit">+</span><span>Speak with borrower or guarantor only</span></li>
+        </ul>
+      </div>
+      <div class="MB2-col-panel">
+        <div class="MB2-col-head MB2-col-head--deny">Prohibited</div>
+        <ul class="MB2-col-list">
+          <li><span class="MB2-col-marker--deny">–</span><span>Abusive or threatening language</span></li>
+          <li><span class="MB2-col-marker--deny">–</span><span>Contact outside permitted hours</span></li>
+          <li><span class="MB2-col-marker--deny">–</span><span>Threatening arrest or police action</span></li>
+          <li><span class="MB2-col-marker--deny">–</span><span>Contacting employer, relatives, or neighbours</span></li>
+          <li><span class="MB2-col-marker--deny">–</span><span>Repeated visits intended to intimidate</span></li>
+          <li><span class="MB2-col-marker--deny">–</span><span>Public disclosure of loan details</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="MB2-notice">
+      <strong>Verify before you engage:</strong> Agents must carry an official ID card, an authorization letter from the lender, and details of your loan. Always ask for these before any interaction.
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="MB2-section">
+    <div class="MB2-section-marker">
+      <span class="MB2-section-num">04</span>
+      <span class="MB2-section-rule"></span>
+    </div>
+    <h2 class="MB2-h2">Your Legal Rights as a Borrower</h2>
+
+    <ul class="MB2-rights">
+      <li class="MB2-right-item">
+        <div class="MB2-right-name">Right to Privacy</div>
+        <div class="MB2-right-sub">Protected under <a class="MB2-link" href="https://legislative.gov.in/constitution-of-india/" target="_blank" rel="noopener">Article 21 of the Constitution of India</a>. Agents cannot reveal your loan status or shame you in any public or semi-public setting.</div>
+      </li>
+      <li class="MB2-right-item">
+        <div class="MB2-right-name">Right Against Harassment</div>
+        <div class="MB2-right-sub">No abuse, threat, or coercion is permissible at any stage of the recovery process.</div>
+      </li>
+      <li class="MB2-right-item">
+        <div class="MB2-right-name">Right to Limited Contact Hours</div>
+        <div class="MB2-right-sub">You may only be contacted between 8&nbsp;AM and 7&nbsp;PM. All contact outside these hours is a regulatory violation.</div>
+      </li>
+      <li class="MB2-right-item">
+        <div class="MB2-right-name">Right to Written Communication</div>
+        <div class="MB2-right-sub">You may demand that all communication be conducted via email or formal written notice.</div>
+      </li>
+      <li class="MB2-right-item">
+        <div class="MB2-right-name">Right to Verify Agent Identity</div>
+        <div class="MB2-right-sub">Demand the agent's ID card and authorization letter before engaging. Any refusal is itself a violation.</div>
+      </li>
+      <li class="MB2-right-item">
+        <div class="MB2-right-name">Right to Grievance Redressal</div>
+        <div class="MB2-right-sub">Every bank and NBFC is mandated to maintain a complaint mechanism and a designated Grievance Redressal Officer.</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 05 -->
+  <section class="MB2-section">
+    <div class="MB2-section-marker">
+      <span class="MB2-section-num">05</span>
+      <span class="MB2-section-rule"></span>
+    </div>
+    <h2 class="MB2-h2">Applicable Legal Provisions</h2>
+
+    <h3 class="MB2-h3">Indian Penal Code / Bharatiya Nyaya Sanhita (post-2023)</h3>
+    <table class="MB2-provisions">
+      <thead>
+        <tr>
+          <th>Section</th>
+          <th>Offence</th>
+          <th>Applies When</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="MB2-prov-code">IPC §503 / §506</td>
+          <td class="MB2-prov-label">Criminal Intimidation</td>
+          <td>Agent threatens harm, arrest, or injury</td>
+        </tr>
+        <tr>
+          <td class="MB2-prov-code">IPC §504</td>
+          <td class="MB2-prov-label">Intentional Insult</td>
+          <td>Agent uses abusive language to provoke</td>
+        </tr>
+        <tr>
+          <td class="MB2-prov-code">IPC §509</td>
+          <td class="MB2-prov-label">Insulting Modesty of Women</td>
+          <td>Abusive contact directed at female borrowers</td>
+        </tr>
+        <tr>
+          <td class="MB2-prov-code">IPC §441</td>
+          <td class="MB2-prov-label">Criminal Trespass</td>
+          <td>Unauthorised entry or intimidating visits</td>
+        </tr>
+        <tr>
+          <td class="MB2-prov-code">IT Act 2000</td>
+          <td class="MB2-prov-label">Cyber Harassment</td>
+          <td>Online threats, WhatsApp abuse, morphed images</td>
+        </tr>
+        <tr>
+          <td class="MB2-prov-code">CPA 2019</td>
+          <td class="MB2-prov-label">Consumer Deficiency</td>
+          <td>Claim compensation through consumer courts</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="MB2-notice">
+      <strong>Clarification:</strong> Loan default is a civil matter. It becomes criminal only where fraud is established or cheques are dishonoured with criminal intent.
+    </div>
+  </section>
+
+  <!-- 06 -->
+  <section class="MB2-section">
+    <div class="MB2-section-marker">
+      <span class="MB2-section-num">06</span>
+      <span class="MB2-section-rule"></span>
+    </div>
+    <h2 class="MB2-h2">Action Plan</h2>
+
+    <ol class="MB2-procedure">
+      <li class="MB2-proc-item">
+        <div class="MB2-proc-num">01</div>
+        <div>
+          <div class="MB2-proc-title">Document Everything</div>
+          <div class="MB2-proc-desc">Preserve call recordings, screenshots of WhatsApp and SMS, call logs, and photographs of any visits. Maintain a written log recording the date, time, agent's name if known, and nature of each incident. Evidence is your primary instrument.</div>
+        </div>
+      </li>
+      <li class="MB2-proc-item">
+        <div class="MB2-proc-num">02</div>
+        <div>
+          <div class="MB2-proc-title">Respond Without Reaction</div>
+          <div class="MB2-proc-desc">Avoid arguments, retaliatory language, or panic responses. Communicate calmly and request all further contact in writing. Do not agree to cash settlements outside official channels.</div>
+        </div>
+      </li>
+      <li class="MB2-proc-item">
+        <div class="MB2-proc-num">03</div>
+        <div>
+          <div class="MB2-proc-title">File a Formal Complaint with the Lender</div>
+          <div class="MB2-proc-desc">Email the bank or NBFC's Grievance Redressal Officer with full incident details, dates, times, and attached evidence. Cite specific RBI guideline violations. The lender is legally required to respond within 30 days.</div>
+        </div>
+      </li>
+      <li class="MB2-proc-item">
+        <div class="MB2-proc-num">04</div>
+        <div>
+          <div class="MB2-proc-title">Escalate to the RBI Ombudsman</div>
+          <div class="MB2-proc-desc">Under the RBI Integrated Ombudsman Scheme 2021, lodge a complaint covering banks, NBFCs, and credit card companies.</div>
+          <a class="MB2-proc-link" href="https://cms.rbi.org.in" target="_blank" rel="noopener">cms.rbi.org.in</a>
+          <a class="MB2-proc-link" href="tel:14448">Helpline 14448</a>
+        </div>
+      </li>
+      <li class="MB2-proc-item">
+        <div class="MB2-proc-num">05</div>
+        <div>
+          <div class="MB2-proc-title">Lodge a Police Complaint (FIR)</div>
+          <div class="MB2-proc-desc">Where threats, abuse, or physical intimidation have occurred, file under IPC §506, §509, or §441 as applicable. If the station refuses to register the FIR, approach a Judicial Magistrate directly under CrPC provisions.</div>
+        </div>
+      </li>
+      <li class="MB2-proc-item">
+        <div class="MB2-proc-num">06</div>
+        <div>
+          <div class="MB2-proc-title">File a Cybercrime Complaint</div>
+          <div class="MB2-proc-desc">For digital harassment — WhatsApp threats, misuse of images, online shaming — report through the National Cybercrime Reporting Portal.</div>
+          <a class="MB2-proc-link" href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in</a>
+        </div>
+      </li>
+      <li class="MB2-proc-item">
+        <div class="MB2-proc-num">07</div>
+        <div>
+          <div class="MB2-proc-title">Consumer Court or Civil Suit</div>
+          <div class="MB2-proc-desc">Claim monetary compensation, damages for mental harassment, and corrective orders through the <a class="MB2-link" href="https://edaakhil.nic.in" target="_blank" rel="noopener">consumer forum system</a> under the Consumer Protection Act 2019.</div>
+        </div>
+      </li>
+    </ol>
+
+    <h3 class="MB2-h3">Escalation Path</h3>
+    <div class="MB2-escalation">
+      <span class="MB2-esc-step">Bank</span>
+      <span class="MB2-esc-arrow"></span>
+      <span class="MB2-esc-step">RBI Ombudsman</span>
+      <span class="MB2-esc-arrow"></span>
+      <span class="MB2-esc-step">Police</span>
+      <span class="MB2-esc-arrow"></span>
+      <span class="MB2-esc-step">Court</span>
+    </div>
+  </section>
+
+  <!-- 07 -->
+  <section class="MB2-section">
+    <div class="MB2-section-marker">
+      <span class="MB2-section-num">07</span>
+      <span class="MB2-section-rule"></span>
+    </div>
+    <h2 class="MB2-h2">Digital Lending App Harassment</h2>
+
+    <p class="MB2-para">
+      Harassment originating from digital lending apps is growing rapidly. Common illegal tactics include accessing the borrower's contact list, dispatching threatening messages to friends and family, morphing photographs, and blackmail.
+    </p>
+
+    <div class="MB2-warning">
+      <strong>Red flags of illegal lending apps:</strong> No RBI-registered lending partner, no formal website, demands for excessive device permissions including contacts, and abusive or coercive recovery methods. Never engage with apps that request contact-list access or use threatening language.
+    </div>
+
+    <p class="MB2-para">
+      The RBI's <a class="MB2-link" href="https://www.rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=12585" target="_blank" rel="noopener">digital lending guidelines (2022)</a> regulate the licensed lender behind the app. Protections also extend through the Information Technology Act 2000 and the National Cybercrime Reporting Portal at <a class="MB2-link" href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in</a>.
+    </p>
+  </section>
+
+  <!-- 08 -->
+  <section class="MB2-section">
+    <div class="MB2-section-marker">
+      <span class="MB2-section-num">08</span>
+      <span class="MB2-section-rule"></span>
+    </div>
+    <h2 class="MB2-h2">Documented Scenarios</h2>
+
+    <table class="MB2-cases">
+      <thead>
+        <tr>
+          <th>Ref.</th>
+          <th>Situation</th>
+          <th>Action Taken</th>
+          <th>Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="MB2-case-no">C-01</td>
+          <td><span class="MB2-case-title-cell">Workplace Contact</span>Borrower's employer was directly contacted by the agent.</td>
+          <td>Calls documented; formal complaint filed citing RBI violation.</td>
+          <td class="MB2-case-outcome">Agent removed</td>
+        </tr>
+        <tr>
+          <td class="MB2-case-no">C-02</td>
+          <td><span class="MB2-case-title-cell">Fabricated Arrest Threat</span>Female borrower received repeated false threats of police action.</td>
+          <td>Calls recorded; FIR filed under IPC §506.</td>
+          <td class="MB2-case-outcome">Agent withdrew</td>
+        </tr>
+        <tr>
+          <td class="MB2-case-no">C-03</td>
+          <td><span class="MB2-case-title-cell">Informal Cash Settlement</span>Agent demanded direct cash payment, bypassing bank records.</td>
+          <td>Borrower demanded written confirmation; request not provided.</td>
+          <td class="MB2-case-outcome">Fraud exposed</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- FAQ -->
+  <section class="MB2-section">
+    <div class="MB2-section-marker">
+      <span class="MB2-section-num">FAQ</span>
+      <span class="MB2-section-rule"></span>
+    </div>
+    <h2 class="MB2-h2">Frequently Asked Questions</h2>
+
+    <div class="MB2-faq">
+      <div class="MB2-faq-item">
+        <button class="MB2-faq-q" aria-expanded="false">
+          Can a recovery agent call me after 7&nbsp;PM in India?
+          <svg class="MB2-faq-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
+        </button>
+        <div class="MB2-faq-a">No. Contact after 7&nbsp;PM violates RBI guidelines and constitutes a reportable offence. Document the time of the call and file a complaint with the bank and the RBI Ombudsman.</div>
+      </div>
+      <div class="MB2-faq-item">
+        <button class="MB2-faq-q" aria-expanded="false">
+          Can a recovery agent visit my home without notice?
+          <svg class="MB2-faq-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
+        </button>
+        <div class="MB2-faq-a">Agents may visit during reasonable daytime hours, but they cannot intimidate, create a public scene, or visit repeatedly as a pressure tactic. Always ask for their ID and authorization letter.</div>
+      </div>
+      <div class="MB2-faq-item">
+        <button class="MB2-faq-q" aria-expanded="false">
+          Can a recovery agent threaten me with arrest?
+          <svg class="MB2-faq-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
+        </button>
+        <div class="MB2-faq-a">No. Loan default is a civil matter. Threatening arrest is an offence under IPC §506. Record the threat and file a police complaint.</div>
+      </div>
+      <div class="MB2-faq-item">
+        <button class="MB2-faq-q" aria-expanded="false">
+          How do I file a complaint?
+          <svg class="MB2-faq-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
+        </button>
+        <div class="MB2-faq-a">Follow the escalation path: write formally to the bank's Grievance Redressal Officer, then escalate to the <a class="MB2-link" href="https://cms.rbi.org.in" target="_blank" rel="noopener">RBI Ombudsman</a> if unresolved. File a police FIR where threats are involved. Approach the consumer court for compensation.</div>
+      </div>
+      <div class="MB2-faq-item">
+        <button class="MB2-faq-q" aria-expanded="false">
+          Is loan default a criminal offence?
+          <svg class="MB2-faq-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
+        </button>
+        <div class="MB2-faq-a">No — not unless fraud is established or cheques are dishonoured with criminal intent. Default alone is a civil matter and cannot result in arrest.</div>
+      </div>
+      <div class="MB2-faq-item">
+        <button class="MB2-faq-q" aria-expanded="false">
+          Can I record recovery agent calls as evidence?
+          <svg class="MB2-faq-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
+        </button>
+        <div class="MB2-faq-a">Yes. Call recordings serve as valuable evidence when filing complaints with the RBI Ombudsman, police, or consumer courts. Preserve originals and maintain dated copies.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conclusion -->
+  <div class="MB2-conclusion">
+    <div class="MB2-section-marker" style="margin-bottom:1rem;">
+      <span class="MB2-section-num">Summary</span>
+      <span class="MB2-section-rule"></span>
+    </div>
+    <h2 class="MB2-h2">You Are Protected by Law</h2>
+    <p>Debt is stressful. Harassment is a separate matter — one the law does not permit, regardless of the amount owed or the duration of default.</p>
+    <p>Recovery agents operate within strict legal limits. Every violation is grounds for regulatory action, criminal complaint, and civil compensation. Use the escalation path:</p>
+    <div class="MB2-escalation">
+      <span class="MB2-esc-step">Bank</span>
+      <span class="MB2-esc-arrow"></span>
+      <span class="MB2-esc-step">RBI Ombudsman</span>
+      <span class="MB2-esc-arrow"></span>
+      <span class="MB2-esc-step">Police</span>
+      <span class="MB2-esc-arrow"></span>
+      <span class="MB2-esc-step">Court</span>
+    </div>
+    <ul class="MB2-conclusion-list">
+      <li><span class="MB2-ci">01</span><span>Document all incidents with dates, times, and preserved evidence before taking any other action.</span></li>
+      <li><span class="MB2-ci">02</span><span>File at <a class="MB2-link" href="https://cms.rbi.org.in" target="_blank" rel="noopener" style="color:#e8a09a">cms.rbi.org.in</a> or call Helpline <strong style="color:#e8e5e0">14448</strong> to reach the RBI Integrated Ombudsman.</span></li>
+      <li><span class="MB2-ci">03</span><span>Report digital harassment at <a class="MB2-link" href="https://cybercrime.gov.in" target="_blank" rel="noopener" style="color:#e8a09a">cybercrime.gov.in</a>.</span></li>
+      <li><span class="MB2-ci">04</span><span>Share this guide with anyone experiencing similar treatment.</span></li>
+    </ul>
+  </div>
+  {% include "related_articles.html" %}
+
+</article>
+
+
+{% include "author.html" %}
+
+<script>
+(function() {
+  document.querySelectorAll('.MB2-faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.MB2-faq-item');
+      var isOpen = item.classList.contains('MB2-open');
+      document.querySelectorAll('.MB2-faq-item').forEach(function(i) {
+        i.classList.remove('MB2-open');
+        i.querySelector('.MB2-faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('MB2-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
+</script>
