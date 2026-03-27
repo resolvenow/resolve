@@ -1521,201 +1521,221 @@ layout: layout.html
   </aside>
 
 </div>
+<!-- ═══════════════════════════════════ -->
+</div>
 
-<!-- ═══════════════════════════════════
-     AUTHOR SECTION
-     To customise: swap out the src, name,
-     role, bio, and social href values below
-═══════════════════════════════════ -->
+{% include "author.html" %}
+
 <style>
-  .MB1-author-strip {
-    max-width: 1120px;
-    margin: 0 auto 48px;
-    padding: 0 24px;
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600&display=swap');
+
+  .rg-section {
+    font-family: 'Outfit', sans-serif;
+    padding: 3rem 0 1.5rem;
   }
 
-  .MB1-author-card {
-    display: flex;
-    gap: 28px;
-    align-items: flex-start;
-    background: #fff;
-    border: 1px solid var(--MB1-border, #e0ddd6);
-    border-top: 4px solid var(--MB1-teal, #1a7a7a);
-    border-radius: 6px;
-    padding: 28px 32px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  .rg-header {
+    text-align: center;
+    margin-bottom: 2rem;
   }
 
-  .MB1-author-avatar {
-    flex-shrink: 0;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 50% 20%; 
-    /* border: 1px solid var(--MB1-teal-light, #174d4d); */
-    background: var(--MB1-paper-warm, #f4f1eb);
+  .rg-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
   }
 
-  /* Fallback initials circle when no image is supplied */
-  .MB1-author-avatar-fallback {
-    flex-shrink: 0;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: var(--MB1-teal, #1a7a7a);
-    color: #fff;
+  .rg-eyebrow::before,
+  .rg-eyebrow::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: #2563eb;
+    opacity: 0.4;
+  }
+
+  .rg-heading {
     font-family: 'Lora', serif;
-    font-size: 1.6rem;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
     font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .rg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rg-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rg-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2563eb;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .rg-card:hover {
+    border-color: #d1d9f5;
+    transform: translateX(4px);
+  }
+
+  .rg-card:hover::before {
+    opacity: 1;
+  }
+
+  .rg-card__number {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2563eb;
+    opacity: 0.12;
+    line-height: 1;
+    min-width: 2.5rem;
+    transition: opacity 0.2s ease;
+    user-select: none;
+  }
+
+  .rg-card:hover .rg-card__number {
+    opacity: 0.22;
+  }
+
+  .rg-card__divider {
+    width: 1px;
+    height: 3rem;
+    background: #e9e9e9;
+    flex-shrink: 0;
+  }
+
+  .rg-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .rg-card__label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2563eb;
+  }
+
+  .rg-card__title {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+  }
+
+  .rg-card:hover .rg-card__title {
+    color: #2563eb;
+  }
+
+  .rg-card__arrow {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e9e9e9;
     display: flex;
     align-items: center;
     justify-content: center;
-    letter-spacing: 1px;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    color: #2563eb;
   }
 
-  .MB1-author-body {
-    flex: 1;
+  .rg-card:hover .rg-card__arrow {
+    background: #eff4ff;
+    border-color: #bfcffe;
+    transform: translateX(2px);
   }
 
-  .MB1-author-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--MB1-teal, #1a7a7a);
-    margin-bottom: 6px;
+  .rg-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin-top: 2.5rem;
   }
 
-  .MB1-author-name {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--MB1-ink, #1a1a2e);
-    margin-bottom: 2px;
-  }
-
-  .MB1-author-role {
-    font-size: 13px;
-    color: var(--MB1-ink-muted, #6b6b88);
-    margin-bottom: 12px;
-  }
-
-  .MB1-author-bio {
-    font-size: 14.5px;
-    color: var(--MB1-ink-light, #444460);
-    line-height: 1.75;
-    margin-bottom: 14px;
-  }
-
-  .MB1-author-links {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  .MB1-author-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12.5px;
-    font-weight: 600;
-    color: var(--MB1-teal, #1a7a7a);
-    text-decoration: none;
-    padding: 5px 14px;
-    border: 1px solid var(--MB1-teal, #1a7a7a);
-    border-radius: 999px;
-    transition: background 0.2s, color 0.2s;
-  }
-
-  .MB1-author-link:hover {
-    background: var(--MB1-teal, #1a7a7a);
-    color: #fff;
-  }
-
-  @media (max-width: 600px) {
-    .MB1-author-card {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 24px 20px;
-    }
-    .MB1-author-links { justify-content: center; }
-  }
-
-
-  .MB1-cta {
-      margin-top: 5rem;
-      padding: 3rem 2rem;
-      border-radius: 24px;
-      background: linear-gradient(135deg, #4f80c1, #3a6fb3);
-      color: #fff;
-      text-align: center;
-  }
-
-  .MB1-cta h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-  }
-
-  .MB1-cta p {
-      opacity: 0.9;
-      margin-bottom: 1.5rem;
-  }
-
-  .MB1-cta .MB1-cta-btn {
-      display: inline-block;
-      background: #f5a623;
-      color: #000;
-      padding: 0.8rem 2rem;
-      border-radius: 999px;
-      font-weight: 500;
-      text-decoration: none;
-  }
-
-  .MB1-cta .MB1-cta-btn:hover {
-      opacity: 0.9;
+  @media (max-width: 480px) {
+    .rg-card__number { display: none; }
+    .rg-card__divider { display: none; }
   }
 </style>
 
-<div class="MB1-author-strip">
-  <div class="MB1-author-card">
+<section class="rg-section">
 
-    <!-- ▼ OPTION A: use a real image — set src to your image path -->
-    <img class="MB1-author-avatar"
-         src="/assets/images/icon.png"
-         alt="Resolve Now">
+  <div class="rg-header">
+    <div class="rg-eyebrow">Keep reading</div>
+    <h2 class="rg-heading">Related Guides</h2>
+  </div>
 
-    <!-- ▼ OPTION B: no image — shows initials instead (remove this block if using Option A) -->
-    <!-- <div class="MB1-author-avatar-fallback">RN</div> -->
+  <div class="rg-list">
 
-    <div class="MB1-author-body">
-      <div class="MB1-author-label">Written by</div>
-
-      <!-- ▼ Change name, role, and bio below -->
-      <div class="MB1-author-name">Resolve Now Finance Advisors</div>
-      <div class="MB1-author-role">Debt Resolution Specialist · India</div>
-      <p class="MB1-author-bio">
-        The Resolve Now team has helped many borrowers across India navigate loan settlements,
-        CIBIL recovery, and recovery harassment — without the legal jargon. Our guides are built from
-        real case experience, not textbook theory.
-      </p>
-
-      <div class="MB1-author-links">
-        <!-- ▼ Add, remove, or change these links as needed -->
-        <a class="MB1-author-link" href="/about/">About Us</a>
-        <a class="MB1-author-link" href="/blogs/">More Articles</a>
-        <a class="MB1-author-link" href="/contact/">Get in Touch</a>
+    <a href="../personal-loan-settlement-india-2026/" class="rg-card">
+      <span class="rg-card__number">01</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Personal Loan Settlement in India 2026</h3>
       </div>
-    </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+    <a href="../harassment-and-legal-protection-india/" class="rg-card">
+      <span class="rg-card__number">02</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Harassment and Legal Protection in India</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
   </div>
 
-    <!-- ── CTA block ── -->
-  <div class="MB1-cta">
-      <h2>Do you like our work?</h2>
-      <p>Talk to our experts and get clarity on similar topics.</p>
-      <a href="/contact" class="MB1-cta-btn">Consult Us</a>
-  </div>
-</div>
-<!-- ═══════════════════════════════════ -->
-</div>
+  <div class="rg-divider"></div>
+</section>
