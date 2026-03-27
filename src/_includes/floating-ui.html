@@ -37,6 +37,25 @@
     .contact-icon.mail {
         background-color: #0d6efd; /* red */
     }
+
+    .whatsapp-float {
+        position: fixed;
+        right: 10px;
+        bottom: 20px;
+        z-index: 999;
+
+        width: 50px;
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .whatsapp-float img {
+        width: 100%;
+        height: 100%;
+    }
 </style>
 
 <button id="scrollTopBtn" aria-label="Go to top">
@@ -46,6 +65,7 @@
 <a
     href="https://wa.me/919451210865"
     class="whatsapp-float"
+    id="waBtn"
     target="_blank"
     aria-label="Chat on WhatsApp"
 >
