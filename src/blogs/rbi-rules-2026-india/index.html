@@ -1,222 +1,927 @@
 ---
 layout: layout.html
 title: RBI Loan Recovery Rules 2026 | Borrower Rights Against Recovery Agent Harassment
-description: Learn about RBI’s new loan recovery rules in 2026 that protect borrowers from harassment and unethical recovery practices.
+description: Learn about RBI's new loan recovery rules in 2026 that protect borrowers from harassment and unethical recovery practices.
 ---
-
 <style>
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-.contract-blog-article{
-max-width:760px;
-margin:72px auto;
-padding:3rem 1.5rem;
-}
+  :root {
+    --ink:       #1a1a18;
+    --ink-soft:  #4a4a46;
+    --ink-mute:  #8a8a84;
+    --rule:      #e2e0da;
+    --bg:        #faf9f6;
+    --bg-warm:   #f3f1ec;
+    --MB2-SB1-accent:    #c0392b;
+    --MB2-SB1-accent-lt: #f9edec;
+    --safe:      #1a6b3a;
+    --safe-lt:   #eaf3ed;
+    --warn:      #7a4800;
+    --warn-lt:   #fdf3e3;
+    --serif:     'Lora', Georgia, 'Times New Roman', serif;
+    --sans:      'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --mono:      'JetBrains Mono', 'Courier New', monospace;
+  } 
 
-.contract-blog-header{
-margin-bottom:2rem;
-}
+  html { font-size: 17px; scroll-behavior: smooth; }
 
-.contract-blog-title{
-font-size:2.2rem;
-font-weight:700;
-color:#1f2933;
-margin-bottom:.5rem;
-}
+  body {
+    margin: 100px 0 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
 
-.contract-blog-subtitle{
-font-size:1.05rem;
-color:#4b5563;
-line-height:1.6;
-}
+  /* ===== TYPOGRAPHY ===== */
+  #MB2-SB1-article h1,
+  #MB2-SB1-article h2,
+  #MB2-SB1-article h3 {
+    font-family: var(--serif);
+    line-height: 1.3;
+    color: var(--ink);
+  }
 
-.contract-blog-content{
-font-size:1rem;
-line-height:1.8;
-color:#374151;
-}
+  /* ===== LAYOUT ===== */
+  #MB2-SB1-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
 
-.contract-blog-paragraph{
-margin-bottom:1.5rem;
-}
+  /* ===== TOP STRIP ===== */
+  #MB2-SB1-topbar {
+    border-bottom: 1px solid var(--rule);
+    padding: 0.75rem 0;
+  }
+  #MB2-SB1-topbar-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .MB2-SB1-site-name {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+  .MB2-SB1-topbar-meta {
+    font-size: 0.75rem;
+    color: var(--ink-mute);
+    font-family: var(--mono);
+  }
 
-.contract-blog-heading{
-font-size:1.45rem;
-font-weight:600;
-color:#111827;
-margin:2.2rem 0 .75rem;
-}
+  /* ===== HEADER ===== */
+  #MB2-SB1-header {
+    padding: 3.5rem 0 2rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 2.5rem;
+  }
+  .MB2-SB1-category {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--MB2-SB1-accent);
+    margin-bottom: 1rem;
+    text-decoration: none;
+  }
+  .MB2-SB1-category:hover { text-decoration: underline; }
 
-/* highlight info box */
+  #MB2-SB1-header h1 {
+    font-size: clamp(1.7rem, 4.5vw, 2.4rem);
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem;
+    max-width: 620px;
+  }
+  .MB2-SB1-subtitle {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 580px;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  .MB2-SB1-byline {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    color: var(--ink-mute);
+  }
+  .MB2-SB1-byline-sep { color: var(--rule); }
+  .MB2-SB1-reading-time {
+    font-family: var(--mono);
+  }
 
-.contract-blog-highlight{
-background:#f3f7ff;
-border-left:4px solid #2563eb;
-padding:1rem 1.2rem;
-border-radius:6px;
-margin:1.5rem 0;
-}
+  /* ===== CALLOUT BOXES ===== */
+  .MB2-SB1-callout {
+    border-left: 3px solid;
+    padding: 1rem 1.25rem;
+    margin: 2rem 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .MB2-SB1-callout--safe {
+    border-color: var(--safe);
+    background: var(--safe-lt);
+  }
+  .MB2-SB1-callout--warn {
+    border-color: var(--warn);
+    background: var(--warn-lt);
+  }
+  .MB2-SB1-callout--alert {
+    border-color: var(--MB2-SB1-accent);
+    background: var(--MB2-SB1-accent-lt);
+  }
+  .MB2-SB1-callout-label {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+  .MB2-SB1-callout--safe .MB2-SB1-callout-label { color: var(--safe); }
+  .MB2-SB1-callout--warn .MB2-SB1-callout-label { color: var(--warn); }
+  .MB2-SB1-callout--alert .MB2-SB1-callout-label { color: var(--MB2-SB1-accent); }
+  .MB2-SB1-callout p {
+    font-size: 0.95rem;
+    margin: 0;
+    color: var(--ink);
+  }
 
-/* rights grid */
+  /* ===== ARTICLE BODY ===== */
+  #MB2-SB1-article {
+    padding-bottom: 3rem;
+  }
+  #MB2-SB1-article h2 {
+    font-size: 1.45rem;
+    margin: 2.75rem 0 0.75rem;
+    letter-spacing: -0.015em;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  #MB2-SB1-article h3 {
+    font-size: 1.05rem;
+    margin: 1.75rem 0 0.5rem;
+    color: var(--ink-soft);
+  }
+  #MB2-SB1-article p {
+    margin-bottom: 1.1rem;
+    color: var(--ink-soft);
+  }
+  #MB2-SB1-article a {
+    color: var(--MB2-SB1-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  #MB2-SB1-article a:hover { text-decoration-thickness: 2px; }
 
-.contract-blog-rights{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:16px;
-margin:2rem 0;
-}
+  #MB2-SB1-article ul,
+  #MB2-SB1-article ol {
+    padding-left: 1.4rem;
+    margin-bottom: 1.1rem;
+  }
+  #MB2-SB1-article li {
+    color: var(--ink-soft);
+    margin-bottom: 0.35rem;
+  }
+  #MB2-SB1-article li::marker { color: var(--MB2-SB1-accent); }
 
-.contract-blog-card{
-background:white;
-border:1px solid #e5e7eb;
-border-radius:10px;
-padding:1.2rem;
-transition:.25s ease;
-}
+  /* ===== COMPARISON TABLE ===== */
+  .MB2-SB1-table-wrap {
+    overflow-x: auto;
+    margin: 1.5rem 0 2rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+  }
+  .MB2-SB1-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .MB2-SB1-table thead tr {
+    background: var(--bg-warm);
+    border-bottom: 2px solid var(--rule);
+  }
+  .MB2-SB1-table th {
+    padding: 0.7rem 1rem;
+    text-align: left;
+    font-family: var(--sans);
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+  }
+  .MB2-SB1-table td {
+    padding: 0.65rem 1rem;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  .MB2-SB1-table tbody tr:last-child td { border-bottom: none; }
+  .MB2-SB1-table tbody tr:hover { background: var(--bg-warm); }
+  .MB2-SB1-table .MB2-SB1-col-old { color: var(--ink-mute); }
+  .MB2-SB1-table .MB2-SB1-col-new { color: var(--safe); font-weight: 500; }
 
-.contract-blog-card:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-}
+  /* ===== STEPS ===== */
+  .MB2-SB1-steps {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 1.5rem;
+    counter-reset: MB2-SB1-step;
+  }
+  .MB2-SB1-steps li {
+    counter-increment: MB2-SB1-step;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+    align-items: flex-start;
+  }
+  .MB2-SB1-steps li::before {
+    content: counter(MB2-SB1-step);
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: var(--ink);
+    color: var(--bg);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    margin-top: 0.1rem;
+  }
+  .MB2-SB1-steps li strong { display: block; color: var(--ink); margin-bottom: 0.15rem; }
 
-.contract-blog-card-title{
-font-weight:600;
-margin-bottom:.4rem;
-color:#111827;
-}
+  /* ===== FAQ ===== */
+  .MB2-SB1-faq-item {
+    border-top: 1px solid var(--rule);
+    padding: 1.1rem 0;
+  }
+  .MB2-SB1-faq-item:last-child { border-bottom: 1px solid var(--rule); }
+  .MB2-SB1-faq-q {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    user-select: none;
+  }
+  .MB2-SB1-faq-q::-webkit-details-marker { display: none; }
+  .MB2-SB1-faq-q::after {
+    content: '+';
+    font-size: 1.3rem;
+    color: var(--ink-mute);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+  details[open] .MB2-SB1-faq-q::after { transform: rotate(45deg); }
+  .MB2-SB1-faq-a {
+    padding-top: 0.7rem;
+    font-size: 0.93rem;
+    color: var(--ink-soft);
+  }
+  .MB2-SB1-faq-a p { margin-bottom: 0.4rem; }
 
-.contract-blog-card-text{
-font-size:.95rem;
-color:#4b5563;
-}
+  /* ===== RESOURCE LINKS ===== */
+  .MB2-SB1-resources {
+    background: var(--bg-warm);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+  }
+  .MB2-SB1-resources-title {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 0.9rem;
+  }
+  .MB2-SB1-resources ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .MB2-SB1-resources li {
+    margin-bottom: 0.55rem;
+    font-size: 0.9rem;
+  }
+  .MB2-SB1-resources li::before {
+    content: '→ ';
+    color: var(--MB2-SB1-accent);
+    font-family: var(--mono);
+  }
 
-/* quick summary */
+  .MB2-SB1-disclaimer {
+    font-size: 0.78rem;
+    color: var(--ink-mute);
+    border-top: 1px solid var(--rule);
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    font-style: italic;
+    line-height: 1.55;
+  }
 
-.contract-blog-summary{
-background:#f9fafb;
-border-radius:10px;
-padding:1.4rem;
-margin-top:2.5rem;
-border:1px solid #e5e7eb;
-}
+  /* ===== PROGRESS BAR ===== */
+  #MB2-SB1-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    background: var(--MB2-SB1-accent);
+    width: 0%;
+    z-index: 999;
+    transition: width 0.1s linear;
+  }
 
-.contract-blog-summary h4{
-margin-bottom:.6rem;
-}
-
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 500px) {
+    #MB2-SB1-header h1 { font-size: 1.5rem; }
+    .MB2-SB1-table th, .MB2-SB1-table td { padding: 0.5rem 0.75rem; }
+  }
 </style>
 
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-<section class="contract-blog-article">
+<!-- SEO Meta -->
+<meta name="description" content="Can you be jailed for not paying a loan in India? Understand your rights under RBI recovery agent rules 2026, what agents can and cannot do, and how to file a harassment complaint.">
+<meta name="keywords" content="RBI recovery agent rules 2026, loan default India jail, recovery agent harassment, RBI guidelines borrower rights, digital loan app harassment, NBFC recovery rules">
+<meta property="og:title" content="RBI Recovery Agent Rules 2026: Can You Be Jailed for Not Paying a Loan?">
+<meta property="og:description" content="Your complete guide to borrower rights, recovery agent limits, and what changes with the new 2026 RBI rules — including the digital loan app crackdown.">
+<meta property="og:type" content="article">
+<meta name="robots" content="index, follow">
 
-<header class="contract-blog-header">
+<!-- Schema.org Article Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "RBI Recovery Agent Rules 2026: Can You Be Jailed for Not Paying a Loan in India?",
+  "description": "Can you be jailed for not repaying a loan in India? A complete guide to RBI's 2026 recovery agent rules, borrower rights, and harassment complaint process.",
+  "datePublished": "2026-03-14",
+  "dateModified": "2026-03-28",
+  "author": { "@type": "Organization", "name": "Resolve Now" },
+  "publisher": { "@type": "Organization", "name": "Resolve Now" },
+  "mainEntityOfPage": { "@type": "WebPage" },
+  "inLanguage": "en-IN"
+}
+</script>
 
-<p class="contract-blog-subtitle">Mar 14, 2026</p>
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can bank recovery agents threaten me?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Threatening behaviour is illegal and directly violates RBI guidelines on fair recovery practices." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can recovery agents visit my home?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, but only with proper identification, during reasonable hours, and without causing any disturbance to you or your neighbours." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can recovery agents call my relatives?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Only in limited cases to locate you, and never to harass or pressure them into repayment on your behalf." }
+    },
+    {
+      "@type": "Question",
+      "name": "What if a digital loan app leaks my data or contacts?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Under the 2026 RBI amendment, this can be treated as a cybercrime. File a complaint with the RBI CMS and your nearest cybercrime cell immediately." }
+    }
+  ]
+}
+</script>
 
-<h1 class="contract-blog-title">
-RBI Loan Recovery Rules 2026: Borrower Rights Against Harassment
-</h1>
+<!-- Read Progress Bar -->
+<div id="MB2-SB1-progress" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 
-<p class="contract-blog-subtitle">
-New RBI guidelines aim to stop harassment by recovery agents and protect borrower dignity during loan recovery.
-</p>
+<!-- Top Bar -->
+<nav id="MB2-SB1-topbar" aria-label="Site navigation">
+  <div id="MB2-SB1-topbar-inner">
+    <a href="/" class="MB2-SB1-site-name">Resolve Now</a>
+    <span class="MB2-SB1-topbar-meta">Personal Finance · India</span>
+  </div>
+</nav>
 
-</header>
+<!-- Main Wrap -->
+<div id="MB2-SB1-wrap">
 
+  <!-- Article Header -->
+  <header id="MB2-SB1-header">
+    <a href="/personal-finance/loans/" class="MB2-SB1-category" rel="category tag">Loans &amp; Credit</a>
+    <h1>RBI Recovery Agent Rules 2026: Can You Be Jailed for Not Paying a Loan in India?</h1>
+    <p class="MB2-SB1-subtitle">With aggressive digital lenders on the rise, harassment complaints have surged. Here's what the law actually says — and what changes from July 1, 2026.</p>
+    <div class="MB2-SB1-byline">
+      <span>Udpated on: March 28, 2026</span>
+      <span class="MB2-SB1-byline-sep">|</span>
+      <span>Updated for RBI 2026 Amendment</span>
+      <span class="MB2-SB1-byline-sep">|</span>
+      <span class="MB2-SB1-reading-time">~6 min read</span>
+    </div>
+  </header>
 
-<div class="contract-blog-content">
+  <!-- Article Body -->
+  <article id="MB2-SB1-article" itemscope itemtype="https://schema.org/Article">
+    <meta itemprop="datePublished" content="2026-03-01">
+    <meta itemprop="dateModified" content="2026-03-28">
 
-<p class="contract-blog-paragraph">
-Loan recovery has always been an essential part of banking, but many borrowers have reported harassment through repeated calls, intimidation, and aggressive recovery practices. To address these concerns, the Reserve Bank of India (RBI) introduced stronger loan recovery guidelines designed to protect borrowers while allowing banks to recover legitimate dues.
-</p>
+    <!-- The big question -->
+    <h2>Can You Be Jailed for Not Repaying a Loan?</h2>
 
-<p class="contract-blog-paragraph">
-The new RBI loan recovery rules focus on transparency, professionalism, and ethical recovery practices. These regulations require banks and financial institutions to ensure that their recovery agents treat borrowers respectfully and follow clearly defined conduct rules.
-</p>
+    <div class="MB2-SB1-callout MB2-SB1-callout--safe">
+      <div class="MB2-SB1-callout-label">Short answer</div>
+      <p><strong>No.</strong> Loan default in India is a civil matter, not a criminal offence. You cannot be sent to jail simply for missing EMIs due to genuine financial difficulty.</p>
+    </div>
 
+    <p>If you miss repayments, your bank or <a href="https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=20002" target="_blank" rel="noopener noreferrer">NBFC (Non-Banking Financial Company)</a> can send notices, report your account to <a href="https://www.cibil.com/" target="_blank" rel="noopener noreferrer">credit bureaus like CIBIL</a>, and file a civil recovery case in court. None of these routes lead to jail for a good-faith borrower.</p>
 
-<div class="contract-blog-highlight">
-<strong>Important:</strong> Borrowers have the right to dignity and privacy during loan recovery. Any threatening or abusive recovery behavior can be reported to the bank or RBI.
+    <div class="MB2-SB1-callout MB2-SB1-callout--warn">
+      <div class="MB2-SB1-callout-label">When jail becomes possible</div>
+      <p>Imprisonment is only relevant when <strong>fraud</strong> is involved — for example, taking a loan using forged documents or with deliberate intent to cheat the lender. This falls under the <a href="https://indiankanoon.org/doc/1962940/" target="_blank" rel="noopener noreferrer">Indian Penal Code's cheating provisions</a>, not simple default.</p>
+    </div>
+
+    <p>The threat of arrest is the most common pressure tactic used by recovery agents. Knowing the law is your first line of defence.</p>
+
+    <!-- Contact hours -->
+    <h2>Can Recovery Agents Call You After 7 PM?</h2>
+
+    <p>No. <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=3722" target="_blank" rel="noopener noreferrer">RBI's guidelines on fair practices</a> are explicit on permitted contact hours:</p>
+
+    <div class="MB2-SB1-callout MB2-SB1-callout--safe">
+      <div class="MB2-SB1-callout-label">Permitted contact window</div>
+      <p>Recovery agents may contact borrowers only between <strong>8:00 AM and 7:00 PM</strong>. Calls before or after this window — including early morning and late-night calls — are a direct violation of RBI norms.</p>
+    </div>
+
+    <p>Repeated calls throughout the day with intent to harass also fall outside what is permitted, even within allowed hours.</p>
+
+    <!-- 2026 changes -->
+    <h2>What's Changing Under the 2026 RBI Rules?</h2>
+
+    <p>Effective <strong>July 1, 2026</strong>, the <a href="https://www.rbi.org.in/" target="_blank" rel="noopener noreferrer">Reserve Bank of India</a> has significantly strengthened borrower protections, particularly targeting the rise of aggressive digital lending platforms.</p>
+
+    <div class="MB2-SB1-table-wrap">
+      <table class="MB2-SB1-table" aria-label="Comparison of old and new RBI recovery rules">
+        <thead>
+          <tr>
+            <th scope="col">Aspect</th>
+            <th scope="col">Old Rules</th>
+            <th scope="col">New Rules (July 2026)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Contact Hours</strong></td>
+            <td class="MB2-SB1-col-old">Loosely enforced</td>
+            <td class="MB2-SB1-col-new">Strict 8 AM – 7 PM limit</td>
+          </tr>
+          <tr>
+            <td><strong>Harassment</strong></td>
+            <td class="MB2-SB1-col-old">Not clearly defined</td>
+            <td class="MB2-SB1-col-new">Explicitly banned — no threats, no abuse</td>
+          </tr>
+          <tr>
+            <td><strong>Agent Identity</strong></td>
+            <td class="MB2-SB1-col-old">Often unclear</td>
+            <td class="MB2-SB1-col-new">Mandatory identity disclosure before each interaction</td>
+          </tr>
+          <tr>
+            <td><strong>Call Recording</strong></td>
+            <td class="MB2-SB1-col-old">Not required</td>
+            <td class="MB2-SB1-col-new">Lender must maintain mandatory recordings</td>
+          </tr>
+          <tr>
+            <td><strong>Privacy</strong></td>
+            <td class="MB2-SB1-col-old">Weak enforcement</td>
+            <td class="MB2-SB1-col-new">Strict data protection obligations</td>
+          </tr>
+          <tr>
+            <td><strong>Digital App Permissions</strong></td>
+            <td class="MB2-SB1-col-old">Misuse common</td>
+            <td class="MB2-SB1-col-new">Access to contacts and gallery strictly banned</td>
+          </tr>
+          <tr>
+            <td><strong>Grievance Redressal</strong></td>
+            <td class="MB2-SB1-col-old">Slow and unclear</td>
+            <td class="MB2-SB1-col-new">Strengthened mechanism with defined timelines</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Digital Loan Apps Can No Longer Access Your Contacts</h3>
+
+    <p>This is arguably the most important update. Many borrowers have faced threats along the lines of "we'll message your family" or "we'll tell your employer." Under the 2026 amendment, this is no longer a grey area:</p>
+
+    <ul>
+      <li>Lending apps <strong>cannot</strong> request or use access to your contacts, call logs, or photo gallery.</li>
+      <li>Public shaming or defamation of borrowers — online or otherwise — is explicitly prohibited.</li>
+      <li>Violations can be reported as a <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">cybercrime on the National Cyber Crime Reporting Portal</a>.</li>
+    </ul>
+
+    <p>For context on the broader digital lending framework, the <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12382" target="_blank" rel="noopener noreferrer">RBI's Digital Lending Guidelines (2022)</a> already laid the groundwork for these protections — the 2026 rules sharpen enforcement.</p>
+
+    <!-- What agents cannot do -->
+    <h2>What Recovery Agents Are Not Allowed to Do</h2>
+
+    <p>The following practices are illegal — both before and after July 2026 — and are explicitly against <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=3722" target="_blank" rel="noopener noreferrer">RBI's code of conduct for recovery agents</a>:</p>
+
+    <ul>
+      <li>Using abusive, threatening, or humiliating language during any interaction</li>
+      <li>Visiting your workplace in a manner that causes embarrassment or professional harm</li>
+      <li>Contacting family members, friends, or colleagues for anything other than locating you</li>
+      <li>Making repeated harassing calls within a single day</li>
+      <li>Impersonating police officers, lawyers, or court officials</li>
+      <li>Making false statements about legal proceedings that haven't actually been filed</li>
+    </ul>
+
+    <div class="MB2-SB1-callout MB2-SB1-callout--alert">
+      <div class="MB2-SB1-callout-label">Important</div>
+      <p>If an agent claims you will be "arrested tomorrow" without any court order, that is a threat and a misrepresentation. Document it immediately.</p>
+    </div>
+
+    <!-- What to do -->
+    <h2>What to Do If You're Being Harassed</h2>
+
+    <ol class="MB2-SB1-steps">
+      <li>
+        <div>
+          <strong>Build your evidence file</strong>
+          Record calls where legally permitted, screenshot WhatsApp messages, and note exact call times and dates. This documentation is essential for any complaint.
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Write to the bank or NBFC directly</strong>
+          Send a formal email to the lender's grievance officer — their contact details must be on their website per RBI requirements. Mention the agent's name, time, and nature of the violation.
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Escalate to the RBI Ombudsman</strong>
+          If unresolved within 30 days, file a complaint on the <a href="https://cms.rbi.org.in/" target="_blank" rel="noopener noreferrer">RBI Complaint Management System (CMS)</a>. It's free and can be done online.
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Approach the Consumer Forum or Police</strong>
+          For serious harassment — threats, public defamation, or data misuse — you can file an FIR at your local police station or approach the <a href="https://consumerhelpline.gov.in/" target="_blank" rel="noopener noreferrer">National Consumer Helpline</a>. A lawyer familiar with consumer rights can help you assess your options.
+        </div>
+      </li>
+    </ol>
+
+    <!-- Ignoring loan -->
+    <h2>Ignoring the Loan Is Not a Solution</h2>
+
+    <p>Your rights as a borrower are real and enforceable — but that doesn't mean non-repayment has no consequences. Even without jail, consistent default will:</p>
+
+    <ul>
+      <li>Significantly damage your <a href="https://www.cibil.com/freecreditreport" target="_blank" rel="noopener noreferrer">CIBIL credit score</a>, affecting all future borrowing</li>
+      <li>Result in the lender filing a civil recovery suit, which could lead to asset attachment</li>
+      <li>Make it harder to get home loans, car loans, or even credit cards for years</li>
+    </ul>
+
+    <p>If you're genuinely struggling, proactive steps work better than silence. Consider reaching out to your bank about <a href="https://www.rbi.org.in/scripts/FAQView.aspx?Id=71" target="_blank" rel="noopener noreferrer">loan restructuring or moratorium options</a>, or speaking with a certified credit counsellor through <a href="https://www.paisabazaar.com/" target="_blank" rel="noopener noreferrer">platforms that offer financial planning support</a>.</p>
+
+    <!-- Resources -->
+    <div class="MB2-SB1-resources">
+      <div class="MB2-SB1-resources-title">Official Resources</div>
+      <ul>
+        <li><a href="https://cms.rbi.org.in/" target="_blank" rel="noopener noreferrer">RBI Complaint Management System (CMS)</a> — file complaints against banks and NBFCs</li>
+        <li><a href="https://sachet.rbi.org.in/" target="_blank" rel="noopener noreferrer">RBI Sachet Portal</a> — report unauthorised lending activity</li>
+        <li><a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">National Cyber Crime Reporting Portal</a> — for data misuse by loan apps</li>
+        <li><a href="https://consumerhelpline.gov.in/" target="_blank" rel="noopener noreferrer">National Consumer Helpline</a> — 1800-11-4000 (toll free)</li>
+        <li><a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=3722" target="_blank" rel="noopener noreferrer">RBI Fair Practices Code for Lenders</a> — full text</li>
+        <li><a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12382" target="_blank" rel="noopener noreferrer">RBI Digital Lending Guidelines 2022</a></li>
+      </ul>
+    </div>
+
+    <!-- FAQ -->
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="MB2-SB1-faq-wrap" itemscope itemtype="https://schema.org/FAQPage">
+
+      <div class="MB2-SB1-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <details>
+          <summary class="MB2-SB1-faq-q" itemprop="name">Can bank recovery agents threaten me?</summary>
+          <div class="MB2-SB1-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              <p>No. Threatening behaviour — including implied threats about arrest, legal action that hasn't been filed, or harm to your reputation — is illegal. It violates <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=3722" target="_blank" rel="noopener noreferrer">RBI's fair practices code</a> and may also constitute criminal intimidation under the Indian Penal Code. Document any such interaction.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="MB2-SB1-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <details>
+          <summary class="MB2-SB1-faq-q" itemprop="name">Can recovery agents visit my home?</summary>
+          <div class="MB2-SB1-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              <p>Yes, home visits are permitted — but the agent must carry and show proper identification, visit only during reasonable hours, and leave if you ask them to once they've communicated their purpose. They cannot create a scene or intimidate you or your family members.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="MB2-SB1-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <details>
+          <summary class="MB2-SB1-faq-q" itemprop="name">Can recovery agents call my relatives?</summary>
+          <div class="MB2-SB1-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              <p>Only to locate you — and even then, only once. Agents cannot repeatedly contact family members, pressure them for repayment, or reveal details of your loan to anyone who is not a co-borrower or guarantor.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="MB2-SB1-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <details>
+          <summary class="MB2-SB1-faq-q" itemprop="name">What if a digital loan app accesses my contacts or leaks my data?</summary>
+          <div class="MB2-SB1-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              <p>Under the 2026 RBI amendment, this constitutes a serious violation and can be treated as a cybercrime. File a complaint on the <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">National Cyber Crime Reporting Portal</a> and also report the app to <a href="https://sachet.rbi.org.in/" target="_blank" rel="noopener noreferrer">RBI Sachet</a>. Keep screenshots and any communications as evidence.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="MB2-SB1-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <details>
+          <summary class="MB2-SB1-faq-q" itemprop="name">What is the RBI Ombudsman and how do I file a complaint?</summary>
+          <div class="MB2-SB1-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              <p>The <a href="https://rbi.org.in/Scripts/Complaints.aspx" target="_blank" rel="noopener noreferrer">RBI Integrated Ombudsman Scheme</a> is a free, independent dispute resolution mechanism for banking and NBFC grievances. You can file a complaint through the <a href="https://cms.rbi.org.in/" target="_blank" rel="noopener noreferrer">CMS portal</a> if your bank or NBFC hasn't resolved your complaint within 30 days, or has given an unsatisfactory response.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+
+    </div><!-- /faq-wrap -->
+
+    <p class="MB2-SB1-disclaimer">This article is for general informational purposes only and does not constitute legal advice. For advice specific to your situation, consult a qualified legal professional.</p>
+
+  </article>
+
 </div>
 
 
-<h2 class="contract-blog-heading">Key Borrower Rights Under RBI Guidelines</h2>
+{% include "author.html" %}
 
-<div class="contract-blog-rights">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600&display=swap');
 
-<div class="contract-blog-card">
-<div class="contract-blog-card-title">Limited Contact Hours</div>
-<div class="contract-blog-card-text">
-Recovery agents can only contact borrowers during reasonable daytime hours and must avoid late-night calls or visits.
-</div>
-</div>
+  .rg-section {
+    font-family: 'Outfit', sans-serif;
+    padding: 3rem 0 1.5rem;
+  }
 
-<div class="contract-blog-card">
-<div class="contract-blog-card-title">No Harassment Allowed</div>
-<div class="contract-blog-card-text">
-Threats, abusive language, intimidation, or repeated aggressive calls are strictly prohibited under RBI rules.
-</div>
-</div>
+  .rg-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 
-<div class="contract-blog-card">
-<div class="contract-blog-card-title">Privacy Protection</div>
-<div class="contract-blog-card-text">
-Agents should communicate directly with the borrower and avoid contacting neighbors, friends, or employers unnecessarily.
-</div>
-</div>
+  .rg-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+  }
 
-<div class="contract-blog-card">
-<div class="contract-blog-card-title">Verified Recovery Agents</div>
-<div class="contract-blog-card-text">
-Recovery agents must carry identification and authorization from the bank when visiting borrowers.
-</div>
-</div>
+  .rg-eyebrow::before,
+  .rg-eyebrow::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: #2563eb;
+    opacity: 0.4;
+  }
 
-</div>
+  .rg-heading {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.2;
+  }
 
+  .rg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-<h2 class="contract-blog-heading">Bank Responsibility for Recovery Agents</h2>
+  .rg-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
 
-<p class="contract-blog-paragraph">
-Banks and financial institutions are responsible for the behavior of their recovery agents. If agents violate RBI guidelines or engage in harassment, the lender may face regulatory penalties or investigation. This rule encourages financial institutions to properly train and supervise recovery personnel.
-</p>
+  .rg-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2563eb;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 3px 0 0 3px;
+  }
 
+  .rg-card:hover {
+    border-color: #d1d9f5;
+    transform: translateX(4px);
+  }
 
-<h2 class="contract-blog-heading">What Borrowers Should Do if Harassed</h2>
+  .rg-card:hover::before {
+    opacity: 1;
+  }
 
-<p class="contract-blog-paragraph">
-If a borrower experiences harassment from recovery agents, they should document the incident and immediately report it to the bank's grievance redressal department. If the issue remains unresolved, complaints can also be escalated through RBI's official complaint system.
-</p>
+  .rg-card__number {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2563eb;
+    opacity: 0.12;
+    line-height: 1;
+    min-width: 2.5rem;
+    transition: opacity 0.2s ease;
+    user-select: none;
+  }
 
+  .rg-card:hover .rg-card__number {
+    opacity: 0.22;
+  }
 
-<h2 class="contract-blog-heading">Allowed Contact Timing for Recovery Agents</h2>
+  .rg-card__divider {
+    width: 1px;
+    height: 3rem;
+    background: #e9e9e9;
+    flex-shrink: 0;
+  }
 
-<p class="contract-blog-paragraph">
-Under RBI guidelines, recovery agents are only allowed to contact borrowers during reasonable daytime hours. According to the rules, recovery calls, messages, or visits should generally take place between <strong>8:00 AM and 7:00 PM</strong>. Any communication outside these hours may be considered inappropriate or harassing.
-</p>
+  .rg-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
 
-<p class="contract-blog-paragraph">
-This rule ensures borrowers are not disturbed late at night or early in the morning while still allowing banks to communicate regarding loan repayment. If recovery agents repeatedly contact borrowers outside these hours, borrowers may file a complaint with the bank or escalate the matter through RBI’s grievance system.
-</p>
+  .rg-card__label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2563eb;
+  }
 
-<div class="contract-blog-highlight">
-<strong>RBI Rule:</strong> Recovery agents should normally contact borrowers only between 
-<strong>8:00 AM and 7:00 PM</strong>.
-</div>
+  .rg-card__title {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+  }
 
-<div class="contract-blog-summary">
+  .rg-card:hover .rg-card__title {
+    color: #2563eb;
+  }
 
-<h4>Quick Summary</h4>
+  .rg-card__arrow {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    color: #2563eb;
+  }
 
-<ul>
-<li>RBI introduced new guidelines to prevent harassment during loan recovery.</li>
-<li>Recovery agents must follow ethical and professional conduct rules.</li>
-<li>Borrowers have the right to privacy and respectful communication.</li>
-<li>Banks are responsible for the actions of their recovery agents.</li>
+  .rg-card:hover .rg-card__arrow {
+    background: #eff4ff;
+    border-color: #bfcffe;
+    transform: translateX(2px);
+  }
 
-</ul>
+  .rg-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin-top: 2.5rem;
+  }
 
-</div>
+  @media (max-width: 480px) {
+    .rg-card__number { display: none; }
+    .rg-card__divider { display: none; }
+  }
+</style>
 
+<section class="rg-section">
 
-</div>
+  <div class="rg-header">
+    <div class="rg-eyebrow">Keep reading</div>
+    <h2 class="rg-heading">Related Guides</h2>
+  </div>
+
+  <div class="rg-list">
+
+    <a href="../personal-loan-settlement-india-2026/" class="rg-card">
+      <span class="rg-card__number">01</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Personal Loan Settlement in India 2026</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+    <a href="../harassment-and-legal-protection-india/" class="rg-card">
+      <span class="rg-card__number">02</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Harassment and Legal Protection in India</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="rg-divider"></div>
 </section>
+
+
+<script>
+  // Reading progress bar
+  (function () {
+    var bar = document.getElementById('MB2-SB1-progress');
+    function updateProgress() {
+      var scrollTop = window.scrollY || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var pct = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+      bar.style.width = pct + '%';
+      bar.setAttribute('aria-valuenow', Math.round(pct));
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  })();
+</script>

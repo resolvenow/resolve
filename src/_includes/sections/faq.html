@@ -1,184 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ Section</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
-/* FAQ Section */
-.faq {
-    background: #f1f4f4;
-    padding: 90px 20px;
-}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #faf9f7; font-family: 'DM Sans', sans-serif; }
 
-.faq-container {
-    max-width: 1100px;
+  /* ── Section ─────────────────────────────────── */
+  .faq {
+    padding: 120px 24px;
+    background: #faf9f7;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Ambient blobs — mirroring contact section style */
+  .faq::before,
+  .faq::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+  }
+  .faq::before {
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, #ffe8d8 0%, transparent 70%);
+    top: -80px; right: -100px;
+    opacity: .5;
+  }
+  .faq::after {
+    width: 340px; height: 340px;
+    background: radial-gradient(circle, #d6e4ff 0%, transparent 70%);
+    bottom: -60px; left: -80px;
+    opacity: .45;
+  }
+
+  /* ── Header ──────────────────────────────────── */
+  .faq-container {
+    position: relative;
+    max-width: 820px;
     margin: 0 auto;
-}
+  }
 
-.faq-header {
+  .faq-header {
     text-align: center;
-    margin-bottom: 60px;
-}
+    margin-bottom: 56px;
+  }
 
-.section-tag {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: #2563eb;
-    background: #e0e7ff;
-    padding: 6px 14px;
-    border-radius: 999px;
-    margin-bottom: 14px;
-}
-
-.faq-header h2 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    color: #111827;
-}
-
-.faq-header p {
-    max-width: 520px;
-    margin: 0 auto;
-    color: #6b7280;
-    font-size: 1rem;
-}
-
-/* FAQ List */
-.faq-list {
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    background: #ffffff;
-    border-radius: 14px;
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #bf5e25;
     margin-bottom: 16px;
-    padding: 22px 24px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
-    transition: box-shadow 0.3s ease, transform 0.2s ease;
-}
+  }
+  .section-tag::before,
+  .section-tag::after {
+    content: '';
+    display: block;
+    width: 20px; height: 2px;
+    background: #bf5e25;
+    border-radius: 2px;
+  }
 
-.faq-item:hover {
+  .faq-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.1;
+    color: #111;
+    margin-bottom: 14px;
+  }
+  .faq-header h2 em {
+    font-style: italic;
+    color: #bf5e25;
+  }
+
+  .faq-header p {
+    font-size: 0.97rem;
+    color: #6e6e6e;
+    line-height: 1.75;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  /* ── FAQ Items ───────────────────────────────── */
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faq-item {
+    background: #fff;
+    border: 1.5px solid #ede8e0;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: box-shadow .25s ease, transform .22s ease, border-color .22s ease;
+  }
+  .faq-item:hover {
+    box-shadow: 0 10px 32px rgba(0,0,0,.07);
     transform: translateY(-2px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
-}
+  }
+  .faq-item[open] {
+    border-color: #e0d4c8;
+    box-shadow: 0 12px 36px rgba(0,0,0,.08);
+  }
 
-/* Summary */
-.faq-item summary {
-    font-size: 1.05rem;
-    font-weight: 600;
-    cursor: pointer;
+  /* Summary row */
+  .faq-item summary {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #111827;
-}
+    gap: 16px;
+    padding: 22px 26px;
+    cursor: pointer;
+    font-size: 0.97rem;
+    font-weight: 500;
+    color: #111;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
 
-.faq-item summary::-webkit-details-marker {
-    display: none;
-}
+  /* Number badge */
+  .faq-num {
+    width: 30px; height: 30px;
+    border-radius: 9px;
+    background: #fdf3ec;
+    color: #bf5e25;
+    font-size: 0.72rem;
+    font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: .02em;
+    transition: background .22s, color .22s;
+  }
+  .faq-item[open] .faq-num {
+    background: #bf5e25;
+    color: #fff;
+  }
 
-/* Plus / Minus Icon */
-.faq-item summary::after {
-    content: "+";
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: #2563eb;
-    transition: transform 0.3s ease;
-}
+  .faq-q { flex: 1; }
 
-.faq-item[open] summary::after {
-    content: "–";
-    transform: rotate(180deg);
-}
+  /* Toggle icon */
+  .faq-icon {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    border: 1.5px solid #e8e2da;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: background .22s, border-color .22s, transform .3s ease;
+    color: #bf5e25;
+  }
+  .faq-icon svg {
+    width: 14px; height: 14px;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    transition: transform .3s ease;
+  }
+  .faq-item[open] .faq-icon {
+    background: #bf5e25;
+    border-color: #bf5e25;
+    color: #fff;
+  }
+  .faq-item[open] .faq-icon svg {
+    transform: rotate(45deg);
+  }
 
-/* Answer */
-.faq-item p {
-    margin-top: 14px;
-    color: #4b5563;
-    line-height: 1.7;
+  /* Answer */
+  .faq-body {
+    padding: 0 26px 22px 72px;
+  }
+  .faq-body p {
+    font-size: 0.9rem;
+    color: #6b6b6b;
+    line-height: 1.8;
+    animation: fadeSlide .28s ease;
+  }
+
+  /* Divider */
+  .faq-divider {
+    height: 1px;
+    background: #f0ebe4;
+    margin: 0 26px 20px;
+  }
+
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Bottom CTA ──────────────────────────────── */
+  .faq-cta {
+    text-align: center;
+    margin-top: 52px;
+    padding: 36px 32px;
+    background: #fff;
+    border: 1.5px solid #ede8e0;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.05);
+  }
+  .faq-cta p {
     font-size: 0.95rem;
-    max-width: 95%;
-}
+    color: #6e6e6e;
+    margin-bottom: 18px;
+  }
+  .faq-cta p strong { color: #111; font-weight: 500; }
+  .faq-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 26px;
+    background: #141414;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: .03em;
+    transition: background .25s, transform .18s, box-shadow .25s;
+  }
+  .faq-cta a:hover {
+    background: #bf5e25;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(191,94,37,.28);
+  }
+  .faq-cta a svg {
+    width: 15px; height: 15px;
+    stroke: #fff; fill: none;
+    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    transition: transform .2s;
+  }
+  .faq-cta a:hover svg { transform: translateX(3px); }
 
-/* Smooth opening animation */
-.faq-item[open] p {
-    animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-4px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Mobile tweaks */
-@media (max-width: 640px) {
-    .faq-header h2 {
-        font-size: 1.8rem;
-    }
-
-    .faq-item {
-        padding: 18px 20px;
-    }
-}
+  /* ── Mobile ──────────────────────────────────── */
+  @media (max-width: 600px) {
+    .faq-body { padding-left: 26px; }
+    .faq-item summary { padding: 18px 20px; }
+    .faq-body { padding: 0 20px 18px; }
+    .faq-divider { margin: 0 20px 16px; }
+  }
 </style>
+</head>
+<body>
 
 <section id="faq" class="faq">
-        <div class="faq-container">
-            <div class="faq-header">
-                <span class="section-tag">FAQs</span>
-                <h2>Frequently Asked Questions</h2>
-                <p>Clear answers to common concerns about loan resolution and support</p>
-            </div>
+  <div class="faq-container">
 
-            <div class="faq-list">
-                <details class="faq-item">
-                    <summary>Which types of loans does Resolve Now assist with?</summary>
-                    <p>
-                        We provide assistance for various kinds of loans, including personal loans,
-                        credit card dues, business loans, and other unsecured borrowings, depending
-                        on individual circumstances.
-                    </p>
-                </details>
+    <div class="faq-header">
+      <span class="section-tag">FAQs</span>
+      <h2>Frequently Asked <em>Questions</em></h2>
+      <p>Clear answers to common concerns about loan resolution and support.</p>
+    </div>
 
-                <details class="faq-item">
-                    <summary>How long does the loan resolution process usually take?</summary>
-                    <p>
-                        The timeline varies based on the lender, loan amount, and case complexity,
-                        but most resolutions are achieved within a few weeks to a few months.
-                    </p>
-                </details>
+    <div class="faq-list">
 
-                <details class="faq-item">
-                    <summary>Will interest or penalty charges continue during the settlement process?</summary>
-                    <p>
-                        In many cases, we work to minimize additional interest and late fees by
-                        engaging with lenders and negotiating fair terms on your behalf.
-                    </p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>How should I respond to calls from banks or recovery agents?</summary>
-                    <p>
-                        Once you are connected with us, we guide you on handling communication
-                        professionally and, where possible, act as an intermediary to reduce
-                        unnecessary pressure.
-                    </p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>What if a lender initiates legal proceedings against me?</summary>
-                    <p>
-                        If legal action is initiated, our team helps you understand the situation
-                        and connects you with appropriate legal guidance to ensure your rights
-                        are protected.
-                    </p>
-                </details>
-            </div>
+      <details class="faq-item">
+        <summary>
+          <span class="faq-num">01</span>
+          <span class="faq-q">Which types of loans does Resolve Now assist with?</span>
+          <span class="faq-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-divider"></div>
+        <div class="faq-body">
+          <p>We provide assistance for various kinds of loans, including personal loans, credit card dues, business loans, and other unsecured borrowings, depending on individual circumstances.</p>
         </div>
-    </section>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-num">02</span>
+          <span class="faq-q">How long does the loan resolution process usually take?</span>
+          <span class="faq-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-divider"></div>
+        <div class="faq-body">
+          <p>The timeline varies based on the lender, loan amount, and case complexity, but most resolutions are achieved within a few weeks to a few months.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-num">03</span>
+          <span class="faq-q">Will interest or penalty charges continue during the settlement process?</span>
+          <span class="faq-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-divider"></div>
+        <div class="faq-body">
+          <p>In many cases, we work to minimize additional interest and late fees by engaging with lenders and negotiating fair terms on your behalf.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-num">04</span>
+          <span class="faq-q">How should I respond to calls from banks or recovery agents?</span>
+          <span class="faq-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-divider"></div>
+        <div class="faq-body">
+          <p>Once you are connected with us, we guide you on handling communication professionally and, where possible, act as an intermediary to reduce unnecessary pressure.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-num">05</span>
+          <span class="faq-q">What if a lender initiates legal proceedings against me?</span>
+          <span class="faq-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-divider"></div>
+        <div class="faq-body">
+          <p>If legal action is initiated, our team helps you understand the situation and connects you with appropriate legal guidance to ensure your rights are protected.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-num">06</span>
+          <span class="faq-q">Will loan settlement hurt my CIBIL score long-term?</span>
+          <span class="faq-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-divider"></div>
+        <div class="faq-body">
+          <p>Loan settlement marks your credit report as "settled" instead of "closed," which can initially reduce your CIBIL score. However, with our post-settlement support — including dispute letters and timely lender updates — scores typically recover to pre-settlement levels within 12–18 months, faster than DIY efforts.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-num">07</span>
+          <span class="faq-q">Do you guarantee a minimum settlement percentage?</span>
+          <span class="faq-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-divider"></div>
+        <div class="faq-body">
+          <p>We cannot make guarantees due to RBI rules and individual case specifics, but our track record shows significant waivers on principal for NPAs across major lenders. We share real case benchmarks during free consultations so you know expected outcomes upfront — not vague promises.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-num">08</span>
+          <span class="faq-q">How do you stop recovery agent harassment immediately?</span>
+          <span class="faq-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-divider"></div>
+        <div class="faq-body">
+          <p>From Day 1, we issue legal notices to agents and banks citing RBI guidelines — including call frequency limits and prohibition on threats — and provide direct access to our lawyers for real-time intervention. This typically reduces unwanted calls significantly within 48 hours of engagement.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-num">09</span>
+          <span class="faq-q">What if the bank rejects my settlement offer?</span>
+          <span class="faq-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-divider"></div>
+        <div class="faq-body">
+          <p>Rejections are common when an NPA is under 6 months or hardship documentation is insufficient. We counter with audited financials, hardship affidavits, and RBI-compliant proposals — using bank-specific strategies to turn rejections into approvals, typically within 30–45 days.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span class="faq-num">10</span>
+          <span class="faq-q">Can I get a No Objection Certificate (NOC) after settlement?</span>
+          <span class="faq-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-divider"></div>
+        <div class="faq-body">
+          <p>Yes. Every client receives a signed NOC / No Dues Certificate from the lender, plus a verified digital copy for CIBIL disputes — delivered within 7 days of final payment. We also guide you through uploading it to all credit bureaus (CIBIL, Experian) to prevent future complications.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="faq-cta">
+      <p><strong>Still have questions?</strong> Our team is happy to help you personally.</p>
+      <a href="#contact">
+        Get in Touch
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
