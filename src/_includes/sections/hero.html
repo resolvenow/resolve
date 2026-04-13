@@ -12,14 +12,12 @@
         padding: 20px 148px;
     }
 
-    /* Dark overlay */
     .hero-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.15) 100%);
     }
 
-    /* Decorative geometric shapes */
     .hero-decorative-shapes {
         position: absolute;
         right: 5%;
@@ -72,30 +70,47 @@
         }
     }
 
-    /* Content */
     .hero-content {
         position: relative;
         z-index: 1;
         max-width: 800px;
         padding: 0;
         text-align: left;
-        color: #e1dfdf;
+        color: #ffffff;
     }
 
     .hero-content h1 {
         font-family: "Bebas Neue", sans-serif;
         letter-spacing: 0.03em;
-        font-weight: 400;
+        font-weight: 700;
         font-style: normal;
         font-size: clamp(2.5rem, 5vw, 4rem);
-        font-weight: 700;
         line-height: 1.2;
         margin-bottom: 24px;
+        color: #ffffff;
     }
 
-    .hero-content h1 .highlight {
+    .hero-content h1 .hero-typewriter-static {
+        color: #ffffff;
+    }
+
+    .hero-content h1 .hero-typewriter-text {
         color: #FFB84D;
-        display: inline;
+    }
+
+    .hero-typewriter-cursor {
+        display: inline-block;
+        width: 3px;
+        height: 1em;
+        background: #FFB84D;
+        margin-left: 2px;
+        vertical-align: middle;
+        animation: hero-blink 0.75s step-end infinite;
+    }
+
+    @keyframes hero-blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
     }
 
     .hero-content p {
@@ -104,12 +119,77 @@
         font-style: normal;
         font-size: 1.5rem;
         line-height: 1.7;
+        color: #ffffff;
         opacity: 0.95;
         margin-bottom: 32px;
         max-width: 650px;
     }
 
-    /* Buttons */
+    .hero-stats {
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .hero-stat {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .hero-stat-number {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        color: #FFB84D;
+        line-height: 1;
+        letter-spacing: 0.03em;
+    }
+
+    .hero-stat-label {
+        font-family: "Tinos", serif;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    .hero-stat-divider {
+        width: 1px;
+        background: rgba(255, 255, 255, 0.2);
+        align-self: stretch;
+    }
+
+    .hero-trust-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(107, 143, 113, 0.2);
+        border: 1px solid rgba(107, 143, 113, 0.5);
+        border-radius: 100px;
+        padding: 6px 16px;
+        margin-bottom: 20px;
+    }
+
+    .hero-trust-badge svg {
+        width: 14px;
+        height: 14px;
+        stroke: #6B8F71;
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        flex-shrink: 0;
+    }
+
+    .hero-trust-badge span {
+        font-family: "Atkinson Hyperlegible Mono", sans-serif;
+        font-size: 0.78rem;
+        color: #a8c9ac;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
     .hero-actions {
         display: flex;
         gap: 16px;
@@ -124,7 +204,6 @@
         padding: 16px 32px;
         border-radius: 8px;
         text-decoration: none;
-        font-weight: 600;
         font-size: 1rem;
         transition: all 0.3s ease;
         display: inline-flex;
@@ -155,66 +234,64 @@
         border-color: #fff;
     }
 
-    /* Responsive Design */
     @media (max-width: 1024px) {
         .hero-decorative-shapes {
             right: -10%;
             width: 400px;
             height: 400px;
         }
-        
-        .shape-1 {
-            width: 300px;
-            height: 300px;
-        }
-        
-        .shape-2 {
-            width: 220px;
-            height: 220px;
-        }
-        
-        .shape-3 {
-            width: 180px;
-            height: 180px;
-        }
+
+        .shape-1 { width: 300px; height: 300px; }
+        .shape-2 { width: 220px; height: 220px; }
+        .shape-3 { width: 180px; height: 180px; }
     }
 
     @media (max-width: 768px) {
         .hero {
             padding: 60px 24px;
         }
-        
+
         .hero-overlay {
             background: rgba(0, 0, 0, 0.6);
         }
-        
+
         .hero-decorative-shapes {
             display: none;
         }
-        
+
         .hero-content {
             max-width: 100%;
         }
-        
+
         .hero-content h1 {
             font-size: 2rem;
         }
-        
+
         .hero-content p {
             font-size: 1rem;
         }
-        
+
+        .hero-stats {
+            gap: 20px;
+        }
+
+        .hero-stat-number {
+            font-size: 1.6rem;
+        }
+
+        .hero-stat-divider {
+            display: none;
+        }
+
         .hero-actions {
             flex-direction: column;
         }
-        
+
         .btn {
             width: 100%;
             justify-content: center;
         }
     }
-
-
 </style>
 
 <section class="hero">
@@ -225,12 +302,100 @@
         <div class="shape shape-3"></div>
     </div>
     <div class="hero-content">
-        <h1>Resolve Now .</h1>
-        <p>Trust our expertise for a stress-free settlement. 
-            <br>We specialize in Credit Card Loan Settlement and Personal Loan Settlement as well as protecting against creditor harassment through our proprietary products. </p>
+
+        <div class="hero-trust-badge">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            <span>RBI-Compliant Debt Resolution</span>
+        </div>
+
+        <h1>
+            <span class="hero-typewriter-text" id="heroTypewriterText"></span><span class="hero-typewriter-cursor" id="heroTypewriterCursor"></span>
+        </h1>   
+
+        <p>Trust our expertise for a stress-free settlement.
+            <br>We specialize in Credit Card Loan Settlement and Personal Loan Settlement as well as protecting against creditor harassment through our proprietary products.</p>
+
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="hero-stat-number">20+</span>
+                <span class="hero-stat-label">Cases Settled</span>
+            </div>
+            <!-- <div class="hero-stat-divider"></div> -->
+            <!-- <div class="hero-stat">
+                <span class="hero-stat-number">₹12Cr+</span>
+                <span class="hero-stat-label">Debt Resolved</span>
+            </div> -->
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">180</span>
+                <span class="hero-stat-label">Day Resolution</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">5.0★</span>
+                <span class="hero-stat-label">Client Rating</span>
+            </div>
+        </div>
+
         <div class="hero-actions">
             <a href="../../forms/" class="btn primary">Consult With Us →</a>
             <a href="https://calendly.com/quickresolvenow" target="_blank" class="btn secondary">Video Meet →</a>
         </div>
+
     </div>
 </section>
+
+<script>
+    (function () {
+        const heroTypewriterPhrases = [
+            { text: "Resolve Now.", golden: true },
+            { text: "Debt Resolution.", golden: false },
+            { text: "Financial Consultation.", golden: false },
+            { text: "Legal Advisory.", golden: false }
+        ];
+
+        const heroTypewriterEl = document.getElementById("heroTypewriterText");
+
+        let heroCurrentPhrase = 0;
+        let heroCurrentChar = 0;
+        let heroIsDeleting = false;
+
+        const HERO_TYPE_SPEED = 80;
+        const HERO_DELETE_SPEED = 45;
+        const HERO_PAUSE_AFTER_TYPE = 1800;
+        const HERO_PAUSE_AFTER_DELETE = 400;
+
+        function heroRunTypewriter() {
+            const phrase = heroTypewriterPhrases[heroCurrentPhrase];
+
+            if (!heroIsDeleting) {
+                heroCurrentChar++;
+            } else {
+                heroCurrentChar--;
+            }
+
+            heroTypewriterEl.textContent = phrase.text.slice(0, heroCurrentChar);
+            heroTypewriterEl.style.color = phrase.golden ? "#FFB84D" : "#ffffff";
+
+            if (!heroIsDeleting && heroCurrentChar === phrase.text.length) {
+                heroIsDeleting = true;
+                setTimeout(heroRunTypewriter, HERO_PAUSE_AFTER_TYPE);
+                return;
+            }
+
+            if (heroIsDeleting && heroCurrentChar === 0) {
+                heroIsDeleting = false;
+                heroCurrentPhrase = (heroCurrentPhrase + 1) % heroTypewriterPhrases.length;
+                setTimeout(heroRunTypewriter, HERO_PAUSE_AFTER_DELETE);
+                return;
+            }
+
+            setTimeout(heroRunTypewriter, heroIsDeleting ? HERO_DELETE_SPEED : HERO_TYPE_SPEED);
+        }
+
+        heroRunTypewriter();
+    })();
+</script>
