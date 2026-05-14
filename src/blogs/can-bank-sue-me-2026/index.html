@@ -1,0 +1,1217 @@
+---
+layout: layout.html
+---
+
+<style>
+  /* === MB3-SB1 ROOT & RESET === */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --MB3-SB1-ink: #1a1a18;
+    --MB3-SB1-ink-muted: #5a5a52;
+    --MB3-SB1-ink-faint: #9a9a90;
+    --MB3-SB1-page: #faf9f6;
+    --MB3-SB1-surface: #f3f1ec;
+    --MB3-SB1-rule: #e0ddd6;
+    --MB3-SB1-accent: #b84a2e;
+    --MB3-SB1-accent-soft: #f5ede9;
+    --MB3-SB1-link: #2b5282;
+    --MB3-SB1-max: 720px;
+    --MB3-SB1-font-body: 'Lora', Georgia, 'Times New Roman', serif;
+    --MB3-SB1-font-ui: 'DM Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  }
+
+  html {
+    font-size: 17px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--MB3-SB1-page);
+    color: var(--MB3-SB1-ink);
+    font-family: var(--MB3-SB1-font-body);
+    line-height: 1.75;
+    min-height: 100vh;
+  }
+
+  /* === MB3-SB1 LAYOUT === */
+  .MB3-SB1-site-header {
+    border-bottom: 1px solid var(--MB3-SB1-rule);
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+
+  .MB3-SB1-site-nav {
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--MB3-SB1-ink-muted);
+  }
+
+  .MB3-SB1-site-nav a {
+    color: inherit;
+    text-decoration: none;
+    margin-left: 1.6rem;
+  }
+
+  .MB3-SB1-site-nav a:hover {
+    color: var(--MB3-SB1-accent);
+  }
+
+  .MB3-SB1-logo {
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--MB3-SB1-ink);
+    text-decoration: none;
+  }
+
+  .MB3-SB1-main {
+    max-width: var(--MB3-SB1-max);
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 5rem;
+  }
+
+  /* === MB3-SB1 HEADER BLOCK === */
+  .MB3-SB1-article-header {
+    margin-bottom: 2.8rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--MB3-SB1-rule);
+  }
+
+  .MB3-SB1-category-tag {
+    display: inline-block;
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--MB3-SB1-accent);
+    margin-bottom: 1rem;
+  }
+
+  .MB3-SB1-h1 {
+    font-family: var(--MB3-SB1-font-body);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--MB3-SB1-ink);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .MB3-SB1-deck {
+    font-size: 1.05rem;
+    color: var(--MB3-SB1-ink-muted);
+    line-height: 1.65;
+    margin-bottom: 1.4rem;
+  }
+
+  .MB3-SB1-meta {
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.78rem;
+    color: var(--MB3-SB1-ink-faint);
+    display: flex;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .MB3-SB1-meta-sep {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--MB3-SB1-rule);
+    vertical-align: middle;
+  }
+
+  /* === MB3-SB1 DISCLAIMER === */
+  .MB3-SB1-disclaimer {
+    background: var(--MB3-SB1-accent-soft);
+    border-left: 3px solid var(--MB3-SB1-accent);
+    padding: 0.9rem 1.2rem;
+    margin-bottom: 2.5rem;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .MB3-SB1-disclaimer p {
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.8rem;
+    color: var(--MB3-SB1-ink-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .MB3-SB1-disclaimer strong {
+    color: var(--MB3-SB1-accent);
+  }
+
+  /* === MB3-SB1 TOC === */
+  .MB3-SB1-toc {
+    background: var(--MB3-SB1-surface);
+    border: 1px solid var(--MB3-SB1-rule);
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 2.8rem;
+    border-radius: 4px;
+  }
+
+  .MB3-SB1-toc-title {
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--MB3-SB1-ink-muted);
+    margin-bottom: 0.9rem;
+  }
+
+  .MB3-SB1-toc-list {
+    list-style: none;
+    counter-reset: MB3-SB1-toc-counter;
+  }
+
+  .MB3-SB1-toc-list li {
+    counter-increment: MB3-SB1-toc-counter;
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    padding: 0.25rem 0;
+    font-size: 0.88rem;
+  }
+
+  .MB3-SB1-toc-list li::before {
+    content: counter(MB3-SB1-toc-counter, decimal-leading-zero);
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--MB3-SB1-ink-faint);
+    flex-shrink: 0;
+  }
+
+  .MB3-SB1-toc-list a {
+    color: var(--MB3-SB1-link);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+
+  .MB3-SB1-toc-list a:hover {
+    border-color: var(--MB3-SB1-link);
+  }
+
+  /* === MB3-SB1 ARTICLE BODY === */
+  .MB3-SB1-body h2 {
+    font-family: var(--MB3-SB1-font-body);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--MB3-SB1-ink);
+    margin-top: 3rem;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.01em;
+    scroll-margin-top: 1.5rem;
+  }
+
+  .MB3-SB1-body h3 {
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--MB3-SB1-ink-muted);
+    margin-top: 2rem;
+    margin-bottom: 0.6rem;
+    scroll-margin-top: 1.5rem;
+  }
+
+  .MB3-SB1-body p {
+    margin-bottom: 1.2rem;
+    color: var(--MB3-SB1-ink);
+  }
+
+  .MB3-SB1-body a {
+    color: var(--MB3-SB1-link);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  .MB3-SB1-body a:hover {
+    color: var(--MB3-SB1-accent);
+  }
+
+  /* === MB3-SB1 LISTS === */
+  .MB3-SB1-ul {
+    list-style: none;
+    margin: 0.6rem 0 1.4rem;
+    padding: 0;
+  }
+
+  .MB3-SB1-ul li {
+    padding: 0.22rem 0 0.22rem 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+  }
+
+  .MB3-SB1-ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--MB3-SB1-ink-faint);
+    font-size: 0.75rem;
+    top: 0.35rem;
+  }
+
+  /* === MB3-SB1 TIMELINE === */
+  .MB3-SB1-timeline {
+    margin: 1.2rem 0 1.8rem;
+    border-left: 2px solid var(--MB3-SB1-rule);
+    padding-left: 1.4rem;
+  }
+
+  .MB3-SB1-timeline-item {
+    position: relative;
+    margin-bottom: 1.4rem;
+  }
+
+  .MB3-SB1-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.73rem;
+    top: 0.45rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--MB3-SB1-accent);
+    border: 2px solid var(--MB3-SB1-page);
+    box-shadow: 0 0 0 1px var(--MB3-SB1-accent);
+  }
+
+  .MB3-SB1-timeline-label {
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--MB3-SB1-accent);
+    margin-bottom: 0.2rem;
+  }
+
+  .MB3-SB1-timeline-item p {
+    font-size: 0.92rem;
+    margin: 0;
+  }
+
+  /* === MB3-SB1 STEPS === */
+  .MB3-SB1-steps {
+    counter-reset: MB3-SB1-step;
+    margin: 1rem 0 1.8rem;
+  }
+
+  .MB3-SB1-step {
+    counter-increment: MB3-SB1-step;
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.8rem 1rem;
+    margin-bottom: 1.6rem;
+    align-items: start;
+  }
+
+  .MB3-SB1-step-num {
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--MB3-SB1-page);
+    background: var(--MB3-SB1-ink);
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+
+  .MB3-SB1-step-num::before {
+    content: counter(MB3-SB1-step);
+  }
+
+  .MB3-SB1-step-content h3 {
+    margin-top: 0;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--MB3-SB1-ink);
+  }
+
+  .MB3-SB1-step-content p {
+    font-size: 0.92rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .MB3-SB1-step-content .MB3-SB1-ul {
+    margin-top: 0.4rem;
+  }
+
+  /* === MB3-SB1 CALLOUT === */
+  .MB3-SB1-callout {
+    border: 1px solid var(--MB3-SB1-rule);
+    background: var(--MB3-SB1-surface);
+    padding: 1.1rem 1.4rem;
+    margin: 1.8rem 0;
+    border-radius: 4px;
+  }
+
+  .MB3-SB1-callout-label {
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--MB3-SB1-ink-faint);
+    margin-bottom: 0.5rem;
+  }
+
+  .MB3-SB1-callout p {
+    font-size: 0.92rem;
+    margin: 0;
+    color: var(--MB3-SB1-ink-muted);
+  }
+
+  .MB3-SB1-callout strong {
+    color: var(--MB3-SB1-ink);
+  }
+
+  /* === MB3-SB1 HR === */
+  .MB3-SB1-rule-line {
+    border: none;
+    border-top: 1px solid var(--MB3-SB1-rule);
+    margin: 2.5rem 0;
+  }
+
+  /* === MB3-SB1 FAQ === */
+  .MB3-SB1-faq-item {
+    border-bottom: 1px solid var(--MB3-SB1-rule);
+    padding: 1.2rem 0;
+  }
+
+  .MB3-SB1-faq-q {
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--MB3-SB1-ink);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    user-select: none;
+  }
+
+  .MB3-SB1-faq-q::-webkit-details-marker { display: none; }
+
+  .MB3-SB1-faq-q .MB3-SB1-faq-icon {
+    font-size: 1.1rem;
+    color: var(--MB3-SB1-ink-faint);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+    font-style: normal;
+    font-family: var(--MB3-SB1-font-ui);
+    font-weight: 300;
+  }
+
+  details[open] .MB3-SB1-faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .MB3-SB1-faq-a {
+    padding-top: 0.8rem;
+    font-size: 0.92rem;
+    color: var(--MB3-SB1-ink-muted);
+    line-height: 1.65;
+  }
+
+  .MB3-SB1-faq-a p { margin: 0; }
+
+  /* === MB3-SB1 PHRASE BOX === */
+  .MB3-SB1-phrase-box {
+    border: 1px solid var(--MB3-SB1-ink);
+    padding: 1rem 1.4rem;
+    margin: 1.2rem 0;
+    background: var(--MB3-SB1-ink);
+    border-radius: 4px;
+  }
+
+  .MB3-SB1-phrase-box p {
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.95rem;
+    color: var(--MB3-SB1-page);
+    margin: 0;
+    font-style: italic;
+  }
+
+  /* === MB3-SB1 RESOURCE LINKS === */
+  .MB3-SB1-resources {
+    background: var(--MB3-SB1-surface);
+    border: 1px solid var(--MB3-SB1-rule);
+    border-radius: 4px;
+    padding: 1.4rem 1.6rem;
+    margin: 2rem 0;
+  }
+
+  .MB3-SB1-resources-title {
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--MB3-SB1-ink-muted);
+    margin-bottom: 1rem;
+  }
+
+  .MB3-SB1-resource-link {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--MB3-SB1-rule);
+    text-decoration: none;
+    color: var(--MB3-SB1-link);
+    font-size: 0.88rem;
+    font-family: var(--MB3-SB1-font-ui);
+    transition: color 0.15s;
+  }
+
+  .MB3-SB1-resource-link:last-child { border-bottom: none; }
+  .MB3-SB1-resource-link:hover { color: var(--MB3-SB1-accent); }
+
+  .MB3-SB1-resource-link span {
+    font-size: 0.68rem;
+    color: var(--MB3-SB1-ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: var(--MB3-SB1-font-ui);
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  /* === MB3-SB1 FOOTER === */
+  .MB3-SB1-footer {
+    border-top: 1px solid var(--MB3-SB1-rule);
+    padding: 2rem 1.5rem;
+    max-width: var(--MB3-SB1-max);
+    margin: 0 auto;
+  }
+
+  .MB3-SB1-footer p {
+    font-family: var(--MB3-SB1-font-ui);
+    font-size: 0.75rem;
+    color: var(--MB3-SB1-ink-faint);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* === MB3-SB1 RESPONSIVE === */
+  @media (max-width: 600px) {
+    .MB3-SB1-h1 { font-size: 1.65rem; }
+    .MB3-SB1-main { padding: 2.2rem 1.1rem 4rem; }
+    .MB3-SB1-site-nav { display: none; }
+  }
+</style>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- SEO Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Can a Bank Sue You? What You Need to Know in 2026</title>
+<meta name="description" content="Yes, banks can sue you for unpaid debt. Learn when banks file lawsuits, how the legal process works, your rights under the FDCPA, and how to defend yourself or avoid a lawsuit altogether.">
+<meta name="keywords" content="can a bank sue you, bank lawsuit, debt lawsuit, FDCPA rights, wage garnishment, statute of limitations debt, debt collection lawsuit, default judgment">
+<meta name="author" content="">
+<link rel="canonical" href="">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Can a Bank Sue You? What You Need to Know in 2026">
+<meta property="og:description" content="Banks can sue for unpaid debt — but consumers have rights. Learn the process, your defenses, and how to avoid a lawsuit.">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-05-01">
+<meta property="article:modified_time" content="2026-05-14">
+<meta property="article:section" content="Personal Finance">
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Can a Bank Sue You? What You Need to Know in 2026",
+  "description": "A comprehensive guide on bank lawsuits for unpaid debt, covering the legal process, consumer rights under the FDCPA, statute of limitations, and how to defend yourself.",
+  "datePublished": "2026-05-01",
+  "dateModified": "2026-05-14",
+  "mainEntityOfPage": {
+    "@type": "WebPage"
+  },
+  "about": [
+    { "@type": "Thing", "name": "Debt collection" },
+    { "@type": "Thing", "name": "Consumer rights" },
+    { "@type": "Thing", "name": "Fair Debt Collection Practices Act" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can a bank sue you for credit card debt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Credit card companies can sue consumers after prolonged nonpayment, typically after 90–180 days of delinquency. If the creditor wins, they may pursue wage garnishment or bank levies depending on state law."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a bank sue you after 7 years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your state's statute of limitations. Some states allow lawsuits longer than seven years, while others have shorter deadlines. If the debt is time-barred, the creditor generally cannot legally sue you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you go to jail for unpaid debt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Consumer debt is a civil issue, not a criminal offense. You cannot be arrested simply for failing to repay a loan or credit card debt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if you ignore a bank lawsuit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ignoring the lawsuit usually leads to a default judgment. That can allow wage garnishment, frozen bank accounts, and property liens."
+      }
+    }
+  ]
+}
+</script>
+
+<header class="MB3-SB1-site-header">
+  <a href="/" class="MB3-SB1-logo">Financial Guide</a>
+  <nav class="MB3-SB1-site-nav" aria-label="Site navigation">
+    <a href="/personal-finance/">Personal Finance</a>
+    <a href="/debt/">Debt</a>
+    <a href="/legal-rights/">Legal Rights</a>
+  </nav>
+</header>
+
+<main class="MB3-SB1-main" id="MB3-SB1-main-content">
+  <article itemscope itemtype="https://schema.org/Article">
+
+    <header class="MB3-SB1-article-header">
+      <span class="MB3-SB1-category-tag">Debt &amp; Legal Rights</span>
+      <h1 class="MB3-SB1-h1" itemprop="headline">Can a Bank Sue You?<br>What You Need to Know in 2026</h1>
+      <p class="MB3-SB1-deck" itemprop="description">Banks, credit card companies, and debt collectors can sue for unpaid debt — but lawsuits follow specific rules, and you have more defenses than you might think.</p>
+      <div class="MB3-SB1-meta">
+        <time datetime="2026-05-14" itemprop="dateModified">Updated May 2026</time>
+        <span class="MB3-SB1-meta-sep" aria-hidden="true"></span>
+        <span>12–14 min read</span>
+      </div>
+    </header>
+
+    <div class="MB3-SB1-disclaimer" role="note" aria-label="Legal disclaimer">
+      <p><strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute legal advice. Laws vary by state. Always consult a <a href="https://www.lawhelp.org/" rel="noopener noreferrer" target="_blank">licensed attorney or legal aid organization</a> for advice regarding your specific situation.</p>
+    </div>
+
+    <nav class="MB3-SB1-toc" aria-label="Table of contents">
+      <div class="MB3-SB1-toc-title">In this article</div>
+      <ol class="MB3-SB1-toc-list">
+        <li><a href="#MB3-SB1-can-a-bank-sue">Can a Bank Legally Sue You?</a></li>
+        <li><a href="#MB3-SB1-when-do-banks-sue">When Do Banks Actually Sue?</a></li>
+        <li><a href="#MB3-SB1-lawsuit-process">The Debt Lawsuit Process, Step by Step</a></li>
+        <li><a href="#MB3-SB1-if-bank-wins">What Happens If the Bank Wins?</a></li>
+        <li><a href="#MB3-SB1-statute-of-limitations">Statute of Limitations</a></li>
+        <li><a href="#MB3-SB1-fdcpa">Your Rights Under the FDCPA</a></li>
+        <li><a href="#MB3-SB1-defend-yourself">How to Defend Yourself in Court</a></li>
+        <li><a href="#MB3-SB1-alternatives">Alternatives to Avoid a Lawsuit</a></li>
+        <li><a href="#MB3-SB1-faq">Frequently Asked Questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="MB3-SB1-body" itemprop="articleBody">
+
+      <!-- SECTION 1 -->
+      <section id="MB3-SB1-can-a-bank-sue" aria-labelledby="MB3-SB1-h2-1">
+        <h2 id="MB3-SB1-h2-1">Can a Bank Legally Sue You?</h2>
+        <p>The short answer is yes. When you borrow money — through a credit card, personal loan, auto loan, or line of credit — you enter into a legally binding contract. If you fail to repay according to that agreement, the lender has the right to pursue collections and, ultimately, file a civil lawsuit.</p>
+        <p>This applies to banks, credit card companies, <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-collector-en-172/" rel="noopener noreferrer" target="_blank">debt buyers, and collection agencies</a>.</p>
+
+        <h3>Original Creditor vs. Debt Collector</h3>
+        <p>An <strong>original creditor</strong> is the institution you borrowed from directly. They typically hold strong documentation — signed agreements, account statements, full payment history. A <strong>debt buyer</strong> purchases old debts from lenders, often for cents on the dollar, and frequently lacks complete paperwork.</p>
+        <p>That gap matters in court. To win a debt lawsuit, the plaintiff must prove:</p>
+        <ul class="MB3-SB1-ul">
+          <li>You owe the debt</li>
+          <li>The amount claimed is accurate</li>
+          <li>They legally own the debt</li>
+        </ul>
+        <p>Incomplete documentation from a debt buyer can be a meaningful defense. According to the <a href="https://www.federalreserve.gov/releases/g19/current/" rel="noopener noreferrer" target="_blank">Federal Reserve's consumer credit data</a>, U.S. household debt has reached record highs in recent years — and as delinquencies rise, creditors are filing lawsuits more aggressively. Still, most banks prefer settlement over litigation because lawsuits cost money and take time.</p>
+      </section>
+
+      <hr class="MB3-SB1-rule-line">
+
+      <!-- SECTION 2 -->
+      <section id="MB3-SB1-when-do-banks-sue" aria-labelledby="MB3-SB1-h2-2">
+        <h2 id="MB3-SB1-h2-2">When Do Banks Actually Sue?</h2>
+        <p>Most lenders follow a predictable escalation pattern before taking you to court. A single missed payment rarely triggers a lawsuit.</p>
+
+        <h3>Common Triggers</h3>
+        <p>Banks are <em>more</em> likely to sue when:</p>
+        <ul class="MB3-SB1-ul">
+          <li>You've missed payments for 90–180 days</li>
+          <li>The balance exceeds $1,000</li>
+          <li>The debt is within the statute of limitations</li>
+          <li>The lender has strong documentation</li>
+          <li>You've ignored all collection attempts</li>
+          <li>Settlement negotiations have broken down</li>
+        </ul>
+        <p>Banks are <em>less</em> likely to sue when the balance is very small, the debt is extremely old, documentation is incomplete, or you're actively communicating and making arrangements.</p>
+
+        <h3>Typical Timeline Before a Lawsuit</h3>
+        <div class="MB3-SB1-timeline" role="list" aria-label="Debt delinquency timeline">
+          <div class="MB3-SB1-timeline-item" role="listitem">
+            <div class="MB3-SB1-timeline-label">Day 1–30</div>
+            <p>Missed payment. Calls, emails, and late notices begin. Late fees may be added to your balance.</p>
+          </div>
+          <div class="MB3-SB1-timeline-item" role="listitem">
+            <div class="MB3-SB1-timeline-label">Day 60–90</div>
+            <p>Serious delinquency. Your credit score may drop significantly. Collection efforts intensify.</p>
+          </div>
+          <div class="MB3-SB1-timeline-item" role="listitem">
+            <div class="MB3-SB1-timeline-label">Day 90–180</div>
+            <p>Charge-off. The lender may write off the debt internally, then hire a collection agency or sell to a debt buyer.</p>
+          </div>
+          <div class="MB3-SB1-timeline-item" role="listitem">
+            <div class="MB3-SB1-timeline-label">After Charge-Off</div>
+            <p>If collection attempts fail, the creditor may file a civil lawsuit against you.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="MB3-SB1-rule-line">
+
+      <!-- SECTION 3 -->
+      <section id="MB3-SB1-lawsuit-process" aria-labelledby="MB3-SB1-h2-3">
+        <h2 id="MB3-SB1-h2-3">The Debt Lawsuit Process, Step by Step</h2>
+        <p>Understanding how a debt lawsuit unfolds removes much of the fear around it. Here's what to expect at each stage.</p>
+
+        <div class="MB3-SB1-steps" role="list">
+          <div class="MB3-SB1-step" role="listitem">
+            <div class="MB3-SB1-step-num" aria-label="Step 1"></div>
+            <div class="MB3-SB1-step-content">
+              <h3>Debt Validation Notice</h3>
+              <p>Under the <a href="https://www.ftc.gov/legal-library/browse/rules/fair-debt-collection-practices-act-text" rel="noopener noreferrer" target="_blank">Fair Debt Collection Practices Act (FDCPA)</a>, collectors must send you a debt validation notice within five days of first contact. It states the amount owed, the creditor's name, and your right to dispute. If you dispute within 30 days, collection must pause until the debt is verified.</p>
+            </div>
+          </div>
+          <div class="MB3-SB1-step" role="listitem">
+            <div class="MB3-SB1-step-num" aria-label="Step 2"></div>
+            <div class="MB3-SB1-step-content">
+              <h3>Collection Attempts Continue</h3>
+              <p>Collectors may call, send letters, offer settlements, or propose payment plans. Many lawsuits are avoided entirely at this stage through negotiation.</p>
+            </div>
+          </div>
+          <div class="MB3-SB1-step" role="listitem">
+            <div class="MB3-SB1-step-num" aria-label="Step 3"></div>
+            <div class="MB3-SB1-step-content">
+              <h3>The Lawsuit Is Filed</h3>
+              <p>If collections fail, the creditor files in civil court. You'll receive a <strong>Summons</strong> and a <strong>Complaint</strong> — documents explaining who is suing you, the amount claimed, and your deadline to respond. In most states, you have only 20–30 days.</p>
+            </div>
+          </div>
+          <div class="MB3-SB1-step" role="listitem">
+            <div class="MB3-SB1-step-num" aria-label="Step 4"></div>
+            <div class="MB3-SB1-step-content">
+              <h3>You Must Respond</h3>
+              <p>Ignoring the lawsuit is one of the worst things you can do. If you don't respond, the court will likely enter a <strong>default judgment</strong> automatically in the creditor's favor. Your response can include denials, defenses, requests for proof, or counterclaims.</p>
+            </div>
+          </div>
+          <div class="MB3-SB1-step" role="listitem">
+            <div class="MB3-SB1-step-num" aria-label="Step 5"></div>
+            <div class="MB3-SB1-step-content">
+              <h3>Court Proceedings</h3>
+              <p>The creditor must prove you owe the debt, the amount is accurate, they own the debt, and the lawsuit was filed within the statute of limitations. You may challenge missing paperwork, incorrect balances, identity theft, or an expired deadline. Most cases settle before trial.</p>
+            </div>
+          </div>
+          <div class="MB3-SB1-step" role="listitem">
+            <div class="MB3-SB1-step-num" aria-label="Step 6"></div>
+            <div class="MB3-SB1-step-content">
+              <h3>Judgment</h3>
+              <p>If the creditor wins — or if you never respond — the court enters a judgment. This gives the creditor broader collection powers. <strong>Note: you cannot go to jail for unpaid consumer debt.</strong> Debt lawsuits are civil, not criminal matters.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="MB3-SB1-rule-line">
+
+      <!-- SECTION 4 -->
+      <section id="MB3-SB1-if-bank-wins" aria-labelledby="MB3-SB1-h2-4">
+        <h2 id="MB3-SB1-h2-4">What Happens If the Bank Wins the Lawsuit?</h2>
+        <p>A court judgment expands what a creditor can legally do to collect. The most common consequences:</p>
+
+        <h3>Wage Garnishment</h3>
+        <p>A court order can require your employer to withhold a portion of your paycheck. Federal law limits garnishment to 25% of your disposable income or the amount by which your weekly earnings exceed 30 times the federal minimum wage — whichever is less. Many states set stricter caps. You can read the rules at the <a href="https://www.dol.gov/agencies/whd/fact-sheets/30-flsa-wage-garnishment" rel="noopener noreferrer" target="_blank">Department of Labor's garnishment fact sheet</a>.</p>
+
+        <h3>Bank Account Levy</h3>
+        <p>A creditor may freeze or seize funds from your bank account. However, certain funds are protected — notably federal benefits like <a href="https://www.ssa.gov/benefits/disability/" rel="noopener noreferrer" target="_blank">Social Security and disability payments</a> often receive automatic protections. Act immediately if you receive notice of a levy.</p>
+
+        <h3>Property Liens</h3>
+        <p>Judgment creditors may place liens on your home, vehicle, or other property. This can prevent you from refinancing or selling assets until the debt is resolved.</p>
+
+        <h3>Credit Damage</h3>
+        <p>Judgments and collection accounts can significantly harm your <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-score-en-315/" rel="noopener noreferrer" target="_blank">credit profile</a>, affecting loan approvals, interest rates, housing applications, and even employment screenings.</p>
+
+        <div class="MB3-SB1-callout" role="note">
+          <div class="MB3-SB1-callout-label">Important</div>
+          <p>Most debt lawsuits end in <strong>default judgments</strong> — simply because people fail to respond. Answering the lawsuit is almost always worth doing, even if you believe the debt is valid. Some courts will vacate a default judgment if you were never properly served, had a valid defense, or there was procedural error.</p>
+        </div>
+      </section>
+
+      <hr class="MB3-SB1-rule-line">
+
+      <!-- SECTION 5 -->
+      <section id="MB3-SB1-statute-of-limitations" aria-labelledby="MB3-SB1-h2-5">
+        <h2 id="MB3-SB1-h2-5">Statute of Limitations: Can a Bank Sue After Years?</h2>
+        <p>The statute of limitations is the legal deadline for filing a lawsuit. Once it expires, the debt becomes <em>time-barred</em> — collectors may still contact you in some states, but they generally cannot win in court.</p>
+
+        <h3>How Long Is It?</h3>
+        <p>It varies by state and debt type. Most consumer debts fall in the <strong>3–10 year range</strong>. The clock typically starts after your last payment, your first missed payment, or the date of account default — state law determines the exact rule.</p>
+        <p>You can look up your state's specific deadlines through resources like the <a href="https://www.nclc.org/resources/fair-debt-collection/" rel="noopener noreferrer" target="_blank">National Consumer Law Center</a>.</p>
+
+        <h3>Can a Payment Restart the Clock?</h3>
+        <p>Yes — in some states. Making a payment or acknowledging a debt in writing may restart the limitations period. This is why you should be cautious before agreeing to any payment on very old debt without first getting legal guidance.</p>
+
+        <div class="MB3-SB1-callout" role="note">
+          <div class="MB3-SB1-callout-label">If You're Sued on Old Debt</div>
+          <p>Never ignore the lawsuit simply because the debt seems old. <strong>Respond to the court, raise the statute of limitations as a defense, and provide any evidence you have.</strong> Silence results in a default judgment regardless of how old the debt is.</p>
+        </div>
+      </section>
+
+      <hr class="MB3-SB1-rule-line">
+
+      <!-- SECTION 6 -->
+      <section id="MB3-SB1-fdcpa" aria-labelledby="MB3-SB1-h2-6">
+        <h2 id="MB3-SB1-h2-6">Your Rights Under the FDCPA</h2>
+        <p>The <a href="https://www.ftc.gov/legal-library/browse/rules/fair-debt-collection-practices-act-text" rel="noopener noreferrer" target="_blank">Fair Debt Collection Practices Act</a> protects consumers from abusive tactics by third-party collectors. Understanding these rights can meaningfully change how collection attempts affect you.</p>
+
+        <h3>What Collectors Cannot Do</h3>
+        <ul class="MB3-SB1-ul">
+          <li>Harass, threaten, or use abusive language</li>
+          <li>Call at unreasonable hours (before 8 a.m. or after 9 p.m. local time)</li>
+          <li>Lie about legal action or pretend to be government officials</li>
+          <li>Threaten arrest for unpaid debt</li>
+          <li>Sue on a time-barred debt</li>
+          <li>Misrepresent the amount owed</li>
+          <li>Discuss your debt publicly</li>
+        </ul>
+
+        <h3>Debt Validation Rights</h3>
+        <p>You have the right to request written verification of the amount owed, the original creditor, and proof of ownership. This is especially valuable when dealing with debt buyers who may have incomplete records.</p>
+
+        <h3>Can You Sue the Collector?</h3>
+        <p>Yes. If a collector violates the FDCPA, you may sue within one year of the violation for actual damages, up to $1,000 in statutory damages, and attorney's fees. File complaints with the <a href="https://www.consumerfinance.gov/complaint/" rel="noopener noreferrer" target="_blank">Consumer Financial Protection Bureau</a> and the <a href="https://reportfraud.ftc.gov/" rel="noopener noreferrer" target="_blank">Federal Trade Commission</a>.</p>
+      </section>
+
+      <hr class="MB3-SB1-rule-line">
+
+      <!-- SECTION 7 -->
+      <section id="MB3-SB1-defend-yourself" aria-labelledby="MB3-SB1-h2-7">
+        <h2 id="MB3-SB1-h2-7">How to Defend Yourself If Sued by a Bank</h2>
+        <p>Being served court papers doesn't mean the creditor will win. Consumers often have defenses that meaningfully weaken a creditor's case.</p>
+
+        <h3>1. Respond Immediately</h3>
+        <p>File your written response before the deadline — typically 20–30 days. Even a simple answer prevents a default judgment, buys time, and opens the door to settlement negotiations on better terms.</p>
+
+        <h3>2. Demand Proof</h3>
+        <p>Require the creditor to prove ownership of the debt, an accurate balance, a complete payment history, and a signed agreement. Debt buyers frequently lack complete documentation, which can be a significant advantage for you.</p>
+
+        <h3>3. Raise Valid Legal Defenses</h3>
+        <p>Possible defenses include:</p>
+        <ul class="MB3-SB1-ul">
+          <li>Statute of limitations has expired</li>
+          <li>Identity theft — the debt isn't yours</li>
+          <li>Wrong person sued</li>
+          <li>Debt was already paid or discharged in bankruptcy</li>
+          <li>Incorrect balance claimed</li>
+          <li>Lack of standing — the plaintiff can't prove they own the debt</li>
+        </ul>
+
+        <h3>4. Negotiate a Settlement</h3>
+        <p>Many creditors prefer a settlement to prolonged litigation. Possible outcomes include a lump-sum payment for a reduced balance, a structured payment plan, or full dismissal. Always get agreements in writing, and confirm the language includes terms like <em>"settled in full"</em> or <em>"account satisfied."</em></p>
+
+        <h3>5. Seek Legal Aid</h3>
+        <p>You may qualify for free or low-cost assistance. Start with the resources below.</p>
+
+        <div class="MB3-SB1-resources" aria-label="Legal aid resources">
+          <div class="MB3-SB1-resources-title">Legal Aid & Consumer Resources</div>
+          <a href="https://www.lsc.gov/about-lsc/what-legal-aid/get-legal-help" rel="noopener noreferrer" target="_blank" class="MB3-SB1-resource-link">
+            Legal Services Corporation — Find Legal Help
+            <span>lsc.gov ↗</span>
+          </a>
+          <a href="https://www.lawhelp.org/" rel="noopener noreferrer" target="_blank" class="MB3-SB1-resource-link">
+            LawHelp.org — Free Legal Aid by State
+            <span>lawhelp.org ↗</span>
+          </a>
+          <a href="https://www.nclc.org/resources/fair-debt-collection/" rel="noopener noreferrer" target="_blank" class="MB3-SB1-resource-link">
+            National Consumer Law Center — Debt Collection Guide
+            <span>nclc.org ↗</span>
+          </a>
+          <a href="https://www.consumerfinance.gov/consumer-tools/debt-collection/" rel="noopener noreferrer" target="_blank" class="MB3-SB1-resource-link">
+            CFPB — Debt Collection Resources
+            <span>consumerfinance.gov ↗</span>
+          </a>
+        </div>
+
+        <h3>6. Consider Bankruptcy Carefully</h3>
+        <p>For overwhelming debt, <a href="https://www.uscourts.gov/services-forms/bankruptcy" rel="noopener noreferrer" target="_blank">bankruptcy</a> may immediately pause all collection activity through an <em>automatic stay</em>. Chapter 7 liquidates eligible debts quickly; Chapter 13 creates a structured repayment plan. Bankruptcy carries serious long-term consequences — consult a qualified attorney before filing.</p>
+      </section>
+
+      <hr class="MB3-SB1-rule-line">
+
+      <!-- SECTION 8 -->
+      <section id="MB3-SB1-alternatives" aria-labelledby="MB3-SB1-h2-8">
+        <h2 id="MB3-SB1-h2-8">Alternatives to Avoid a Bank Lawsuit</h2>
+        <p>The most effective strategy is preventing litigation before it starts. A few options to consider:</p>
+
+        <h3>Communicate Early</h3>
+        <p>Many people avoid lawsuits simply by contacting their creditor early. Banks are often willing to reduce payments temporarily, pause collections, or offer hardship programs. Ignoring the problem almost always makes it worse.</p>
+
+        <h3>Debt Consolidation</h3>
+        <p>A <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-consolidation-loan-en-1504/" rel="noopener noreferrer" target="_blank">debt consolidation loan</a> combines multiple balances into a single payment, often at a lower interest rate. Approval depends on your credit profile.</p>
+
+        <h3>Nonprofit Credit Counseling</h3>
+        <p>Accredited nonprofit credit counselors can negotiate lower interest rates and structured repayment plans through <a href="https://www.nfcc.org/" rel="noopener noreferrer" target="_blank">debt management programs</a>. These differ meaningfully from for-profit settlement companies.</p>
+
+        <h3>Debt Settlement</h3>
+        <p>You can negotiate directly with creditors to pay less than the full balance. Risks include credit score damage, potential tax liability on forgiven amounts, and the possibility of lawsuits continuing during negotiations. Be cautious with companies promising unrealistic results.</p>
+
+        <h3>Direct Payment Plans</h3>
+        <p>Some creditors offer temporary hardship plans, interest reductions, or extended schedules. Always get any agreed terms in writing before making payments.</p>
+      </section>
+
+      <hr class="MB3-SB1-rule-line">
+
+      <!-- SECTION 9: FAQ -->
+      <section id="MB3-SB1-faq" aria-labelledby="MB3-SB1-h2-9">
+        <h2 id="MB3-SB1-h2-9">Frequently Asked Questions</h2>
+
+        <details class="MB3-SB1-faq-item">
+          <summary class="MB3-SB1-faq-q">
+            Can a bank sue you for credit card debt?
+            <i class="MB3-SB1-faq-icon" aria-hidden="true">+</i>
+          </summary>
+          <div class="MB3-SB1-faq-a">
+            <p>Yes. Credit card companies can sue consumers after prolonged nonpayment, typically after 90–180 days of delinquency. If the creditor wins, they may pursue <a href="https://www.dol.gov/agencies/whd/fact-sheets/30-flsa-wage-garnishment" rel="noopener noreferrer" target="_blank">wage garnishment</a> or bank levies depending on state law.</p>
+          </div>
+        </details>
+
+        <details class="MB3-SB1-faq-item">
+          <summary class="MB3-SB1-faq-q">
+            Can a bank sue you after 7 years?
+            <i class="MB3-SB1-faq-icon" aria-hidden="true">+</i>
+          </summary>
+          <div class="MB3-SB1-faq-a">
+            <p>It depends on your state's statute of limitations. Some states allow lawsuits beyond seven years, while others have shorter deadlines. If the debt is time-barred, the creditor generally cannot sue you successfully — but you must raise this as a defense by responding to the lawsuit.</p>
+          </div>
+        </details>
+
+        <details class="MB3-SB1-faq-item">
+          <summary class="MB3-SB1-faq-q">
+            What happens if you ignore a bank lawsuit?
+            <i class="MB3-SB1-faq-icon" aria-hidden="true">+</i>
+          </summary>
+          <div class="MB3-SB1-faq-a">
+            <p>Ignoring the lawsuit almost always leads to a default judgment in the creditor's favor. That judgment can enable wage garnishment, frozen bank accounts, and property liens — all without you ever having made your case to a judge.</p>
+          </div>
+        </details>
+
+        <details class="MB3-SB1-faq-item">
+          <summary class="MB3-SB1-faq-q">
+            Can you go to jail for unpaid debt?
+            <i class="MB3-SB1-faq-icon" aria-hidden="true">+</i>
+          </summary>
+          <div class="MB3-SB1-faq-a">
+            <p>No. Consumer debt lawsuits are civil matters, not criminal ones. You cannot be arrested simply for failing to repay a credit card or personal loan.</p>
+          </div>
+        </details>
+
+        <details class="MB3-SB1-faq-item">
+          <summary class="MB3-SB1-faq-q">
+            How much debt does a bank need to sue you?
+            <i class="MB3-SB1-faq-icon" aria-hidden="true">+</i>
+          </summary>
+          <div class="MB3-SB1-faq-a">
+            <p>There is no official legal minimum. However, lawsuits are far more common when balances exceed $1,000 — because litigation itself costs the creditor time and money, smaller balances often aren't worth pursuing in court.</p>
+          </div>
+        </details>
+
+        <details class="MB3-SB1-faq-item">
+          <summary class="MB3-SB1-faq-q">
+            Can a bank freeze your account without warning?
+            <i class="MB3-SB1-faq-icon" aria-hidden="true">+</i>
+          </summary>
+          <div class="MB3-SB1-faq-a">
+            <p>Generally, creditors need a court judgment before freezing your account. Certain funds — particularly federal benefits like Social Security — may be legally protected from seizure even after a judgment.</p>
+          </div>
+        </details>
+
+        <details class="MB3-SB1-faq-item">
+          <summary class="MB3-SB1-faq-q">
+            What is the 11-word phrase that stops debt collectors?
+            <i class="MB3-SB1-faq-icon" aria-hidden="true">+</i>
+          </summary>
+          <div class="MB3-SB1-faq-a">
+            <p>A common phrase is: <strong>"Please cease and desist all calls and contact with me immediately."</strong> Sending this in writing can restrict further contact under the <a href="https://www.ftc.gov/legal-library/browse/rules/fair-debt-collection-practices-act-text" rel="noopener noreferrer" target="_blank">FDCPA</a>. Keep in mind: stopping communication does not eliminate the debt or prevent a lawsuit.</p>
+          </div>
+        </details>
+
+      </section>
+
+    </div><!-- end MB3-SB1-body -->
+
+  </article>
+</main>
+
+{% include "author.html" %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600&display=swap');
+
+  .rg-section {
+    font-family: 'Outfit', sans-serif;
+    padding: 3rem 0 1.5rem;
+  }
+
+  .rg-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .rg-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+  }
+
+  .rg-eyebrow::before,
+  .rg-eyebrow::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: #2563eb;
+    opacity: 0.4;
+  }
+
+  .rg-heading {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .rg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rg-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rg-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2563eb;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .rg-card:hover {
+    border-color: #d1d9f5;
+    transform: translateX(4px);
+  }
+
+  .rg-card:hover::before {
+    opacity: 1;
+  }
+
+  .rg-card__number {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2563eb;
+    opacity: 0.12;
+    line-height: 1;
+    min-width: 2.5rem;
+    transition: opacity 0.2s ease;
+    user-select: none;
+  }
+
+  .rg-card:hover .rg-card__number {
+    opacity: 0.22;
+  }
+
+  .rg-card__divider {
+    width: 1px;
+    height: 3rem;
+    background: #e9e9e9;
+    flex-shrink: 0;
+  }
+
+  .rg-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .rg-card__label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2563eb;
+  }
+
+  .rg-card__title {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+  }
+
+  .rg-card:hover .rg-card__title {
+    color: #2563eb;
+  }
+
+  .rg-card__arrow {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    color: #2563eb;
+  }
+
+  .rg-card:hover .rg-card__arrow {
+    background: #eff4ff;
+    border-color: #bfcffe;
+    transform: translateX(2px);
+  }
+
+  .rg-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .rg-card__number { display: none; }
+    .rg-card__divider { display: none; }
+  }
+</style>
+
+<section class="rg-section">
+
+  <div class="rg-header">
+    <div class="rg-eyebrow">Keep reading</div>
+    <h2 class="rg-heading">Related Guides</h2>
+  </div>
+
+  <div class="rg-list">
+
+    <a href="../personal-loan-settlement-india-2026/" class="rg-card">
+      <span class="rg-card__number">01</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Personal Loan Settlement in India 2026</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+    <a href="../harassment-and-legal-protection-india/" class="rg-card">
+      <span class="rg-card__number">02</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Harassment and Legal Protection in India</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="rg-divider"></div>
+</section>
