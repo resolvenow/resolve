@@ -1,0 +1,369 @@
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .noc-section {
+    background: #f5f4f1;
+    padding: 80px 24px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .noc-section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .noc-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a07c3a;
+    margin-bottom: 16px;
+  }
+
+  .noc-heading {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    color: #1a1917;
+    line-height: 1.2;
+    max-width: 560px;
+    margin-bottom: 16px;
+  }
+
+  .noc-heading span { color: #a07c3a; }
+
+  .noc-subtext {
+    font-size: 16px;
+    color: #6b6860;
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 56px;
+  }
+
+  .noc-carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .noc-track {
+    display: flex;
+    gap: 28px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .noc-card {
+    flex: 0 0 calc(33.333% - 19px);
+    min-width: 260px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 900px) { .noc-card { flex: 0 0 calc(50% - 14px); } }
+  @media (max-width: 580px) { .noc-card { flex: 0 0 85%; } }
+
+  .noc-card-paper {
+    border-radius: 4px;
+    aspect-ratio: 1 / 1.414;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12), 0 0 0 0.5px rgba(0,0,0,0.06);
+  }
+
+  .noc-card:hover .noc-card-paper {
+    transform: translateY(-6px) rotate(-0.5deg);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.18), 0 0 0 0.5px rgba(0,0,0,0.08);
+  }
+
+  .noc-card-paper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .noc-card-label {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .noc-card-bank {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1917;
+  }
+
+  .noc-card-type {
+    font-size: 11px;
+    color: #8a8780;
+  }
+
+  .noc-card-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #2d6a3f;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .noc-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .noc-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0.5px solid #d4d2cc;
+    background: #ffffff;
+    color: #8a8780;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    font-size: 18px;
+  }
+
+  .noc-btn:hover {
+    border-color: #a07c3a;
+    color: #a07c3a;
+    background: rgba(160,124,58,0.06);
+  }
+
+  .noc-dots { display: flex; gap: 6px; }
+
+  .noc-dot {
+    width: 20px;
+    height: 3px;
+    border-radius: 2px;
+    background: #d4d2cc;
+    cursor: pointer;
+    transition: background 0.2s, width 0.2s;
+  }
+
+  .noc-dot.active { background: #a07c3a; width: 32px; }
+
+  .noc-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    font-size: 13px;
+    font-weight: 500;
+    color: #a07c3a;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: gap 0.2s;
+  }
+
+  .noc-cta:hover { gap: 12px; }
+
+  .noc-cta svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .noc-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1px;
+    background: #e0ddd7;
+    border: 0.5px solid #e0ddd7;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 64px;
+  }
+
+  .noc-stat { background: #ffffff; padding: 24px 28px; }
+
+  .noc-stat-num {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1917;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .noc-stat-num span { color: #a07c3a; }
+
+  .noc-stat-label { font-size: 13px; color: #8a8780; }
+</style>
+
+<section class="noc-section">
+  <div class="noc-section-inner">
+
+    <div class="noc-eyebrow">Official documentation</div>
+    <h2 class="noc-heading">Real NOCs from <span>real banks</span></h2>
+    <p class="noc-subtext">Every settlement we negotiate ends with an official No Objection Certificate — your legal proof that the debt is fully cleared.</p>
+
+    <div class="noc-carousel-wrapper">
+      <div class="noc-track" id="nocTrack">
+
+        <!-- CARD 1 — replace YOUR_IMAGE_URL_1 -->
+        <div class="noc-card">
+          <div class="noc-card-paper">
+            <img src="/assets/images/noc_1.png" alt="ICIC Bank NOC" />
+          </div>
+          <div class="noc-card-label">
+            <div>
+              <div class="noc-card-bank">ICICI Bank</div>
+              <div class="noc-card-type">Credit Card Settlement</div>
+            </div>
+            <div class="noc-card-dot"></div>
+          </div>
+        </div>
+
+        <!-- CARD 2 — replace YOUR_IMAGE_URL_2 -->
+        <div class="noc-card">
+          <div class="noc-card-paper">
+            <img src="/assets/images/noc_1.png" alt="OneCard NOC" />
+          </div>
+          <div class="noc-card-label">
+            <div>
+              <div class="noc-card-bank">OneCard / Federal Bank</div>
+              <div class="noc-card-type">Credit Card Settlement</div>
+            </div>
+            <div class="noc-card-dot"></div>
+          </div>
+        </div>
+
+        <!-- CARD 3 — replace YOUR_IMAGE_URL_3 -->
+        <div class="noc-card">
+          <div class="noc-card-paper">
+            <img src="/assets/images/noc_1.png" alt="HDFC Bank NOC" />
+          </div>
+          <div class="noc-card-label">
+            <div>
+              <div class="noc-card-bank">HDFC Bank</div>
+              <div class="noc-card-type">Personal Loan Settlement</div>
+            </div>
+            <div class="noc-card-dot"></div>
+          </div>
+        </div>
+
+        <!-- CARD 4 — replace YOUR_IMAGE_URL_4 -->
+        <div class="noc-card">
+          <div class="noc-card-paper">
+            <img src="/assets/images/noc_1.png" alt="Axis Bank NOC" />
+          </div>
+          <div class="noc-card-label">
+            <div>
+              <div class="noc-card-bank">Axis Bank</div>
+              <div class="noc-card-type">Credit Card Settlement</div>
+            </div>
+            <div class="noc-card-dot"></div>
+          </div>
+        </div>
+
+        <!-- CARD 5 — replace YOUR_IMAGE_URL_5 -->
+        <div class="noc-card">
+          <div class="noc-card-paper">
+            <img src="/assets/images/noc_1.png" alt="SBI Card NOC" />
+          </div>
+          <div class="noc-card-label">
+            <div>
+              <div class="noc-card-bank">SBI Card</div>
+              <div class="noc-card-type">Credit Card Settlement</div>
+            </div>
+            <div class="noc-card-dot"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="noc-controls">
+      <button class="noc-btn" id="nocPrev" aria-label="Previous">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <div class="noc-dots" id="nocDots"></div>
+      <button class="noc-btn" id="nocNext" aria-label="Next">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+      <a href="#get-started" class="noc-cta">
+        Get your NOC
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+
+    <!-- <div class="noc-stats">
+      <div class="noc-stat">
+        <div class="noc-stat-num">2,400<span>+</span></div>
+        <div class="noc-stat-label">NOCs issued</div>
+      </div>
+      <div class="noc-stat">
+        <div class="noc-stat-num">35<span>+</span></div>
+        <div class="noc-stat-label">Banks & NBFCs</div>
+      </div>
+      <div class="noc-stat">
+        <div class="noc-stat-num">60<span>days</span></div>
+        <div class="noc-stat-label">CIBIL update window</div>
+      </div>
+      <div class="noc-stat">
+        <div class="noc-stat-num">100<span>%</span></div>
+        <div class="noc-stat-label">Legally binding</div>
+      </div>
+    </div> -->
+
+  </div>
+</section>
+
+<script>
+(function() {
+  const track = document.getElementById('nocTrack');
+  const cards = track.querySelectorAll('.noc-card');
+  const dotsContainer = document.getElementById('nocDots');
+  const prevBtn = document.getElementById('nocPrev');
+  const nextBtn = document.getElementById('nocNext');
+
+  let current = 0;
+  const total = cards.length;
+
+  function getVisible() {
+    const w = track.parentElement.offsetWidth;
+    if (w < 580) return 1;
+    if (w < 900) return 2;
+    return 3;
+  }
+
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    const vis = getVisible();
+    const pages = Math.ceil(total / vis);
+    for (let i = 0; i < pages; i++) {
+      const d = document.createElement('div');
+      d.className = 'noc-dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(d);
+    }
+  }
+
+  function goTo(page) {
+    const vis = getVisible();
+    const pages = Math.ceil(total / vis);
+    current = Math.max(0, Math.min(page, pages - 1));
+    const cardW = cards[0].offsetWidth + 28;
+    track.style.transform = `translateX(-${current * vis * cardW}px)`;
+    dotsContainer.querySelectorAll('.noc-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  buildDots();
+  window.addEventListener('resize', () => { buildDots(); goTo(0); });
+})();
+</script>

@@ -1,0 +1,1261 @@
+---
+title: "Loan Settlement vs Loan Closure — What's the Real Difference?"
+description: "Understand the key differences between loan settlement and loan closure, how each affects your CIBIL score, and which option is right for your financial situation."
+date: 2025-05-25
+tags: ["loan settlement", "loan closure", "CIBIL score", "credit score", "personal finance"]
+layout: layout.html
+---
+
+<style>
+  /* =============================================
+     pt-1- PREFIX: All classes namespaced for Eleventy safety
+  ============================================= */
+
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --pt-1-ink: #1a1a1a;
+    --pt-1-ink-muted: #5a5a5a;
+    --pt-1-ink-faint: #9a9a9a;
+    --pt-1-surface: #fafaf8;
+    --pt-1-surface-alt: #f4f3ef;
+    --pt-1-border: #e8e6e0;
+    --pt-1-accent: #c94f2a;
+    --pt-1-accent-light: #fdf0ec;
+    --pt-1-link: #2a5fa8;
+    --pt-1-green: #2a7a4f;
+    --pt-1-red: #c94f2a;
+    --pt-1-font-display: 'Lora', Georgia, serif;
+    --pt-1-font-body: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  .pt-1-article-wrap {
+    font-family: var(--pt-1-font-body);
+    color: var(--pt-1-ink);
+    background: var(--pt-1-surface);
+    max-width: 960px;
+    margin: 110px auto;
+    padding: 0 1.25rem;
+    line-height: 1.75;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  /* ── Hero ── */
+  .pt-1-hero {
+    padding: 3.5rem 0 2.5rem;
+    border-bottom: 1px solid var(--pt-1-border);
+    margin-bottom: 2.5rem;
+  }
+
+  .pt-1-hero-label {
+    font-family: var(--pt-1-font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--pt-1-accent);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .pt-1-hero-title {
+    font-family: var(--pt-1-font-display);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--pt-1-ink);
+    margin: 0 0 1.25rem;
+    letter-spacing: -0.01em;
+  }
+
+  .pt-1-hero-desc {
+    font-size: 1.05rem;
+    color: var(--pt-1-ink-muted);
+    margin: 0 0 1.5rem;
+    max-width: 600px;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .pt-1-hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    font-size: 0.8rem;
+    color: var(--pt-1-ink-faint);
+    font-weight: 400;
+  }
+
+  .pt-1-hero-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .pt-1-hero-meta-dot {
+    width: 3px;
+    height: 3px;
+    background: var(--pt-1-border);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* ── Key Takeaway Box ── */
+  .pt-1-callout {
+    background: var(--pt-1-accent-light);
+    border-left: 3px solid var(--pt-1-accent);
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .pt-1-callout p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--pt-1-ink);
+    line-height: 1.65;
+  }
+
+  .pt-1-callout strong {
+    font-weight: 500;
+  }
+
+  /* ── TOC ── */
+  .pt-1-toc {
+    background: var(--pt-1-surface-alt);
+    border: 1px solid var(--pt-1-border);
+    padding: 1.5rem 1.75rem;
+    border-radius: 6px;
+    margin: 2.5rem 0;
+  }
+
+  .pt-1-toc-title {
+    font-family: var(--pt-1-font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--pt-1-ink-muted);
+    margin: 0 0 1rem;
+  }
+
+  .pt-1-toc ol {
+    margin: 0;
+    padding: 0 0 0 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem 1.5rem;
+  }
+
+  @media (max-width: 520px) {
+    .pt-1-toc ol {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pt-1-toc li {
+    font-size: 0.875rem;
+    color: var(--pt-1-link);
+    line-height: 1.5;
+  }
+
+  .pt-1-toc a {
+    color: var(--pt-1-link);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+
+  .pt-1-toc a:hover {
+    border-color: var(--pt-1-link);
+  }
+
+  /* ── Body Typography ── */
+  .pt-1-body h2 {
+    font-family: var(--pt-1-font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--pt-1-ink);
+    margin: 3rem 0 0.75rem;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    scroll-margin-top: 1rem;
+  }
+
+  .pt-1-body h3 {
+    font-family: var(--pt-1-font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--pt-1-ink);
+    margin: 2rem 0 0.5rem;
+    line-height: 1.4;
+  }
+
+  .pt-1-body p {
+    margin: 0 0 1.25rem;
+    color: var(--pt-1-ink);
+  }
+
+  .pt-1-body a {
+    color: var(--pt-1-link);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(42, 95, 168, 0.35);
+    transition: border-color 0.15s;
+  }
+
+  .pt-1-body a:hover {
+    border-color: var(--pt-1-link);
+  }
+
+  .pt-1-body ul,
+  .pt-1-body ol {
+    margin: 0.5rem 0 1.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .pt-1-body li {
+    margin-bottom: 0.4rem;
+    font-size: 0.97rem;
+  }
+
+  .pt-1-divider {
+    border: none;
+    border-top: 1px solid var(--pt-1-border);
+    margin: 2.5rem 0;
+  }
+
+  /* ── Comparison Table ── */
+  .pt-1-table-wrap {
+    overflow-x: auto;
+    margin: 1.5rem 0 2rem;
+    border: 1px solid var(--pt-1-border);
+    border-radius: 6px;
+  }
+
+  .pt-1-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    min-width: 520px;
+  }
+
+  .pt-1-table thead tr {
+    background: var(--pt-1-ink);
+    color: #fff;
+  }
+
+  .pt-1-table thead th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-family: var(--pt-1-font-body);
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .pt-1-table tbody tr {
+    border-bottom: 1px solid var(--pt-1-border);
+  }
+
+  .pt-1-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .pt-1-table tbody tr:nth-child(even) {
+    background: var(--pt-1-surface-alt);
+  }
+
+  .pt-1-table td {
+    padding: 0.65rem 1rem;
+    vertical-align: top;
+    line-height: 1.5;
+    color: var(--pt-1-ink);
+  }
+
+  .pt-1-table td:first-child {
+    font-weight: 500;
+    color: var(--pt-1-ink-muted);
+    white-space: nowrap;
+  }
+
+  .pt-1-good {
+    color: var(--pt-1-green);
+    font-weight: 500;
+  }
+
+  .pt-1-bad {
+    color: var(--pt-1-red);
+    font-weight: 500;
+  }
+
+  /* ── Score Recovery Timeline ── */
+  .pt-1-timeline {
+    margin: 1.5rem 0 2rem;
+    position: relative;
+  }
+
+  .pt-1-timeline-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 0 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed var(--pt-1-border);
+  }
+
+  .pt-1-timeline-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .pt-1-timeline-year {
+    font-family: var(--pt-1-font-display);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--pt-1-ink-faint);
+    padding-top: 0.1rem;
+    white-space: nowrap;
+  }
+
+  .pt-1-timeline-desc {
+    font-size: 0.9rem;
+    color: var(--pt-1-ink-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* ── Process Steps ── */
+  .pt-1-steps {
+    counter-reset: pt1-step;
+    margin: 1.25rem 0 2rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  .pt-1-steps li {
+    counter-increment: pt1-step;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0 1rem;
+    margin-bottom: 1.1rem;
+    align-items: start;
+  }
+
+  .pt-1-steps li::before {
+    content: counter(pt1-step);
+    font-family: var(--pt-1-font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--pt-1-ink);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .pt-1-steps li span {
+    font-size: 0.935rem;
+    line-height: 1.6;
+    color: var(--pt-1-ink);
+  }
+
+  .pt-1-steps li strong {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.15rem;
+  }
+
+  /* ── Tip Block ── */
+  .pt-1-tip {
+    background: #f0f6ff;
+    border: 1px solid #c5d9f5;
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+    font-size: 0.9rem;
+    color: var(--pt-1-ink-muted);
+    line-height: 1.6;
+  }
+
+  .pt-1-tip strong {
+    color: var(--pt-1-link);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  /* ── Choice Cards ── */
+  .pt-1-choice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+
+  @media (max-width: 520px) {
+    .pt-1-choice-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pt-1-choice-card {
+    border: 1px solid var(--pt-1-border);
+    border-radius: 6px;
+    padding: 1.25rem;
+  }
+
+  .pt-1-choice-card-title {
+    font-family: var(--pt-1-font-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid;
+  }
+
+  .pt-1-choice-card--closure .pt-1-choice-card-title {
+    color: var(--pt-1-green);
+    border-color: var(--pt-1-green);
+  }
+
+  .pt-1-choice-card--settlement .pt-1-choice-card-title {
+    color: var(--pt-1-red);
+    border-color: var(--pt-1-red);
+  }
+
+  .pt-1-choice-card ul {
+    margin: 0;
+    padding: 0 0 0 1.1rem;
+    list-style: disc;
+  }
+
+  .pt-1-choice-card li {
+    font-size: 0.875rem;
+    color: var(--pt-1-ink-muted);
+    margin-bottom: 0.3rem;
+    line-height: 1.5;
+  }
+
+  /* ── FAQ ── */
+  .pt-1-faq-item {
+    border-bottom: 1px solid var(--pt-1-border);
+    padding: 1.25rem 0;
+  }
+
+  .pt-1-faq-item:first-child {
+    border-top: 1px solid var(--pt-1-border);
+  }
+
+  .pt-1-faq-q {
+    font-family: var(--pt-1-font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--pt-1-ink);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    user-select: none;
+  }
+
+  .pt-1-faq-q svg {
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  .pt-1-faq-item.pt-1-open .pt-1-faq-q svg {
+    transform: rotate(45deg);
+  }
+
+  .pt-1-faq-a {
+    font-size: 0.92rem;
+    color: var(--pt-1-ink-muted);
+    line-height: 1.7;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease, margin 0.25s;
+  }
+
+  .pt-1-faq-item.pt-1-open .pt-1-faq-a {
+    max-height: 300px;
+    margin-top: 0.75rem;
+  }
+
+  /* ── Conclusion ── */
+  .pt-1-conclusion {
+    background: var(--pt-1-surface-alt);
+    border: 1px solid var(--pt-1-border);
+    border-radius: 6px;
+    padding: 1.75rem 2rem;
+    margin: 2.5rem 0;
+  }
+
+  .pt-1-conclusion h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+  }
+
+  .pt-1-conclusion p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ── External Link Badge ── */
+  .pt-1-ext-links {
+    background: var(--pt-1-surface-alt);
+    border: 1px solid var(--pt-1-border);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .pt-1-ext-links-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    color: var(--pt-1-ink-faint);
+    margin: 0 0 0.75rem;
+  }
+
+  .pt-1-ext-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .pt-1-ext-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: #fff;
+    border: 1px solid var(--pt-1-border);
+    border-radius: 3px;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+    color: var(--pt-1-link);
+    text-decoration: none;
+    font-weight: 400;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .pt-1-ext-links a:hover {
+    background: var(--pt-1-accent-light);
+    border-color: var(--pt-1-accent);
+    color: var(--pt-1-accent);
+  }
+
+  /* ── Inline tip quote ── */
+  .pt-1-inline-tip {
+    font-style: italic;
+    color: var(--pt-1-ink-muted);
+    border-left: 2px solid var(--pt-1-border);
+    padding-left: 1rem;
+    margin: 1.25rem 0;
+    font-size: 0.95rem;
+  }
+</style>
+
+<article class="pt-1-article-wrap" itemscope itemtype="https://schema.org/Article">
+
+  <meta itemprop="datePublished" content="2025-05-25" />
+  <meta itemprop="dateModified" content="2025-05-25" />
+  <meta itemprop="author" content="ResolveNow" />
+
+  <!-- ── Hero ── -->
+  <header class="pt-1-hero">
+    <span class="pt-1-hero-label">Personal Finance · Credit & Loans</span>
+    <h1 class="pt-1-hero-title" itemprop="headline">
+      Loan Settlement vs Loan Closure — What's the Real Difference?
+    </h1>
+    <p class="pt-1-hero-desc" itemprop="description">
+      Both terms end a loan account — but financially, they lead to completely different outcomes. Here's what every borrower should know before deciding.
+    </p>
+    <div class="pt-1-hero-meta">
+      <span>May 25, 2026</span>
+      <span class="pt-1-hero-meta-dot"></span>
+      <span>12 min read</span>
+      <span class="pt-1-hero-meta-dot"></span>
+      <span>Updated on May 2026</span>
+    </div>
+  </header>
+
+  <div class="pt-1-body" itemprop="articleBody">
+
+    <!-- Key Callout -->
+    <div class="pt-1-callout" role="note">
+      <p>
+        <strong>Quick answer:</strong> Loan closure means you repay the full outstanding amount — your account is marked <em>"Closed"</em> on your <a href="https://www.cibil.com" target="_blank" rel="noopener noreferrer">CIBIL report</a>, which is a positive signal. Loan settlement means the lender accepts less than what you owe due to hardship — your report gets a <em>"Settled"</em> tag, which can hurt your credit score for up to seven years.
+      </p>
+    </div>
+
+    <p>
+      If you've spoken to a bank executive about an overdue EMI, you've likely heard both terms used almost interchangeably. In both cases, the loan account ends — but financially, they lead to vastly different outcomes. One protects your ability to borrow in the future. The other can make future lenders cautious for years.
+    </p>
+
+    <p>
+      Understanding the difference between <strong>loan settlement vs loan closure</strong> is critical — especially if you're already under financial pressure. A wrong decision today can affect your eligibility for a home loan, car loan, or even a credit card years down the line.
+    </p>
+
+    <!-- TOC -->
+    <nav class="pt-1-toc" aria-label="Table of contents">
+      <p class="pt-1-toc-title">In this article</p>
+      <ol>
+        <li><a href="#what-is-loan-closure">What Is Loan Closure?</a></li>
+        <li><a href="#what-is-loan-settlement">What Is Loan Settlement?</a></li>
+        <li><a href="#comparison">Side-by-Side Comparison</a></li>
+        <li><a href="#cibil-impact">How Each Affects Your CIBIL Score</a></li>
+        <li><a href="#closure-process">The Loan Closure Process</a></li>
+        <li><a href="#settlement-process">The Loan Settlement Process</a></li>
+        <li><a href="#convert-settled">Can "Settled" Become "Closed"?</a></li>
+        <li><a href="#alternatives">Alternatives to Try First</a></li>
+        <li><a href="#which-to-choose">Which Option Should You Choose?</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+      </ol>
+    </nav>
+
+    <hr class="pt-1-divider" />
+
+    <!-- ── Section 1 ── -->
+    <h2 id="what-is-loan-closure">What Is Loan Closure?</h2>
+
+    <p>
+      Loan closure simply means you have repaid the <strong>entire outstanding loan amount</strong> — including the principal, interest, and any applicable charges. This can happen in two ways: you complete all EMIs over the full tenure, or you repay the remaining balance early in one lump sum (known as <em>foreclosure</em>).
+    </p>
+
+    <p>
+      Once the lender receives the full payment, the account is marked as <strong>"Closed"</strong> on your credit report. The bank or NBFC then issues a <strong>Loan Closure Certificate</strong> or <strong>No Objection Certificate (NOC)</strong> — a document confirming that no dues remain. If your loan was secured against property or gold, the pledged assets are also returned.
+    </p>
+
+    <h3>Why Loan Closure Is the Gold Standard</h3>
+
+    <p>
+      Banks and credit bureaus view loan closure positively because it demonstrates that you honoured your repayment commitment in full. A "Closed" status on your <a href="https://www.cibil.com" target="_blank" rel="noopener noreferrer">CIBIL credit report</a> tells future lenders that you managed debt responsibly, paid on time, and fulfilled the contract without defaulting.
+    </p>
+
+    <div class="pt-1-tip">
+      <strong>Tip for after closure</strong>
+      Always verify within 30–45 days that your credit report correctly reflects the status as "Closed" and not "Active." You can download your report for free once a year at <a href="https://www.cibil.com" target="_blank" rel="noopener noreferrer">TransUnion CIBIL</a> or check through <a href="https://www.experian.in" target="_blank" rel="noopener noreferrer">Experian India</a>.
+    </div>
+
+    <hr class="pt-1-divider" />
+
+    <!-- ── Section 2 ── -->
+    <h2 id="what-is-loan-settlement">What Is Loan Settlement?</h2>
+
+    <p>
+      Loan settlement happens when a borrower is genuinely unable to repay the full outstanding amount due to serious financial hardship — such as job loss, a medical emergency, business failure, or a significant income reduction.
+    </p>
+
+    <p>
+      In such cases, the borrower negotiates with the lender for a <strong>One-Time Settlement (OTS)</strong>. Instead of demanding the full amount, the bank agrees to accept a reduced lump-sum payment and internally writes off the remaining balance.
+    </p>
+
+    <p>For example:</p>
+    <ul>
+      <li>Outstanding loan amount: ₹5,00,000</li>
+      <li>Negotiated settlement amount: ₹3,00,000</li>
+      <li>Amount waived by the bank: ₹2,00,000</li>
+    </ul>
+
+    <p>
+      Even though the account is operationally closed, the credit report will show the status as <strong>"Settled"</strong> — not "Closed." Future lenders can also see the amount that was written off.
+    </p>
+
+    <h3>When Does a Bank Agree to Settle?</h3>
+
+    <p>
+      Banks don't typically offer settlements after a single missed EMI. Usually, the account must already be in default, with EMIs overdue for 90 or more days, and the loan may have been classified as a <a href="https://www.rbi.org.in/scripts/BS_ViewMasCirculardetails.aspx" target="_blank" rel="noopener noreferrer">Non-Performing Asset (NPA)</a> under RBI guidelines. Settlement is a last resort for banks — not a discount scheme.
+    </p>
+
+    <div class="pt-1-callout" role="note">
+      <p>
+        <strong>Important:</strong> A settled account can remain visible on your credit report for up to seven years and signals repayment failure to any future lender who pulls your report.
+      </p>
+    </div>
+
+    <hr class="pt-1-divider" />
+
+    <!-- ── Section 3 ── -->
+    <h2 id="comparison">Loan Settlement vs Loan Closure — Side-by-Side</h2>
+
+    <div class="pt-1-table-wrap">
+      <table class="pt-1-table">
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Loan Closure</th>
+            <th scope="col">Loan Settlement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Amount Repaid</td>
+            <td class="pt-1-good">100% of dues</td>
+            <td class="pt-1-bad">Partial negotiated amount</td>
+          </tr>
+          <tr>
+            <td>How It Happens</td>
+            <td>EMI completion or foreclosure</td>
+            <td>One-Time Settlement (OTS)</td>
+          </tr>
+          <tr>
+            <td>CIBIL Report Status</td>
+            <td class="pt-1-good">"Closed" ✓</td>
+            <td class="pt-1-bad">"Settled" ✗</td>
+          </tr>
+          <tr>
+            <td>Impact on Credit Score</td>
+            <td class="pt-1-good">Positive</td>
+            <td class="pt-1-bad">Negative (75–100+ points)</td>
+          </tr>
+          <tr>
+            <td>Future Loan Eligibility</td>
+            <td class="pt-1-good">Stronger</td>
+            <td class="pt-1-bad">Weaker for 5–7 years</td>
+          </tr>
+          <tr>
+            <td>NOC Issued</td>
+            <td class="pt-1-good">Yes</td>
+            <td class="pt-1-bad">Settlement letter only</td>
+          </tr>
+          <tr>
+            <td>Lender View</td>
+            <td>Full repayment</td>
+            <td>Partial recovery / NPA</td>
+          </tr>
+          <tr>
+            <td>Long-Term Effect</td>
+            <td class="pt-1-good">Builds lender trust</td>
+            <td class="pt-1-bad">Raises lender caution</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="pt-1-divider" />
+
+    <!-- ── Section 4 ── -->
+    <h2 id="cibil-impact">How Each Affects Your CIBIL Score</h2>
+
+    <h3>Loan Closure and Your Credit Score</h3>
+    <p>
+      Your repayment history is one of the most heavily weighted factors in calculating your <a href="https://www.cibil.com/faq/what-is-a-cibil-score" target="_blank" rel="noopener noreferrer">CIBIL score</a>. A fully closed loan improves lender trust, strengthens your repayment history, and helps future loan approvals. Even after closure, the account stays on your report as a positive historical record.
+    </p>
+
+    <h3>Loan Settlement and Your Credit Score</h3>
+    <p>
+      Settlement has a far more serious impact. Once marked "Settled," your score may drop by <strong>75–100+ points</strong>. Someone with a score of 720 could see it fall to 620–650 after settlement. Future lenders will also see the Days Past Due (DPD) history, missed payment patterns, and the amount written off.
+    </p>
+
+    <p>You can monitor your full credit profile across all bureaus:</p>
+    <ul>
+      <li><a href="https://www.cibil.com" target="_blank" rel="noopener noreferrer">TransUnion CIBIL</a> — India's most widely used bureau</li>
+      <li><a href="https://www.experian.in" target="_blank" rel="noopener noreferrer">Experian India</a> — alternative bureau report</li>
+      <li><a href="https://www.crifhighmark.com" target="_blank" rel="noopener noreferrer">CRIF High Mark</a> — used by many NBFCs and co-operative banks</li>
+      <li><a href="https://www.equifax.co.in" target="_blank" rel="noopener noreferrer">Equifax India</a> — the fourth licensed credit bureau</li>
+    </ul>
+
+    <h3>Score Recovery Timeline After Settlement</h3>
+
+    <div class="pt-1-timeline">
+      <div class="pt-1-timeline-item">
+        <span class="pt-1-timeline-year">Year 1</span>
+        <p class="pt-1-timeline-desc">Score is usually at its lowest. Most banks will reject unsecured loan applications at this stage.</p>
+      </div>
+      <div class="pt-1-timeline-item">
+        <span class="pt-1-timeline-year">Years 1–2</span>
+        <p class="pt-1-timeline-desc">If all current dues are paid on time, the score begins recovering slowly and steadily.</p>
+      </div>
+      <div class="pt-1-timeline-item">
+        <span class="pt-1-timeline-year">Years 2–4</span>
+        <p class="pt-1-timeline-desc">Some NBFCs may begin approving smaller loans or secured credit products like a <a href="https://www.rbi.org.in" target="_blank" rel="noopener noreferrer">secured credit card</a>.</p>
+      </div>
+      <div class="pt-1-timeline-item">
+        <span class="pt-1-timeline-year">Years 5–7</span>
+        <p class="pt-1-timeline-desc">The settled entry carries less weight if your recent repayment behaviour is consistently strong.</p>
+      </div>
+      <div class="pt-1-timeline-item">
+        <span class="pt-1-timeline-year">After 7 years</span>
+        <p class="pt-1-timeline-desc">The settlement entry generally drops off the credit report automatically per bureau data retention norms.</p>
+      </div>
+    </div>
+
+    <hr class="pt-1-divider" />
+
+    <!-- ── Section 5 ── -->
+    <h2 id="closure-process">The Loan Closure Process — Step by Step</h2>
+
+    <ol class="pt-1-steps">
+      <li><span><strong>Request the final outstanding statement</strong> Ask your lender for the exact amount payable, including any interest accrued and applicable foreclosure charges.</span></li>
+      <li><span><strong>Check foreclosure charges</strong> Some banks levy foreclosure fees, especially on fixed-rate loans. Review these carefully. The <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=7471" target="_blank" rel="noopener noreferrer">RBI has abolished foreclosure charges</a> on floating-rate home loans, but fixed-rate products may still carry them.</span></li>
+      <li><span><strong>Make the final payment</strong> Use official channels — bank transfer, online portal, or demand draft. Always keep payment receipts.</span></li>
+      <li><span><strong>Collect your NOC and original documents</strong> This is non-negotiable. Also collect cancelled ECS mandates, security cheques, and property papers if applicable.</span></li>
+      <li><span><strong>Verify your credit report</strong> Within 30–45 days, confirm the status reflects "Closed." If it still shows "Active," raise a dispute with the bureau directly on <a href="https://www.cibil.com/dispute" target="_blank" rel="noopener noreferrer">CIBIL's dispute portal</a>.</span></li>
+    </ol>
+
+    <hr class="pt-1-divider" />
+
+    <!-- ── Section 6 ── -->
+    <h2 id="settlement-process">The Loan Settlement Process — Step by Step</h2>
+
+    <ol class="pt-1-steps">
+      <li><span><strong>Assess your situation honestly</strong> Calculate the maximum lump sum you can realistically arrange. Be conservative — overpromising and defaulting on a settlement is worse than not settling.</span></li>
+      <li><span><strong>Contact your lender proactively</strong> Explain your financial hardship clearly and provide supporting documents — medical bills, termination letters, or business closure proof if required.</span></li>
+      <li><span><strong>Wait for settlement eligibility</strong> Banks typically begin OTS discussions only after prolonged default. Don't expect an offer immediately after your first missed EMI.</span></li>
+      <li><span><strong>Negotiate the settlement amount</strong> Never accept the first offer immediately. Lenders often have flexibility. The final amount depends on how long the account has been in default and your repayment capacity.</span></li>
+      <li><span><strong>Get written confirmation</strong> The agreement must clearly state the settlement amount, payment timeline, and that it constitutes full and final settlement of the debt.</span></li>
+      <li><span><strong>Pay through traceable channels</strong> Avoid cash payments. Bank transfer or demand draft ensures you have proof of payment.</span></li>
+      <li><span><strong>Collect the settlement letter</strong> This document proves the lender accepted the settlement and is essential for any future credit or legal conversations.</span></li>
+      <li><span><strong>Verify the credit report update</strong> Confirm the status now shows "Settled." If the bureau hasn't been updated within 45 days, follow up with the lender.</span></li>
+    </ol>
+
+    <hr class="pt-1-divider" />
+
+    <!-- ── Section 7 ── -->
+    <h2 id="convert-settled">Can You Convert "Settled" to "Closed" on CIBIL?</h2>
+
+    <p>
+      Yes — in many cases, it is possible. The process typically works like this: you repay the remaining waived amount later, request the lender to update the account status, and the lender reports the revised status to the bureau. This is sometimes called <em>loan closure after settlement</em>.
+    </p>
+
+    <p>
+      Converting a settled account to "Closed" can recover <strong>50–75 credit score points within 6–12 months</strong> of the update. However, this depends entirely on the lender's internal policy.
+    </p>
+
+    <div class="pt-1-inline-tip">
+      Before agreeing to any settlement, ask the lender directly: <em>"If I clear the remaining amount later, can you update my status to 'Closed'?"</em> — and get the response in writing.
+    </div>
+
+    <hr class="pt-1-divider" />
+
+    <!-- ── Section 8 ── -->
+    <h2 id="alternatives">Alternatives to Loan Settlement You Should Try First</h2>
+
+    <p>Before agreeing to a settlement, exhaust these options — each is less damaging to your credit profile.</p>
+
+    <h3>1. Loan Restructuring</h3>
+    <p>
+      Under <a href="https://www.rbi.org.in/scripts/BS_ViewMasCirculardetails.aspx" target="_blank" rel="noopener noreferrer">RBI guidelines</a>, lenders can restructure loans for borrowers facing genuine financial hardship. This may include lower EMIs, an extended tenure, or a temporary relief period. A restructured loan is far less damaging than a settled one.
+    </p>
+
+    <h3>2. EMI Moratorium</h3>
+    <p>
+      Some lenders may temporarily pause EMI collections during documented hardship. This is always preferable to silently defaulting, which starts your DPD (Days Past Due) clock immediately.
+    </p>
+
+    <h3>3. Interest or Penalty Waiver</h3>
+    <p>
+      Instead of settling the principal amount at a discount, try negotiating the waiver of late payment penalties or excess interest. This may allow you to fully close the loan without taking the "Settled" hit on your credit report.
+    </p>
+
+    <h3>4. Balance Transfer</h3>
+    <p>
+      If the EMI burden is due to a high interest rate, moving your loan to a lender offering a lower rate via a <a href="https://www.bankbazaar.com/personal-loan/balance-transfer.html" target="_blank" rel="noopener noreferrer">balance transfer</a> can reduce your monthly outflow significantly and prevent default.
+    </p>
+
+    <!-- External links block -->
+    <div class="pt-1-ext-links">
+      <p class="pt-1-ext-links-title">Useful external resources</p>
+      <ul>
+        <li><a href="https://www.rbi.org.in" target="_blank" rel="noopener noreferrer">↗ Reserve Bank of India</a></li>
+        <li><a href="https://www.cibil.com" target="_blank" rel="noopener noreferrer">↗ TransUnion CIBIL</a></li>
+        <li><a href="https://www.experian.in" target="_blank" rel="noopener noreferrer">↗ Experian India</a></li>
+        <li><a href="https://www.crifhighmark.com" target="_blank" rel="noopener noreferrer">↗ CRIF High Mark</a></li>
+        <li><a href="https://www.equifax.co.in" target="_blank" rel="noopener noreferrer">↗ Equifax India</a></li>
+        <li><a href="https://financialservices.gov.in" target="_blank" rel="noopener noreferrer">↗ Ministry of Finance (India)</a></li>
+        <li><a href="https://www.bankbazaar.com" target="_blank" rel="noopener noreferrer">↗ BankBazaar — Loan comparison</a></li>
+        <li><a href="https://www.paisabazaar.com/cibil-score/" target="_blank" rel="noopener noreferrer">↗ PaisaBazaar — Free CIBIL check</a></li>
+      </ul>
+    </div>
+
+    <hr class="pt-1-divider" />
+
+    <!-- ── Section 9 ── -->
+    <h2 id="which-to-choose">Which Option Should You Choose?</h2>
+
+    <div class="pt-1-choice-grid">
+      <div class="pt-1-choice-card pt-1-choice-card--closure">
+        <p class="pt-1-choice-card-title">Choose Loan Closure if…</p>
+        <ul>
+          <li>You can repay the full outstanding amount</li>
+          <li>You want to maintain a healthy credit score</li>
+          <li>You plan to apply for future loans soon</li>
+          <li>You want stronger financial credibility</li>
+        </ul>
+      </div>
+      <div class="pt-1-choice-card pt-1-choice-card--settlement">
+        <p class="pt-1-choice-card-title">Choose Settlement only if…</p>
+        <ul>
+          <li>Repayment has become genuinely impossible</li>
+          <li>You've exhausted restructuring options</li>
+          <li>You fully understand the 7-year credit impact</li>
+          <li>Partial payment is all you can realistically manage</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-1-callout" role="note">
+      <p>
+        <strong>Key takeaway:</strong> Loan closure strengthens your financial future. Loan settlement offers temporary relief but carries long-term credit consequences. Treat settlement as a genuine last resort — not a shortcut.
+      </p>
+    </div>
+
+    <hr class="pt-1-divider" />
+
+    <!-- ── Section 10: FAQ ── -->
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <div class="pt-1-faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+      <div class="pt-1-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <p class="pt-1-faq-q" role="button" tabindex="0" aria-expanded="false">
+          <span itemprop="name">What is the difference between loan settlement and loan closure?</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </p>
+        <p class="pt-1-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">Loan closure means you repay the full loan amount and the account is marked "Closed" on your credit report. Loan settlement means the lender accepts a reduced amount due to financial hardship, and the account is marked "Settled" — which negatively affects your CIBIL score.</span>
+        </p>
+      </div>
+
+      <div class="pt-1-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <p class="pt-1-faq-q" role="button" tabindex="0" aria-expanded="false">
+          <span itemprop="name">How long does a settled loan stay on my CIBIL report?</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </p>
+        <p class="pt-1-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">A settled account can remain visible on your credit report for up to seven years from the settlement date. After that, it generally drops off automatically under standard bureau data retention policies.</span>
+        </p>
+      </div>
+
+      <div class="pt-1-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <p class="pt-1-faq-q" role="button" tabindex="0" aria-expanded="false">
+          <span itemprop="name">Will loan settlement permanently ruin my credit score?</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </p>
+        <p class="pt-1-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">No. The impact reduces over time if you maintain consistent, on-time repayment behaviour afterward. The settlement entry eventually drops off the report after seven years, and disciplined financial behaviour can rebuild your score significantly before then.</span>
+        </p>
+      </div>
+
+      <div class="pt-1-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <p class="pt-1-faq-q" role="button" tabindex="0" aria-expanded="false">
+          <span itemprop="name">Can I get a home loan after loan settlement?</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </p>
+        <p class="pt-1-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">Yes, but it can be difficult in the initial years. Most scheduled banks are cautious during the first three to five years after a settlement. Some NBFCs or housing finance companies may approve applications with strong income proof and a significant down payment.</span>
+        </p>
+      </div>
+
+      <div class="pt-1-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <p class="pt-1-faq-q" role="button" tabindex="0" aria-expanded="false">
+          <span itemprop="name">Is foreclosure the same as loan settlement?</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </p>
+        <p class="pt-1-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">No. Foreclosure means paying the full remaining principal and interest balance ahead of the original tenure — it results in a "Closed" status. Settlement means paying only a portion of what you owe, resulting in a "Settled" status.</span>
+        </p>
+      </div>
+
+      <div class="pt-1-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <p class="pt-1-faq-q" role="button" tabindex="0" aria-expanded="false">
+          <span itemprop="name">How do I check if my loan is marked "Closed" or "Settled"?</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </p>
+        <p class="pt-1-faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">Download your credit report from TransUnion CIBIL (cibil.com), Experian India, or CRIF High Mark. In the "Accounts" section, each loan will show its current status — look for the "Account Status" or "Ownership" field.</span>
+        </p>
+      </div>
+
+    </div>
+
+    <hr class="pt-1-divider" />
+
+    <!-- ── Conclusion ── -->
+    <section class="pt-1-conclusion" aria-label="Conclusion">
+      <h2 id="conclusion">The Bottom Line</h2>
+      <p>
+        Loan settlement and loan closure may sound like similar outcomes, but they send completely different signals to every future lender who views your credit report.
+      </p>
+      <p>
+        A closed loan strengthens your credit history and keeps your borrowing options open. A settled loan — while sometimes the only path forward — leaves a mark that takes years to fade. If you're facing repayment difficulties, speak to your lender about restructuring or a moratorium before you settle. And if settlement becomes unavoidable, handle it carefully: get everything in writing, use traceable payment channels, and start rebuilding your credit immediately.
+      </p>
+      <p>
+        Your financial setbacks don't have to define your future. The decisions you make from here determine what that future looks like.
+      </p>
+    </section>
+
+  </div><!-- /.pt-1-body -->
+
+</article>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.pt-1-faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = this.closest('.pt-1-faq-item');
+      var isOpen = item.classList.contains('pt-1-open');
+
+      // Close all
+      document.querySelectorAll('.pt-1-faq-item').forEach(function(el) {
+        el.classList.remove('pt-1-open');
+        el.querySelector('.pt-1-faq-q').setAttribute('aria-expanded', 'false');
+      });
+
+      // Open clicked if it was closed
+      if (!isOpen) {
+        item.classList.add('pt-1-open');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  });
+</script>
+
+
+{% include "author.html" %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600&display=swap');
+
+  .rg-section {
+    font-family: 'Outfit', sans-serif;
+    padding: 3rem 0 1.5rem;
+  }
+
+  .rg-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .rg-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+  }
+
+  .rg-eyebrow::before,
+  .rg-eyebrow::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: #2563eb;
+    opacity: 0.4;
+  }
+
+  .rg-heading {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .rg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rg-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rg-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2563eb;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .rg-card:hover {
+    border-color: #d1d9f5;
+    transform: translateX(4px);
+  }
+
+  .rg-card:hover::before {
+    opacity: 1;
+  }
+
+  .rg-card__number {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2563eb;
+    opacity: 0.12;
+    line-height: 1;
+    min-width: 2.5rem;
+    transition: opacity 0.2s ease;
+    user-select: none;
+  }
+
+  .rg-card:hover .rg-card__number {
+    opacity: 0.22;
+  }
+
+  .rg-card__divider {
+    width: 1px;
+    height: 3rem;
+    background: #e9e9e9;
+    flex-shrink: 0;
+  }
+
+  .rg-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .rg-card__label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2563eb;
+  }
+
+  .rg-card__title {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+  }
+
+  .rg-card:hover .rg-card__title {
+    color: #2563eb;
+  }
+
+  .rg-card__arrow {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    color: #2563eb;
+  }
+
+  .rg-card:hover .rg-card__arrow {
+    background: #eff4ff;
+    border-color: #bfcffe;
+    transform: translateX(2px);
+  }
+
+  .rg-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .rg-card__number { display: none; }
+    .rg-card__divider { display: none; }
+  }
+</style>
+
+<section class="rg-section">
+
+  <div class="rg-header">
+    <div class="rg-eyebrow">Keep reading</div>
+    <h2 class="rg-heading">Related Guides</h2>
+  </div>
+
+  <div class="rg-list">
+
+    <a href="../personal-loan-settlement-india-2026/" class="rg-card">
+      <span class="rg-card__number">01</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Personal Loan Settlement in India 2026</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+    <a href="../harassment-and-legal-protection-india/" class="rg-card">
+      <span class="rg-card__number">02</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Harassment and Legal Protection in India</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="rg-divider"></div>
+</section>
