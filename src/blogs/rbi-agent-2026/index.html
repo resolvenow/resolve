@@ -1,0 +1,1265 @@
+---
+title: "Can recovery agents call you at night?"
+description: "Guidelines by RBI for recovery agents against harrasment"
+date: 2026-05-30
+tags: ["loan settlement", "anti harrasment", "RBI Guidelines", "Financial Rights", "personal finance"]
+layout: layout.html
+---
+
+<style>
+  /* ── Reset & base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --pt-3-ink:        #1a1a18;
+    --pt-3-ink-light:  #5a5a54;
+    --pt-3-paper:      #fafaf7;
+    --pt-3-rule:       #e4e4dc;
+    --pt-3-accent:     #1d5c8c;
+    --pt-3-accent-bg:  #eef4fa;
+    --pt-3-warn:       #b84040;
+    --pt-3-warn-bg:    #fdf3f3;
+    --pt-3-serif:      'Lora', Georgia, 'Times New Roman', serif;
+    --pt-3-sans:       'DM Sans', system-ui, sans-serif;
+    --pt-3-mono:       'JetBrains Mono', 'Courier New', monospace;
+    --pt-3-max:        960px;
+    --pt-3-wide:       860px;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  html { font-size: 17px; scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--pt-3-sans);
+    background: var(--pt-3-paper);
+    color: var(--pt-3-ink);
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Utility ── */
+  .pt-3-visually-hidden {
+    position: absolute; width: 1px; height: 1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+  }
+
+  /* ── Layout wrappers ── */
+  .pt-3-article-wrap {
+    max-width: var(--pt-3-wide);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .pt-3-prose {
+    max-width: var(--pt-3-max);
+    margin: 0 auto;
+  }
+
+
+  /* ── Header ── */
+  .pt-3-header {
+    padding: 3.5rem 0 2.5rem;
+    margin-top: 50px;
+    border-bottom: 1px solid var(--pt-3-rule);
+    margin-bottom: 2.8rem;
+  }
+
+  .pt-3-label {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--pt-3-accent);
+    margin-bottom: 1.1rem;
+  }
+
+  .pt-3-h1 {
+    font-family: var(--pt-3-serif);
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    font-weight: 600;
+    line-height: 1.28;
+    color: var(--pt-3-ink);
+    margin-bottom: 1rem;
+    max-width: 620px;
+  }
+
+  .pt-3-deck {
+    font-size: 1.05rem;
+    color: var(--pt-3-ink-light);
+    max-width: 560px;
+    line-height: 1.65;
+    margin-bottom: 1.6rem;
+  }
+
+  .pt-3-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 0.8rem;
+    color: var(--pt-3-ink-light);
+    flex-wrap: wrap;
+  }
+
+  .pt-3-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .pt-3-meta-dot {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background: var(--pt-3-rule);
+    border-radius: 50%;
+  }
+
+  /* ── Quick answer box ── */
+  .pt-3-quick-answer {
+    background: var(--pt-3-accent-bg);
+    border-left: 3px solid var(--pt-3-accent);
+    padding: 1.25rem 1.4rem;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 2.4rem;
+  }
+
+  .pt-3-quick-answer-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--pt-3-accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .pt-3-quick-answer p {
+    font-size: 0.96rem;
+    line-height: 1.62;
+    color: var(--pt-3-ink);
+  }
+
+  /* ── Warning box ── */
+  .pt-3-warning-box {
+    background: var(--pt-3-warn-bg);
+    border-left: 3px solid var(--pt-3-warn);
+    padding: 1.1rem 1.4rem;
+    border-radius: 0 6px 6px 0;
+    margin: 1.8rem 0;
+    font-size: 0.95rem;
+  }
+
+  /* ── TOC ── */
+  .pt-3-toc {
+    background: #fff;
+    border: 1px solid var(--pt-3-rule);
+    border-radius: 8px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 2.8rem;
+  }
+
+  .pt-3-toc-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--pt-3-ink-light);
+    margin-bottom: 0.9rem;
+  }
+
+  .pt-3-toc-list {
+    list-style: none;
+    counter-reset: toc-counter;
+  }
+
+  .pt-3-toc-list li {
+    counter-increment: toc-counter;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.28rem 0;
+    font-size: 0.88rem;
+    border-bottom: 1px solid var(--pt-3-rule);
+  }
+
+  .pt-3-toc-list li:last-child { border-bottom: none; }
+
+  .pt-3-toc-list li::before {
+    content: counter(toc-counter, decimal-leading-zero);
+    font-family: var(--pt-3-mono);
+    font-size: 0.7rem;
+    color: var(--pt-3-accent);
+    flex-shrink: 0;
+  }
+
+  .pt-3-toc-list a {
+    color: var(--pt-3-ink);
+    text-decoration: none;
+  }
+
+  .pt-3-toc-list a:hover { color: var(--pt-3-accent); }
+
+  /* ── Content typography ── */
+  .pt-3-content h2 {
+    font-family: var(--pt-3-serif);
+    font-size: 1.38rem;
+    font-weight: 600;
+    color: var(--pt-3-ink);
+    margin: 2.6rem 0 0.9rem;
+    line-height: 1.35;
+    scroll-margin-top: 1.5rem;
+  }
+
+  .pt-3-content h3 {
+    font-family: var(--pt-3-sans);
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--pt-3-ink);
+    margin: 1.8rem 0 0.6rem;
+    scroll-margin-top: 1.5rem;
+  }
+
+  .pt-3-content p {
+    margin-bottom: 1.1rem;
+    font-size: 0.97rem;
+    line-height: 1.75;
+    color: #2a2a26;
+  }
+
+  .pt-3-content a {
+    color: var(--pt-3-accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  .pt-3-content a:hover { text-decoration-thickness: 2px; }
+
+  /* ── Rights list ── */
+  .pt-3-rights-list {
+    list-style: none;
+    margin: 1rem 0 1.4rem;
+  }
+
+  .pt-3-rights-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--pt-3-rule);
+    font-size: 0.93rem;
+    line-height: 1.55;
+  }
+
+  .pt-3-rights-list li:last-child { border-bottom: none; }
+
+  .pt-3-rights-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--pt-3-accent-bg);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .pt-3-rights-icon svg {
+    width: 11px;
+    height: 11px;
+    stroke: var(--pt-3-accent);
+  }
+
+  .pt-3-rights-title {
+    font-weight: 600;
+    color: var(--pt-3-ink);
+  }
+
+  .pt-3-rights-desc {
+    color: var(--pt-3-ink-light);
+    font-size: 0.88rem;
+  }
+
+  /* ── Steps ── */
+  .pt-3-steps {
+    list-style: none;
+    margin: 1rem 0 1.6rem;
+    counter-reset: step-counter;
+  }
+
+  .pt-3-steps li {
+    counter-increment: step-counter;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--pt-3-rule);
+    font-size: 0.93rem;
+    line-height: 1.6;
+  }
+
+  .pt-3-steps li:last-child { border-bottom: none; margin-bottom: 0; }
+
+  .pt-3-step-num {
+    font-family: var(--pt-3-mono);
+    font-size: 0.75rem;
+    color: #fff;
+    background: var(--pt-3-accent);
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ── Callout quote ── */
+  .pt-3-callout {
+    border-left: 2px solid var(--pt-3-rule);
+    padding: 0.6rem 1.2rem;
+    margin: 1.6rem 0;
+    font-style: italic;
+    color: var(--pt-3-ink-light);
+    font-size: 0.95rem;
+    font-family: var(--pt-3-serif);
+  }
+
+  /* ── Time badge ── */
+  .pt-3-time-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--pt-3-accent);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-family: var(--pt-3-mono);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 1rem 0 1.4rem;
+  }
+
+  /* ── Harassment grid ── */
+  .pt-3-harass-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 0.6rem;
+    margin: 1rem 0 1.6rem;
+  }
+
+  .pt-3-harass-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    background: #fff;
+    border: 1px solid var(--pt-3-rule);
+    border-radius: 6px;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--pt-3-ink);
+  }
+
+  .pt-3-harass-item svg {
+    width: 14px; height: 14px;
+    stroke: var(--pt-3-warn);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ── FAQ ── */
+  .pt-3-faq-list {
+    margin: 0.8rem 0 1.4rem;
+  }
+
+  .pt-3-faq-item {
+    border-bottom: 1px solid var(--pt-3-rule);
+  }
+
+  .pt-3-faq-btn {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--pt-3-ink);
+    gap: 1rem;
+  }
+
+  .pt-3-faq-btn:hover { color: var(--pt-3-accent); }
+
+  .pt-3-faq-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    stroke: currentColor;
+    transition: transform 0.25s ease;
+  }
+
+  .pt-3-faq-btn[aria-expanded="true"] .pt-3-faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .pt-3-faq-answer {
+    display: none;
+    font-size: 0.91rem;
+    line-height: 1.7;
+    color: var(--pt-3-ink-light);
+    padding-bottom: 1rem;
+  }
+
+  .pt-3-faq-answer.pt-3-open { display: block; }
+
+  .pt-3-faq-answer a {
+    color: var(--pt-3-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* ── Links panel ── */
+  .pt-3-links-panel {
+    background: #fff;
+    border: 1px solid var(--pt-3-rule);
+    border-radius: 8px;
+    padding: 1.3rem 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .pt-3-links-panel-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--pt-3-ink-light);
+    margin-bottom: 0.9rem;
+  }
+
+  .pt-3-ext-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .pt-3-ext-links li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.88rem;
+    color: var(--pt-3-accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .pt-3-ext-links li a:hover { text-decoration: underline; }
+
+  .pt-3-ext-links li a svg {
+    width: 12px; height: 12px;
+    stroke: currentColor;
+    flex-shrink: 0;
+  }
+
+  .pt-3-ext-links li span {
+    color: var(--pt-3-ink-light);
+    font-weight: 400;
+    font-size: 0.83rem;
+  }
+
+  /* ── Footer CTA ── */
+  .pt-3-footer-cta {
+    border-top: 1px solid var(--pt-3-rule);
+    margin-top: 3rem;
+    padding: 2rem 0 1rem;
+    text-align: center;
+  }
+
+  .pt-3-footer-cta p {
+    font-size: 0.9rem;
+    color: var(--pt-3-ink-light);
+    max-width: 420px;
+    margin: 0 auto 1.2rem;
+  }
+
+  .pt-3-cta-btn {
+    display: inline-block;
+    background: var(--pt-3-accent);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 6px;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: opacity 0.15s;
+  }
+
+  .pt-3-cta-btn:hover { opacity: 0.88; }
+
+  /* ── Disclaimer ── */
+  .pt-3-disclaimer {
+    margin-top: 2.4rem;
+    padding: 1rem 1.2rem;
+    background: #f4f4f1;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    color: var(--pt-3-ink-light);
+    line-height: 1.6;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .pt-3-h1 { font-size: 1.5rem; }
+    .pt-3-topbar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .pt-3-harass-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- MAIN CONTENT -->
+<!-- ════════════════════════════════════════════ -->
+<main id="pt-3-main" itemscope itemtype="https://schema.org/Article">
+  <div class="pt-3-article-wrap">
+
+    <!-- ARTICLE HEADER -->
+    <header class="pt-3-header">
+      <div class="pt-3-prose">
+        <span class="pt-3-label" itemprop="articleSection">Borrower Rights · RBI Guidelines</span>
+        <h1 class="pt-3-h1" itemprop="headline">
+          Is It Illegal for Recovery Agents to Call at Night? RBI Rules Explained
+        </h1>
+        <p class="pt-3-deck" itemprop="description">
+          Under RBI guidelines, recovery agents cannot contact you outside the window of 8 AM to 7 PM. Here is everything you need to know — your rights, what counts as harassment, and how to file a complaint.
+        </p>
+        <div class="pt-3-meta">
+          <span class="pt-3-meta-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <time itemprop="datePublished" datetime="2026-05-30">May 2026</time>
+          </span>
+          <span class="pt-3-meta-dot" aria-hidden="true"></span>
+          <span class="pt-3-meta-item">8 min read</span>
+          <span class="pt-3-meta-dot" aria-hidden="true"></span>
+          <span class="pt-3-meta-item" itemprop="author" itemscope itemtype="https://schema.org/Organization">
+            <span itemprop="name">ResolveNow Editorial</span>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <div class="pt-3-prose pt-3-content" itemprop="articleBody">
+
+      <!-- QUICK ANSWER -->
+      <div class="pt-3-quick-answer" role="note">
+        <p class="pt-3-quick-answer-label">Quick Answer</p>
+        <p>
+          Yes — it is against <a href="https://www.rbi.org.in" target="_blank" rel="noopener noreferrer">RBI guidelines</a> for recovery agents to call you outside <strong>8:00 AM to 7:00 PM</strong>. This applies to banks, NBFCs, housing finance companies, and RBI-regulated digital lenders. Any contact after 7 PM can be reported as a violation.
+        </p>
+      </div>
+
+      <!-- TOC -->
+      <nav class="pt-3-toc" aria-label="Table of contents">
+        <p class="pt-3-toc-title">In this article</p>
+        <ol class="pt-3-toc-list">
+          <li><a href="#pt-3-permitted-hours">What are the permitted calling hours?</a></li>
+          <li><a href="#pt-3-is-it-illegal">Is it illegal to call after 7 PM?</a></li>
+          <li><a href="#pt-3-harassment">What counts as harassment?</a></li>
+          <li><a href="#pt-3-rights">Your rights as a borrower</a></li>
+          <li><a href="#pt-3-respond">How to respond to a night-time call</a></li>
+          <li><a href="#pt-3-complain">How to file a complaint</a></li>
+          <li><a href="#pt-3-visits">Home visits: what the rules say</a></li>
+          <li><a href="#pt-3-nbfc">Do these rules cover NBFCs &amp; apps?</a></li>
+          <li><a href="#pt-3-faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <!-- SECTION 1 -->
+      <h2 id="pt-3-permitted-hours">What Are the Permitted Calling Hours for Recovery Agents?</h2>
+      <p>
+        The <a href="https://www.rbi.org.in/scripts/BS_ViewMasCirculardetails.aspx" target="_blank" rel="noopener noreferrer">RBI's Fair Practices Code</a> sets a clear boundary. Recovery agents — whether they work for a bank, NBFC, or a third-party collection agency — can only contact borrowers during:
+      </p>
+
+      <div class="pt-3-time-badge" aria-label="Permitted contact window: 8 AM to 7 PM">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        8:00 AM — 7:00 PM only
+      </div>
+
+      <p>
+        This window covers all communication channels: phone calls, SMS, WhatsApp messages, emails, automated reminders, and in-person visits. The rules apply uniformly to:
+      </p>
+      <ul class="pt-3-rights-list" aria-label="Entities bound by RBI recovery rules">
+        <li>
+          <span class="pt-3-rights-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span><span class="pt-3-rights-title">Scheduled commercial banks</span></span>
+        </li>
+        <li>
+          <span class="pt-3-rights-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span><span class="pt-3-rights-title">NBFCs</span> <span class="pt-3-rights-desc">(Non-Banking Financial Companies)</span></span>
+        </li>
+        <li>
+          <span class="pt-3-rights-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span><span class="pt-3-rights-title">Housing finance companies</span></span>
+        </li>
+        <li>
+          <span class="pt-3-rights-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span><span class="pt-3-rights-title">RBI-regulated digital lenders &amp; fintech apps</span></span>
+        </li>
+        <li>
+          <span class="pt-3-rights-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span><span class="pt-3-rights-title">Third-party collection agencies</span> <span class="pt-3-rights-desc">acting on behalf of any of the above</span></span>
+        </li>
+      </ul>
+
+      <p>
+        Recovery agents must also be certified through the <a href="https://www.iibf.org.in" target="_blank" rel="noopener noreferrer">Indian Institute of Banking &amp; Finance (IIBF)</a>. As of 2026, operating without a valid IIBF certification is itself a regulatory violation.
+      </p>
+
+      <!-- SECTION 2 -->
+      <h2 id="pt-3-is-it-illegal">Is It Illegal for Recovery Agents to Call After 7 PM?</h2>
+      <p>
+        In short: <strong>yes</strong>. A recovery call made after 7 PM violates RBI recovery guidelines. The legal foundation comes from RBI circulars, the <a href="https://www.rbi.org.in/scripts/PublicationReportDetails.aspx?UrlPage=&ID=1046" target="_blank" rel="noopener noreferrer">Fair Practices Code for lenders</a>, and the Responsible Business Conduct Directions issued to regulated entities.
+      </p>
+      <p>
+        These are not soft recommendations — they form part of the compliance framework that every regulated lender must follow. A violation can attract regulatory penalties, and if the call involves threats or intimidation, it may cross into criminal misconduct under the <a href="https://legislative.gov.in/sites/default/files/A2023-45.pdf" target="_blank" rel="noopener noreferrer">Bharatiya Nyaya Sanhita (BNS) 2023</a>.
+      </p>
+
+      <div class="pt-3-warning-box" role="note" aria-label="Important">
+        <strong>Banks cannot escape liability by using third-party agencies.</strong> Whether the caller works directly for the bank or for an outsourced agency, the lender remains accountable for ensuring its agents comply with RBI rules.
+      </div>
+
+      <p>
+        The RBI has authority to impose substantial penalties on regulated entities that fail to maintain proper recovery practices — which is why formal complaints often receive serious attention.
+      </p>
+
+      <!-- SECTION 3 -->
+      <h2 id="pt-3-harassment">What Counts as Harassment by a Recovery Agent?</h2>
+      <p>
+        Late-night calls are only one form of harassment. RBI guidelines identify a much broader set of prohibited practices, any of which can form the basis of a complaint:
+      </p>
+
+      <div class="pt-3-harass-grid" role="list" aria-label="Prohibited recovery practices">
+        <div class="pt-3-harass-item" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Calling before 8 AM or after 7 PM
+        </div>
+        <div class="pt-3-harass-item" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Abusive, insulting, or threatening language
+        </div>
+        <div class="pt-3-harass-item" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Calling dozens of times in a single day
+        </div>
+        <div class="pt-3-harass-item" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Contacting family, neighbours, or employer
+        </div>
+        <div class="pt-3-harass-item" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Threatening public humiliation or shaming
+        </div>
+        <div class="pt-3-harass-item" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Intimidating WhatsApp or SMS messages
+        </div>
+        <div class="pt-3-harass-item" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Refusing to identify themselves
+        </div>
+        <div class="pt-3-harass-item" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Calling from hidden or unknown numbers
+        </div>
+        <div class="pt-3-harass-item" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Continuing harassment during an active complaint
+        </div>
+        <div class="pt-3-harass-item" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Unannounced or improper home visits
+        </div>
+      </div>
+
+      <p>The governing principle is straightforward: <em>recovery is permitted, harassment is not.</em></p>
+
+      <!-- SECTION 4 -->
+      <h2 id="pt-3-rights">Your Rights as a Borrower Under RBI Rules</h2>
+      <ul class="pt-3-rights-list" aria-label="Borrower rights">
+        <li>
+          <span class="pt-3-rights-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>
+            <span class="pt-3-rights-title">Right to silence after 7 PM</span><br>
+            <span class="pt-3-rights-desc">No recovery communication is permitted outside the allowed window. You can refuse to engage and document the call.</span>
+          </span>
+        </li>
+        <li>
+          <span class="pt-3-rights-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>
+            <span class="pt-3-rights-title">Right to identification</span><br>
+            <span class="pt-3-rights-desc">You can demand the agent's full name, agency name, and lender-issued authorisation before discussing your account.</span>
+          </span>
+        </li>
+        <li>
+          <span class="pt-3-rights-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>
+            <span class="pt-3-rights-title">Right to privacy</span><br>
+            <span class="pt-3-rights-desc">Your loan details cannot be discussed with relatives, neighbours, friends, or colleagues.</span>
+          </span>
+        </li>
+        <li>
+          <span class="pt-3-rights-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>
+            <span class="pt-3-rights-title">Right to dignity</span><br>
+            <span class="pt-3-rights-desc">No borrower may be subjected to threats, humiliation, intimidation, or abusive language at any point.</span>
+          </span>
+        </li>
+        <li>
+          <span class="pt-3-rights-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>
+            <span class="pt-3-rights-title">Right to file a free complaint</span><br>
+            <span class="pt-3-rights-desc">The <a href="https://cms.rbi.org.in" target="_blank" rel="noopener noreferrer">RBI Integrated Ombudsman Scheme</a> allows you to raise grievances at no cost.</span>
+          </span>
+        </li>
+        <li>
+          <span class="pt-3-rights-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>
+            <span class="pt-3-rights-title">Right to call recordings</span><br>
+            <span class="pt-3-rights-desc">Every recovery interaction must be digitally recorded. You can request these records from your lender. If unavailable, that itself is a violation.</span>
+          </span>
+        </li>
+      </ul>
+
+      <!-- SECTION 5 -->
+      <h2 id="pt-3-respond">How to Respond When a Recovery Agent Calls at Night</h2>
+      <p>Receiving a recovery call after hours is stressful. Staying composed gives you the upper hand.</p>
+
+      <ol class="pt-3-steps">
+        <li>
+          <span class="pt-3-step-num" aria-hidden="true">01</span>
+          <span><strong>Stay calm.</strong> Do not argue or become emotional. Your goal is to collect information, not resolve the debt in that moment.</span>
+        </li>
+        <li>
+          <span class="pt-3-step-num" aria-hidden="true">02</span>
+          <span><strong>Record the interaction</strong> if legally permissible on your device. Screenshots of WhatsApp messages or SMS count as evidence.</span>
+        </li>
+        <li>
+          <span class="pt-3-step-num" aria-hidden="true">03</span>
+          <span><strong>Note the details:</strong> exact date and time, phone number, caller's name and agency, and a summary of what was said.</span>
+        </li>
+        <li>
+          <span class="pt-3-step-num" aria-hidden="true">04</span>
+          <span><strong>State the violation calmly.</strong> You can say: <em>"This call is outside RBI-permitted recovery hours. I am documenting it and may file a formal complaint."</em> Many callers back down once they know evidence is being kept.</span>
+        </li>
+        <li>
+          <span class="pt-3-step-num" aria-hidden="true">05</span>
+          <span><strong>Do not make payments under pressure.</strong> Urgent threats during late-night calls are designed to create fear. No legitimate legal process demands midnight payments.</span>
+        </li>
+      </ol>
+
+      <!-- SECTION 6 -->
+      <h2 id="pt-3-complain">Step-by-Step: How to File a Complaint Against a Recovery Agent</h2>
+
+      <ol class="pt-3-steps">
+        <li>
+          <span class="pt-3-step-num" aria-hidden="true">01</span>
+          <span>
+            <strong>Collect evidence first.</strong> Preserve call recordings, screenshots, SMS logs, WhatsApp chats, and call history. Strong evidence is the foundation of any successful complaint.
+          </span>
+        </li>
+        <li>
+          <span class="pt-3-step-num" aria-hidden="true">02</span>
+          <span>
+            <strong>Contact your bank's Grievance Redressal Officer.</strong> Every bank and NBFC must maintain a grievance mechanism. Submit your complaint in writing (email + letter) with your loan account number, date and time of the incident, and supporting evidence.
+          </span>
+        </li>
+        <li>
+          <span class="pt-3-step-num" aria-hidden="true">03</span>
+          <span>
+            <strong>Escalate to the RBI Ombudsman</strong> if unresolved within 30 days. File at <a href="https://cms.rbi.org.in" target="_blank" rel="noopener noreferrer">cms.rbi.org.in</a> — the process is free and available to all borrowers of regulated entities.
+          </span>
+        </li>
+        <li>
+          <span class="pt-3-step-num" aria-hidden="true">04</span>
+          <span>
+            <strong>Consider police action</strong> for threats, intimidation, or extortion attempts. These may attract provisions under the BNS, and you should also consult a qualified legal professional.
+          </span>
+        </li>
+        <li>
+          <span class="pt-3-step-num" aria-hidden="true">05</span>
+          <span>
+            <strong>Approach consumer authorities</strong> if relevant. The <a href="https://consumerhelpline.gov.in" target="_blank" rel="noopener noreferrer">National Consumer Helpline (1800-11-4000)</a> provides guidance on consumer disputes.
+          </span>
+        </li>
+      </ol>
+
+      <!-- EXTERNAL LINKS PANEL -->
+      <div class="pt-3-links-panel" aria-label="Official resources">
+        <p class="pt-3-links-panel-title">Official resources &amp; portals</p>
+        <ul class="pt-3-ext-links">
+          <li>
+            <a href="https://cms.rbi.org.in" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              RBI Complaint Portal — cms.rbi.org.in
+            </a>
+            <span>File grievances against banks &amp; NBFCs for free</span>
+          </li>
+          <li>
+            <a href="https://www.rbi.org.in" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Reserve Bank of India — rbi.org.in
+            </a>
+            <span>Circulars, Fair Practices Code, and regulatory updates</span>
+          </li>
+          <li>
+            <a href="https://www.iibf.org.in" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              IIBF — iibf.org.in
+            </a>
+            <span>Recovery agent certification standards (mandatory as of 2026)</span>
+          </li>
+          <li>
+            <a href="https://consumerhelpline.gov.in" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              National Consumer Helpline — consumerhelpline.gov.in
+            </a>
+            <span>Consumer dispute guidance &amp; escalation</span>
+          </li>
+          <li>
+            <a href="https://sachet.rbi.org.in" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              RBI Sachet Portal — sachet.rbi.org.in
+            </a>
+            <span>Report illegal deposit &amp; lending complaints</span>
+          </li>
+          <li>
+            <a href="https://rbidocs.rbi.org.in/rdocs/content/pdfs/FAIRPRAC.pdf" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              RBI Fair Practices Code (PDF)
+            </a>
+            <span>The foundational document governing lender conduct</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SECTION 7 -->
+      <h2 id="pt-3-visits">Can Recovery Agents Visit Your Home?</h2>
+      <p>
+        Yes — but with strict conditions. Any home visit must occur during permitted hours (8 AM to 7 PM), and the representative must carry valid identification and lender-issued authorisation. You are entitled to verify both before engaging.
+      </p>
+      <p>
+        During a visit, the agent must remain professional. They cannot threaten you, disclose your financial situation to others present, or attempt to seize property without legal authorisation. If they try to contact you at your workplace, they must maintain strict confidentiality and cannot involve your colleagues or supervisors.
+      </p>
+      <blockquote class="pt-3-callout">
+        A recovery visit is not a licence for harassment. The same standards of dignity and privacy that apply over the phone apply in person.
+      </blockquote>
+
+      <!-- SECTION 8 -->
+      <h2 id="pt-3-nbfc">Do These Rules Cover NBFCs and Digital Lending Apps?</h2>
+      <p>
+        Yes. A common misconception is that only traditional banks are bound by RBI recovery rules. All <a href="https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=12256" target="_blank" rel="noopener noreferrer">RBI-regulated entities</a> — including NBFCs, housing finance companies, and digital lenders operating under RBI authorisation — must comply with the same fair recovery standards.
+      </p>
+      <p>
+        This includes automated systems. If a regulated digital lender sends repeated recovery messages after 7 PM via an automated bot, that communication may still be subject to regulatory scrutiny. The channel does not change the obligation.
+      </p>
+
+      <!-- FAQ SECTION -->
+      <h2 id="pt-3-faq">Frequently Asked Questions</h2>
+
+      <div class="pt-3-faq-list" role="list">
+
+        <div class="pt-3-faq-item" role="listitem">
+          <button class="pt-3-faq-btn" aria-expanded="false" aria-controls="pt-3-faq-a1">
+            Can recovery agents call after 7 PM in India?
+            <svg class="pt-3-faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="pt-3-faq-answer" id="pt-3-faq-a1" role="region">
+            No. <a href="https://www.rbi.org.in" target="_blank" rel="noopener noreferrer">RBI guidelines</a> restrict recovery-related communication to 8:00 AM–7:00 PM. Any call outside this window may constitute a violation. Document it and file a complaint with your lender or the RBI Ombudsman.
+          </div>
+        </div>
+
+        <div class="pt-3-faq-item" role="listitem">
+          <button class="pt-3-faq-btn" aria-expanded="false" aria-controls="pt-3-faq-a2">
+            Is harassment by a recovery agent a criminal offence?
+            <svg class="pt-3-faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="pt-3-faq-answer" id="pt-3-faq-a2" role="region">
+            It can be. Threats, criminal intimidation, and coercive conduct may attract provisions under the Bharatiya Nyaya Sanhita (BNS) 2023. Victims should consider consulting a qualified legal professional or approaching local law enforcement for serious incidents.
+          </div>
+        </div>
+
+        <div class="pt-3-faq-item" role="listitem">
+          <button class="pt-3-faq-btn" aria-expanded="false" aria-controls="pt-3-faq-a3">
+            Can a recovery agent discuss my loan with my family or employer?
+            <svg class="pt-3-faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="pt-3-faq-answer" id="pt-3-faq-a3" role="region">
+            Generally, no. Borrower privacy is a core RBI principle. Unauthorized disclosure of loan information to third parties — including relatives, neighbours, friends, or colleagues — may constitute a serious violation of the Fair Practices Code.
+          </div>
+        </div>
+
+        <div class="pt-3-faq-item" role="listitem">
+          <button class="pt-3-faq-btn" aria-expanded="false" aria-controls="pt-3-faq-a4">
+            Do RBI recovery rules apply to digital lending apps and NBFCs?
+            <svg class="pt-3-faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="pt-3-faq-answer" id="pt-3-faq-a4" role="region">
+            Yes. All RBI-regulated entities — including NBFCs and authorised digital lenders — are bound by the same fair recovery obligations. If an app sends you threatening or untimely messages, the underlying lender can be held accountable. You can file a complaint at <a href="https://cms.rbi.org.in" target="_blank" rel="noopener noreferrer">cms.rbi.org.in</a>.
+          </div>
+        </div>
+
+        <div class="pt-3-faq-item" role="listitem">
+          <button class="pt-3-faq-btn" aria-expanded="false" aria-controls="pt-3-faq-a5">
+            Can I be jailed for not repaying a personal loan?
+            <svg class="pt-3-faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="pt-3-faq-answer" id="pt-3-faq-a5" role="region">
+            In most cases, loan default is a civil matter, not a criminal offence. Imprisonment typically arises only when fraud, misrepresentation, or cheque dishonour under Section 138 of the Negotiable Instruments Act is involved. Recovery agents who threaten jail for ordinary default are making false statements.
+          </div>
+        </div>
+
+        <div class="pt-3-faq-item" role="listitem">
+          <button class="pt-3-faq-btn" aria-expanded="false" aria-controls="pt-3-faq-a6">
+            What identification should a recovery agent show before visiting?
+            <svg class="pt-3-faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="pt-3-faq-answer" id="pt-3-faq-a6" role="region">
+            A legitimate recovery representative must provide their full name, the name of the agency they represent, their IIBF certification number, and a lender-issued authorisation letter. If any of these are missing, you are under no obligation to engage.
+          </div>
+        </div>
+
+      </div>
+
+
+    </div><!-- /.pt-3-prose -->
+  </div><!-- /.pt-3-article-wrap -->
+</main>
+
+{% include "author.html" %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600&display=swap');
+
+  .rg-section {
+    font-family: 'Outfit', sans-serif;
+    padding: 3rem 0 1.5rem;
+  }
+
+  .rg-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .rg-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+  }
+
+  .rg-eyebrow::before,
+  .rg-eyebrow::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: #2563eb;
+    opacity: 0.4;
+  }
+
+  .rg-heading {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .rg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rg-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rg-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2563eb;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .rg-card:hover {
+    border-color: #d1d9f5;
+    transform: translateX(4px);
+  }
+
+  .rg-card:hover::before {
+    opacity: 1;
+  }
+
+  .rg-card__number {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2563eb;
+    opacity: 0.12;
+    line-height: 1;
+    min-width: 2.5rem;
+    transition: opacity 0.2s ease;
+    user-select: none;
+  }
+
+  .rg-card:hover .rg-card__number {
+    opacity: 0.22;
+  }
+
+  .rg-card__divider {
+    width: 1px;
+    height: 3rem;
+    background: #e9e9e9;
+    flex-shrink: 0;
+  }
+
+  .rg-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .rg-card__label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2563eb;
+  }
+
+  .rg-card__title {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+  }
+
+  .rg-card:hover .rg-card__title {
+    color: #2563eb;
+  }
+
+  .rg-card__arrow {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    color: #2563eb;
+  }
+
+  .rg-card:hover .rg-card__arrow {
+    background: #eff4ff;
+    border-color: #bfcffe;
+    transform: translateX(2px);
+  }
+
+  .rg-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .rg-card__number { display: none; }
+    .rg-card__divider { display: none; }
+  }
+</style>
+
+<section class="rg-section">
+
+  <div class="rg-header">
+    <div class="rg-eyebrow">Keep reading</div>
+    <h2 class="rg-heading">Related Guides</h2>
+  </div>
+
+  <div class="rg-list">
+
+    <a href="../personal-loan-settlement-india-2026/" class="rg-card">
+      <span class="rg-card__number">01</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Personal Loan Settlement in India 2026</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+    <a href="../harassment-and-legal-protection-india/" class="rg-card">
+      <span class="rg-card__number">02</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Harassment and Legal Protection in India</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="rg-divider"></div>
+</section>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SCHEMA MARKUP -->
+<!-- ════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Is It Illegal for Recovery Agents to Call at Night? RBI Rules Explained",
+  "description": "Under RBI guidelines, recovery agents cannot contact borrowers outside 8 AM to 7 PM. This guide explains borrower rights, what counts as harassment, and how to file a complaint.",
+  "datePublished": "2026-05-30",
+  "dateModified": "2026-05-30",
+  "author": {
+    "@type": "Organization",
+    "name": "ResolveNow",
+    "url": "https://resolvenow.co.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ResolveNow",
+    "url": "https://resolvenow.co.in"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://resolvenow.co.in/blog/rbi-recovery-agent-calling-hours/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can recovery agents call after 7 PM in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. RBI guidelines restrict recovery-related communication to 8:00 AM to 7:00 PM. Calls outside this window may constitute a violation and should be documented for complaint purposes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is harassment by a recovery agent a criminal offence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can be. Threats, criminal intimidation, and coercive conduct may attract provisions under the Bharatiya Nyaya Sanhita (BNS) 2023, depending on the facts of the case."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a recovery agent discuss my loan with my family or employer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally, no. Borrower privacy is a core RBI principle. Unauthorized disclosure of loan information to third parties may constitute a serious violation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do RBI recovery rules apply to NBFCs and digital lending apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All RBI-regulated entities, including NBFCs and authorised digital lenders, must comply with the same fair recovery obligations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I be jailed for not repaying a personal loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases, loan default is a civil matter, not a criminal offence. Recovery agents who threaten jail for ordinary default are making false statements."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- FAQ ACCORDION SCRIPT -->
+<!-- ════════════════════════════════════════════ -->
+<script>
+(function () {
+  var btns = document.querySelectorAll('.pt-3-faq-btn');
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      var answerId = btn.getAttribute('aria-controls');
+      var answer = document.getElementById(answerId);
+
+      // Close all
+      btns.forEach(function (b) {
+        b.setAttribute('aria-expanded', 'false');
+        var aId = b.getAttribute('aria-controls');
+        var a = document.getElementById(aId);
+        if (a) a.classList.remove('pt-3-open');
+      });
+
+      // Open clicked (if it was closed)
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        if (answer) answer.classList.add('pt-3-open');
+      }
+    });
+  });
+})();
+</script>
+
