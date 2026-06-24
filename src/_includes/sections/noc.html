@@ -1,159 +1,267 @@
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  .noc-section {
+  .sl-section {
     background: #f5f4f1;
-    padding: 80px 24px;
+    padding: 80px 24px 72px;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    position: relative;
   }
 
-  .noc-section-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
+  .sl-inner { max-width: 1080px; margin: 0 auto; }
 
-  .noc-eyebrow {
-    display: inline-block;
-    font-size: 12px;
+  .sl-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
     color: #a07c3a;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
 
-  .noc-heading {
-    font-size: clamp(28px, 4vw, 44px);
+  .sl-eyebrow-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #a07c3a;
+    display: inline-block;
+  }
+
+  .sl-head-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 52px;
+  }
+
+  .sl-heading {
+    font-size: clamp(26px, 3.8vw, 42px);
     font-weight: 700;
     color: #1a1917;
-    line-height: 1.2;
-    max-width: 560px;
-    margin-bottom: 16px;
+    line-height: 1.15;
+    max-width: 520px;
+    margin: 0;
   }
 
-  .noc-heading span { color: #a07c3a; }
+  .sl-heading em {
+    font-style: normal;
+    color: #a07c3a;
+  }
 
-  .noc-subtext {
-    font-size: 16px;
+  .sl-sub {
+    font-size: 15px;
     color: #6b6860;
-    line-height: 1.7;
-    max-width: 480px;
-    margin-bottom: 56px;
+    line-height: 1.65;
+    max-width: 320px;
+    margin: 0;
   }
 
-  .noc-carousel-wrapper {
+  .sl-wrap {
     position: relative;
     overflow: hidden;
   }
 
-  .noc-track {
+  .sl-track {
     display: flex;
-    gap: 28px;
+    gap: 24px;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .noc-card {
-    flex: 0 0 calc(33.333% - 19px);
-    min-width: 260px;
+  .sl-card {
+    flex: 0 0 calc(33.333% - 16px);
+    min-width: 240px;
     cursor: pointer;
   }
 
-  @media (max-width: 900px) { .noc-card { flex: 0 0 calc(50% - 14px); } }
-  @media (max-width: 580px) { .noc-card { flex: 0 0 85%; } }
+  @media (max-width: 860px) {
+    .sl-card { flex: 0 0 calc(50% - 12px); }
+  }
 
-  .noc-card-paper {
-    border-radius: 4px;
-    aspect-ratio: 1 / 1.414;
+  @media (max-width: 560px) {
+    .sl-card { flex: 0 0 87%; }
+  }
+
+  .sl-paper {
+    border-radius: 3px;
+    aspect-ratio: 1 / 1.41;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.12), 0 0 0 0.5px rgba(0,0,0,0.06);
+    position: relative;
+    box-shadow:
+      0 1px 3px rgba(0,0,0,0.10),
+      0 4px 16px rgba(0,0,0,0.10),
+      0 0 0 0.5px rgba(0,0,0,0.07);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    background: #fff;
   }
 
-  .noc-card:hover .noc-card-paper {
-    transform: translateY(-6px) rotate(-0.5deg);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.18), 0 0 0 0.5px rgba(0,0,0,0.08);
+  .sl-card:hover .sl-paper {
+    transform: translateY(-8px) rotate(-0.6deg);
+    box-shadow:
+      0 2px 6px rgba(0,0,0,0.09),
+      0 20px 48px rgba(0,0,0,0.16),
+      0 0 0 0.5px rgba(0,0,0,0.08);
   }
 
-  .noc-card-paper img {
+  .sl-paper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    filter: brightness(0.97);
   }
 
-  .noc-card-label {
-    margin-top: 14px;
+  .sl-stamp {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #1e5e30;
+    color: #d4f4df;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    border-radius: 2px;
+    transform: rotate(3deg);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+  }
+
+  .sl-meta {
+    margin-top: 16px;
+    padding: 0 2px;
+  }
+
+  .sl-bank-row {
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: space-between;
+    margin-bottom: 8px;
   }
 
-  .noc-card-bank {
+  .sl-bank {
     font-size: 13px;
     font-weight: 600;
     color: #1a1917;
   }
 
-  .noc-card-type {
+  .sl-type {
     font-size: 11px;
-    color: #8a8780;
+    color: #9a9791;
+    margin-top: 2px;
   }
 
-  .noc-card-dot {
-    width: 6px;
-    height: 6px;
+  .sl-status {
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: #2d6a3f;
     flex-shrink: 0;
-    margin-left: auto;
   }
 
-  .noc-controls {
+  .sl-highlight {
+    background: #ffffff;
+    border: 0.5px solid #d8d5cd;
+    border-radius: 6px;
+    padding: 10px 14px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .sl-highlight-label {
+    font-size: 11px;
+    color: #8a8780;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+  }
+
+  .sl-highlight-owed {
+    font-size: 13px;
+    color: #6b6860;
+  }
+
+  .sl-highlight-arrow {
+    font-size: 13px;
+    color: #c8c4bc;
+  }
+
+  .sl-highlight-amount {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1e5e30;
+    white-space: nowrap;
+  }
+
+  .sl-controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
     margin-top: 40px;
   }
 
-  .noc-btn {
-    width: 40px;
-    height: 40px;
+  .sl-btn {
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    border: 0.5px solid #d4d2cc;
-    background: #ffffff;
-    color: #8a8780;
-    cursor: pointer;
+    border: 0.5px solid #ccc9c0;
+    background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: border-color 0.2s, color 0.2s, background 0.2s;
-    font-size: 18px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    flex-shrink: 0;
   }
 
-  .noc-btn:hover {
+  .sl-btn:hover {
     border-color: #a07c3a;
-    color: #a07c3a;
-    background: rgba(160,124,58,0.06);
+    background: rgba(160, 124, 58, 0.07);
   }
 
-  .noc-dots { display: flex; gap: 6px; }
+  .sl-btn:active { transform: scale(0.93); }
 
-  .noc-dot {
-    width: 20px;
+  .sl-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke: #6b6860;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.2s;
+  }
+
+  .sl-btn:hover svg { stroke: #a07c3a; }
+
+  .sl-dots {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .sl-dot {
     height: 3px;
     border-radius: 2px;
-    background: #d4d2cc;
+    background: #ccc9c0;
     cursor: pointer;
-    transition: background 0.2s, width 0.2s;
+    transition: background 0.25s, width 0.25s;
+    width: 18px;
   }
 
-  .noc-dot.active { background: #a07c3a; width: 32px; }
+  .sl-dot.on {
+    background: #a07c3a;
+    width: 30px;
+  }
 
-  .noc-cta {
+  .sl-cta {
+    margin-left: auto;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    margin-left: auto;
+    gap: 6px;
     font-size: 13px;
     font-weight: 500;
     color: #a07c3a;
@@ -162,11 +270,11 @@
     transition: gap 0.2s;
   }
 
-  .noc-cta:hover { gap: 12px; }
+  .sl-cta:hover { gap: 10px; }
 
-  .noc-cta svg {
-    width: 16px;
-    height: 16px;
+  .sl-cta svg {
+    width: 15px;
+    height: 15px;
     stroke: currentColor;
     fill: none;
     stroke-width: 2;
@@ -174,145 +282,279 @@
     stroke-linejoin: round;
   }
 
-  .noc-stats {
+  .sl-proof {
+    margin-top: 56px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 1px;
-    background: #e0ddd7;
-    border: 0.5px solid #e0ddd7;
-    border-radius: 12px;
+    background: #ddd9d0;
+    border: 0.5px solid #ddd9d0;
+    border-radius: 10px;
     overflow: hidden;
-    margin-top: 64px;
   }
 
-  .noc-stat { background: #ffffff; padding: 24px 28px; }
+  .sl-proof-item {
+    background: #faf9f6;
+    padding: 22px 24px;
+  }
 
-  .noc-stat-num {
-    font-size: 28px;
+  .sl-proof-num {
+    font-size: 26px;
     font-weight: 700;
     color: #1a1917;
     line-height: 1;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 
-  .noc-stat-num span { color: #a07c3a; }
+  .sl-proof-num sup {
+    font-size: 14px;
+    color: #a07c3a;
+    font-weight: 600;
+  }
 
-  .noc-stat-label { font-size: 13px; color: #8a8780; }
+  .sl-proof-label {
+    font-size: 12px;
+    color: #8a8780;
+  }
 </style>
 
-<section class="noc-section">
-  <div class="noc-section-inner">
+<section class="sl-section">
+  <div class="sl-inner">
 
-    <div class="noc-eyebrow">Official documentation</div>
-    <h2 class="noc-heading">Real NOCs from <span>real banks</span></h2>
-    <p class="noc-subtext">Every settlement we negotiate ends with an official No Objection Certificate — your legal proof that the debt is fully cleared.</p>
+    <div class="sl-eyebrow">
+      <span class="sl-eyebrow-dot"></span>
+      Verified documentation
+    </div>
 
-    <div class="noc-carousel-wrapper">
-      <div class="noc-track" id="nocTrack">
+    <div class="sl-head-row">
+      <div>
+        <h2 class="sl-heading">Real settlement letters<br>from <em>real banks</em></h2>
+      </div>
+      <p class="sl-sub">Every case we negotiate ends with an official settlement letter or NOC — your legal proof that the debt is completely cleared.</p>
+    </div>
 
-        <!-- CARD 1 — replace YOUR_IMAGE_URL_1 -->
-        <div class="noc-card">
-          <div class="noc-card-paper">
-            <img src="/assets/images/noc_1.png" alt="ICIC Bank NOC" />
+    <div class="sl-wrap">
+      <div class="sl-track" id="slTrack">
+
+        <!-- CARD 1 — update image src and amounts -->
+        <div class="sl-card">
+          <div class="sl-paper">
+            <img src="/assets/images/noc_1.png" alt="ICICI Bank settlement letter" />
+            <div class="sl-stamp">Settled</div>
           </div>
-          <div class="noc-card-label">
-            <div>
-              <div class="noc-card-bank">ICICI Bank</div>
-              <div class="noc-card-type">Credit Card Settlement</div>
+          <div class="sl-meta">
+            <div class="sl-bank-row">
+              <div>
+                <div class="sl-bank">ICICI Bank</div>
+                <div class="sl-type">Credit Card Settlement</div>
+              </div>
+              <div class="sl-status"></div>
             </div>
-            <div class="noc-card-dot"></div>
+            <div class="sl-highlight">
+              <span class="sl-highlight-label">Outcome</span>
+              <span class="sl-highlight-owed">₹6L owed</span>
+              <span class="sl-highlight-arrow">→</span>
+              <span class="sl-highlight-amount">₹1.4L paid</span>
+            </div>
           </div>
         </div>
 
-        <!-- CARD 2 — replace YOUR_IMAGE_URL_2 -->
-        <div class="noc-card">
-          <div class="noc-card-paper">
-            <img src="/assets/images/noc_1.png" alt="OneCard NOC" />
+        <!-- CARD 2 — update image src and amounts -->
+        <div class="sl-card">
+          <div class="sl-paper">
+            <img src="/assets/images/noc_2.png" alt="OneCard Federal Bank settlement letter" />
+            <div class="sl-stamp">Settled</div>
           </div>
-          <div class="noc-card-label">
-            <div>
-              <div class="noc-card-bank">OneCard / Federal Bank</div>
-              <div class="noc-card-type">Credit Card Settlement</div>
+          <div class="sl-meta">
+            <div class="sl-bank-row">
+              <div>
+                <div class="sl-bank">OneCard / Federal Bank</div>
+                <div class="sl-type">Credit Card Settlement</div>
+              </div>
+              <div class="sl-status"></div>
             </div>
-            <div class="noc-card-dot"></div>
+            <div class="sl-highlight">
+              <span class="sl-highlight-label">Outcome</span>
+              <span class="sl-highlight-owed">₹3.8L owed</span>
+              <span class="sl-highlight-arrow">→</span>
+              <span class="sl-highlight-amount">₹95K paid</span>
+            </div>
           </div>
         </div>
 
-        <!-- CARD 3 — replace YOUR_IMAGE_URL_3 -->
-        <div class="noc-card">
-          <div class="noc-card-paper">
-            <img src="/assets/images/noc_1.png" alt="HDFC Bank NOC" />
+        <!-- CARD 3 — update image src and amounts -->
+        <div class="sl-card">
+          <div class="sl-paper">
+            <img src="/assets/images/noc_3.png" alt="HDFC Bank settlement letter" />
+            <div class="sl-stamp">Settled</div>
           </div>
-          <div class="noc-card-label">
-            <div>
-              <div class="noc-card-bank">HDFC Bank</div>
-              <div class="noc-card-type">Personal Loan Settlement</div>
+          <div class="sl-meta">
+            <div class="sl-bank-row">
+              <div>
+                <div class="sl-bank">HDFC Bank</div>
+                <div class="sl-type">Personal Loan Settlement</div>
+              </div>
+              <div class="sl-status"></div>
             </div>
-            <div class="noc-card-dot"></div>
+            <div class="sl-highlight">
+              <span class="sl-highlight-label">Outcome</span>
+              <span class="sl-highlight-owed">₹5L owed</span>
+              <span class="sl-highlight-arrow">→</span>
+              <span class="sl-highlight-amount">₹1.1L paid</span>
+            </div>
           </div>
         </div>
 
-        <!-- CARD 4 — replace YOUR_IMAGE_URL_4 -->
-        <div class="noc-card">
-          <div class="noc-card-paper">
-            <img src="/assets/images/noc_1.png" alt="Axis Bank NOC" />
+        <!-- CARD 4 — update image src and amounts -->
+        <div class="sl-card">
+          <div class="sl-paper">
+            <img src="/assets/images/noc_4.png" alt="Axis Bank settlement letter" />
+            <div class="sl-stamp">Settled</div>
           </div>
-          <div class="noc-card-label">
-            <div>
-              <div class="noc-card-bank">Axis Bank</div>
-              <div class="noc-card-type">Credit Card Settlement</div>
+          <div class="sl-meta">
+            <div class="sl-bank-row">
+              <div>
+                <div class="sl-bank">Axis Bank</div>
+                <div class="sl-type">Credit Card Settlement</div>
+              </div>
+              <div class="sl-status"></div>
             </div>
-            <div class="noc-card-dot"></div>
+            <div class="sl-highlight">
+              <span class="sl-highlight-label">Outcome</span>
+              <span class="sl-highlight-owed">₹2.5L owed</span>
+              <span class="sl-highlight-arrow">→</span>
+              <span class="sl-highlight-amount">₹60K paid</span>
+            </div>
           </div>
         </div>
 
-        <!-- CARD 5 — replace YOUR_IMAGE_URL_5 -->
-        <div class="noc-card">
-          <div class="noc-card-paper">
-            <img src="/assets/images/noc_1.png" alt="SBI Card NOC" />
+        <!-- CARD 5 — update image src and amounts -->
+        <div class="sl-card">
+          <div class="sl-paper">
+            <img src="/assets/images/noc_5.png" alt="SBI Card settlement letter" />
+            <div class="sl-stamp">Settled</div>
           </div>
-          <div class="noc-card-label">
-            <div>
-              <div class="noc-card-bank">SBI Card</div>
-              <div class="noc-card-type">Credit Card Settlement</div>
+          <div class="sl-meta">
+            <div class="sl-bank-row">
+              <div>
+                <div class="sl-bank">SBI Card</div>
+                <div class="sl-type">Credit Card Settlement</div>
+              </div>
+              <div class="sl-status"></div>
             </div>
-            <div class="noc-card-dot"></div>
+            <div class="sl-highlight">
+              <span class="sl-highlight-label">Outcome</span>
+              <span class="sl-highlight-owed">₹4.2L owed</span>
+              <span class="sl-highlight-arrow">→</span>
+              <span class="sl-highlight-amount">₹1L paid</span>
+            </div>
           </div>
         </div>
+
+        <!-- CARD 6 — update image src and amounts -->
+        <div class="sl-card">
+          <div class="sl-paper">
+            <img src="/assets/images/noc_6.png" alt="SBI Card settlement letter" />
+            <div class="sl-stamp">Settled</div>
+          </div>
+          <div class="sl-meta">
+            <div class="sl-bank-row">
+              <div>
+                <div class="sl-bank">SBI Card</div>
+                <div class="sl-type">Credit Card Settlement</div>
+              </div>
+              <div class="sl-status"></div>
+            </div>
+            <div class="sl-highlight">
+              <span class="sl-highlight-label">Outcome</span>
+              <span class="sl-highlight-owed">₹4.2L owed</span>
+              <span class="sl-highlight-arrow">→</span>
+              <span class="sl-highlight-amount">₹1L paid</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 7 — update image src and amounts -->
+        <div class="sl-card">
+          <div class="sl-paper">
+            <img src="/assets/images/noc_7.png" alt="SBI Card settlement letter" />
+            <div class="sl-stamp">Settled</div>
+          </div>
+          <div class="sl-meta">
+            <div class="sl-bank-row">
+              <div>
+                <div class="sl-bank">SBI Card</div>
+                <div class="sl-type">Credit Card Settlement</div>
+              </div>
+              <div class="sl-status"></div>
+            </div>
+            <div class="sl-highlight">
+              <span class="sl-highlight-label">Outcome</span>
+              <span class="sl-highlight-owed">₹4.2L owed</span>
+              <span class="sl-highlight-arrow">→</span>
+              <span class="sl-highlight-amount">₹1L paid</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 8 — update image src and amounts -->
+        <div class="sl-card">
+          <div class="sl-paper">
+            <img src="/assets/images/noc_8.png" alt="SBI Card settlement letter" />
+            <div class="sl-stamp">Settled</div>
+          </div>
+          <div class="sl-meta">
+            <div class="sl-bank-row">
+              <div>
+                <div class="sl-bank">SBI Card</div>
+                <div class="sl-type">Credit Card Settlement</div>
+              </div>
+              <div class="sl-status"></div>
+            </div>
+            <div class="sl-highlight">
+              <span class="sl-highlight-label">Outcome</span>
+              <span class="sl-highlight-owed">₹4.2L owed</span>
+              <span class="sl-highlight-arrow">→</span>
+              <span class="sl-highlight-amount">₹1L paid</span>
+            </div>
+          </div>
+        </div>
+
+
 
       </div>
     </div>
 
-    <div class="noc-controls">
-      <button class="noc-btn" id="nocPrev" aria-label="Previous">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    <div class="sl-controls">
+      <button class="sl-btn" id="slPrev" aria-label="Previous">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
       </button>
-      <div class="noc-dots" id="nocDots"></div>
-      <button class="noc-btn" id="nocNext" aria-label="Next">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="sl-dots" id="slDots"></div>
+      <button class="sl-btn" id="slNext" aria-label="Next">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </button>
-      <a href="#get-started" class="noc-cta">
-        Get your NOC
+      <a href="../../forms/" class="sl-cta">
+        Get your settlement letter
         <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
     </div>
 
-    <!-- <div class="noc-stats">
-      <div class="noc-stat">
-        <div class="noc-stat-num">2,400<span>+</span></div>
-        <div class="noc-stat-label">NOCs issued</div>
+    <!-- <div class="sl-proof">
+      <div class="sl-proof-item">
+        <div class="sl-proof-num">2,400<sup>+</sup></div>
+        <div class="sl-proof-label">Settlements closed</div>
       </div>
-      <div class="noc-stat">
-        <div class="noc-stat-num">35<span>+</span></div>
-        <div class="noc-stat-label">Banks & NBFCs</div>
+      <div class="sl-proof-item">
+        <div class="sl-proof-num">35<sup>+</sup></div>
+        <div class="sl-proof-label">Banks &amp; NBFCs</div>
       </div>
-      <div class="noc-stat">
-        <div class="noc-stat-num">60<span>days</span></div>
-        <div class="noc-stat-label">CIBIL update window</div>
+      <div class="sl-proof-item">
+        <div class="sl-proof-num">78<sup>%</sup></div>
+        <div class="sl-proof-label">Avg. debt reduction</div>
       </div>
-      <div class="noc-stat">
-        <div class="noc-stat-num">100<span>%</span></div>
-        <div class="noc-stat-label">Legally binding</div>
+      <div class="sl-proof-item">
+        <div class="sl-proof-num">60<sup>days</sup></div>
+        <div class="sl-proof-label">Avg. resolution time</div>
       </div>
     </div> -->
 
@@ -320,50 +562,45 @@
 </section>
 
 <script>
-(function() {
-  const track = document.getElementById('nocTrack');
-  const cards = track.querySelectorAll('.noc-card');
-  const dotsContainer = document.getElementById('nocDots');
-  const prevBtn = document.getElementById('nocPrev');
-  const nextBtn = document.getElementById('nocNext');
-
-  let current = 0;
+(function () {
+  const track = document.getElementById('slTrack');
+  const cards = track.querySelectorAll('.sl-card');
+  const dotsC = document.getElementById('slDots');
+  const prev  = document.getElementById('slPrev');
+  const next  = document.getElementById('slNext');
+  let cur = 0;
   const total = cards.length;
 
-  function getVisible() {
+  function vis() {
     const w = track.parentElement.offsetWidth;
-    if (w < 580) return 1;
-    if (w < 900) return 2;
+    if (w < 560) return 1;
+    if (w < 860) return 2;
     return 3;
   }
 
+  function pages() { return Math.ceil(total / vis()); }
+
   function buildDots() {
-    dotsContainer.innerHTML = '';
-    const vis = getVisible();
-    const pages = Math.ceil(total / vis);
-    for (let i = 0; i < pages; i++) {
+    dotsC.innerHTML = '';
+    for (let i = 0; i < pages(); i++) {
       const d = document.createElement('div');
-      d.className = 'noc-dot' + (i === 0 ? ' active' : '');
-      d.addEventListener('click', () => goTo(i));
-      dotsContainer.appendChild(d);
+      d.className = 'sl-dot' + (i === cur ? ' on' : '');
+      d.addEventListener('click', () => go(i));
+      dotsC.appendChild(d);
     }
   }
 
-  function goTo(page) {
-    const vis = getVisible();
-    const pages = Math.ceil(total / vis);
-    current = Math.max(0, Math.min(page, pages - 1));
-    const cardW = cards[0].offsetWidth + 28;
-    track.style.transform = `translateX(-${current * vis * cardW}px)`;
-    dotsContainer.querySelectorAll('.noc-dot').forEach((d, i) => {
-      d.classList.toggle('active', i === current);
-    });
+  function go(page) {
+    cur = Math.max(0, Math.min(page, pages() - 1));
+    const cardW = cards[0].offsetWidth + 24;
+    track.style.transform = `translateX(-${cur * vis() * cardW}px)`;
+    dotsC.querySelectorAll('.sl-dot').forEach((d, i) => d.classList.toggle('on', i === cur));
   }
 
-  prevBtn.addEventListener('click', () => goTo(current - 1));
-  nextBtn.addEventListener('click', () => goTo(current + 1));
+  prev.addEventListener('click', () => go(cur - 1));
+  next.addEventListener('click', () => go(cur + 1));
 
   buildDots();
-  window.addEventListener('resize', () => { buildDots(); goTo(0); });
+  window.addEventListener('resize', () => { buildDots(); go(0); });
 })();
 </script>
