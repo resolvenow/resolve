@@ -1,0 +1,831 @@
+---
+layout: layout.html
+title: "Can Recovery Agents Call You on Sunday? RBI Calling Time Rules Explained"
+description: "RBI's fair practice code sets exact hours banks and recovery agents can call or visit borrowers. Know your legal rights on Sunday calls and after-hours contact."
+date: 2026-07-14
+tags:
+  - recovery agents
+  - RBI guidelines
+  - harassment
+  - calling hours
+---
+
+<style>
+  .rac-article {
+    --rac-bg: #F5F6F1;
+    --rac-surface: #FFFFFF;
+    --rac-ink: #1B211C;
+    --rac-ink-soft: #545B52;
+    --rac-line: #DBDED2;
+    --rac-navy: #1F3B5C;
+    --rac-navy-deep: #142B44;
+    --rac-amber: #8F630F;
+    --rac-blocked: #A8412B;
+    --rac-focus: #3D6AA0;
+
+    background: var(--rac-bg);
+    color: var(--rac-ink);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 960px;
+    margin: 96px auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+  .rac-article * { box-sizing: border-box; }
+
+  .rac-article h1,
+  .rac-article h2,
+  .rac-article h3 {
+    font-family: "Newsreader", Georgia, serif;
+    color: var(--rac-navy-deep);
+    line-height: 1.25;
+    font-weight: 600;
+  }
+
+  .rac-eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--rac-navy);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .rac-eyebrow::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background: var(--rac-amber);
+    display: inline-block;
+  }
+
+  .rac-title {
+    font-size: 2.15rem;
+    margin: 0 0 0.4rem;
+  }
+  .rac-subtitle {
+    font-size: 1.15rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--rac-ink-soft);
+    margin: 0 0 1.1rem;
+  }
+
+  .rac-meta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.78rem;
+    color: var(--rac-ink-soft);
+    border-top: 1px solid var(--rac-line);
+    border-bottom: 1px solid var(--rac-line);
+    padding: 0.65rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .rac-article h2 {
+    font-size: 1.45rem;
+    margin: 2.6rem 0 1rem;
+  }
+  .rac-article h3 {
+    font-size: 1.12rem;
+    margin: 1.8rem 0 0.7rem;
+  }
+  .rac-article p { margin: 0 0 1.1rem; }
+  .rac-article a {
+    color: var(--rac-navy);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  .rac-article a:hover { color: var(--rac-blocked); }
+  .rac-article a:focus-visible,
+  .rac-article summary:focus-visible,
+  .rac-article details:focus-visible {
+    outline: 2px solid var(--rac-focus);
+    outline-offset: 3px;
+  }
+
+  /* Quick-answer clause card */
+  .rac-clause {
+    background: var(--rac-surface);
+    border-left: 3px solid var(--rac-navy);
+    padding: 1.1rem 1.3rem;
+    margin: 1.5rem 0 2rem;
+    border-radius: 0 4px 4px 0;
+  }
+  .rac-clause-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--rac-navy);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .rac-clause p { margin: 0; font-size: 0.98rem; }
+
+  .rac-editorial-note {
+    font-size: 0.85rem;
+    color: var(--rac-ink-soft);
+    font-style: italic;
+    margin-bottom: 2.2rem;
+  }
+
+  /* Signature element: permitted contact window */
+  .rac-window {
+    background: var(--rac-surface);
+    border: 1px solid var(--rac-line);
+    border-radius: 6px;
+    padding: 1.5rem 1.5rem 1.2rem;
+    margin: 2rem 0 2.4rem;
+  }
+  .rac-window-heading {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--rac-ink-soft);
+    margin-bottom: 0.9rem;
+  }
+  .rac-window-bar {
+    display: flex;
+    height: 34px;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid var(--rac-line);
+  }
+  .rac-window-seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem;
+    color: #fff;
+    letter-spacing: 0.03em;
+  }
+  .rac-window-seg--blocked {
+    background: repeating-linear-gradient(
+      135deg,
+      var(--rac-blocked),
+      var(--rac-blocked) 6px,
+      #8f3423 6px,
+      #8f3423 12px
+    );
+    flex: 0 0 33.33%;
+  }
+  .rac-window-seg--allowed {
+    background: var(--rac-navy);
+    flex: 0 0 45.84%;
+  }
+  .rac-window-seg--blocked-2 {
+    background: repeating-linear-gradient(
+      135deg,
+      var(--rac-blocked),
+      var(--rac-blocked) 6px,
+      #8f3423 6px,
+      #8f3423 12px
+    );
+    flex: 0 0 20.83%;
+  }
+  .rac-window-ticks {
+    display: flex;
+    justify-content: space-between;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem;
+    color: var(--rac-ink-soft);
+    margin-top: 0.5rem;
+  }
+  .rac-window-legend {
+    display: flex;
+    gap: 1.4rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  .rac-window-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    color: var(--rac-ink-soft);
+  }
+  .rac-window-swatch {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+  .rac-window-swatch--allowed { background: var(--rac-navy); }
+  .rac-window-swatch--blocked {
+    background: repeating-linear-gradient(135deg, var(--rac-blocked), var(--rac-blocked) 3px, #8f3423 3px, #8f3423 6px);
+  }
+  .rac-window-note {
+    margin-top: 0.9rem;
+    font-size: 0.85rem;
+    color: var(--rac-ink-soft);
+  }
+
+  .rac-article ul,
+  .rac-article ol {
+    padding-left: 1.3rem;
+    margin: 0 0 1.1rem;
+  }
+  .rac-article li { margin-bottom: 0.4rem; }
+
+  /* Numbered grounds list (the "what counts as harassment" section) */
+  .rac-grounds { counter-reset: rac-ground; margin: 1.6rem 0; }
+  .rac-ground {
+    counter-increment: rac-ground;
+    display: grid;
+    grid-template-columns: 2.2rem 1fr;
+    gap: 0.9rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rac-line);
+  }
+  .rac-ground:first-child { border-top: 1px solid var(--rac-line); }
+  .rac-ground::before {
+    content: counter(rac-ground, decimal-leading-zero);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.85rem;
+    color: var(--rac-amber);
+    font-weight: 600;
+    padding-top: 0.1rem;
+  }
+  .rac-ground h3 { margin: 0 0 0.35rem; font-size: 1rem; }
+  .rac-ground p { margin: 0; font-size: 0.95rem; }
+
+  /* Secured vs unsecured comparison */
+  .rac-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.6rem 0 2rem;
+  }
+  .rac-compare-card {
+    background: var(--rac-surface);
+    border: 1px solid var(--rac-line);
+    border-radius: 6px;
+    padding: 1.1rem 1.2rem;
+  }
+  .rac-compare-card h3 {
+    margin: 0 0 0.6rem;
+    font-size: 1rem;
+    color: var(--rac-navy-deep);
+  }
+  .rac-compare-card ul { padding-left: 1.1rem; margin-bottom: 0.7rem; }
+  .rac-compare-card li { font-size: 0.9rem; margin-bottom: 0.3rem; }
+  .rac-compare-card p { font-size: 0.9rem; color: var(--rac-ink-soft); margin: 0; }
+
+  @media (max-width: 560px) {
+    .rac-compare { grid-template-columns: 1fr; }
+  }
+
+  /* Escalation steps */
+  .rac-steps { counter-reset: rac-step; list-style: none; padding-left: 0; margin: 1.6rem 0 2rem; }
+  .rac-steps li {
+    counter-increment: rac-step;
+    position: relative;
+    padding-left: 2.6rem;
+    margin-bottom: 1.2rem;
+  }
+  .rac-steps li::before {
+    content: counter(rac-step);
+    position: absolute;
+    left: 0;
+    top: 0.05rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background: var(--rac-navy);
+    color: #fff;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rac-steps strong { display: block; margin-bottom: 0.15rem; color: var(--rac-navy-deep); }
+
+  /* FAQ */
+  .rac-faq-item {
+    border-bottom: 1px solid var(--rac-line);
+  }
+  .rac-faq-item summary {
+    cursor: pointer;
+    padding: 1rem 0;
+    font-weight: 600;
+    color: var(--rac-navy-deep);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .rac-faq-item summary::-webkit-details-marker { display: none; }
+  .rac-faq-item summary::after {
+    content: "+";
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--rac-amber);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  .rac-faq-item[open] summary::after { content: "–"; }
+  .rac-faq-item p {
+    padding-bottom: 1rem;
+    margin: 0;
+    color: var(--rac-ink-soft);
+    font-size: 0.96rem;
+  }
+
+  .rac-callout-danger {
+    background: #FBF1EE;
+    border: 1px solid #E3B7AB;
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+  }
+  .rac-callout-danger strong { color: var(--rac-blocked); }
+
+  .rac-sources {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rac-line);
+  }
+  .rac-sources h2 { font-size: 1.05rem; margin-bottom: 0.8rem; }
+  .rac-sources ol { padding-left: 1.2rem; }
+  .rac-sources li { font-size: 0.85rem; margin-bottom: 0.5rem; }
+
+  .rac-disclaimer {
+    margin-top: 2rem;
+    font-size: 0.82rem;
+    color: var(--rac-ink-soft);
+    background: var(--rac-surface);
+    border: 1px solid var(--rac-line);
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+  }
+</style>
+
+<article class="rac-article">
+
+  <p class="rac-eyebrow">Harassment &amp; RBI · Borrower Rights</p>
+  <h1 class="rac-title">How legal is it for loan folks to reach out to you?</h1>
+  <p class="rac-subtitle">RBI's calling-time rules, explained in plain terms</p>
+  <p class="rac-meta">Published 14 Jul 2026 &middot; Updated for RB-IOS, 2026 &middot; 10 min read</p>
+
+  <p>If a recovery agent has called you before breakfast, after dinner, or on a Sunday you'd rather have to yourself, the question is simple: is that even allowed?</p>
+
+  <p>Mostly, no. Recovery agents working for banks, NBFCs, and RBI-regulated digital lenders are permitted to contact borrowers only between <strong>8:00 AM and 7:00 PM</strong> &mdash; and that window applies every single day of the week, Sundays and public holidays included. A call at 9 PM or a doorstep visit at 7 AM sits outside what the <a href="https://www.rbi.org.in/commonperson/English/Scripts/Notification.aspx?Id=1572" target="_blank" rel="noopener">Reserve Bank of India's Fair Practices Code</a> permits, regardless of how much is owed.</p>
+
+  <div class="rac-clause">
+    <span class="rac-clause-label">Quick answer</span>
+    <p>Recovery agents can call or visit only from 8:00 AM to 7:00 PM, seven days a week &mdash; Sundays included. Contact outside this window can be raised as a regulatory violation with the lender and, if unresolved, with the RBI Ombudsman.</p>
+  </div>
+
+  <div class="rac-window">
+    <p class="rac-window-heading">The permitted contact window &mdash; 24-hour view</p>
+    <div class="rac-window-bar" role="img" aria-label="24 hour bar showing blocked hours from midnight to 8am, allowed hours from 8am to 7pm, and blocked hours from 7pm to midnight">
+      <div class="rac-window-seg rac-window-seg--blocked">12 AM&ndash;8 AM</div>
+      <div class="rac-window-seg rac-window-seg--allowed">8 AM&ndash;7 PM</div>
+      <div class="rac-window-seg rac-window-seg--blocked-2">7 PM&ndash;12 AM</div>
+    </div>
+    <div class="rac-window-ticks">
+      <span>12 AM</span><span>8 AM</span><span>7 PM</span><span>12 AM</span>
+    </div>
+    <div class="rac-window-legend">
+      <span class="rac-window-legend-item"><span class="rac-window-swatch rac-window-swatch--allowed"></span>Permitted contact</span>
+      <span class="rac-window-legend-item"><span class="rac-window-swatch rac-window-swatch--blocked"></span>No calls or visits</span>
+    </div>
+    <p class="rac-window-note">This window is identical on Sundays and public holidays &mdash; RBI does not set a separate, shorter window for weekends.</p>
+  </div>
+
+  <h2>Where the 8 AM&ndash;7 PM rule actually comes from</h2>
+  <p>It isn't an industry custom that lenders adopted informally. It's regulatory. The RBI's <a href="https://www.rbi.org.in/commonman/english/scripts/Notification.aspx?Id=787" target="_blank" rel="noopener">2010 Guidelines on Recovery Agents</a> built on an earlier 2008 circular restricting the hours in which <a href="https://www.rbi.org.in/commonman/English/scripts/Notification.aspx?Id=347" target="_blank" rel="noopener">recovery agents engaged by banks</a> could approach a borrower, after courts flagged recovery practices that crossed into harassment. A 2022 circular on outsourcing of financial services reaffirmed the same 8 AM&ndash;7 PM boundary for both calls and visits.</p>
+  <p>These sit inside the RBI's broader <a href="https://www.rbi.org.in/commonperson/English/Scripts/Notification.aspx?Id=1572" target="_blank" rel="noopener">Master Circular on the Fair Practices Code</a>, which binds scheduled commercial banks, NBFCs, and the lending platforms they outsource collections to. A bank cannot point to a third-party agency and disclaim responsibility &mdash; the lender remains on the hook for how its agents behave.</p>
+  <p>One nuance worth knowing: for purely digital lending apps, the specific conduct requirements now sit inside the <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12848&Mode=0" target="_blank" rel="noopener">RBI (Digital Lending) Directions, 2025</a>, which folded the older outsourcing guidelines into a single framework. The calling-hours principle carries over unchanged.</p>
+
+  <h2>Yes &mdash; it covers visits, not just calls</h2>
+  <p>A common misreading is that the timing rule only applies to phone calls. It doesn't. The same 8 AM&ndash;7 PM boundary applies whether an agent wants to call you, show up at your home, or attempt a workplace visit. Physical visits, though, carry extra obligations on top of timing.</p>
+
+  <h3>What a legitimate home visit should look like</h3>
+  <ul>
+    <li>The agent carries an official identity card and a written authorisation letter from the lender.</li>
+    <li>They state clearly who they represent and why they're there.</li>
+    <li>They don't linger, raise their voice, or involve neighbours in the conversation.</li>
+  </ul>
+  <p>If someone can't produce identification or authorisation, you're entitled to verify their claim with your lender's customer care before discussing anything.</p>
+
+  <h2>What counts as harassment &mdash; beyond the clock</h2>
+  <p>Calling within permitted hours doesn't give an agent a free pass on conduct. Timing and behaviour are judged separately.</p>
+
+  <div class="rac-grounds">
+    <div class="rac-ground">
+      <div>
+        <h3>Calls designed to overwhelm</h3>
+        <p>Dozens of calls a day, often from different numbers, intended to mentally exhaust rather than inform.</p>
+      </div>
+    </div>
+    <div class="rac-ground">
+      <div>
+        <h3>Threatening or abusive language</h3>
+        <p>Shouting, insults, or threats of physical harm have no place in a recovery call, regardless of how overdue the account is.</p>
+      </div>
+    </div>
+    <div class="rac-ground">
+      <div>
+        <h3>Contacting family members</h3>
+        <p>Disclosing your loan to a spouse, parent, or sibling to apply pressure is inconsistent with the Fair Practices Code.</p>
+      </div>
+    </div>
+    <div class="rac-ground">
+      <div>
+        <h3>Contacting your employer</h3>
+        <p>Calling HR or your workplace to embarrass you into paying can itself become the basis for a complaint.</p>
+      </div>
+    </div>
+    <div class="rac-ground">
+      <div>
+        <h3>Involving neighbours</h3>
+        <p>Asking neighbours to confirm you live somewhere, or to relay pressure, discusses your debt with people who have no part in it.</p>
+      </div>
+    </div>
+    <div class="rac-ground">
+      <div>
+        <h3>False threats of arrest</h3>
+        <p>Ordinary default on a personal loan or credit card is a civil matter. "We'll send the police" is, in most such cases, not true.</p>
+      </div>
+    </div>
+    <div class="rac-ground">
+      <div>
+        <h3>Refusing identification</h3>
+        <p>A legitimate agent will always identify themselves and the lender they represent, on request.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rac-callout-danger">
+    <strong>Not a criminal matter, usually.</strong> Loan default on an unsecured product is a civil issue. Since the <a href="https://www.indiacode.nic.in/bitstream/123456789/20062/1/a202345.pdf" target="_blank" rel="noopener">Bharatiya Nyaya Sanhita, 2023</a> replaced the IPC on 1 July 2024, genuine threats of harm can separately fall under Section 351 (criminal intimidation) or Section 352 (intentional insult) &mdash; but the debt itself doesn't put you at risk of arrest.
+  </div>
+
+  <h2>Secured vs. unsecured loans: does the rule change?</h2>
+  <p>No &mdash; but the recovery mechanics behind it do, which is why the two get confused.</p>
+  <div class="rac-compare">
+    <div class="rac-compare-card">
+      <h3>Unsecured loans</h3>
+      <ul>
+        <li>Personal loans, credit cards, consumer durable loans</li>
+        <li>No collateral for the lender to seize</li>
+        <li>Recovery runs through civil process</li>
+      </ul>
+      <p>Same 8 AM&ndash;7 PM rule, no exceptions for the type of unsecured product.</p>
+    </div>
+    <div class="rac-compare-card">
+      <h3>Secured loans</h3>
+      <ul>
+        <li>Home, vehicle, gold, or property-backed loans</li>
+        <li>Lender can enforce security under the SARFAESI Act, 2002</li>
+        <li>Statutory notice must precede possession</li>
+      </ul>
+      <p>Even with a legal right to the asset, the agent still can't call outside permitted hours or use intimidation to get there.</p>
+    </div>
+  </div>
+
+  <h2>If a recovery agent calls after 7 PM or before 8 AM</h2>
+  <ol class="rac-steps">
+    <li>
+      <strong>Say so, calmly.</strong>
+      Tell the agent RBI guidelines restrict recovery calls to 8 AM&ndash;7 PM, and ask them to call back within that window.
+    </li>
+    <li>
+      <strong>Log the details.</strong>
+      Date, time, number used, agent's name if given, and a short summary of what was said.
+    </li>
+    <li>
+      <strong>Ask for identification, in person.</strong>
+      Request an ID card and written authorisation before discussing anything, and verify with the lender if in doubt.
+    </li>
+    <li>
+      <strong>File a written complaint.</strong>
+      Every regulated lender has a Grievance Redressal Officer or Nodal Officer. Include your loan account number, the incident details, and any evidence.
+    </li>
+  </ol>
+
+  <h2>Escalating to the RBI Ombudsman</h2>
+  <p>If the lender's response is unsatisfactory or the 30-day response window lapses, you can move to the RBI's <a href="https://cms.rbi.org.in/" target="_blank" rel="noopener">Complaint Management System (CMS)</a> portal, run under the <strong>Reserve Bank &ndash; Integrated Ombudsman Scheme (RB-IOS), 2026</strong>, which took effect on 1 July 2026 and replaced the 2021 scheme.</p>
+  <p>Filing is free. Complaints generally need to reach the Ombudsman within 90 days of the lender's reply (or the expiry of its response window). The Ombudsman can award up to <strong>&#8377;30 lakh</strong> for demonstrable financial loss and up to <strong>&#8377;3 lakh</strong> for harassment, mental anguish, or loss of time. You can also start through the <a href="https://rbi.org.in/Scripts/Complaints.aspx" target="_blank" rel="noopener">RBI's general complaints page</a>, or call the toll-free helpline <strong>14448</strong>.</p>
+
+  <h2>Frequently asked questions</h2>
+
+  <details class="rac-faq-item">
+    <summary>Can recovery agents call on Sundays or public holidays?</summary>
+    <p>Yes, but only within the same 8 AM&ndash;7 PM window that applies on any other day. There's no separate, shorter allowance for weekends.</p>
+  </details>
+  <details class="rac-faq-item">
+    <summary>Can a recovery agent contact my employer?</summary>
+    <p>They shouldn't disclose your loan to your employer or HR to pressure or embarrass you into repaying. Doing so can form the basis of a complaint against the lender.</p>
+  </details>
+  <details class="rac-faq-item">
+    <summary>Can I be arrested for not paying a personal loan or credit card bill?</summary>
+    <p>Ordinary default on an unsecured loan is a civil matter, not a criminal one. You generally can't be arrested simply for missing repayments, unless separate criminal conduct such as fraud is involved.</p>
+  </details>
+  <details class="rac-faq-item">
+    <summary>How do I complain against a recovery agent?</summary>
+    <p>Start with your lender's Grievance Redressal Officer in writing. If it's unresolved after the prescribed period, escalate through the RBI's CMS portal under RB-IOS, 2026.</p>
+  </details>
+  <details class="rac-faq-item">
+    <summary>Do these rules apply to loan apps?</summary>
+    <p>Yes, provided the app is tied to an RBI-regulated bank or NBFC. Such entities must comply with the Fair Practices Code, and for digital lenders specifically, the RBI (Digital Lending) Directions, 2025.</p>
+  </details>
+
+  <h2>The line that actually matters</h2>
+  <p>Lenders have a legitimate right to recover what's owed. Borrowers have an equally real right to be contacted at reasonable hours and treated with basic dignity while that happens. The 8 AM&ndash;7 PM rule is the clearest, easiest-to-invoke part of that balance &mdash; and it's worth remembering the exact hours even if you never need to cite them.</p>
+
+  <div class="rac-disclaimer">
+    This article is for general information only and isn't legal advice. RBI regulations and escalation procedures can change; verify current details on the RBI's official site before acting on a specific case.
+  </div>
+
+  <div class="rac-sources">
+    <h2>Sources</h2>
+    <ol>
+      <li>RBI &ndash; <a href="https://www.rbi.org.in/commonman/english/scripts/Notification.aspx?Id=787" target="_blank" rel="noopener">Guidelines on Recovery Agents engaged by banks (2010)</a></li>
+      <li>RBI &ndash; <a href="https://www.rbi.org.in/commonman/English/scripts/Notification.aspx?Id=347" target="_blank" rel="noopener">Recovery Agents engaged by banks (2008 circular)</a></li>
+      <li>RBI &ndash; <a href="https://www.rbi.org.in/commonperson/English/Scripts/Notification.aspx?Id=1572" target="_blank" rel="noopener">Master Circular on Fair Practices Code</a></li>
+      <li>RBI &ndash; <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12848&Mode=0" target="_blank" rel="noopener">Digital Lending Directions, 2025</a></li>
+      <li>RBI &ndash; <a href="https://www.rbi.org.in/commonperson/english/scripts/FAQs.aspx?Id=3407" target="_blank" rel="noopener">FAQs, Reserve Bank &ndash; Integrated Ombudsman Scheme, 2026</a></li>
+      <li>RBI &ndash; <a href="https://cms.rbi.org.in/" target="_blank" rel="noopener">Complaint Management System portal</a></li>
+      <li>RBI &ndash; <a href="https://rbi.org.in/Scripts/Complaints.aspx" target="_blank" rel="noopener">General complaints page</a></li>
+      <li>India Code &ndash; <a href="https://www.indiacode.nic.in/bitstream/123456789/20062/1/a202345.pdf" target="_blank" rel="noopener">Bharatiya Nyaya Sanhita, 2023 (full text)</a></li>
+    </ol>
+  </div>
+
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can recovery agents call on Sundays or public holidays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but only within the same 8 AM to 7 PM window that applies on any other day. There is no separate, shorter allowance for weekends."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a recovery agent contact my employer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They should not disclose your loan to your employer or HR to pressure or embarrass you into repaying. Doing so can form the basis of a complaint against the lender."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I be arrested for not paying a personal loan or credit card bill?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ordinary default on an unsecured loan is a civil matter, not a criminal one, unless separate criminal conduct such as fraud is involved."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I complain against a recovery agent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with your lender's Grievance Redressal Officer in writing, then escalate through the RBI's CMS portal under RB-IOS, 2026 if unresolved."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do these rules apply to loan apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, provided the app is tied to an RBI-regulated bank or NBFC, which must follow the Fair Practices Code and the Digital Lending Directions, 2025."
+      }
+    }
+  ]
+}
+</script>
+
+
+{% include "author.html" %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600&display=swap');
+
+  .rg-section {
+    font-family: 'Outfit', sans-serif;
+    padding: 3rem 0 1.5rem;
+  }
+
+  .rg-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .rg-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+  }
+
+  .rg-eyebrow::before,
+  .rg-eyebrow::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: #2563eb;
+    opacity: 0.4;
+  }
+
+  .rg-heading {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .rg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rg-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rg-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2563eb;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .rg-card:hover {
+    border-color: #d1d9f5;
+    transform: translateX(4px);
+  }
+
+  .rg-card:hover::before {
+    opacity: 1;
+  }
+
+  .rg-card__number {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2563eb;
+    opacity: 0.12;
+    line-height: 1;
+    min-width: 2.5rem;
+    transition: opacity 0.2s ease;
+    user-select: none;
+  }
+
+  .rg-card:hover .rg-card__number {
+    opacity: 0.22;
+  }
+
+  .rg-card__divider {
+    width: 1px;
+    height: 3rem;
+    background: #e9e9e9;
+    flex-shrink: 0;
+  }
+
+  .rg-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .rg-card__label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2563eb;
+  }
+
+  .rg-card__title {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+  }
+
+  .rg-card:hover .rg-card__title {
+    color: #2563eb;
+  }
+
+  .rg-card__arrow {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    color: #2563eb;
+  }
+
+  .rg-card:hover .rg-card__arrow {
+    background: #eff4ff;
+    border-color: #bfcffe;
+    transform: translateX(2px);
+  }
+
+  .rg-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .rg-card__number { display: none; }
+    .rg-card__divider { display: none; }
+  }
+</style>
+
+<section class="rg-section">
+
+  <div class="rg-header">
+    <div class="rg-eyebrow">Keep reading</div>
+    <h2 class="rg-heading">Related Guides</h2>
+  </div>
+
+  <div class="rg-list">
+
+    <a href="../personal-loan-settlement-india-2026/" class="rg-card">
+      <span class="rg-card__number">01</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Personal Loan Settlement in India 2026</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+    <a href="../harassment-and-legal-protection-india/" class="rg-card">
+      <span class="rg-card__number">02</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Harassment and Legal Protection in India</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="rg-divider"></div>
+</section>
