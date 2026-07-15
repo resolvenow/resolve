@@ -1,0 +1,780 @@
+---
+layout: layout.html
+title: "What is OTS in Banking? Full Form, Meaning & How One-Time Settlement Works"
+description: "OTS in banking means One Time Settlement, a lump-sum route to close a defaulted loan for less than what's owed. Eligibility, process, CIBIL impact & RBI rules."
+tags:
+  - personal-loan
+  - glossary
+  - ots-article
+  - loan-settlement
+date: 2026-07-15
+---
+
+<style>
+  .ots-article {
+    --ots-ink: #1f2328;
+    --ots-muted: #5b6470;
+    --ots-line: #e3e6ea;
+    --ots-bg-soft: #f7f8f9;
+    --ots-accent: #0f5132;
+    --ots-accent-soft: #eaf3ee;
+    --ots-warn-soft: #fbf3e8;
+    --ots-warn-line: #eddcc0;
+    max-width: 960px;
+    margin: 96px auto;
+    padding: 2rem 1.25rem 3rem;
+    color: var(--ots-ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    font-size: 1.0625rem;
+  }
+
+  .ots-article h1 {
+    font-size: 1.85rem;
+    line-height: 1.3;
+    margin: 0 0 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .ots-article h2 {
+    font-size: 1.3rem;
+    margin: 2.5rem 0 0.9rem;
+    letter-spacing: -0.01em;
+  }
+
+  .ots-article h3 {
+    font-size: 1.05rem;
+    margin: 1.5rem 0 0.6rem;
+  }
+
+  .ots-article p {
+    margin: 0 0 1rem;
+  }
+
+  .ots-article ul,
+  .ots-article ol {
+    margin: 0 0 1.25rem;
+    padding-left: 1.4rem;
+  }
+
+  .ots-article li {
+    margin-bottom: 0.45rem;
+  }
+
+  .ots-article a {
+    color: var(--ots-accent);
+    text-decoration: underline;
+    text-decoration-color: #b7d3c3;
+    text-underline-offset: 2px;
+  }
+
+  .ots-article a:hover {
+    text-decoration-color: var(--ots-accent);
+  }
+
+  .ots-lead {
+    font-size: 1.15rem;
+    color: var(--ots-ink);
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--ots-line);
+    margin-bottom: 1.75rem;
+  }
+
+  .ots-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    font-size: 0.85rem;
+    color: var(--ots-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .ots-fullform-box {
+    background: var(--ots-accent-soft);
+    border: 1px solid #cfe4d8;
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    margin: 1rem 0 1.4rem;
+    font-size: 1.05rem;
+  }
+
+  .ots-fullform-box strong {
+    color: var(--ots-accent);
+  }
+
+  .ots-table-wrap {
+    overflow-x: auto;
+    margin: 1rem 0 1.5rem;
+    border: 1px solid var(--ots-line);
+    border-radius: 6px;
+  }
+
+  .ots-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    min-width: 560px;
+  }
+
+  .ots-table caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 0.85rem;
+    color: var(--ots-muted);
+    padding: 0.6rem 0.8rem 0;
+  }
+
+  .ots-table th,
+  .ots-table td {
+    padding: 0.65rem 0.8rem;
+    border-bottom: 1px solid var(--ots-line);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .ots-table thead th {
+    background: var(--ots-bg-soft);
+    font-weight: 600;
+  }
+
+  .ots-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .ots-table td:first-child,
+  .ots-table th:first-child {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .ots-proscons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+  }
+
+  @media (max-width: 560px) {
+    .ots-proscons {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ots-proscons > div {
+    border: 1px solid var(--ots-line);
+    border-radius: 6px;
+    padding: 1rem 1.1rem;
+  }
+
+  .ots-proscons h3 {
+    margin-top: 0;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ots-muted);
+  }
+
+  .ots-proscons ul {
+    margin-bottom: 0;
+  }
+
+  .ots-checklist {
+    background: var(--ots-bg-soft);
+    border: 1px solid var(--ots-line);
+    border-radius: 6px;
+    padding: 1rem 1.1rem 1rem 1.6rem;
+  }
+
+  .ots-disclaimer {
+    background: var(--ots-warn-soft);
+    border: 1px solid var(--ots-warn-line);
+    border-radius: 6px;
+    padding: 0.85rem 1.1rem;
+    font-size: 0.92rem;
+    color: #6b4f22;
+    margin: 0.5rem 0 1.5rem;
+  }
+
+  .ots-faq {
+    border-top: 1px solid var(--ots-line);
+    margin-top: 0.5rem;
+  }
+
+  .ots-faq details {
+    border-bottom: 1px solid var(--ots-line);
+    padding: 0.9rem 0;
+  }
+
+  .ots-faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .ots-faq summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .ots-faq summary::after {
+    content: "+";
+    font-weight: 400;
+    color: var(--ots-muted);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .ots-faq details[open] summary::after {
+    content: "\2212";
+  }
+
+  .ots-faq p {
+    margin: 0.6rem 0 0;
+    color: var(--ots-ink);
+  }
+
+  .ots-cta {
+    margin-top: 2.25rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--ots-line);
+    font-size: 0.98rem;
+  }
+
+  .ots-source-note {
+    font-size: 0.82rem;
+    color: var(--ots-muted);
+    margin-top: 2rem;
+  }
+</style>
+
+<article class="ots-article">
+
+  <h1>What is OTS in Banking? Full Form, Meaning &amp; How One-Time Settlement Works</h1>
+
+  <div class="ots-meta-row">
+    <span>Personal Loan</span>
+    <span>&middot;</span>
+    <span>Updated July 2026</span>
+    <span>&middot;</span>
+    <span>7 min read</span>
+  </div>
+
+  <p class="ots-lead">
+    OTS in banking stands for <strong>One Time Settlement</strong> &mdash; an arrangement where a lender agrees to close a defaulted loan account for a lump-sum payment that is lower than the total amount owed. Banks offer this to borrowers who are genuinely unable to repay in full, once the account has already been classified as a non-performing asset (NPA). It closes the loan, but not on the same footing as full repayment, and that difference matters for your credit report.
+  </p>
+
+  <h2>What Does OTS Stand For? (Full Form)</h2>
+
+  <div class="ots-fullform-box">
+    <strong>OTS = One Time Settlement</strong>
+  </div>
+
+  <p>
+    In RBI terminology, the same arrangement is officially called a <strong>compromise settlement</strong> &mdash; so if you've come across that phrase in a bank letter or a recovery agent's call, it refers to the same thing as OTS. Both terms describe a negotiated, one-off payment that closes a stressed loan account for less than the outstanding balance.
+  </p>
+
+  <h2>What Is a One-Time Settlement (OTS)? &mdash; Detailed Meaning</h2>
+
+  <p>
+    A one-time settlement is a negotiated agreement between a lender and a borrower to close a loan account by accepting a reduced lump-sum amount instead of the full outstanding dues &mdash; principal, accrued interest, and penal charges combined. It's typically offered only after an account has crossed 90 days overdue and been classified as an <strong>NPA</strong>, and after the bank has assessed that recovering the full amount through continued follow-up or legal action is unlikely or uneconomical.
+  </p>
+
+  <p>
+    This is worth repeating clearly: an OTS is <strong>not the same as a regular loan closure</strong>. When you repay a loan in full, the account is marked "Closed." When you settle it via OTS, the account is marked "Settled" &mdash; a status that future lenders read very differently. That distinction is covered in detail further down.
+  </p>
+
+  <h2>When Do Banks Offer an OTS?</h2>
+
+  <p>Banks typically consider offering an OTS when:</p>
+
+  <ul>
+    <li>The loan or credit card account has become an <strong>NPA</strong> (overdue for 90 days or more)</li>
+    <li>The borrower is facing genuine financial hardship &mdash; job loss, medical emergency, business failure, and similar situations</li>
+    <li>Legal recovery routes such as <a href="https://www.indiacode.nic.in/handle/123456789/1521" target="_blank" rel="noopener noreferrer">SARFAESI proceedings</a> or a Debt Recovery Tribunal (DRT) case would be slow, expensive, or unlikely to recover the full amount</li>
+    <li>Any collateral backing the loan has lost value and no longer covers the outstanding dues</li>
+    <li>The bank wants to clean up its NPA ratio and reduce provisioning on its balance sheet</li>
+  </ul>
+
+  <h2>Who Is Eligible for an OTS?</h2>
+
+  <p>Eligibility is decided case by case, but banks generally look for:</p>
+
+  <ul>
+    <li>The account is already classified as an NPA</li>
+    <li>Documented proof of genuine financial hardship rather than an unwillingness to pay</li>
+    <li>The borrower is not, ordinarily, tagged as a <strong>wilful defaulter</strong> or linked to a fraud account</li>
+  </ul>
+
+  <p>
+    That said, the <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12513&amp;Mode=0" target="_blank" rel="noopener noreferrer">RBI's June 2023 Framework for Compromise Settlements and Technical Write-offs</a> (circular RBI/2023-24/40, dated June 8, 2023) permits regulated entities to settle even wilful-defaulter or fraud-tagged accounts, subject to Board approval and a minimum 12-month cooling-off period before fresh credit can be extended. This is a regulatory nuance worth knowing rather than a reason to expect it &mdash; a settlement is never a borrower's right; it remains entirely at the lender's discretion. Since each bank runs its own Board-approved OTS policy under this framework, exact eligibility thresholds vary from lender to lender.
+  </p>
+
+  <h2>How Does the One-Time Settlement Process Work?</h2>
+
+  <p>For a typical personal loan, the process generally moves through these steps:</p>
+
+  <ol>
+    <li>The account crosses 90 days overdue and is classified as an NPA</li>
+    <li>Either the borrower or the bank initiates a settlement conversation</li>
+    <li>The borrower submits a written settlement request along with hardship documentation (medical bills, termination letter, income proof, etc.)</li>
+    <li>The bank calculates the total outstanding &mdash; principal, accrued interest, and charges &mdash; and weighs this against its likely recovery through other means</li>
+    <li>Both sides negotiate the settlement figure, commonly somewhere between 40% and 70% of the total outstanding, though this varies widely by case</li>
+    <li>The bank issues a formal <strong>OTS or settlement letter</strong> on its letterhead &mdash; never pay anything before you have this in writing</li>
+    <li>The borrower pays the agreed lump sum, or agreed instalments, within the stated timeline</li>
+    <li>The bank issues a <strong>No Dues Certificate (NOC)</strong> and updates the account status with the credit bureaus</li>
+  </ol>
+
+  <h2>OTS vs Restructuring vs Write-off vs Full Repayment &mdash; What's the Difference?</h2>
+
+  <div class="ots-table-wrap">
+    <table class="ots-table">
+      <caption>Comparing how each resolution route affects the loan, the payment, and your credit report</caption>
+      <thead>
+        <tr>
+          <th scope="col">Basis</th>
+          <th scope="col">OTS</th>
+          <th scope="col">Restructuring</th>
+          <th scope="col">Write-off</th>
+          <th scope="col">Full repayment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>What happens to the loan</td>
+          <td>Account is closed for a reduced amount</td>
+          <td>Loan stays active with revised tenure/EMI</td>
+          <td>Bank removes it from its books; debt may still legally exist</td>
+          <td>Loan is closed as originally agreed</td>
+        </tr>
+        <tr>
+          <td>Amount paid</td>
+          <td>Less than total outstanding (negotiated)</td>
+          <td>Full amount, over a longer or modified schedule</td>
+          <td>Often nothing from the borrower at that point</td>
+          <td>100% of principal and interest due</td>
+        </tr>
+        <tr>
+          <td>Credit report impact</td>
+          <td>Marked "Settled" &mdash; negative</td>
+          <td>Noted as restructured &mdash; moderate impact</td>
+          <td>Marked "Written Off" &mdash; severe, long-lasting</td>
+          <td>Marked "Closed" &mdash; neutral to positive</td>
+        </tr>
+        <tr>
+          <td>Who typically initiates</td>
+          <td>Borrower or bank, after NPA</td>
+          <td>Usually the borrower, before default</td>
+          <td>The bank, internally</td>
+          <td>The borrower, as scheduled</td>
+        </tr>
+        <tr>
+          <td>Best suited for</td>
+          <td>Long-term genuine inability to pay in full</td>
+          <td>Temporary, short-term hardship</td>
+          <td>Bank's own accounting decision</td>
+          <td>Borrowers who can pay as agreed</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    In short: restructuring keeps the loan alive on revised terms and suits temporary setbacks, while an OTS closes the account for less than what's owed and is meant for cases of genuine, longer-term inability to repay. If you're only facing a short cash-flow gap, it's worth exploring the <a href="/blogs/what-is-loan-restructuring/">loan restructuring route</a> before considering settlement.
+  </p>
+
+  <h2>Does OTS Affect Your CIBIL Score?</h2>
+
+  <p>
+    Yes. Once an account is settled via OTS, it gets marked <strong>"Settled"</strong> rather than "Closed" on your <a href="/blogs/what-is-cibil-score/">CIBIL score</a> report, and future lenders view this status less favourably than a normal closure. Score drops of roughly <strong>75 to 100+ points</strong> are commonly reported, though the actual impact depends on your starting score and overall credit profile. This "Settled" marking typically stays visible on your report for around <strong>seven years</strong>.
+  </p>
+
+  <h3>Settled vs Written Off vs Closed &mdash; What's the Difference?</h3>
+
+  <p>
+    These three terms are frequently mixed up, even by people who've been through the process. <strong>"Closed"</strong> means the loan was repaid exactly as agreed. <strong>"Settled"</strong> means the bank accepted less than the full amount through an OTS &mdash; the account is finished, but the shortfall is on record. <strong>"Written Off"</strong> means the bank removed the loan from its books for accounting purposes, often without your involvement or any payment, and this tends to carry an even heavier, longer-lasting mark on your credit history than a settlement. Note that credit bureaus other than CIBIL &mdash; such as Experian, CRIF High Mark, and Equifax &mdash; report the same settlement in a similar way, so the impact isn't limited to one bureau.
+  </p>
+
+  <h2>Is the Waived Loan Amount Taxable?</h2>
+
+  <p>
+    This is genuinely case-specific, so treat the following as general education rather than tax advice. Amounts waived on business or trading liabilities can potentially attract tax under <strong>Section 41(1) of the Income Tax Act</strong>, since a waiver can be treated as a benefit arising from a business transaction. For an individual's personal, non-business loan &mdash; a personal loan or credit card, for instance &mdash; the tax position is generally more favourable, but it still depends on the specific facts of the loan and how the waiver is structured.
+  </p>
+
+  <div class="ots-disclaimer">
+    This is general information, not tax advice. Please consult a qualified Chartered Accountant about how a settlement applies to your specific situation.
+  </div>
+
+  <h2>Pros and Cons of Opting for an OTS</h2>
+
+  <div class="ots-proscons">
+    <div>
+      <h3>Pros</h3>
+      <ul>
+        <li>Stops recovery calls and legal action</li>
+        <li>Resolves the debt faster than prolonged litigation</li>
+        <li>Provides documented closure through the NOC</li>
+        <li>Reduces the overall financial burden versus the full outstanding amount</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Cons</h3>
+      <ul>
+        <li>"Settled" tag can hurt your credit score for around 7 years</li>
+        <li>New credit, especially unsecured loans, becomes harder to get during that period</li>
+        <li>Possible tax implications depending on the nature of the loan</li>
+        <li>A lump sum is still required upfront, which not everyone can arrange</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Things to Check Before Agreeing to an OTS</h2>
+
+  <div class="ots-checklist">
+    <ul>
+      <li>Always get the settlement letter in writing before you pay anything</li>
+      <li>Confirm whether any token or upfront amount (often 5&ndash;10% of the settlement figure) will be adjusted into the final payment</li>
+      <li>Ask whether the account will be reported as "Settled," or whether there's any path to a "Closed" status later if the waived amount is eventually repaid</li>
+      <li>Get the No Dues Certificate (NOC) after the final payment, and keep it safely, indefinitely</li>
+      <li>Check your credit report 30&ndash;45 days after settlement to confirm it's been updated accurately</li>
+    </ul>
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="ots-faq">
+    <details>
+      <summary>What is the full form of OTS in banking?</summary>
+      <p>OTS stands for One Time Settlement &mdash; a negotiated, lump-sum payment that closes a defaulted loan account for less than the total amount owed. In RBI terminology, it's referred to as a compromise settlement.</p>
+    </details>
+    <details>
+      <summary>Is OTS good or bad for the borrower?</summary>
+      <p>It's neither purely good nor bad &mdash; it's a trade-off. It stops recovery pressure and resolves the debt, but it comes with a lasting mark on your credit report. It's generally considered a last resort rather than a first option.</p>
+    </details>
+    <details>
+      <summary>How much does CIBIL score drop after an OTS?</summary>
+      <p>Reported drops commonly range from roughly 75 to 100+ points, though the exact fall depends on your starting score and overall credit history. The "Settled" status typically stays on record for about seven years.</p>
+    </details>
+    <details>
+      <summary>Can I get a new loan after doing an OTS?</summary>
+      <p>It's possible but harder, especially for unsecured credit, while the "Settled" tag remains on your report. Some lenders may still approve secured loans or smaller amounts depending on your overall profile.</p>
+    </details>
+    <details>
+      <summary>What is the difference between "Settled" and "Closed" in a credit report?</summary>
+      <p>"Closed" means the loan was repaid in full as agreed. "Settled" means the bank accepted a reduced amount through an OTS, and the shortfall remains visible on your credit history.</p>
+    </details>
+    <details>
+      <summary>Who is not eligible for an OTS?</summary>
+      <p>Banks are typically reluctant to settle with wilful defaulters or fraud-linked accounts, though RBI's 2023 framework allows this in limited cases with Board approval and a 12-month cooling-off period. It's a discretionary option, not a guaranteed right.</p>
+    </details>
+    <details>
+      <summary>Is the amount waived under OTS taxable?</summary>
+      <p>It can be, particularly for business-related liabilities under Section 41(1) of the Income Tax Act. For personal, non-business loans the position is usually more favourable, but it depends on individual facts &mdash; consult a Chartered Accountant.</p>
+    </details>
+    <details>
+      <summary>What documents are required to apply for OTS?</summary>
+      <p>Typically a written settlement request, proof of financial hardship (such as medical bills, a termination letter, or reduced income proof), identity and loan account documents, and any prior communication from the bank regarding the default.</p>
+    </details>
+  </div>
+
+  <p class="ots-cta">
+    An OTS is a legitimate way to close a genuinely unmanageable loan, but it's meant to be a last resort rather than a first move &mdash; it's worth exploring repayment plans or <a href="/blogs/what-is-loan-restructuring/">restructuring options</a> first. If you're trying to plan repayments before things reach this stage, our <a href="/tools/emi-calculator/">EMI calculator</a> and guide on <a href="/blogs/how-to-improve-cibil-score/">improving your credit score</a> are good places to start, and you can compare current options on our <a href="/personal-loan/">personal loan page</a>.
+  </p>
+
+  <p class="ots-source-note">
+    Regulatory reference: RBI Framework for Compromise Settlements and Technical Write-offs, circular RBI/2023-24/40 dated June 8, 2023.
+  </p>
+
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the full form of OTS in banking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OTS stands for One Time Settlement, a negotiated lump-sum payment that closes a defaulted loan account for less than the total amount owed. In RBI terminology, it is referred to as a compromise settlement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is OTS good or bad for the borrower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a trade-off rather than purely good or bad. It stops recovery pressure and resolves the debt, but leaves a lasting mark on the credit report, so it is generally treated as a last resort."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does CIBIL score drop after an OTS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reported drops commonly range from roughly 75 to 100 or more points, depending on the starting score and credit history. The Settled status typically stays on record for about seven years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a new loan after doing an OTS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is possible but harder, especially for unsecured credit, while the Settled tag remains on the credit report. Some lenders may still approve secured loans or smaller amounts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Settled and Closed in a credit report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Closed means the loan was repaid in full as agreed. Settled means the bank accepted a reduced amount through an OTS, and the shortfall remains visible on the credit history."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is not eligible for an OTS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Banks are typically reluctant to settle with wilful defaulters or fraud-linked accounts, though RBI's 2023 framework allows this in limited cases with Board approval and a 12-month cooling-off period."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the amount waived under OTS taxable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can be, particularly for business-related liabilities under Section 41(1) of the Income Tax Act. For personal loans the position is usually more favourable, but it depends on individual facts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What documents are required to apply for OTS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typically a written settlement request, proof of financial hardship, identity and loan account documents, and any prior communication from the bank regarding the default."
+      }
+    }
+  ]
+}
+</script>
+
+
+{% include "author.html" %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600&display=swap');
+
+  .rg-section {
+    font-family: 'Outfit', sans-serif;
+    padding: 3rem 0 1.5rem;
+  }
+
+  .rg-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .rg-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+  }
+
+  .rg-eyebrow::before,
+  .rg-eyebrow::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: #2563eb;
+    opacity: 0.4;
+  }
+
+  .rg-heading {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .rg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rg-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rg-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2563eb;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .rg-card:hover {
+    border-color: #d1d9f5;
+    transform: translateX(4px);
+  }
+
+  .rg-card:hover::before {
+    opacity: 1;
+  }
+
+  .rg-card__number {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2563eb;
+    opacity: 0.12;
+    line-height: 1;
+    min-width: 2.5rem;
+    transition: opacity 0.2s ease;
+    user-select: none;
+  }
+
+  .rg-card:hover .rg-card__number {
+    opacity: 0.22;
+  }
+
+  .rg-card__divider {
+    width: 1px;
+    height: 3rem;
+    background: #e9e9e9;
+    flex-shrink: 0;
+  }
+
+  .rg-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .rg-card__label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2563eb;
+  }
+
+  .rg-card__title {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+  }
+
+  .rg-card:hover .rg-card__title {
+    color: #2563eb;
+  }
+
+  .rg-card__arrow {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    color: #2563eb;
+  }
+
+  .rg-card:hover .rg-card__arrow {
+    background: #eff4ff;
+    border-color: #bfcffe;
+    transform: translateX(2px);
+  }
+
+  .rg-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .rg-card__number { display: none; }
+    .rg-card__divider { display: none; }
+  }
+</style>
+
+<section class="rg-section">
+
+  <div class="rg-header">
+    <div class="rg-eyebrow">Keep reading</div>
+    <h2 class="rg-heading">Related Guides</h2>
+  </div>
+
+  <div class="rg-list">
+
+    <a href="../personal-loan-settlement-india-2026/" class="rg-card">
+      <span class="rg-card__number">01</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Personal Loan Settlement in India 2026</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+    <a href="../harassment-and-legal-protection-india/" class="rg-card">
+      <span class="rg-card__number">02</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Harassment and Legal Protection in India</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="rg-divider"></div>
+</section>
