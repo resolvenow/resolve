@@ -1,0 +1,783 @@
+---
+layout: layout.html
+title: "One Time Settlement (OTS) Scheme: Eligibility, Process & How to Apply"
+description: "Who qualifies for a bank's One Time Settlement scheme, how the application process works, and what documents you need. A step-by-step OTS guide for 2026."
+tags: ["OTS", "one time settlement", "eligibility", "NPA"]
+date: 2026-07-18
+---
+
+<style>
+  .ots-article {
+    --ots-bg: #F3F5F4;
+    --ots-surface: #FFFFFF;
+    --ots-ink: #17262B;
+    --ots-ink-soft: #4C5D62;
+    --ots-line: #D9DFDD;
+    --ots-accent: #8B3A2A;
+    --ots-accent-soft: #F2E3DD;
+    --ots-ledger: #2F5D50;
+    --ots-ledger-soft: #E3EEEA;
+    --ots-font-display: "Fraunces", Georgia, serif;
+    --ots-font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    --ots-font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+    background: var(--ots-bg);
+    color: var(--ots-ink);
+    font-family: var(--ots-font-body);
+    line-height: 1.65;
+    font-size: 17px;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  .ots-article * { box-sizing: border-box; }
+
+  .ots-wrap {
+    max-width: 960px;
+    margin: 72px auto;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+
+  .ots-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--ots-font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ots-accent);
+    margin-bottom: 1rem;
+  }
+  .ots-eyebrow::before {
+    content: "";
+    width: 22px;
+    height: 1px;
+    background: var(--ots-accent);
+  }
+
+  .ots-h1 {
+    font-family: var(--ots-font-display);
+    font-weight: 600;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.75rem;
+  }
+
+  .ots-meta {
+    font-family: var(--ots-font-mono);
+    font-size: 0.78rem;
+    color: var(--ots-ink-soft);
+    margin-bottom: 1.75rem;
+  }
+
+  .ots-dek {
+    font-size: 1.08rem;
+    color: var(--ots-ink-soft);
+    margin-bottom: 2rem;
+  }
+
+  .ots-takeaways {
+    background: var(--ots-surface);
+    border: 1px solid var(--ots-line);
+    border-left: 3px solid var(--ots-ledger);
+    padding: 1.25rem 1.4rem;
+    margin: 0 0 2.25rem;
+  }
+  .ots-takeaways p {
+    font-family: var(--ots-font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ots-ledger);
+    margin: 0 0 0.7rem;
+  }
+  .ots-takeaways ul { margin: 0; padding-left: 1.1rem; }
+  .ots-takeaways li { margin-bottom: 0.5rem; font-size: 0.95rem; }
+  .ots-takeaways li:last-child { margin-bottom: 0; }
+  .ots-takeaways strong { color: var(--ots-ink); }
+
+  .ots-toc {
+    border: 1px solid var(--ots-line);
+    background: var(--ots-surface);
+    padding: 1.25rem 1.4rem;
+    margin: 0 0 2.5rem;
+  }
+  .ots-toc-title {
+    font-family: var(--ots-font-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 0.85rem;
+  }
+  .ots-toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: ots-toc-counter;
+    columns: 2;
+    column-gap: 1.5rem;
+  }
+  .ots-toc li {
+    counter-increment: ots-toc-counter;
+    font-size: 0.88rem;
+    margin-bottom: 0.55rem;
+    break-inside: avoid;
+  }
+  .ots-toc li::before {
+    content: counter(ots-toc-counter, decimal-leading-zero);
+    font-family: var(--ots-font-mono);
+    color: var(--ots-accent);
+    margin-right: 0.5rem;
+    font-size: 0.78rem;
+  }
+  .ots-toc a { color: var(--ots-ink); text-decoration: none; border-bottom: 1px solid var(--ots-line); }
+  .ots-toc a:hover { border-color: var(--ots-ink); }
+
+  .ots-article section { margin-bottom: 2.5rem; }
+
+  .ots-h2 {
+    font-family: var(--ots-font-display);
+    font-weight: 600;
+    font-size: 1.45rem;
+    margin: 0 0 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--ots-line);
+  }
+  .ots-h3 {
+    font-family: var(--ots-font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.75rem;
+  }
+
+  .ots-article p { margin: 0 0 1rem; }
+  .ots-article a { color: var(--ots-accent); text-decoration-thickness: 1px; }
+  .ots-article a:hover { color: var(--ots-ink); }
+  .ots-article ul, .ots-article ol.ots-steps { padding-left: 1.2rem; margin: 0 0 1rem; }
+  .ots-article li { margin-bottom: 0.5rem; }
+
+  .ots-table-wrap { overflow-x: auto; margin: 0 0 1.25rem; }
+  .ots-article table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background: var(--ots-surface);
+  }
+  .ots-article th, .ots-article td {
+    border: 1px solid var(--ots-line);
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .ots-article th {
+    font-family: var(--ots-font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ots-ink-soft);
+    background: var(--ots-bg);
+  }
+  .ots-article td.ots-figure, .ots-article th.ots-figure { font-family: var(--ots-font-mono); }
+  .ots-figure-waived { color: var(--ots-ledger); font-weight: 500; }
+
+  .ots-steps { counter-reset: ots-step; }
+  .ots-steps > li {
+    list-style: none;
+    position: relative;
+    padding-left: 2.3rem;
+    margin-bottom: 1.1rem;
+  }
+  .ots-steps > li::before {
+    counter-increment: ots-step;
+    content: counter(ots-step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0.05rem;
+    font-family: var(--ots-font-mono);
+    font-size: 0.78rem;
+    color: var(--ots-accent);
+  }
+  .ots-steps > li strong { display: block; margin-bottom: 0.2rem; }
+
+  .ots-stamp-block {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    background: var(--ots-accent-soft);
+    border: 1px solid var(--ots-accent);
+    padding: 1.25rem 1.4rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .ots-stamp { width: 92px; height: 92px; flex-shrink: 0; transform: rotate(-8deg); }
+  .ots-stamp-ring { fill: none; stroke: var(--ots-accent); }
+  .ots-stamp-ring.ots-stamp-ring-outer { stroke-width: 2; }
+  .ots-stamp-ring.ots-stamp-ring-inner { stroke-width: 1; stroke-dasharray: 3 3; }
+  .ots-stamp-text {
+    font-family: var(--ots-font-mono);
+    font-size: 8.5px;
+    letter-spacing: 0.05em;
+    fill: var(--ots-accent);
+  }
+  .ots-stamp-core {
+    font-family: var(--ots-font-display);
+    font-weight: 600;
+    font-size: 17px;
+    fill: var(--ots-accent);
+  }
+  .ots-stamp-copy p { margin: 0; font-size: 0.92rem; }
+  .ots-stamp-copy strong { font-family: var(--ots-font-display); font-size: 1.02rem; }
+
+  .ots-stamp-mini { width: 46px; height: 46px; flex-shrink: 0; transform: rotate(6deg); }
+
+  .ots-faq-item {
+    border-bottom: 1px solid var(--ots-line);
+    padding: 0.9rem 0;
+  }
+  .ots-faq-item:first-of-type { border-top: 1px solid var(--ots-line); }
+  .ots-faq-item summary {
+    cursor: pointer;
+    font-weight: 500;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .ots-faq-item summary::-webkit-details-marker { display: none; }
+  .ots-faq-item summary::after {
+    content: "+";
+    font-family: var(--ots-font-mono);
+    color: var(--ots-accent);
+    flex-shrink: 0;
+  }
+  .ots-faq-item[open] summary::after { content: "\2212"; }
+  .ots-faq-item p { margin: 0.65rem 0 0; color: var(--ots-ink-soft); font-size: 0.94rem; }
+
+  .ots-disclaimer {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    font-size: 0.85rem;
+    color: var(--ots-ink-soft);
+    border: 1px solid var(--ots-line);
+    padding: 1.1rem 1.25rem;
+    margin-top: 2rem;
+  }
+  .ots-disclaimer p { margin: 0; }
+
+  .ots-sources {
+    font-size: 0.8rem;
+    color: var(--ots-ink-soft);
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--ots-line);
+  }
+  .ots-sources a { margin-right: 1rem; }
+
+  @media (max-width: 560px) {
+    .ots-toc ol { columns: 1; }
+    .ots-stamp-block { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+
+<article class="ots-article">
+  <div class="ots-wrap">
+
+    <p class="ots-eyebrow">Personal Loans &middot; Debt Resolution</p>
+    <h1 class="ots-h1">One Time Settlement (OTS) Scheme: Eligibility, Process &amp; How to Apply</h1>
+    <p class="ots-meta">Updated July 2026 &middot; 8 min read</p>
+
+    <p class="ots-dek">If your loan account has slipped into default, a One Time Settlement lets you close it by paying a negotiated lump sum instead of fighting recovery notices for years. Here's who qualifies, how banks decide the amount, and the exact steps to apply.</p>
+
+    <div class="ots-takeaways">
+      <p>In short</p>
+      <ul>
+        <li>OTS closes a defaulted loan for a <strong>negotiated lump sum below the total outstanding dues</strong> &mdash; it's not available on regular, up-to-date accounts.</li>
+        <li>Banks typically settle for <strong>40%&ndash;70% of the outstanding balance</strong>, but every case is priced individually.</li>
+        <li>Your credit report will show <strong>&ldquo;Settled&rdquo;</strong>, not &ldquo;Closed&rdquo; &mdash; expect a dent in your score.</li>
+        <li><strong>Never pay before you have the settlement letter in writing.</strong> A verbal assurance from a recovery agent is not an approval.</li>
+      </ul>
+    </div>
+
+    <nav class="ots-toc" aria-label="Table of contents">
+      <p class="ots-toc-title">On this page</p>
+      <ol>
+        <li><a href="#ots-what-is">What OTS actually means</a></li>
+        <li><a href="#ots-eligible">Who is eligible</a></li>
+        <li><a href="#ots-vs-others">OTS vs restructuring vs write-off</a></li>
+        <li><a href="#ots-amount">How much gets settled</a></li>
+        <li><a href="#ots-process">The application process</a></li>
+        <li><a href="#ots-documents">Documents you'll need</a></li>
+        <li><a href="#ots-credit-tax">Credit score &amp; tax impact</a></li>
+        <li><a href="#ots-pros-cons">Pros and cons</a></li>
+        <li><a href="#ots-faq">FAQs</a></li>
+      </ol>
+    </nav>
+
+    <section id="ots-what-is">
+      <h2 class="ots-h2">What OTS actually means</h2>
+      <p>A One Time Settlement is an agreement between you and your lender to close a defaulted loan by paying less than what's owed. The bank waives the remaining balance once the agreed amount clears &mdash; a very different outcome from a normal closure, where you repay every rupee.</p>
+      <p>Banks usually only entertain this once an account has been classified as a <strong>Non-Performing Asset (NPA)</strong> &mdash; typically after 90 days of missed EMIs &mdash; and after they've weighed the cost of litigation against the certainty of recovering something now. Here's how the arithmetic can look on a defaulted personal loan:</p>
+      <div class="ots-table-wrap">
+        <table>
+          <thead><tr><th>Particulars</th><th class="ots-figure">Amount</th></tr></thead>
+          <tbody>
+            <tr><td>Outstanding principal</td><td class="ots-figure">₹4,60,000</td></tr>
+            <tr><td>Accrued interest</td><td class="ots-figure">₹1,20,000</td></tr>
+            <tr><td>Penal charges</td><td class="ots-figure">₹20,000</td></tr>
+            <tr><td><strong>Total outstanding</strong></td><td class="ots-figure"><strong>₹6,00,000</strong></td></tr>
+            <tr><td>Negotiated settlement</td><td class="ots-figure">₹3,90,000</td></tr>
+            <tr><td>Amount waived</td><td class="ots-figure ots-figure-waived">₹2,10,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>This example is illustrative only &mdash; your own settlement is priced against your outstanding balance, not anyone else's.</p>
+    </section>
+
+    <section id="ots-eligible">
+      <h2 class="ots-h2">Who is eligible for an OTS</h2>
+      <p>Eligibility isn't automatic, and it varies by lender, but most banks look for the same handful of signals:</p>
+      <ul>
+        <li><strong>The account is already an NPA.</strong> Loans still being repaid on schedule are rarely considered.</li>
+        <li><strong>Genuine hardship</strong> &mdash; job loss, salary cuts, medical emergencies, business losses, or a similar documented setback.</li>
+        <li><strong>Ability to arrange the lump sum</strong>, whether from savings, family support, or asset sales, within the bank's timeline.</li>
+        <li><strong>A track record of cooperating</strong> with the bank's communications rather than avoiding them.</li>
+        <li><strong>Meeting the lender's own OTS policy</strong>, which can vary by loan type, NPA vintage, and whether the loan is secured.</li>
+      </ul>
+      <p>Always confirm the current terms directly with your lender rather than assuming a scheme you've read about applies to your account.</p>
+    </section>
+
+    <section id="ots-vs-others">
+      <h2 class="ots-h2">OTS vs restructuring vs write-off vs normal closure</h2>
+      <p>Borrowers often conflate these, but they resolve debt in very different ways:</p>
+      <div class="ots-table-wrap">
+        <table>
+          <thead><tr><th>Feature</th><th>OTS</th><th>Restructuring</th><th>Technical write-off</th><th>Normal closure</th></tr></thead>
+          <tbody>
+            <tr><td>Outstanding reduced?</td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+            <tr><td>Terms modified?</td><td>No</td><td>Yes</td><td>No</td><td>No</td></tr>
+            <tr><td>Credit impact</td><td>Moderate&ndash;High</td><td>Moderate</td><td>High</td><td>Minimal</td></tr>
+            <tr><td>Debt legally ends?</td><td>Yes, on payment</td><td>After full repayment</td><td>Not necessarily</td><td>Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>A technical write-off is purely an accounting entry on the bank's books &mdash; it does not forgive the debt, and recovery can continue afterward.</p>
+    </section>
+
+    <section id="ots-amount">
+      <h2 class="ots-h2">How much of the loan actually gets settled</h2>
+      <p>There's no fixed formula. Banks weigh the age of the NPA, your repayment history, the strength of any collateral, whether legal proceedings have already started, and their own recovery policy. In practice, settlements often land somewhere between <strong>40% and 70% of the total outstanding balance</strong> &mdash; but treat that as an industry range, not a promise.</p>
+    </section>
+
+    <section id="ots-process">
+      <h2 class="ots-h2">The application process, step by step</h2>
+      <ol class="ots-steps">
+        <li><strong>Check your loan status.</strong> Confirm the outstanding amount, NPA classification, and whether any legal notice has already been issued.</li>
+        <li><strong>Work out what you can realistically pay</strong> in one lump sum &mdash; a proposal you can't follow through on wastes everyone's time.</li>
+        <li><strong>Gather hardship proof</strong>: termination letters, medical bills, income statements, bank statements.</li>
+        <li><strong>Reach the right team.</strong> Settlement decisions sit with the recovery department, NPA cell, or asset recovery branch &mdash; not general customer care.</li>
+        <li><strong>Submit a written proposal</strong> with your account details, hardship reason, and proposed amount, kept factual and free of exaggeration.</li>
+        <li><strong>Negotiate.</strong> Expect the bank to counter with a higher figure, extra documents, or a tighter payment window.</li>
+        <li><strong>Get the settlement letter.</strong> This is the step that protects you &mdash; see below.</li>
+        <li><strong>Pay through traceable banking channels</strong> and keep every receipt.</li>
+        <li><strong>Collect your No Dues / No Objection Certificate</strong> as proof the obligation is closed.</li>
+        <li><strong>Check your credit report</strong> after 30&ndash;45 days to confirm the status was updated correctly.</li>
+      </ol>
+
+      <div class="ots-stamp-block">
+        <svg class="ots-stamp" viewBox="0 0 200 200" role="img" aria-label="Stamp reading: get it in writing">
+          <defs>
+            <path id="ots-stamp-path-a" d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" />
+          </defs>
+          <circle cx="100" cy="100" r="94" class="ots-stamp-ring ots-stamp-ring-outer" />
+          <circle cx="100" cy="100" r="66" class="ots-stamp-ring ots-stamp-ring-inner" />
+          <text class="ots-stamp-text">
+            <textPath href="#ots-stamp-path-a" startOffset="1%">NO WRITTEN LETTER &middot; NO PAYMENT &middot; NO WRITTEN LETTER &middot; NO PAYMENT &middot;</textPath>
+          </text>
+          <text x="100" y="94" text-anchor="middle" class="ots-stamp-core">GET IT</text>
+          <text x="100" y="118" text-anchor="middle" class="ots-stamp-core">IN WRITING</text>
+        </svg>
+        <div class="ots-stamp-copy">
+          <p><strong>The one rule that matters most:</strong> never transfer any settlement amount until you hold the bank's official approval letter, stating the settlement amount, due date, and payment terms. Recovery agents and phone assurances cannot approve an OTS &mdash; only the authorised department can.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ots-documents">
+      <h2 class="ots-h2">Documents you'll typically need</h2>
+      <div class="ots-table-wrap">
+        <table>
+          <thead><tr><th>Document</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>Loan account statement</td><td>Confirms outstanding dues</td></tr>
+            <tr><td>Identity &amp; address proof</td><td>KYC verification</td></tr>
+            <tr><td>Income proof / bank statements</td><td>Assesses current repayment capacity</td></tr>
+            <tr><td>Hardship proof (medical bills, termination letter, etc.)</td><td>Supports the settlement rationale</td></tr>
+            <tr><td>Written OTS application</td><td>Formal, on-record request</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="ots-credit-tax">
+      <h2 class="ots-h2">Effect on your credit score, and tax treatment</h2>
+      <p>Settlements are governed by the Reserve Bank of India's <a href="https://www.rbi.org.in/commonman/english/scripts/FAQs.aspx?Id=3459" target="_blank" rel="noopener">Framework for Compromise Settlements and Technical Write-offs</a>, which requires every regulated lender to run OTS under a board-approved policy rather than ad hoc discretion.</p>
+      <p>Where it bites is your credit history. A fully repaid loan is reported as <strong>Closed</strong>; a settled one is reported as <strong>Settled</strong>, which most lenders read as a higher-risk signal. You can check exactly how a settlement shows up on your report through your bureau, such as <a href="https://www.cibil.com/" target="_blank" rel="noopener">CIBIL</a>. The mark typically stays on record for years, though disciplined repayment on new, smaller credit lines can rebuild your profile over time.</p>
+      <p>On tax, waived amounts on <strong>personal loans</strong> are generally not treated as taxable income, but business-loan waivers can be more complex. Check current guidance on the <a href="https://www.incometax.gov.in/" target="_blank" rel="noopener">Income Tax Department's portal</a> or with a chartered accountant before assuming either way.</p>
+    </section>
+
+    <section id="ots-pros-cons">
+      <h2 class="ots-h2">Pros and cons</h2>
+      <div class="ots-table-wrap">
+        <table>
+          <thead><tr><th>Pros</th><th>Cons</th></tr></thead>
+          <tbody>
+            <tr><td>Reduces the total repayment burden</td><td>Reported as &ldquo;Settled,&rdquo; not &ldquo;Closed&rdquo;</td></tr>
+            <tr><td>Faster than prolonged legal proceedings</td><td>Can lower your credit score</td></tr>
+            <tr><td>Ends recovery pressure and gives closure</td><td>May complicate future loan approvals</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>If you can realistically repay the loan in full over time, a normal closure protects your credit history better than a settlement will.</p>
+    </section>
+
+    <section id="ots-faq">
+      <h2 class="ots-h2">Frequently asked questions</h2>
+
+      <details class="ots-faq-item">
+        <summary>What is OTS in banking?</summary>
+        <p>A negotiated agreement where a borrower pays an agreed lump sum, lower than the total outstanding, to close a defaulted loan.</p>
+      </details>
+      <details class="ots-faq-item">
+        <summary>Can I apply for OTS myself, without an agent?</summary>
+        <p>Yes. Most borrowers can approach the bank's recovery or NPA department directly; a paid agent isn't required.</p>
+      </details>
+      <details class="ots-faq-item">
+        <summary>How much of my loan can actually be waived?</summary>
+        <p>There's no fixed percentage. It depends on your outstanding balance, the age of the NPA, and the lender's internal policy &mdash; settlements commonly fall between 40% and 70% of dues, but every case is priced individually.</p>
+      </details>
+      <details class="ots-faq-item">
+        <summary>Does OTS hurt my CIBIL score?</summary>
+        <p>Generally, yes. A settled account is reported differently from a closed one and is often read as higher risk by future lenders.</p>
+      </details>
+      <details class="ots-faq-item">
+        <summary>Is the waived loan amount taxable?</summary>
+        <p>Personal loan waivers are usually not taxed as income, but business loan settlements can carry tax implications worth checking with a tax professional.</p>
+      </details>
+      <details class="ots-faq-item">
+        <summary>Can I get a new loan after settling an old one?</summary>
+        <p>Yes, though approval may be harder until you rebuild your credit profile through on-time repayment elsewhere.</p>
+      </details>
+      <details class="ots-faq-item">
+        <summary>What should I do immediately after paying the settlement?</summary>
+        <p>Collect your No Dues Certificate or No Objection Certificate, retain every payment record, and verify your credit report reflects the update within 30&ndash;45 days.</p>
+      </details>
+    </section>
+
+    <div class="ots-disclaimer">
+      <svg class="ots-stamp-mini" viewBox="0 0 200 200" role="img" aria-label="Small stamp icon">
+        <defs>
+          <path id="ots-stamp-path-b" d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" />
+        </defs>
+        <circle cx="100" cy="100" r="94" class="ots-stamp-ring ots-stamp-ring-outer" />
+        <circle cx="100" cy="100" r="66" class="ots-stamp-ring ots-stamp-ring-inner" />
+        <text x="100" y="112" text-anchor="middle" class="ots-stamp-core">VERIFY</text>
+      </svg>
+      <p>This article is for general information only and isn't financial, legal, or tax advice. OTS eligibility, timelines, and settlement percentages vary by lender &mdash; confirm current terms with your bank and consult a qualified professional before signing anything.</p>
+    </div>
+
+    <p class="ots-sources">Sources: <a href="https://www.rbi.org.in/commonman/english/scripts/FAQs.aspx?Id=3459" target="_blank" rel="noopener">RBI &ndash; Compromise Settlements Framework FAQs</a> <a href="https://www.cibil.com/" target="_blank" rel="noopener">CIBIL</a> <a href="https://www.incometax.gov.in/" target="_blank" rel="noopener">Income Tax Department</a></p>
+
+  </div>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is OTS in banking?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A negotiated agreement where a borrower pays an agreed lump sum, lower than the total outstanding, to close a defaulted loan." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I apply for OTS myself, without an agent?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most borrowers can approach the bank's recovery or NPA department directly; a paid agent isn't required." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much of my loan can actually be waived?",
+      "acceptedAnswer": { "@type": "Answer", "text": "There's no fixed percentage. It depends on the outstanding balance, the age of the NPA, and the lender's internal policy. Settlements commonly fall between 40% and 70% of dues, but every case is priced individually." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does OTS hurt my CIBIL score?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Generally, yes. A settled account is reported differently from a closed one and is often read as higher risk by future lenders." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the waived loan amount taxable?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Personal loan waivers are usually not taxed as income, but business loan settlements can carry tax implications worth checking with a tax professional." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a new loan after settling an old one?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, though approval may be harder until the borrower rebuilds their credit profile through on-time repayment elsewhere." }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do immediately after paying the settlement?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Collect the No Dues Certificate or No Objection Certificate, retain every payment record, and verify the credit report reflects the update within 30-45 days." }
+    }
+  ]
+}
+</script>
+
+
+{% include "author.html" %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600&display=swap');
+
+  .rg-section {
+    font-family: 'Outfit', sans-serif;
+    padding: 3rem 0 1.5rem;
+  }
+
+  .rg-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .rg-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+  }
+
+  .rg-eyebrow::before,
+  .rg-eyebrow::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: #2563eb;
+    opacity: 0.4;
+  }
+
+  .rg-heading {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .rg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rg-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rg-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2563eb;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .rg-card:hover {
+    border-color: #d1d9f5;
+    transform: translateX(4px);
+  }
+
+  .rg-card:hover::before {
+    opacity: 1;
+  }
+
+  .rg-card__number {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2563eb;
+    opacity: 0.12;
+    line-height: 1;
+    min-width: 2.5rem;
+    transition: opacity 0.2s ease;
+    user-select: none;
+  }
+
+  .rg-card:hover .rg-card__number {
+    opacity: 0.22;
+  }
+
+  .rg-card__divider {
+    width: 1px;
+    height: 3rem;
+    background: #e9e9e9;
+    flex-shrink: 0;
+  }
+
+  .rg-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .rg-card__label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2563eb;
+  }
+
+  .rg-card__title {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+  }
+
+  .rg-card:hover .rg-card__title {
+    color: #2563eb;
+  }
+
+  .rg-card__arrow {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    color: #2563eb;
+  }
+
+  .rg-card:hover .rg-card__arrow {
+    background: #eff4ff;
+    border-color: #bfcffe;
+    transform: translateX(2px);
+  }
+
+  .rg-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .rg-card__number { display: none; }
+    .rg-card__divider { display: none; }
+  }
+</style>
+
+<section class="rg-section">
+
+  <div class="rg-header">
+    <div class="rg-eyebrow">Keep reading</div>
+    <h2 class="rg-heading">Related Guides</h2>
+  </div>
+
+  <div class="rg-list">
+
+    <a href="../personal-loan-settlement-india-2026/" class="rg-card">
+      <span class="rg-card__number">01</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Personal Loan Settlement in India 2026</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+    <a href="../harassment-and-legal-protection-india/" class="rg-card">
+      <span class="rg-card__number">02</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Harassment and Legal Protection in India</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+    <a href="../what-happens-if-loan-default-india-2026/" class="rg-card">
+      <span class="rg-card__number">03</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">What happens if loan defaults in 2026</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+    <a href="../credit-card-settlement-2026/" class="rg-card">
+      <span class="rg-card__number">04</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Credit card settlement in 2026</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="rg-divider"></div>
+</section>
