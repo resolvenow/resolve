@@ -1,0 +1,646 @@
+---
+layout: layout.html
+title: "Loan Settlement vs Foreclosure: What's the Real Difference?"
+description: "Settlement and foreclosure both close a loan early, but they affect your credit score very differently. Here's how to tell them apart before you decide."
+tags:
+  - loan settlement
+  - foreclosure
+  - CIBIL
+  - loan closure
+date: 2026-07-19
+---
+
+<style>
+  .lsf-article {
+    --lsf-ink: #1c1f1e;
+    --lsf-sub: #565f5c;
+    --lsf-line: #dde1df;
+    --lsf-paper: #fbfaf7;
+    --lsf-accent: #1f5f4f;
+    --lsf-accent-soft: #eef3f1;
+    max-width: 960px;
+    margin: 84px auto;
+    padding: 2.5rem 1.25rem 4rem;
+    color: var(--lsf-ink);
+    background: var(--lsf-paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+    font-size: 1.06rem;
+  }
+
+  .lsf-article .lsf-kicker {
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--lsf-accent);
+    border-bottom: 1px solid var(--lsf-accent);
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .lsf-article h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+    margin: 0 0 0.6rem;
+    letter-spacing: -0.01em;
+  }
+
+  .lsf-article .lsf-dek {
+    font-size: 1.12rem;
+    color: var(--lsf-sub);
+    margin: 0 0 1.75rem;
+    font-style: italic;
+  }
+
+  .lsf-article .lsf-meta {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.85rem;
+    color: var(--lsf-sub);
+    border-top: 1px solid var(--lsf-line);
+    border-bottom: 1px solid var(--lsf-line);
+    padding: 0.6rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .lsf-article h2 {
+    font-size: 1.4rem;
+    margin: 2.6rem 0 0.9rem;
+    letter-spacing: -0.005em;
+  }
+
+  .lsf-article h3 {
+    font-size: 1.1rem;
+    margin: 1.6rem 0 0.6rem;
+    color: var(--lsf-ink);
+  }
+
+  .lsf-article p { margin: 0 0 1rem; }
+
+  .lsf-article a {
+    color: var(--lsf-accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  .lsf-article ul,
+  .lsf-article ol {
+    margin: 0 0 1.1rem;
+    padding-left: 1.3rem;
+  }
+
+  .lsf-article li { margin-bottom: 0.4rem; }
+
+  .lsf-callout {
+    border-left: 3px solid var(--lsf-accent);
+    background: var(--lsf-accent-soft);
+    padding: 0.9rem 1.1rem;
+    margin: 1.6rem 0 2rem;
+    font-size: 0.98rem;
+  }
+
+  .lsf-callout p:last-child { margin-bottom: 0; }
+
+  .lsf-contrast {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    margin: 1.4rem 0 1.8rem;
+  }
+
+  .lsf-contrast blockquote {
+    margin: 0;
+    padding: 0.85rem 1.1rem;
+    border-left: 2px solid var(--lsf-line);
+    font-style: italic;
+    color: var(--lsf-sub);
+  }
+
+  .lsf-contrast blockquote strong {
+    display: block;
+    font-style: normal;
+    color: var(--lsf-ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .lsf-table-wrap {
+    overflow-x: auto;
+    margin: 1.4rem 0 2rem;
+    border: 1px solid var(--lsf-line);
+  }
+
+  .lsf-article table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  .lsf-article caption {
+    text-align: left;
+    font-size: 0.78rem;
+    color: var(--lsf-sub);
+    padding: 0.5rem 0.75rem 0;
+  }
+
+  .lsf-article th,
+  .lsf-article td {
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--lsf-line);
+    vertical-align: top;
+  }
+
+  .lsf-article thead th {
+    background: var(--lsf-accent-soft);
+    font-weight: 600;
+  }
+
+  .lsf-article tbody tr:last-child td { border-bottom: none; }
+
+  .lsf-faq {
+    border-top: 1px solid var(--lsf-line);
+    margin-top: 0.5rem;
+  }
+
+  .lsf-faq details {
+    border-bottom: 1px solid var(--lsf-line);
+    padding: 0.9rem 0;
+  }
+
+  .lsf-faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+
+  .lsf-faq summary::-webkit-details-marker { display: none; }
+
+  .lsf-faq summary::after {
+    content: "+";
+    color: var(--lsf-accent);
+    font-weight: 400;
+    flex-shrink: 0;
+  }
+
+  .lsf-faq details[open] summary::after { content: "\2212"; }
+
+  .lsf-faq details p {
+    margin: 0.7rem 0 0;
+    color: var(--lsf-sub);
+  }
+
+  .lsf-disclaimer {
+    margin-top: 2.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--lsf-line);
+    font-size: 0.85rem;
+    color: var(--lsf-sub);
+  }
+
+  .lsf-resources {
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 480px) {
+    .lsf-article { padding: 1.75rem 1rem 3rem; }
+    .lsf-article h1 { font-size: 1.6rem; }
+  }
+</style>
+
+<article class="lsf-article">
+  <span class="lsf-kicker">Personal Loan</span>
+  <h1>Loan Settlement vs Foreclosure: What's the Real Difference?</h1>
+  <p class="lsf-dek">One clears your debt early. The other means you couldn't pay it in full. Here's why lenders — and your credit report — treat them so differently.</p>
+  <p class="lsf-meta">Updated 19 July 2026 &middot; 8 min read</p>
+
+  <div class="lsf-callout">
+    <p><strong>Quick answer:</strong> Foreclosure means repaying your loan in full before the tenure ends, which usually has a neutral or mildly positive effect on your credit profile. Settlement means paying only part of your outstanding dues after financial hardship, and it can pull down your CIBIL score for years.</p>
+  </div>
+
+  <p>A call from your bank offering to "settle" your loan can sound like good news — pay less, close the account, move on. Around the same time, a colleague might mention "foreclosing" a personal loan after a bonus lands. Both end the loan early. The outcomes for your credit history are not remotely the same.</p>
+
+  <p>Before agreeing to either, it helps to know exactly what each term commits you to, and what a credit bureau like <a href="https://www.cibil.com" target="_blank" rel="noopener">CIBIL</a> or <a href="https://www.experian.in" target="_blank" rel="noopener">Experian</a> will record about you afterwards.</p>
+
+  <h2>What is loan foreclosure?</h2>
+  <p>Foreclosure means paying off your entire outstanding balance — principal, interest, and any charges — before the original tenure is over, in one final payment instead of the remaining EMIs.</p>
+
+  <p>Borrowers typically foreclose after a bonus, an inheritance, or the sale of an investment leaves them with surplus cash. The motivation is usually to cut future interest, free up monthly cash flow, or simply get out of debt sooner.</p>
+
+  <h3>What happens once you foreclose</h3>
+  <ul>
+    <li>The lender marks the account as <strong>Closed</strong>.</li>
+    <li>You receive a Loan Closure Certificate or No Objection Certificate (NOC).</li>
+    <li>EMIs stop immediately, and the closure is reported to credit bureaus as a full repayment.</li>
+  </ul>
+  <p>Because you've met the original obligation in full, this is generally read as a mark of responsible borrowing rather than a red flag.</p>
+
+  <h3>Do foreclosure charges still apply in 2026?</h3>
+  <p>Under revised <a href="https://www.rbi.org.in" target="_blank" rel="noopener">Reserve Bank of India</a> guidelines effective from January 2026, lenders can no longer levy prepayment or foreclosure charges on most floating-rate loans taken by individual borrowers. That said, fixed-rate loans or agreements signed before the new rules kicked in may still carry a fee. Always ask your lender for a foreclosure statement before making the final payment — it should list the exact payable amount and any charges.</p>
+
+  <h2>What is loan settlement?</h2>
+  <p>Settlement is a negotiated compromise: instead of the full outstanding amount, the lender agrees to accept a smaller lump sum and closes the account as <strong>Settled</strong> rather than Closed.</p>
+
+  <p>This route usually surfaces only after genuine financial distress — job loss, a medical emergency, business losses — and a string of missed EMIs. Lenders offer a One-Time Settlement (OTS) because recovering part of the dues, without the time and cost of legal recovery, is often preferable to recovering nothing.</p>
+
+  <h3>What happens once you settle</h3>
+  <ul>
+    <li>The account is marked <strong>Settled</strong>, and active recovery on that agreement usually stops.</li>
+    <li>The unpaid balance is booked as a loss by the lender.</li>
+    <li>Your credit report permanently notes that the loan was not repaid in full — future lenders can see this during any credit check.</li>
+  </ul>
+
+  <p>Settlement should be treated as a last resort, considered only when full repayment is genuinely out of reach and restructuring or an EMI reschedule isn't on offer.</p>
+
+  <div class="lsf-contrast">
+    <blockquote><strong>Foreclosure says:</strong> "I paid everything I promised, just earlier than expected."</blockquote>
+    <blockquote><strong>Settlement says:</strong> "I couldn't pay the full amount, so the lender accepted less."</blockquote>
+  </div>
+
+  <h2>Side-by-side comparison</h2>
+  <div class="lsf-table-wrap">
+    <table>
+      <caption>Foreclosure vs. settlement, feature by feature</caption>
+      <thead>
+        <tr><th scope="col">Feature</th><th scope="col">Foreclosure</th><th scope="col">Settlement</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Amount paid</td><td>100% of outstanding dues</td><td>A negotiated portion only</td></tr>
+        <tr><td>Reason</td><td>Voluntary early repayment</td><td>Financial hardship</td></tr>
+        <tr><td>Loan status on report</td><td>Closed</td><td>Settled</td></tr>
+        <tr><td>Impact on CIBIL score</td><td>Neutral to mildly positive</td><td>Generally negative</td></tr>
+        <tr><td>Document received</td><td>Loan Closure Certificate / NOC</td><td>Settlement letter</td></tr>
+        <tr><td>Future loan eligibility</td><td>Largely unaffected</td><td>Can become harder</td></tr>
+        <tr><td>Best suited for</td><td>Borrowers with surplus funds</td><td>Borrowers facing genuine distress</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>How each option shows up on your CIBIL score</h2>
+  <p>Foreclosure rarely moves your score by itself — it's one positive data point among several, alongside repayment history, credit utilisation, and credit mix. It won't undo the damage from existing missed EMIs, but it doesn't add any either.</p>
+
+  <p>Settlement is a different story. Because the lender wrote off part of what you owed, bureaus read it as evidence you couldn't honour the original agreement. Financial commentators commonly cite a drop of roughly <strong>75 to 100 points</strong>, though the real number depends on your prior score, repayment history, loan size, and how many EMIs you'd already missed. No lender can promise you an exact figure in advance.</p>
+
+  <p>A "Settled" remark can stay visible on your report for up to seven years, during which future applications may face closer scrutiny, smaller approved amounts, or higher interest rates. With <a href="https://www.cibil.com" target="_blank" rel="noopener">credit bureaus</a> now moving to weekly reporting cycles in 2026 rather than monthly ones, both good and bad updates — a foreclosure closure or a fresh settlement — reflect on your report sooner than before, so it's worth checking your report shortly after either event.</p>
+
+  <h2>Settlement vs write-off vs waive-off</h2>
+  <p>These three get used interchangeably, but they aren't the same thing.</p>
+  <ul>
+    <li><strong>Settlement:</strong> a mutual agreement — you pay less than what's owed, and the lender closes the account as Settled. It stays on your credit history.</li>
+    <li><strong>Write-off:</strong> an internal accounting move by the lender once a loan turns into a non-performing asset. It doesn't forgive your debt — recovery agents, legal action, or a sale to a collections agency can still follow.</li>
+    <li><strong>Waive-off:</strong> the borrower is legally released from repaying. This is uncommon in personal lending and typically tied to government relief schemes rather than individual negotiation.</li>
+  </ul>
+
+  <h2>Can a settled loan be converted back to closed?</h2>
+  <p>Sometimes, but never guaranteed. Some lenders will let you pay the remaining unpaid balance after settlement and update the status from Settled to Closed — though this depends on internal policy, and gets harder once the debt has been sold to a recovery agency.</p>
+  <ol>
+    <li>Ask your lender in writing whether settlement reversal is possible, and request the exact remaining balance.</li>
+    <li>Pay through a traceable method — NEFT, IMPS, RTGS, or UPI — and avoid unacknowledged cash payments.</li>
+    <li>Collect a No Dues Certificate or Loan Closure Certificate once payment clears.</li>
+    <li>Check your credit report 30–45 days later, and raise a dispute with the bureau if the status hasn't updated.</li>
+  </ol>
+
+  <h2>Which one should you choose?</h2>
+  <p><strong>Foreclose</strong> if you have the funds to clear the balance without wiping out your emergency reserve, and you want to protect your credit profile for future borrowing. <strong>Consider settlement</strong> only if repayment is genuinely unrealistic, you've already defaulted or are close to it, and restructuring or an EMI reschedule isn't available. Talk to your lender about restructuring options before agreeing to any settlement offer — many are willing to extend tenure or adjust EMIs if you raise the difficulty early.</p>
+
+  <h2 id="lsf-faq-heading">Frequently asked questions</h2>
+  <div class="lsf-faq">
+    <details>
+      <summary>Is loan settlement the same as foreclosure?</summary>
+      <p>No. Foreclosure repays the entire loan early and closes it as Closed. Settlement pays only a negotiated portion and closes it as Settled.</p>
+    </details>
+    <details>
+      <summary>Does loan foreclosure hurt your CIBIL score?</summary>
+      <p>Generally not — it's usually neutral or mildly positive, though your overall score still depends on repayment history and credit utilisation elsewhere.</p>
+    </details>
+    <details>
+      <summary>How many points can a settlement reduce your score by?</summary>
+      <p>There's no fixed figure. Commentators commonly cite a range of 75–100 points, but the actual drop depends on your credit history and the bureau's own model.</p>
+    </details>
+    <details>
+      <summary>Can a settled loan be changed to a closed loan?</summary>
+      <p>Sometimes, if the lender allows it and you clear the remaining balance — but it's never guaranteed, and depends on the lender's policy.</p>
+    </details>
+    <details>
+      <summary>Are foreclosure charges still applicable on personal loans in 2026?</summary>
+      <p>Many floating-rate loans are now exempt under RBI's revised rules, but fixed-rate loans or older agreements may still carry a fee. Check your sanction letter.</p>
+    </details>
+    <details>
+      <summary>How long does a "Settled" status stay on a credit report?</summary>
+      <p>Typically up to seven years, during which future lenders may treat you as higher risk.</p>
+    </details>
+  </div>
+
+  <p class="lsf-resources">For related reading, see how <a href="https://www.rbi.org.in" target="_blank" rel="noopener">RBI's prepayment guidelines</a> apply to your loan type, or check your score directly with <a href="https://www.cibil.com" target="_blank" rel="noopener">CIBIL</a>, <a href="https://www.experian.in" target="_blank" rel="noopener">Experian</a>, or <a href="https://www.equifax.co.in" target="_blank" rel="noopener">Equifax</a> before deciding between the two.</p>
+
+  <p class="lsf-disclaimer">This article is for general information only and isn't financial or legal advice. Foreclosure charges, settlement terms, and credit bureau practices vary by lender and loan agreement — confirm specifics with your bank or a qualified advisor before acting.</p>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is loan settlement the same as foreclosure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Foreclosure repays the entire loan early and closes it as Closed. Settlement pays only a negotiated portion and closes it as Settled."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does loan foreclosure hurt your CIBIL score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally not, foreclosure usually has a neutral or mildly positive impact, though the overall score still depends on repayment history and credit utilisation elsewhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many points can a settlement reduce your score by?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no fixed figure. A common estimate is a 75 to 100 point drop, but the actual impact depends on credit history and the bureau's scoring model."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a settled loan be changed to a closed loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sometimes, if the lender allows it and the remaining balance is cleared, but it is never guaranteed and depends on the lender's policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are foreclosure charges still applicable on personal loans in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many floating-rate loans are now exempt under RBI's revised guidelines, but fixed-rate loans or older agreements may still carry a fee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a Settled status stay on a credit report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typically up to seven years, during which future lenders may treat the borrower as higher risk."
+      }
+    }
+  ]
+}
+</script>
+
+
+{% include "author.html" %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600&display=swap');
+
+  .rg-section {
+    font-family: 'Outfit', sans-serif;
+    padding: 3rem 0 1.5rem;
+  }
+
+  .rg-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .rg-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+  }
+
+  .rg-eyebrow::before,
+  .rg-eyebrow::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: #2563eb;
+    opacity: 0.4;
+  }
+
+  .rg-heading {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .rg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rg-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e9e9e9;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rg-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2563eb;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .rg-card:hover {
+    border-color: #d1d9f5;
+    transform: translateX(4px);
+  }
+
+  .rg-card:hover::before {
+    opacity: 1;
+  }
+
+  .rg-card__number {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2563eb;
+    opacity: 0.12;
+    line-height: 1;
+    min-width: 2.5rem;
+    transition: opacity 0.2s ease;
+    user-select: none;
+  }
+
+  .rg-card:hover .rg-card__number {
+    opacity: 0.22;
+  }
+
+  .rg-card__divider {
+    width: 1px;
+    height: 3rem;
+    background: #e9e9e9;
+    flex-shrink: 0;
+  }
+
+  .rg-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .rg-card__label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2563eb;
+  }
+
+  .rg-card__title {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+  }
+
+  .rg-card:hover .rg-card__title {
+    color: #2563eb;
+  }
+
+  .rg-card__arrow {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    color: #2563eb;
+  }
+
+  .rg-card:hover .rg-card__arrow {
+    background: #eff4ff;
+    border-color: #bfcffe;
+    transform: translateX(2px);
+  }
+
+  .rg-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .rg-card__number { display: none; }
+    .rg-card__divider { display: none; }
+  }
+</style>
+
+<section class="rg-section">
+
+  <div class="rg-header">
+    <div class="rg-eyebrow">Keep reading</div>
+    <h2 class="rg-heading">Related Guides</h2>
+  </div>
+
+  <div class="rg-list">
+
+    <a href="../personal-loan-settlement-india-2026/" class="rg-card">
+      <span class="rg-card__number">01</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Personal Loan Settlement in India 2026</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+    <a href="../harassment-and-legal-protection-india/" class="rg-card">
+      <span class="rg-card__number">02</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Harassment and Legal Protection in India</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+    <a href="../what-happens-if-loan-default-india-2026/" class="rg-card">
+      <span class="rg-card__number">03</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">What happens if loan defaults in 2026</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+    <a href="../credit-card-settlement-2026/" class="rg-card">
+      <span class="rg-card__number">04</span>
+      <div class="rg-card__divider"></div>
+      <div class="rg-card__body">
+        <span class="rg-card__label">Related Guide</span>
+        <h3 class="rg-card__title">Credit card settlement in 2026</h3>
+      </div>
+      <div class="rg-card__arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="rg-divider"></div>
+</section>
